@@ -37,7 +37,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sm-fB-fwF">
-                                <rect key="frame" x="94.5" y="488" width="186" height="8"/>
+                                <rect key="frame" x="94.5" y="486.5" width="186" height="8"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="ex2-Zc-Pn5"/>
@@ -45,20 +45,20 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매일매일 새로운 행운의 기회가" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBy-HU-fop">
-                                <rect key="frame" x="115" y="451" width="145" height="15"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                <rect key="frame" x="115.5" y="451" width="144.5" height="14.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쏟아지고 있어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30h-zu-jgh">
-                                <rect key="frame" x="147.5" y="466" width="80" height="15"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                <rect key="frame" x="148" y="465.5" width="79" height="14.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 공연이 있는지 응모하러 가볼까요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuV-mI-eym">
-                                <rect key="frame" x="94.5" y="481" width="186" height="15"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                <rect key="frame" x="95.5" y="480" width="184" height="14.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

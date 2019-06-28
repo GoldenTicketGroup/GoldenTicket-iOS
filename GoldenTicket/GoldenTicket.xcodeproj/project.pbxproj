@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836ED5822C5A72D006295D3 /* Notice.storyboard */; };
-		0836ED5E22C5A919006295D3 /* NoticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836ED5D22C5A919006295D3 /* NoticeTableViewController.swift */; };
 		08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2422C2552D009C1199 /* AppDelegate.swift */; };
 		08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2622C2552D009C1199 /* ViewController.swift */; };
 		08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB2822C2552D009C1199 /* Main.storyboard */; };
@@ -18,11 +17,14 @@
 		08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */; };
 		08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7622C507C8009C1199 /* Login.storyboard */; };
 		08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7822C523C9009C1199 /* Lose.storyboard */; };
+		F440B38F22C60AC100B8AFD6 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B38E22C60AC100B8AFD6 /* test.swift */; };
+		F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */; };
+		F440B39F22C61BF200B8AFD6 /* NoticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */; };
+		F440B3A122C61C5800B8AFD6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0836ED5822C5A72D006295D3 /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
-		0836ED5D22C5A919006295D3 /* NoticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoticeTableViewController.swift; path = ViewControllers/NoticeTableViewController.swift; sourceTree = "<group>"; };
 		08CBCB2122C2552D009C1199 /* GoldenTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CBCB2422C2552D009C1199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CBCB2622C2552D009C1199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +36,10 @@
 		08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		08CBCB7622C507C8009C1199 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		08CBCB7822C523C9009C1199 /* Lose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lose.storyboard; sourceTree = "<group>"; };
+		F440B38E22C60AC100B8AFD6 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewController.swift; sourceTree = "<group>"; };
+		F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +56,6 @@
 		08CBCB1822C2552D009C1199 = {
 			isa = PBXGroup;
 			children = (
-				0836ED5D22C5A919006295D3 /* NoticeTableViewController.swift */,
 				08CBCB2322C2552D009C1199 /* GoldenTicket */,
 				08CBCB2222C2552D009C1199 /* Products */,
 			);
@@ -67,10 +72,10 @@
 		08CBCB2322C2552D009C1199 /* GoldenTicket */ = {
 			isa = PBXGroup;
 			children = (
+				F440B39822C61AA000B8AFD6 /* Sources */,
+				F440B38A22C6098200B8AFD6 /* Extensions */,
 				08CBCB4022C25610009C1199 /* Model */,
-				08CBCB3F22C25608009C1199 /* Extensions */,
 				08CBCB3E22C255FB009C1199 /* APIServices */,
-				08CBCB3A22C255C5009C1199 /* Sources */,
 				08CBCB3922C2554B009C1199 /* Resources */,
 				08CBCB2422C2552D009C1199 /* AppDelegate.swift */,
 				08CBCB2622C2552D009C1199 /* ViewController.swift */,
@@ -89,14 +94,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		08CBCB3A22C255C5009C1199 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				08CBCB3C22C255E3009C1199 /* ViewControllers */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
 		08CBCB3B22C255CF009C1199 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,21 +107,6 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		08CBCB3C22C255E3009C1199 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				08CBCB3D22C255EE009C1199 /* Login */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		08CBCB3D22C255EE009C1199 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		08CBCB3E22C255FB009C1199 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,18 +114,53 @@
 			path = APIServices;
 			sourceTree = "<group>";
 		};
-		08CBCB3F22C25608009C1199 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		08CBCB4022C25610009C1199 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F440B38A22C6098200B8AFD6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F440B38E22C60AC100B8AFD6 /* test.swift */,
+				F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F440B39822C61AA000B8AFD6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F440B39922C61AAD00B8AFD6 /* ViewControllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F440B39922C61AAD00B8AFD6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F440B39B22C61B7600B8AFD6 /* Notice */,
+				F440B39A22C61AB900B8AFD6 /* Login */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F440B39A22C61AB900B8AFD6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F440B39B22C61B7600B8AFD6 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */,
+				F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */,
+			);
+			path = Notice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,10 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F440B3A122C61C5800B8AFD6 /* UIView+Extensions.swift in Sources */,
 				08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,
 				08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */,
-				0836ED5E22C5A919006295D3 /* NoticeTableViewController.swift in Sources */,
+				F440B39F22C61BF200B8AFD6 /* NoticeTableViewController.swift in Sources */,
+				F440B38F22C60AC100B8AFD6 /* test.swift in Sources */,
+				F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
