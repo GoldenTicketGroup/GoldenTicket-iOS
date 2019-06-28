@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836ED5822C5A72D006295D3 /* Notice.storyboard */; };
+		0836ED5E22C5A919006295D3 /* NoticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836ED5D22C5A919006295D3 /* NoticeTableViewController.swift */; };
 		08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2422C2552D009C1199 /* AppDelegate.swift */; };
 		08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2622C2552D009C1199 /* ViewController.swift */; };
 		08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB2822C2552D009C1199 /* Main.storyboard */; };
@@ -14,9 +16,13 @@
 		08CBCB2F22C2552F009C1199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB2E22C2552F009C1199 /* Assets.xcassets */; };
 		08CBCB3222C2552F009C1199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB3022C2552F009C1199 /* LaunchScreen.storyboard */; };
 		08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */; };
+		08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7622C507C8009C1199 /* Login.storyboard */; };
+		08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7822C523C9009C1199 /* Lose.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0836ED5822C5A72D006295D3 /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
+		0836ED5D22C5A919006295D3 /* NoticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoticeTableViewController.swift; path = ViewControllers/NoticeTableViewController.swift; sourceTree = "<group>"; };
 		08CBCB2122C2552D009C1199 /* GoldenTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CBCB2422C2552D009C1199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CBCB2622C2552D009C1199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		08CBCB3122C2552F009C1199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08CBCB3322C2552F009C1199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		08CBCB7622C507C8009C1199 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		08CBCB7822C523C9009C1199 /* Lose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lose.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,7 @@
 		08CBCB1822C2552D009C1199 = {
 			isa = PBXGroup;
 			children = (
+				0836ED5D22C5A919006295D3 /* NoticeTableViewController.swift */,
 				08CBCB2322C2552D009C1199 /* GoldenTicket */,
 				08CBCB2222C2552D009C1199 /* Products */,
 			);
@@ -93,6 +102,9 @@
 			children = (
 				08CBCB2822C2552D009C1199 /* Main.storyboard */,
 				08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */,
+				08CBCB7622C507C8009C1199 /* Login.storyboard */,
+				08CBCB7822C523C9009C1199 /* Lose.storyboard */,
+				0836ED5822C5A72D006295D3 /* Notice.storyboard */,
 				08CBCB3022C2552F009C1199 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -194,8 +206,11 @@
 			files = (
 				08CBCB3222C2552F009C1199 /* LaunchScreen.storyboard in Resources */,
 				08CBCB2F22C2552F009C1199 /* Assets.xcassets in Resources */,
+				0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */,
 				08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */,
+				08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */,
 				08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */,
+				08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +224,7 @@
 				08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,
 				08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */,
+				0836ED5E22C5A919006295D3 /* NoticeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
