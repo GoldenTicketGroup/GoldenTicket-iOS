@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="E2q-bn-x3b">
+            <objects>
+                <viewController id="ibT-sw-wjb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T2X-MB-fmD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8UQ-ON-VDa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ixm-nl-f55">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterBenhurInfo" translatesAutoresizingMaskIntoConstraints="NO" id="yrp-Ns-qdD">
+                                                <rect key="frame" x="56.5" y="47" width="262" height="337"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="뮤지컬 벤허" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgQ-yL-95w">
+                                                <rect key="frame" x="135" y="404" width="105" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="yrp-Ns-qdD" firstAttribute="centerX" secondItem="Ixm-nl-f55" secondAttribute="centerX" id="6Cx-3R-YmW"/>
+                                            <constraint firstItem="yrp-Ns-qdD" firstAttribute="top" secondItem="Ixm-nl-f55" secondAttribute="top" constant="47" id="GcD-6A-zMl"/>
+                                            <constraint firstItem="FgQ-yL-95w" firstAttribute="top" secondItem="yrp-Ns-qdD" secondAttribute="bottom" constant="20" id="PFM-9T-j25"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8UQ-ON-VDa" firstAttribute="leading" secondItem="XdU-2i-WzT" secondAttribute="leading" id="0qm-bP-gpi"/>
+                            <constraint firstItem="XdU-2i-WzT" firstAttribute="top" secondItem="8UQ-ON-VDa" secondAttribute="top" id="3Eq-Ht-I15"/>
+                            <constraint firstItem="Ixm-nl-f55" firstAttribute="height" secondItem="T2X-MB-fmD" secondAttribute="height" priority="250" id="3F9-Vu-1pT"/>
+                            <constraint firstItem="Ixm-nl-f55" firstAttribute="top" secondItem="XdU-2i-WzT" secondAttribute="top" id="3yl-ze-xwg"/>
+                            <constraint firstItem="Ixm-nl-f55" firstAttribute="width" secondItem="T2X-MB-fmD" secondAttribute="width" id="9jq-th-hTw"/>
+                            <constraint firstItem="XdU-2i-WzT" firstAttribute="trailing" secondItem="Ixm-nl-f55" secondAttribute="trailing" id="QTG-dp-l2J"/>
+                            <constraint firstItem="Ixm-nl-f55" firstAttribute="bottom" secondItem="XdU-2i-WzT" secondAttribute="bottom" constant="20" id="bL2-f6-gHS"/>
+                            <constraint firstItem="Ixm-nl-f55" firstAttribute="leading" secondItem="XdU-2i-WzT" secondAttribute="leading" id="fcV-Nq-3Hr"/>
+                            <constraint firstItem="XdU-2i-WzT" firstAttribute="bottom" secondItem="8UQ-ON-VDa" secondAttribute="bottom" id="mlD-ba-eg1"/>
+                            <constraint firstItem="XdU-2i-WzT" firstAttribute="trailing" secondItem="8UQ-ON-VDa" secondAttribute="trailing" id="phi-mM-KiC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XdU-2i-WzT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fEV-nc-K38" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103.2" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="posterBenhurInfo" width="262" height="337"/>
+    </resources>
+</document>

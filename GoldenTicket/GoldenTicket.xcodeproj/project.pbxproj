@@ -10,6 +10,9 @@
 		0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836ED5822C5A72D006295D3 /* Notice.storyboard */; };
 		0836EDA622C750F7006295D3 /* Win.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDA522C750F7006295D3 /* Win.storyboard */; };
 		0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAB22C75A24006295D3 /* Lottory.storyboard */; };
+		0836EDAE22C7C2B1006295D3 /* Unpaid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAD22C7C2B1006295D3 /* Unpaid.storyboard */; };
+		0836EDB222C7C618006295D3 /* UnpaidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836EDB122C7C618006295D3 /* UnpaidViewController.swift */; };
+		08CB6A3922C7D2B200BA6CCF /* ShowInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CB6A3822C7D2B200BA6CCF /* ShowInfo.storyboard */; };
 		08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2422C2552D009C1199 /* AppDelegate.swift */; };
 		08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2622C2552D009C1199 /* ViewController.swift */; };
 		08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB2822C2552D009C1199 /* Main.storyboard */; };
@@ -32,6 +35,9 @@
 		0836ED5822C5A72D006295D3 /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
 		0836EDA522C750F7006295D3 /* Win.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Win.storyboard; sourceTree = "<group>"; };
 		0836EDAB22C75A24006295D3 /* Lottory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottory.storyboard; sourceTree = "<group>"; };
+		0836EDAD22C7C2B1006295D3 /* Unpaid.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Unpaid.storyboard; sourceTree = "<group>"; };
+		0836EDB122C7C618006295D3 /* UnpaidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnpaidViewController.swift; sourceTree = "<group>"; };
+		08CB6A3822C7D2B200BA6CCF /* ShowInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowInfo.storyboard; sourceTree = "<group>"; };
 		08CBCB2122C2552D009C1199 /* GoldenTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CBCB2422C2552D009C1199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CBCB2622C2552D009C1199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,7 @@
 		08CBCB1822C2552D009C1199 = {
 			isa = PBXGroup;
 			children = (
+				08CB6A3822C7D2B200BA6CCF /* ShowInfo.storyboard */,
 				08CBCB2322C2552D009C1199 /* GoldenTicket */,
 				08CBCB2222C2552D009C1199 /* Products */,
 			);
@@ -114,6 +121,7 @@
 				0836EDAB22C75A24006295D3 /* Lottory.storyboard */,
 				08CBCB7822C523C9009C1199 /* Lose.storyboard */,
 				0836EDA522C750F7006295D3 /* Win.storyboard */,
+				0836EDAD22C7C2B1006295D3 /* Unpaid.storyboard */,
 				0836ED5822C5A72D006295D3 /* Notice.storyboard */,
 			);
 			path = Storyboard;
@@ -157,6 +165,7 @@
 			children = (
 				F440B39B22C61B7600B8AFD6 /* Notice */,
 				F440B39A22C61AB900B8AFD6 /* Login */,
+				0836EDB122C7C618006295D3 /* UnpaidViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -237,11 +246,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				08CBCB3222C2552F009C1199 /* LaunchScreen.storyboard in Resources */,
+				0836EDAE22C7C2B1006295D3 /* Unpaid.storyboard in Resources */,
 				08CBCB2F22C2552F009C1199 /* Assets.xcassets in Resources */,
 				0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */,
 				0836EDA622C750F7006295D3 /* Win.storyboard in Resources */,
 				0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */,
 				08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */,
+				08CB6A3922C7D2B200BA6CCF /* ShowInfo.storyboard in Resources */,
 				08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */,
 				08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */,
 				08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */,
@@ -255,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0836EDB222C7C618006295D3 /* UnpaidViewController.swift in Sources */,
 				F440B3A122C61C5800B8AFD6 /* UIView+Extensions.swift in Sources */,
 				08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */,
 				F440B3AD22C6444000B8AFD6 /* UIViewController+Extensions.swift in Sources */,
