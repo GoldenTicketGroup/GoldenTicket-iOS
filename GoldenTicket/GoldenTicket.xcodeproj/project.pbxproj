@@ -17,10 +17,13 @@
 		08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */; };
 		08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7622C507C8009C1199 /* Login.storyboard */; };
 		08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7822C523C9009C1199 /* Lose.storyboard */; };
-		F440B38F22C60AC100B8AFD6 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B38E22C60AC100B8AFD6 /* test.swift */; };
 		F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */; };
 		F440B39F22C61BF200B8AFD6 /* NoticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */; };
 		F440B3A122C61C5800B8AFD6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */; };
+		F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A222C63C6800B8AFD6 /* LoginVC.swift */; };
+		F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A822C640A100B8AFD6 /* CustomButton.swift */; };
+		F440B3AB22C6437400B8AFD6 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3AA22C6437400B8AFD6 /* UIColor+Extensions.swift */; };
+		F440B3AD22C6444000B8AFD6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3AC22C6444000B8AFD6 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +39,13 @@
 		08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		08CBCB7622C507C8009C1199 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		08CBCB7822C523C9009C1199 /* Lose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lose.storyboard; sourceTree = "<group>"; };
-		F440B38E22C60AC100B8AFD6 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewController.swift; sourceTree = "<group>"; };
 		F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		F440B3A222C63C6800B8AFD6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F440B3A822C640A100B8AFD6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		F440B3AA22C6437400B8AFD6 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		F440B3AC22C6444000B8AFD6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +130,10 @@
 		F440B38A22C6098200B8AFD6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F440B38E22C60AC100B8AFD6 /* test.swift */,
+				F440B3A822C640A100B8AFD6 /* CustomButton.swift */,
 				F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */,
+				F440B3AC22C6444000B8AFD6 /* UIViewController+Extensions.swift */,
+				F440B3AA22C6437400B8AFD6 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,6 +158,7 @@
 		F440B39A22C61AB900B8AFD6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F440B3A222C63C6800B8AFD6 /* LoginVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -240,10 +249,13 @@
 			files = (
 				F440B3A122C61C5800B8AFD6 /* UIView+Extensions.swift in Sources */,
 				08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */,
+				F440B3AD22C6444000B8AFD6 /* UIViewController+Extensions.swift in Sources */,
+				F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */,
+				F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,
 				08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */,
 				F440B39F22C61BF200B8AFD6 /* NoticeTableViewController.swift in Sources */,
-				F440B38F22C60AC100B8AFD6 /* test.swift in Sources */,
+				F440B3AB22C6437400B8AFD6 /* UIColor+Extensions.swift in Sources */,
 				F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

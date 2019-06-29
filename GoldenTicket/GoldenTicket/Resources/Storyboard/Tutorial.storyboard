@@ -30,7 +30,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjL-hA-bAq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjL-hA-bAq" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
                                 <rect key="frame" x="240" y="606" width="118" height="36"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -103,7 +103,7 @@
                                     <constraint firstAttribute="width" secondItem="oJ4-WP-x2T" secondAttribute="height" multiplier="262:279" id="bGS-u6-beE"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NM-Kd-sko">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NM-Kd-sko" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
                                 <rect key="frame" x="240" y="606" width="118" height="36"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -163,7 +163,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTutorial03" translatesAutoresizingMaskIntoConstraints="NO" id="34t-yf-F7p">
                                 <rect key="frame" x="49" y="268" width="277" height="160"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4u-Ud-HfN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4u-Ud-HfN" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
                                 <rect key="frame" x="240" y="606" width="118" height="36"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
