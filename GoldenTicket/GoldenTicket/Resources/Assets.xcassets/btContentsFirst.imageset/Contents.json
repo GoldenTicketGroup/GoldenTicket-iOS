@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "btContentsFirst.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "scale" : "2x",
+      "filename" : "btContentsFirst@2x.png",
+      "idiom" : "universal"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "btContentsFirst@3x.png"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
