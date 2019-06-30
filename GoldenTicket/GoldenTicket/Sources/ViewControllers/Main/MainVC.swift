@@ -9,8 +9,6 @@
 import UIKit
 
 class MainVC: UIViewController {
-
-    @IBOutlet weak var searchButton: CustomButton!
     
     @IBOutlet weak var showCollectionView: UICollectionView!
     
@@ -20,33 +18,12 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setShowData()
         // Do any additional setup after loading the view.
-        
-        // 검색 버튼 그림자 추가
-//        searchButton.layer.shadowColor = UIColor.black16.cgColor
-//        searchButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        searchButton.layer.shadowRadius = 3
-//        searchButton.layer.shadowOpacity = 1
-//
-//        // show data
-//        showCollectionView.dataSource = self
-//
-        setNavigationBarClear()
+        showCollectionView.dataSource = self
         
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension MainVC: UICollectionViewDataSource {
