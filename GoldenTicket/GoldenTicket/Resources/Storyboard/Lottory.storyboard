@@ -56,6 +56,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oli-tf-P0C">
+                                <rect key="frame" x="88.5" y="490" width="198" height="8"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="198" id="dns-fd-gcX"/>
+                                    <constraint firstAttribute="height" constant="8" id="in4-sF-Wub"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당첨 후 결제가 이루어지지 않으면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VQ-Kl-6aG">
                                 <rect key="frame" x="89" y="480" width="197" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
@@ -80,14 +88,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oli-tf-P0C">
-                                <rect key="frame" x="88.5" y="490" width="198" height="8"/>
-                                <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="198" id="dns-fd-gcX"/>
-                                    <constraint firstAttribute="height" constant="8" id="in4-sF-Wub"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -139,6 +139,14 @@
                                     <constraint firstAttribute="width" secondItem="guN-h8-NJc" secondAttribute="height" multiplier="297:235" id="z2A-NO-JEW"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oH1-k8-sHx">
+                                <rect key="frame" x="72" y="446" width="231" height="8"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="AyX-NS-iD8"/>
+                                    <constraint firstAttribute="width" constant="231" id="hPf-9c-QG6"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당첨 결과는 공연 시작 2시간 전, 발표됩니다. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55X-SL-SBS">
                                 <rect key="frame" x="72" y="438" width="231" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
@@ -169,14 +177,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oH1-k8-sHx">
-                                <rect key="frame" x="72" y="446" width="231" height="8"/>
-                                <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="8" id="AyX-NS-iD8"/>
-                                    <constraint firstAttribute="width" constant="231" id="hPf-9c-QG6"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

@@ -12,7 +12,6 @@
 		0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAB22C75A24006295D3 /* Lottory.storyboard */; };
 		0836EDAE22C7C2B1006295D3 /* Unpaid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAD22C7C2B1006295D3 /* Unpaid.storyboard */; };
 		0836EDB222C7C618006295D3 /* UnpaidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836EDB122C7C618006295D3 /* UnpaidViewController.swift */; };
-		08CB6A3922C7D2B200BA6CCF /* ShowInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CB6A3822C7D2B200BA6CCF /* ShowInfo.storyboard */; };
 		08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2422C2552D009C1199 /* AppDelegate.swift */; };
 		08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2622C2552D009C1199 /* ViewController.swift */; };
 		08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB2822C2552D009C1199 /* Main.storyboard */; };
@@ -29,6 +28,7 @@
 		F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A822C640A100B8AFD6 /* CustomButton.swift */; };
 		F440B3AB22C6437400B8AFD6 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3AA22C6437400B8AFD6 /* UIColor+Extensions.swift */; };
 		F440B3AD22C6444000B8AFD6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3AC22C6444000B8AFD6 /* UIViewController+Extensions.swift */; };
+		F4955BDD22C83FCB00530906 /* ShowInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4955BDC22C83FCB00530906 /* ShowInfo.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,6 @@
 		0836EDAB22C75A24006295D3 /* Lottory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottory.storyboard; sourceTree = "<group>"; };
 		0836EDAD22C7C2B1006295D3 /* Unpaid.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Unpaid.storyboard; sourceTree = "<group>"; };
 		0836EDB122C7C618006295D3 /* UnpaidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnpaidViewController.swift; sourceTree = "<group>"; };
-		08CB6A3822C7D2B200BA6CCF /* ShowInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowInfo.storyboard; sourceTree = "<group>"; };
 		08CBCB2122C2552D009C1199 /* GoldenTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CBCB2422C2552D009C1199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CBCB2622C2552D009C1199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		F440B3A822C640A100B8AFD6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F440B3AA22C6437400B8AFD6 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		F440B3AC22C6444000B8AFD6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		F4955BDC22C83FCB00530906 /* ShowInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShowInfo.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,6 @@
 		08CBCB1822C2552D009C1199 = {
 			isa = PBXGroup;
 			children = (
-				08CB6A3822C7D2B200BA6CCF /* ShowInfo.storyboard */,
 				08CBCB2322C2552D009C1199 /* GoldenTicket */,
 				08CBCB2222C2552D009C1199 /* Products */,
 			);
@@ -114,6 +113,7 @@
 		08CBCB3B22C255CF009C1199 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				F4955BDC22C83FCB00530906 /* ShowInfo.storyboard */,
 				08CBCB3022C2552F009C1199 /* LaunchScreen.storyboard */,
 				08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */,
 				08CBCB7622C507C8009C1199 /* Login.storyboard */,
@@ -252,7 +252,7 @@
 				0836EDA622C750F7006295D3 /* Win.storyboard in Resources */,
 				0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */,
 				08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */,
-				08CB6A3922C7D2B200BA6CCF /* ShowInfo.storyboard in Resources */,
+				F4955BDD22C83FCB00530906 /* ShowInfo.storyboard in Resources */,
 				08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */,
 				08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */,
 				08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */,
