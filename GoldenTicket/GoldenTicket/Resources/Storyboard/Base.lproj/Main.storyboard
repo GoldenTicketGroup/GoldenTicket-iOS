@@ -243,11 +243,11 @@
             <objects>
                 <viewController storyboardIdentifier="ShowDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="txR-zd-iJi" customClass="ShowDetailVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a4a-oJ-NbP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="6354"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXR-yO-Gad">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="6354"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="800-zd-WoJ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="6354"/>
@@ -413,6 +413,80 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-ef-Wbu" customClass="CustomView" customModule="GoldenTicket" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="560" width="375" height="200"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-6Y-ir8">
+                                                        <rect key="frame" x="165" y="1" width="44" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcn-Tx-PWm">
+                                                        <rect key="frame" x="171" y="7" width="33" height="33"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" red="0.93514388800000003" green="0.81616985799999997" blue="0.37243670229999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button" image="btUp"/>
+                                                        <connections>
+                                                            <action selector="checkUpButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="2kd-e0-7La"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAh-LE-mEz" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
+                                                        <rect key="frame" x="41" y="143" width="293" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                        <state key="normal" title="선택완료">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="applyButtonAction:" destination="txR-zd-iJi" eventType="touchUpInside" id="ER3-3a-JoG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rr9-pM-dWi">
+                                                        <rect key="frame" x="41" y="63" width="30" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2d-2f-AaJ">
+                                                        <rect key="frame" x="113" y="51" width="221" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="시간을 선택해주세요">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btC-1w-xH7">
+                                                        <rect key="frame" x="306" y="65" width="16" height="16"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLm-n1-s3f">
+                                                                <rect key="frame" x="2" y="2" width="12" height="12"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" image="btUp"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.93514388800000003" green="0.81616985799999997" blue="0.37243670229999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-jf-mul" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
+                                                        <rect key="frame" x="41" y="46" width="293" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                        <state key="normal" title="응모하기">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="applyButtonAction:" destination="txR-zd-iJi" eventType="touchUpInside" id="wqV-zZ-iYU"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="gKX-ut-xWO"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -454,16 +528,22 @@
                             <constraint firstItem="mXR-yO-Gad" firstAttribute="top" secondItem="a4a-oJ-NbP" secondAttribute="top" priority="250" id="EBG-Qg-CrM"/>
                             <constraint firstItem="mXR-yO-Gad" firstAttribute="trailing" secondItem="uIv-Ge-VB4" secondAttribute="trailing" id="FfP-pb-Xre"/>
                             <constraint firstItem="doJ-rU-vfr" firstAttribute="top" secondItem="uIv-Ge-VB4" secondAttribute="top" constant="10" id="Jeb-Jz-yVV"/>
+                            <constraint firstItem="nBg-ef-Wbu" firstAttribute="bottom" secondItem="uIv-Ge-VB4" secondAttribute="bottom" constant="93" id="UV2-Qo-9qI"/>
                             <constraint firstItem="mXR-yO-Gad" firstAttribute="bottom" secondItem="uIv-Ge-VB4" secondAttribute="bottom" id="UhG-nP-Hxh"/>
+                            <constraint firstItem="nBg-ef-Wbu" firstAttribute="leading" secondItem="uIv-Ge-VB4" secondAttribute="leading" id="auo-pZ-mEh"/>
                             <constraint firstItem="800-zd-WoJ" firstAttribute="width" secondItem="a4a-oJ-NbP" secondAttribute="width" id="cI1-Qz-P7T"/>
                             <constraint firstItem="doJ-rU-vfr" firstAttribute="leading" secondItem="uIv-Ge-VB4" secondAttribute="leading" constant="12" id="ly4-8V-F0r"/>
+                            <constraint firstItem="uIv-Ge-VB4" firstAttribute="trailing" secondItem="nBg-ef-Wbu" secondAttribute="trailing" id="qtE-aW-eiG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uIv-Ge-VB4"/>
                     </view>
-                    <size key="freeformSize" width="375" height="6354"/>
                     <connections>
                         <outlet property="actorCollectionView" destination="HUu-XJ-QB2" id="ftM-Fo-sDy"/>
+                        <outlet property="applyButton" destination="eCh-jf-mul" id="fzz-ES-GN8"/>
                         <outlet property="backgroundImage" destination="gnW-aB-JL2" id="bcP-rY-Xz9"/>
+                        <outlet property="checkButton" destination="Zcn-Tx-PWm" id="Gm7-yj-NI3"/>
+                        <outlet property="checkView" destination="nBg-ef-Wbu" id="Ajx-hA-8I6"/>
+                        <outlet property="fillView" destination="eaa-6Y-ir8" id="OmY-uz-r6C"/>
                         <outlet property="posterImage" destination="Pvk-QU-lCP" id="gev-Ku-Afe"/>
                         <outlet property="showDetailImage" destination="h0w-kS-VZN" id="7Ve-Ib-zve"/>
                         <outlet property="showLocationLabel" destination="LeD-9h-n6L" id="Bal-SD-6Ic"/>
@@ -474,7 +554,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Oa-NE-dME" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4917.6000000000004" y="-277.06146926536735"/>
+            <point key="canvasLocation" x="4601" y="-276"/>
         </scene>
     </scenes>
     <resources>
@@ -485,12 +565,13 @@
         <image name="btHambergerMain" width="29" height="27"/>
         <image name="btLikeInfo" width="27" height="27"/>
         <image name="btTicktetMain" width="36" height="33"/>
+        <image name="btUp" width="200" height="200"/>
         <image name="btwhiteBackMain" width="330" height="127"/>
         <image name="iconLocationCoral" width="10" height="14"/>
         <image name="iconLocationMain" width="9.5" height="13"/>
         <image name="iconTimeCoral" width="11.5" height="11.5"/>
         <image name="iconTimeMain" width="10.5" height="10.5"/>
-        <image name="longMusicalInfo" width="376" height="5652.5"/>
+        <image name="longMusicalInfo" width="376" height="5653"/>
         <image name="posterBenhurInfo" width="262" height="337"/>
     </resources>
 </document>

@@ -10,14 +10,6 @@ import UIKit
 
 class ShowDetailVC: UIViewController {
 
-    // detail view에 필요한 정보들.
-    var backgroundImg : UIImage?
-    var posterImg : UIImage?
-    var showName : String?
-    var showPrice : String?
-    var showTime : String?
-    var showLocation : String?
-    var showDetail : UIImage?
     
     // 배우들을 보여주는 collection view.
     @IBOutlet weak var actorCollectionView: UICollectionView!
@@ -36,26 +28,53 @@ class ShowDetailVC: UIViewController {
 
     @IBOutlet weak var showDetailImage: UIImageView!
     
-    
+    // detail view에 필요한 정보들.
+    var backgroundImg : UIImage?
+    var posterImg : UIImage?
+    var showName : String?
+    var showPrice : String?
+    var showTime : String?
+    var showLocation : String?
+    var showDetail : UIImage?
+    // 더미 데이터로 넣을 배우 리스트
     var actorList : [Actor] = []
+    
+    @IBOutlet weak var checkView: CustomView!
+    
+    @IBOutlet weak var fillView: UIView!
+    
+    @IBOutlet weak var checkButton: UIButton!
+    
+    @IBOutlet weak var applyButton: CustomButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 테스트용 더미 데이터 세팅해두기.
         setContent()
         setData()
-        // Do any additional setup after loading the view.
+        
+        
+        // 응모하기 뷰 그림자주기
+        // 아래 코드를 구현하세요.
+        
+        
+        // fillViewButton corner radius 설정해주기
+        fillView.layer.cornerRadius = 22
+        
+        // dataSource 지정해주기
         actorCollectionView.dataSource = self
     }
     
-    
+    // 메인 화면으로 돌아가는 backButton 함수
     @IBAction func backButton(_ sender: UIButton) {
         
         self.dismiss(animated: true, completion: nil)
         
     }
     
+    // 나타낼 데이터들 지정해주기
     func setContent() {
         backgroundImage.image = backgroundImg
         posterImage.image = posterImg
@@ -65,6 +84,60 @@ class ShowDetailVC: UIViewController {
         showLocationLabel.text = showLocation
         showDetailImage.image = showDetail
     }
+    
+    @IBAction func checkUpButton(_ sender: UIButton) {
+        if fillView.transform == .identity {
+            UIView.animate(withDuration: 1, animations: {
+                self.fillView.transform = CGAffineTransform(scaleX: 22, y: 22)
+                self.checkView.transform = CGAffineTransform(translationX: 0, y: -93)
+                self.checkButton.transform = CGAffineTransform(rotationAngle: self.radians(180))
+                self.applyButton.transform = CGAffineTransform(translationX: 0, y: 600)
+            }) {(true) in
+                
+            }
+        } else {
+            UIView.animate(withDuration: 1, animations: {
+                self.fillView.transform = .identity
+                self.checkView.transform = .identity
+                self.checkButton.transform = .identity
+                self.applyButton.transform = .identity
+            }) {(true) in
+                
+            }
+        }
+        
+    }
+    
+    // 버튼 애니메이션이 제대로 180 도 회전되도록 지정해주기
+    func radians(_ degrees: Double) -> CGFloat {
+        return CGFloat(degrees * .pi / degrees)
+    }
+    
+    @IBAction func applyButtonAction(_ sender: UIButton) {
+        
+        if fillView.transform == .identity {
+            UIView.animate(withDuration: 1, animations: {
+                self.fillView.transform = CGAffineTransform(scaleX: 22, y: 22)
+                self.checkView.transform = CGAffineTransform(translationX: 0, y: -93)
+                self.checkButton.transform = CGAffineTransform(rotationAngle: self.radians(180))
+                self.applyButton.transform = CGAffineTransform(translationX: 0, y: 600)
+            }) {(true) in
+                
+            }
+        } else {
+            UIView.animate(withDuration: 1, animations: {
+                self.fillView.transform = .identity
+                self.checkView.transform = .identity
+                self.checkButton.transform = .identity
+                self.applyButton.transform = .identity
+            }) {(true) in
+                
+            }
+        }
+        
+    }
+    
+    
 
 }
 
