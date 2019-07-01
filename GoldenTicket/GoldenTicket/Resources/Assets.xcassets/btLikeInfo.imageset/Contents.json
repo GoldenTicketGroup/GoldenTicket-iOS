@@ -1,18 +1,18 @@
 {
   "images" : [
     {
+      "filename" : "btLikeInfo.png",
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "btBack.png"
+      "scale" : "1x"
     },
     {
-      "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "btBack@2x.png"
+      "idiom" : "universal",
+      "filename" : "btLikeInfo@2x.png"
     },
     {
+      "filename" : "btLikeInfo@3x.png",
       "idiom" : "universal",
-      "filename" : "btBack@3x.png",
       "scale" : "3x"
     }
   ],

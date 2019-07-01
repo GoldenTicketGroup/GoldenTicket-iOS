@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "posterBenhurInfo.png",
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "iconTimeCoral.png"
     },
     {
       "scale" : "2x",
-      "filename" : "posterBenhurInfo@2x.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "iconTimeCoral@2x.png"
     },
     {
-      "filename" : "posterBenhurInfo@3x.png",
+      "filename" : "iconTimeCoral@3x.png",
       "scale" : "3x",
       "idiom" : "universal"
     }
