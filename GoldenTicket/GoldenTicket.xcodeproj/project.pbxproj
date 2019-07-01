@@ -24,6 +24,7 @@
 		F43F453322C9A4AE00C53898 /* ShowDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F453222C9A4AE00C53898 /* ShowDetail.storyboard */; };
 		F43F453622C9A81000C53898 /* ShowDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F453522C9A81000C53898 /* ShowDetailVC.swift */; };
 		F43F453822C9A83200C53898 /* ShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F453722C9A83200C53898 /* ShowDetail.swift */; };
+		F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F453F22C9EB5500C53898 /* ActorCVCell.swift */; };
 		F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */; };
 		F440B39F22C61BF200B8AFD6 /* NoticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */; };
 		F440B3A122C61C5800B8AFD6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */; };
@@ -60,6 +61,7 @@
 		F43F453222C9A4AE00C53898 /* ShowDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowDetail.storyboard; sourceTree = "<group>"; };
 		F43F453522C9A81000C53898 /* ShowDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailVC.swift; sourceTree = "<group>"; };
 		F43F453722C9A83200C53898 /* ShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetail.swift; sourceTree = "<group>"; };
+		F43F453F22C9EB5500C53898 /* ActorCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCVCell.swift; sourceTree = "<group>"; };
 		F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewController.swift; sourceTree = "<group>"; };
 		F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				F43F453522C9A81000C53898 /* ShowDetailVC.swift */,
+				F43F453F22C9EB5500C53898 /* ActorCVCell.swift */,
 			);
 			path = Show;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				F440B3AD22C6444000B8AFD6 /* UIViewController+Extensions.swift in Sources */,
 				F4955C0722C8936900530906 /* SearchVC.swift in Sources */,
 				F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */,
+				F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */,
 				F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,
 				08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */,

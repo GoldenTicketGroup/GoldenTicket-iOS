@@ -64,6 +64,10 @@ extension MainVC : UICollectionViewDelegate {
         dvc.backgroundImg = show.backgroundImage
         dvc.posterImg = show.posterImage
         dvc.showName = show.showTitle
+        dvc.showPrice = show.showPrice
+        dvc.showTime = show.showTime
+        dvc.showLocation = show.showLocation
+        dvc.showDetail = show.showDetailImage
         
         present(dvc, animated: true)
         //navigationController?.pushViewController(dvc, animated: true)
@@ -84,11 +88,9 @@ extension MainVC {
     
     func setDetailData() {
         
-        let showD1 = Detail(background: "backImgInfo", poster: "posterBenhurInfo", title: "뮤지컬 벤허")
-        let showD2 = Detail(background: "backImgInfo", poster: "posterBenhurInfo", title: "뮤지컬 벤허")
-        let showD3 = Detail(background: "backImgInfo", poster: "posterBenhurInfo", title: "뮤지컬 벤허")
-        let showD4 = Detail(background: "backImgInfo", poster: "posterBenhurInfo", title: "뮤지컬 벤허")
+        let showD1 = Detail(background: "backImgInfo", poster: "posterBenhurInfo", title: "뮤지컬 벤허", time: "2019.06.15 17:00~19:00", price: "150,000 -> 20,000", location: "블루스퀘어 인터파크홀", detail: "longMusicalInfo")
+        let showD2 = Detail(background: "backImgInfoKillMeNow", poster: "posteKillMeNowInfo", title: "뮤지컬 킬미나우", time: "2019.06.15 17:00~19:00", price: "150,000 -> 20,000", location: "예술의 전당", detail: "longInfoKillMeNow")
         
-        showDetailList = [showD1, showD2, showD3, showD4]
+        showDetailList = [showD1, showD2, showD2, showD1]
     }
 }

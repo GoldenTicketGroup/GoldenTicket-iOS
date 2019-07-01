@@ -12,31 +12,45 @@ import UIKit
 // 서버와 연결한 뒤에는 codable 로 작성
 // 지금은 colloection view 가 제대로 나타나는지를 위한 테스트용 더미데이터
 // 필요한 데이터들 모두 적어둠, 아래 주석 처리는 일단 테스트에서 제외
+
+//공연의 기본정보를 나타내는 Detail struct
 struct Detail {
     
     var backgroundImage : UIImage?
     var posterImage : UIImage?
     var showTitle: String?
-//    var showPrice : String?
-//    var showTime : String?
-//    var showLocation : String?
-//
-//    var actorImage : UIImage
-//    var actorName : String
-//    var actorRole : String
-//
-//    var showDetailImage : UIImage
+    var showPrice : String?
+    var showTime : String?
+    var showLocation : String?
+    var showDetailImage : UIImage?
     
-    init (background : String, poster : String, title: String) {
+    init (background : String, poster : String, title: String, time: String, price: String, location: String, detail: String) {
         
-        backgroundImage = UIImage(named: background)
-        posterImage = UIImage(named: poster)
-        showTitle = title
-//        showPrice = price
-//        showTime = time
-//        showLocation = location
-//
+        self.backgroundImage = UIImage(named: background)
+        self.posterImage = UIImage(named: poster)
+        self.showTitle = title
+        self.showPrice = price
+        self.showTime = time
+        self.showLocation = location
+        self.showDetailImage = UIImage(named: detail)
+
     }
+}
+
+//공연하는 배우들을 나타내는 Actor struct.
+
+struct Actor {
     
+    var actorImage : UIImage?
+    var actorName : String
+    var castingName : String
+    
+    init (image : String, name: String, casting: String) {
+        
+        self.actorImage = UIImage(named: image)
+        self.actorName = name
+        self.castingName = casting
+        
+    }
     
 }
