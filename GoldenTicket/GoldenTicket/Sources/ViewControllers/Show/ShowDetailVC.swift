@@ -47,6 +47,7 @@ class ShowDetailVC: UIViewController {
     
     @IBOutlet weak var applyButton: CustomButton!
     
+    @IBOutlet weak var checkShadowView: CustomView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,8 +58,7 @@ class ShowDetailVC: UIViewController {
         
         
         // 응모하기 뷰 그림자주기
-        // 아래 코드를 구현하세요.
-        
+
         
         // fillViewButton corner radius 설정해주기
         fillView.layer.cornerRadius = 22

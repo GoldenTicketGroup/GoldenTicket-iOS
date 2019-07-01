@@ -26,6 +26,9 @@
 		F43F453822C9A83200C53898 /* ShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F453722C9A83200C53898 /* ShowDetail.swift */; };
 		F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F453F22C9EB5500C53898 /* ActorCVCell.swift */; };
 		F43F454222C9F46500C53898 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F454122C9F46500C53898 /* CustomView.swift */; };
+		F43F454422CA45B700C53898 /* WinTicket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F454322CA45B700C53898 /* WinTicket.storyboard */; };
+		F43F454722CA639C00C53898 /* TicketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F454622CA639C00C53898 /* TicketVC.swift */; };
+		F43F454922CA79C900C53898 /* NoTicket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F454822CA79C900C53898 /* NoTicket.storyboard */; };
 		F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */; };
 		F440B39F22C61BF200B8AFD6 /* NoticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */; };
 		F440B3A122C61C5800B8AFD6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */; };
@@ -63,6 +66,9 @@
 		F43F453722C9A83200C53898 /* ShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetail.swift; sourceTree = "<group>"; };
 		F43F453F22C9EB5500C53898 /* ActorCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCVCell.swift; sourceTree = "<group>"; };
 		F43F454122C9F46500C53898 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		F43F454322CA45B700C53898 /* WinTicket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WinTicket.storyboard; sourceTree = "<group>"; };
+		F43F454622CA639C00C53898 /* TicketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketVC.swift; sourceTree = "<group>"; };
+		F43F454822CA79C900C53898 /* NoTicket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoTicket.storyboard; sourceTree = "<group>"; };
 		F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewController.swift; sourceTree = "<group>"; };
 		F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -144,6 +150,8 @@
 				0836ED5822C5A72D006295D3 /* Notice.storyboard */,
 				F4955C0322C88D1C00530906 /* Search.storyboard */,
 				F43F453222C9A4AE00C53898 /* ShowDetail.storyboard */,
+				F43F454322CA45B700C53898 /* WinTicket.storyboard */,
+				F43F454822CA79C900C53898 /* NoTicket.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -173,6 +181,14 @@
 			path = Show;
 			sourceTree = "<group>";
 		};
+		F43F454522CA636E00C53898 /* Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				F43F454622CA639C00C53898 /* TicketVC.swift */,
+			);
+			path = Ticket;
+			sourceTree = "<group>";
+		};
 		F440B38A22C6098200B8AFD6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +213,7 @@
 		F440B39922C61AAD00B8AFD6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F43F454522CA636E00C53898 /* Ticket */,
 				F43F453422C9A7F300C53898 /* Show */,
 				F4955C0522C8935300530906 /* Search */,
 				F4955BF822C857D100530906 /* Main */,
@@ -308,9 +325,11 @@
 				08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */,
 				08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */,
 				08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */,
+				F43F454422CA45B700C53898 /* WinTicket.storyboard in Resources */,
 				F4955C0422C88D1C00530906 /* Search.storyboard in Resources */,
 				F43F453322C9A4AE00C53898 /* ShowDetail.storyboard in Resources */,
 				08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */,
+				F43F454922CA79C900C53898 /* NoTicket.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +343,7 @@
 				0836EDB222C7C618006295D3 /* UnpaidViewController.swift in Sources */,
 				F4955BFE22C8587300530906 /* MainShowCell.swift in Sources */,
 				F4955C0222C8635A00530906 /* Show.swift in Sources */,
+				F43F454722CA639C00C53898 /* TicketVC.swift in Sources */,
 				F4955BFA22C857F000530906 /* MainVC.swift in Sources */,
 				F440B3A122C61C5800B8AFD6 /* UIView+Extensions.swift in Sources */,
 				F43F454222C9F46500C53898 /* CustomView.swift in Sources */,

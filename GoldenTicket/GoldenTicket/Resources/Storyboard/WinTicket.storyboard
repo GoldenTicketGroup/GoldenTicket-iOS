@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FFs-GA-M3G">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TicketVC-->
+        <scene sceneID="Woh-fq-fPU">
+            <objects>
+                <viewController storyboardIdentifier="TicketVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FFs-GA-M3G" customClass="TicketVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tj7-N8-OXS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RH1-cA-A5K">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="당첨티켓" id="lcs-rO-pmI">
+                                        <barButtonItem key="leftBarButtonItem" image="btBack" id="zpH-Af-Zzu">
+                                            <color key="tintColor" red="0.93514388800000003" green="0.81616985799999997" blue="0.37243670229999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="backButton:" destination="FFs-GA-M3G" id="Iw4-wQ-eba"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterTicketBenhur" translatesAutoresizingMaskIntoConstraints="NO" id="Nhs-Vx-qgg">
+                                <rect key="frame" x="-7" y="64" width="389" height="507"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Nhs-Vx-qgg" secondAttribute="height" multiplier="139:181" id="BGq-Eg-jk1"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTicketBottom" translatesAutoresizingMaskIntoConstraints="NO" id="EWf-ZU-iCI">
+                                <rect key="frame" x="173.5" y="577" width="28" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EWf-ZU-iCI" secondAttribute="height" multiplier="278:161" id="mBh-7s-9wN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6l-aj-MsK" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
+                                <rect key="frame" x="49" y="609" width="278" height="36"/>
+                                <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="FsM-Vb-NM9"/>
+                                    <constraint firstAttribute="width" secondItem="Z6l-aj-MsK" secondAttribute="height" multiplier="139:18" id="GOW-qj-Und"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <state key="normal" title="확인">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkButton:" destination="FFs-GA-M3G" eventType="touchUpInside" id="Drl-KT-490"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="날짜라벨" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wu2-DH-yLk">
+                                <rect key="frame" x="80" y="460" width="79" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="공연제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCZ-IH-HDV">
+                                <rect key="frame" x="80" y="475" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="공연장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcF-AK-Vs5">
+                                <rect key="frame" x="95" y="544" width="80" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="객석라벨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjK-BL-US1">
+                                <rect key="frame" x="212" y="459" width="83" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="좌석가격라벨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgt-RM-cR5">
+                                <rect key="frame" x="80" y="508" width="88" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="공연시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHz-P9-py4">
+                                <rect key="frame" x="95" y="562" width="80" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconLocationLightCoral" translatesAutoresizingMaskIntoConstraints="NO" id="coO-mX-xY5">
+                                <rect key="frame" x="80" y="545" width="9" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconTimelightCoral" translatesAutoresizingMaskIntoConstraints="NO" id="ioe-IQ-cOn">
+                                <rect key="frame" x="80" y="562" width="9" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2X-qi-QIb">
+                                <rect key="frame" x="202" y="478" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EWf-ZU-iCI" firstAttribute="centerX" secondItem="jDV-cA-OKX" secondAttribute="centerX" id="BDQ-0G-jLM"/>
+                            <constraint firstItem="Nhs-Vx-qgg" firstAttribute="top" secondItem="RH1-cA-A5K" secondAttribute="bottom" id="BfC-pM-jtM"/>
+                            <constraint firstItem="jDV-cA-OKX" firstAttribute="trailing" secondItem="Z6l-aj-MsK" secondAttribute="trailing" constant="48" id="PFt-43-eM5"/>
+                            <constraint firstItem="jDV-cA-OKX" firstAttribute="trailing" secondItem="RH1-cA-A5K" secondAttribute="trailing" id="XAU-Jd-512"/>
+                            <constraint firstItem="Nhs-Vx-qgg" firstAttribute="centerX" secondItem="jDV-cA-OKX" secondAttribute="centerX" id="ZNP-N1-Ivb"/>
+                            <constraint firstItem="RH1-cA-A5K" firstAttribute="top" secondItem="jDV-cA-OKX" secondAttribute="top" id="aB9-jT-zFg"/>
+                            <constraint firstItem="RH1-cA-A5K" firstAttribute="leading" secondItem="jDV-cA-OKX" secondAttribute="leading" id="anA-FU-7uP"/>
+                            <constraint firstItem="Z6l-aj-MsK" firstAttribute="leading" secondItem="jDV-cA-OKX" secondAttribute="leading" constant="49" id="dVf-zX-eBF"/>
+                            <constraint firstItem="Z6l-aj-MsK" firstAttribute="top" secondItem="EWf-ZU-iCI" secondAttribute="bottom" constant="16" id="fGB-Gh-Uy4"/>
+                            <constraint firstItem="jDV-cA-OKX" firstAttribute="bottom" secondItem="Z6l-aj-MsK" secondAttribute="bottom" constant="22" id="iLZ-bb-4VA"/>
+                            <constraint firstItem="EWf-ZU-iCI" firstAttribute="top" secondItem="Nhs-Vx-qgg" secondAttribute="bottom" constant="6" id="vbs-Pt-UhT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jDV-cA-OKX"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="RH1-cA-A5K" id="Saa-CD-l6q"/>
+                        <outlet property="ticketBottomView" destination="EWf-ZU-iCI" id="CFL-In-Ixl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAp-x6-YE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btBack" width="19" height="26"/>
+        <image name="iconLocationLightCoral" width="9" height="12.5"/>
+        <image name="iconTimelightCoral" width="10" height="10"/>
+        <image name="imgTicketBottom" width="278" height="161"/>
+        <image name="posterTicketBenhur" width="278" height="362"/>
+    </resources>
+</document>

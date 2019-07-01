@@ -27,6 +27,17 @@ class MainVC: UIViewController {
         
         
     }
+    
+    // 티켓 버튼 누를 시 당첨된 티켓 / 당첨 되지 않았다는 뷰를 보여주는 함수.
+    @IBAction func showTicket(_ sender: Any) {
+        
+        let storyboardWin = UIStoryboard.init(name: "WinTicket", bundle: nil)
+        guard let dvc = storyboardWin.instantiateViewController(withIdentifier: "TicketVC") as? TicketVC else{
+            return
+        }
+        present(dvc, animated: false)
+        
+    }
 }
 
 extension MainVC: UICollectionViewDataSource {
@@ -76,6 +87,7 @@ extension MainVC : UICollectionViewDelegate {
 }
 
 
+// 테스트용 더미 데이터 세팅.
 extension MainVC {
     func setShowData() {
         

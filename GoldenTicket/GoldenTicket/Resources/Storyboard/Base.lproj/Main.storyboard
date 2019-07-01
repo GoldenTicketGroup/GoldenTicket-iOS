@@ -86,7 +86,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLocationMain" translatesAutoresizingMaskIntoConstraints="NO" id="Nmf-Wz-LHU">
-                                                                    <rect key="frame" x="25" y="260" width="13" height="16"/>
+                                                                    <rect key="frame" x="25" y="260" width="13" height="13"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="13" id="c7D-1s-DAE"/>
                                                                     </constraints>
@@ -98,7 +98,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconTimeMain" translatesAutoresizingMaskIntoConstraints="NO" id="IhB-Zn-vk7">
-                                                                    <rect key="frame" x="25" y="280" width="13" height="16"/>
+                                                                    <rect key="frame" x="25" y="277" width="13" height="13"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4l-bq-p92">
                                                                     <rect key="frame" x="46" y="277" width="70" height="13"/>
@@ -182,6 +182,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-FN-U4B">
                                                 <rect key="frame" x="323" y="29" width="36" height="33"/>
                                                 <state key="normal" image="btTicktetMain"/>
+                                                <connections>
+                                                    <action selector="showTicket:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="HtV-qi-0l1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -413,6 +416,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqi-UZ-MSO" customClass="CustomView" customModule="GoldenTicket" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="560" width="375" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="K21-F9-pPv"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-ef-Wbu" customClass="CustomView" customModule="GoldenTicket" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="560" width="375" height="200"/>
                                                 <subviews>
@@ -422,10 +432,10 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcn-Tx-PWm">
-                                                        <rect key="frame" x="171" y="7" width="33" height="33"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <rect key="frame" x="177" y="15" width="20" height="15"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="tintColor" red="0.93514388800000003" green="0.81616985799999997" blue="0.37243670229999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <state key="normal" title="Button" image="btUp"/>
+                                                        <state key="normal" image="2648929-200"/>
                                                         <connections>
                                                             <action selector="checkUpButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="2kd-e0-7La"/>
                                                         </connections>
@@ -527,11 +537,14 @@
                             <constraint firstItem="800-zd-WoJ" firstAttribute="height" secondItem="a4a-oJ-NbP" secondAttribute="height" priority="250" id="DU7-G6-Q7H"/>
                             <constraint firstItem="mXR-yO-Gad" firstAttribute="top" secondItem="a4a-oJ-NbP" secondAttribute="top" priority="250" id="EBG-Qg-CrM"/>
                             <constraint firstItem="mXR-yO-Gad" firstAttribute="trailing" secondItem="uIv-Ge-VB4" secondAttribute="trailing" id="FfP-pb-Xre"/>
+                            <constraint firstItem="kqi-UZ-MSO" firstAttribute="bottom" secondItem="uIv-Ge-VB4" secondAttribute="bottom" constant="93" id="HbC-SX-MjI"/>
                             <constraint firstItem="doJ-rU-vfr" firstAttribute="top" secondItem="uIv-Ge-VB4" secondAttribute="top" constant="10" id="Jeb-Jz-yVV"/>
+                            <constraint firstItem="uIv-Ge-VB4" firstAttribute="trailing" secondItem="kqi-UZ-MSO" secondAttribute="trailing" id="Th4-sH-uky"/>
                             <constraint firstItem="nBg-ef-Wbu" firstAttribute="bottom" secondItem="uIv-Ge-VB4" secondAttribute="bottom" constant="93" id="UV2-Qo-9qI"/>
                             <constraint firstItem="mXR-yO-Gad" firstAttribute="bottom" secondItem="uIv-Ge-VB4" secondAttribute="bottom" id="UhG-nP-Hxh"/>
                             <constraint firstItem="nBg-ef-Wbu" firstAttribute="leading" secondItem="uIv-Ge-VB4" secondAttribute="leading" id="auo-pZ-mEh"/>
                             <constraint firstItem="800-zd-WoJ" firstAttribute="width" secondItem="a4a-oJ-NbP" secondAttribute="width" id="cI1-Qz-P7T"/>
+                            <constraint firstItem="kqi-UZ-MSO" firstAttribute="leading" secondItem="uIv-Ge-VB4" secondAttribute="leading" id="e5t-Ns-ZDh"/>
                             <constraint firstItem="doJ-rU-vfr" firstAttribute="leading" secondItem="uIv-Ge-VB4" secondAttribute="leading" constant="12" id="ly4-8V-F0r"/>
                             <constraint firstItem="uIv-Ge-VB4" firstAttribute="trailing" secondItem="nBg-ef-Wbu" secondAttribute="trailing" id="qtE-aW-eiG"/>
                         </constraints>
@@ -542,6 +555,7 @@
                         <outlet property="applyButton" destination="eCh-jf-mul" id="fzz-ES-GN8"/>
                         <outlet property="backgroundImage" destination="gnW-aB-JL2" id="bcP-rY-Xz9"/>
                         <outlet property="checkButton" destination="Zcn-Tx-PWm" id="Gm7-yj-NI3"/>
+                        <outlet property="checkShadowView" destination="kqi-UZ-MSO" id="rVX-O4-VAt"/>
                         <outlet property="checkView" destination="nBg-ef-Wbu" id="Ajx-hA-8I6"/>
                         <outlet property="fillView" destination="eaa-6Y-ir8" id="OmY-uz-r6C"/>
                         <outlet property="posterImage" destination="Pvk-QU-lCP" id="gev-Ku-Afe"/>
@@ -558,6 +572,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2648929-200" width="200" height="200"/>
         <image name="backImgInfo" width="375" height="393"/>
         <image name="btBack" width="19" height="26"/>
         <image name="btContentsFirst" width="209" height="127"/>

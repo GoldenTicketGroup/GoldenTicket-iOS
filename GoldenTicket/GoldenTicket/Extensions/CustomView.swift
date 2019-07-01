@@ -21,7 +21,6 @@ class CustomView: UIView {
         
         roundCorners(corners: [.topLeft, .topRight], radius: 20)
         
-        
     }
     
 }
