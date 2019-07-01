@@ -33,7 +33,6 @@
 		F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A822C640A100B8AFD6 /* CustomButton.swift */; };
 		F440B3AB22C6437400B8AFD6 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3AA22C6437400B8AFD6 /* UIColor+Extensions.swift */; };
 		F440B3AD22C6444000B8AFD6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3AC22C6444000B8AFD6 /* UIViewController+Extensions.swift */; };
-		F4955BDD22C83FCB00530906 /* ShowInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4955BDC22C83FCB00530906 /* ShowInfo.storyboard */; };
 		F4955BFA22C857F000530906 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4955BF922C857F000530906 /* MainVC.swift */; };
 		F4955BFE22C8587300530906 /* MainShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4955BFD22C8587300530906 /* MainShowCell.swift */; };
 		F4955C0222C8635A00530906 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4955C0122C8635A00530906 /* Show.swift */; };
@@ -71,7 +70,6 @@
 		F440B3A822C640A100B8AFD6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F440B3AA22C6437400B8AFD6 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		F440B3AC22C6444000B8AFD6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		F4955BDC22C83FCB00530906 /* ShowInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShowInfo.storyboard; sourceTree = "<group>"; };
 		F4955BF922C857F000530906 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		F4955BFD22C8587300530906 /* MainShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShowCell.swift; sourceTree = "<group>"; };
 		F4955C0122C8635A00530906 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 		08CBCB3B22C255CF009C1199 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				F4955BDC22C83FCB00530906 /* ShowInfo.storyboard */,
 				08CBCB3022C2552F009C1199 /* LaunchScreen.storyboard */,
 				08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */,
 				08CBCB7622C507C8009C1199 /* Login.storyboard */,
@@ -309,7 +306,6 @@
 				0836EDA622C750F7006295D3 /* Win.storyboard in Resources */,
 				0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */,
 				08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */,
-				F4955BDD22C83FCB00530906 /* ShowInfo.storyboard in Resources */,
 				08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */,
 				08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */,
 				F4955C0422C88D1C00530906 /* Search.storyboard in Resources */,
