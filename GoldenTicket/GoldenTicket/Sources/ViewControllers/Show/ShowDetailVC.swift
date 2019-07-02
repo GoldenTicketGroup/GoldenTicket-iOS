@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Hero
+
 
 class ShowDetailVC: UIViewController {
 
@@ -20,7 +22,9 @@ class ShowDetailVC: UIViewController {
     
     @IBOutlet weak var showTitle: UILabel!
     
-    @IBOutlet weak var showPriceLabel: UILabel!
+    @IBOutlet weak var showBeforePriceLabel: UILabel!
+    
+    @IBOutlet weak var showAfterPriceLabel: UILabel!
     
     @IBOutlet weak var showTimeLabel: UILabel!
     
@@ -32,10 +36,12 @@ class ShowDetailVC: UIViewController {
     var backgroundImg : UIImage?
     var posterImg : UIImage?
     var showName : String?
-    var showPrice : String?
+    var showBeforePrice : String?
+    var showAfterPrice : String?
     var showTime : String?
     var showLocation : String?
     var showDetail : UIImage?
+    
     // 더미 데이터로 넣을 배우 리스트
     var actorList : [Actor] = []
     
@@ -79,7 +85,8 @@ class ShowDetailVC: UIViewController {
         backgroundImage.image = backgroundImg
         posterImage.image = posterImg
         showTitle.text = showName
-        showPriceLabel.text = showPrice
+        showBeforePriceLabel.text = showBeforePrice
+        showAfterPriceLabel.text = showAfterPrice
         showTimeLabel.text = showTime
         showLocationLabel.text = showLocation
         showDetailImage.image = showDetail

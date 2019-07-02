@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Hero
+import SideMenu
 
 class MainVC: UIViewController {
     
@@ -21,6 +23,7 @@ class MainVC: UIViewController {
 
         setShowData()
         setDetailData()
+        setupSideMenu()
         // Do any additional setup after loading the view.
         showCollectionView.dataSource = self
         showCollectionView.delegate = self
@@ -35,9 +38,43 @@ class MainVC: UIViewController {
         guard let dvc = storyboardWin.instantiateViewController(withIdentifier: "TicketVC") as? TicketVC else{
             return
         }
-        present(dvc, animated: false)
+        present(dvc, animated: true)
         
     }
+    
+    // side Menu bar 의 제스쳐를 지정해주는 함수.
+    
+    func setupSideMenu() {
+        
+        // Side Menu 의 애니메이션을 지정합니다.
+        // 옵션은 .menuSlideIn, .viewSlideOut, viewSlideInOut, .menuDissolveIn 이 있습니다.
+        SideMenuManager.default.menuPresentMode = .menuSlideIn
+        
+        // Side Menu 의 이펙트를 지정합니다. 하나하나 바꿔보세요.
+        // 옵션은 .extraLight, .light, .dark, .regular, .prominent, nil 이 있습니다.
+        SideMenuManager.default.menuBlurEffectStyle = nil
+        
+        // Side Menu 가 보일 때 기존 ViewController 의 투명도
+        // 0.0 ~ 1.0
+        SideMenuManager.default.menuAnimationFadeStrength = 0.5
+        // Side Menu 의 투명도
+        // 0.0 ~ 1.0
+        SideMenuManager.default.menuShadowOpacity = 0.3
+        // Side Menu 가 보일 때 기존 ViewController 의 크기
+        // 0.001 ~ 2.0
+        SideMenuManager.default.menuAnimationTransformScaleFactor = 1
+        // Side Menu 의 Width
+        // 0 ~ self.view.frame.width
+        SideMenuManager.default.menuWidth = 311
+        // Side Menu 의 Status Bar 에 대한 침범 여부를 결정합니다.
+        // true - 침범하지 않음, false - 침범함
+        SideMenuManager.default.menuFadeStatusBar = false
+        
+        // menuFadeStatusBar 가 true 일 때
+        // Side Menu 가 보일 때 Status bar 의 배경 이미지를 지정합니다.
+        //SideMenuManager.default.menuAnimationBackgroundColor = UIColor(patternImage: UIImage(named: "cherryBlossom")!)
+    }
+
 }
 
 extension MainVC: UICollectionViewDataSource {
@@ -75,14 +112,15 @@ extension MainVC : UICollectionViewDelegate {
         dvc.backgroundImg = show.backgroundImage
         dvc.posterImg = show.posterImage
         dvc.showName = show.showTitle
-        dvc.showPrice = show.showPrice
+        //dvc.showPrice = show.showPrice
+        dvc.showBeforePrice = show.showBeforePrice
+        dvc.showAfterPrice = show.showAfterPrice
         dvc.showTime = show.showTime
         dvc.showLocation = show.showLocation
         dvc.showDetail = show.showDetailImage
         
         present(dvc, animated: true)
         //navigationController?.pushViewController(dvc, animated: true)
-        
     }
 }
 
@@ -100,8 +138,8 @@ extension MainVC {
     
     func setDetailData() {
         
-        let showD1 = Detail(background: "backImgInfo", poster: "posterBenhurInfo", title: "뮤지컬 벤허", time: "2019.06.15 17:00~19:00", price: "150,000 -> 20,000", location: "블루스퀘어 인터파크홀", detail: "longMusicalInfo")
-        let showD2 = Detail(background: "backImgInfoKillMeNow", poster: "posteKillMeNowInfo", title: "뮤지컬 킬미나우", time: "2019.06.15 17:00~19:00", price: "150,000 -> 20,000", location: "예술의 전당", detail: "longInfoKillMeNow")
+        let showD1 = Detail(background: "backImgInfo", poster: "posterBenhurInfo", title: "뮤지컬 벤허", time: "2019.06.15 17:00~19:00", bprice: "150,000", aprice: "20,000", location: "블루스퀘어 인터파크홀", detail: "longMusicalInfo")
+        let showD2 = Detail(background: "backImgInfoKillMeNow", poster: "posteKillMeNowInfo", title: "뮤지컬 킬미나우", time: "2019.06.15 17:00~19:00", bprice: "150,000", aprice: "10,000", location: "예술의 전당", detail: "longInfoKillMeNow")
         
         showDetailList = [showD1, showD2, showD2, showD1]
     }

@@ -19,17 +19,19 @@ struct Detail {
     var backgroundImage : UIImage?
     var posterImage : UIImage?
     var showTitle: String?
-    var showPrice : String?
+    var showBeforePrice : String?
+    var showAfterPrice : String?
     var showTime : String?
     var showLocation : String?
     var showDetailImage : UIImage?
     
-    init (background : String, poster : String, title: String, time: String, price: String, location: String, detail: String) {
+    init (background : String, poster : String, title: String, time: String, bprice: String, aprice:String, location: String, detail: String) {
         
         self.backgroundImage = UIImage(named: background)
         self.posterImage = UIImage(named: poster)
         self.showTitle = title
-        self.showPrice = price
+        self.showBeforePrice = bprice
+        self.showAfterPrice = aprice
         self.showTime = time
         self.showLocation = location
         self.showDetailImage = UIImage(named: detail)

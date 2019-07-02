@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class TicketVC: UIViewController {
 

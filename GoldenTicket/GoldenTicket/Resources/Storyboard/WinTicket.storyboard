@@ -129,6 +129,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jDV-cA-OKX"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="navigationBar" destination="RH1-cA-A5K" id="Saa-CD-l6q"/>
                         <outlet property="ticketBottomView" destination="EWf-ZU-iCI" id="CFL-In-Ixl"/>
