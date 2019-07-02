@@ -324,7 +324,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="sQi-Lx-nnp" detailTextLabel="oVm-iw-fhH" rowHeight="60" style="IBUITableViewCellStyleValue1" id="LGE-kp-QP3" customClass="UITableViewVibrantCell" customModule="SideMenu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="winListCell" textLabel="sQi-Lx-nnp" detailTextLabel="oVm-iw-fhH" rowHeight="60" style="IBUITableViewCellStyleValue1" id="LGE-kp-QP3" customClass="UITableViewVibrantCell" customModule="SideMenu">
                                         <rect key="frame" x="0.0" y="218" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LGE-kp-QP3" id="Ezu-u4-KdB">
@@ -348,7 +348,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="k0t-wZ-wyG" rowHeight="60" style="IBUITableViewCellStyleDefault" id="xTv-jd-Tlg" customClass="UITableViewVibrantCell" customModule="SideMenu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="interestedShowCell" textLabel="k0t-wZ-wyG" rowHeight="60" style="IBUITableViewCellStyleDefault" id="xTv-jd-Tlg" customClass="UITableViewVibrantCell" customModule="SideMenu">
                                         <rect key="frame" x="0.0" y="278" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xTv-jd-Tlg" id="P5g-nA-6lD">
@@ -374,7 +374,7 @@
                                             <color key="backgroundColor" red="0.94118285179138184" green="0.94116520881652832" blue="0.9411771297454834" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="VjA-07-yx1" rowHeight="60" style="IBUITableViewCellStyleDefault" id="mal-6Y-7xM" customClass="UITableViewVibrantCell" customModule="SideMenu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="noticeCell" textLabel="VjA-07-yx1" rowHeight="60" style="IBUITableViewCellStyleDefault" id="mal-6Y-7xM" customClass="UITableViewVibrantCell" customModule="SideMenu">
                                         <rect key="frame" x="0.0" y="360" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mal-6Y-7xM" id="0hi-ZP-mGt">
@@ -391,7 +391,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="TwX-ih-KoZ" rowHeight="60" style="IBUITableViewCellStyleDefault" id="cea-HD-2UZ" customClass="UITableViewVibrantCell" customModule="SideMenu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="settingCell" textLabel="TwX-ih-KoZ" rowHeight="60" style="IBUITableViewCellStyleDefault" id="cea-HD-2UZ" customClass="UITableViewVibrantCell" customModule="SideMenu">
                                         <rect key="frame" x="0.0" y="420" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cea-HD-2UZ" id="F00-9i-IcR">
@@ -408,7 +408,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="oNL-48-OG2" rowHeight="60" style="IBUITableViewCellStyleDefault" id="o1i-v0-DUK" customClass="UITableViewVibrantCell" customModule="SideMenu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="qnaCell" textLabel="oNL-48-OG2" rowHeight="60" style="IBUITableViewCellStyleDefault" id="o1i-v0-DUK" customClass="UITableViewVibrantCell" customModule="SideMenu">
                                         <rect key="frame" x="0.0" y="480" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o1i-v0-DUK" id="C10-8y-vlN">
@@ -425,7 +425,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="m3w-Rq-g23" detailTextLabel="gTY-rF-KZe" rowHeight="60" style="IBUITableViewCellStyleValue1" id="DLn-vE-MeU" customClass="UITableViewVibrantCell" customModule="SideMenu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="versionCell" textLabel="m3w-Rq-g23" detailTextLabel="gTY-rF-KZe" rowHeight="60" style="IBUITableViewCellStyleValue1" id="DLn-vE-MeU" customClass="UITableViewVibrantCell" customModule="SideMenu">
                                         <rect key="frame" x="0.0" y="540" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DLn-vE-MeU" id="dnT-gQ-FMg">
@@ -458,6 +458,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="wcD-vt-esk"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="st8-AV-MVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -475,7 +478,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="800-zd-WoJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="6354"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="6033"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backImgInfo" translatesAutoresizingMaskIntoConstraints="NO" id="gnW-aB-JL2">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="393"/>
@@ -484,13 +487,13 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterBenhurInfo" translatesAutoresizingMaskIntoConstraints="NO" id="Pvk-QU-lCP">
-                                                <rect key="frame" x="57" y="64" width="262" height="337"/>
+                                                <rect key="frame" x="57" y="64" width="262" height="16"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="showImage"/>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmj-5G-knG">
-                                                <rect key="frame" x="161" y="421" width="53" height="28"/>
+                                                <rect key="frame" x="161" y="100" width="53" height="28"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -499,7 +502,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="longMusicalInfo" translatesAutoresizingMaskIntoConstraints="NO" id="h0w-kS-VZN">
-                                                <rect key="frame" x="0.0" y="717" width="375" height="5637"/>
+                                                <rect key="frame" x="0.0" y="396" width="375" height="5637"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="h0w-kS-VZN" secondAttribute="height" multiplier="94:1413" id="ol7-AV-6hh"/>
                                                 </constraints>
@@ -564,18 +567,21 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-rU-vfr">
-                                                <rect key="frame" x="12" y="30" width="19" height="26"/>
+                                                <rect key="frame" x="12" y="30" width="16" height="22"/>
                                                 <state key="normal" image="btBack"/>
                                                 <connections>
                                                     <action selector="backButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="355-g7-rou"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jJ-wz-Z0A">
-                                                <rect key="frame" x="332" y="29" width="27" height="27"/>
-                                                <state key="normal" image="btLikeInfo"/>
+                                                <rect key="frame" x="343" y="29" width="16" height="22"/>
+                                                <state key="normal" image="iconLikeNoFill"/>
+                                                <connections>
+                                                    <action selector="onClickedLikeButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="VAR-1z-Gdx"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RS-70-l1f">
-                                                <rect key="frame" x="0.0" y="548" width="375" height="169"/>
+                                                <rect key="frame" x="0.0" y="227" width="375" height="169"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HUu-XJ-QB2">
                                                         <rect key="frame" x="0.0" y="35" width="375" height="134"/>
@@ -645,7 +651,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공연정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yl3-F2-vLP">
-                                                <rect key="frame" x="31" y="556" width="59" height="21"/>
+                                                <rect key="frame" x="31" y="235" width="59" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -806,6 +812,7 @@
                         <outlet property="checkShadowView" destination="kqi-UZ-MSO" id="rVX-O4-VAt"/>
                         <outlet property="checkView" destination="nBg-ef-Wbu" id="Ajx-hA-8I6"/>
                         <outlet property="fillView" destination="eaa-6Y-ir8" id="OmY-uz-r6C"/>
+                        <outlet property="likeButton" destination="9jJ-wz-Z0A" id="ZuR-eo-qmI"/>
                         <outlet property="posterImage" destination="Pvk-QU-lCP" id="gev-Ku-Afe"/>
                         <outlet property="showAfterPriceLabel" destination="abw-Wf-CIc" id="eXM-GZ-6Sj"/>
                         <outlet property="showBeforePriceLabel" destination="DPD-q5-Geh" id="Kgy-p0-a1y"/>
@@ -848,11 +855,11 @@
         <image name="btContentsFirst" width="209" height="127"/>
         <image name="btContentsSecond" width="209" height="127"/>
         <image name="btHambergerMain" width="29" height="27"/>
-        <image name="btLikeInfo" width="27" height="27"/>
         <image name="btTicktetMain" width="36" height="33"/>
         <image name="btUp" width="200" height="200"/>
         <image name="btwhiteBackMain" width="330" height="127"/>
         <image name="cancelLine" width="91.5" height="4"/>
+        <image name="iconLikeNoFill" width="25" height="24"/>
         <image name="iconLocationCoral" width="10" height="14"/>
         <image name="iconLocationMain" width="9.5" height="13"/>
         <image name="iconTimeCoral" width="11.5" height="11.5"/>

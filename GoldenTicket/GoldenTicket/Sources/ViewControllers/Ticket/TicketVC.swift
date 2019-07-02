@@ -14,6 +14,7 @@ class TicketVC: UIViewController {
     @IBOutlet weak var ticketBottomView: UIImageView!
     
     @IBOutlet weak var navigationBar: UINavigationBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

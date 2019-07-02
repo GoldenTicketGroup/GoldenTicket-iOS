@@ -53,6 +53,8 @@ class ShowDetailVC: UIViewController {
     
     @IBOutlet weak var applyButton: CustomButton!
     
+    @IBOutlet weak var likeButton: UIButton!
+    
     @IBOutlet weak var checkShadowView: CustomView!
     
     override func viewDidLoad() {
@@ -73,13 +75,6 @@ class ShowDetailVC: UIViewController {
         actorCollectionView.dataSource = self
     }
     
-    // 메인 화면으로 돌아가는 backButton 함수
-    @IBAction func backButton(_ sender: UIButton) {
-        
-        self.dismiss(animated: true, completion: nil)
-        
-    }
-    
     // 나타낼 데이터들 지정해주기
     func setContent() {
         backgroundImage.image = backgroundImg
@@ -92,6 +87,25 @@ class ShowDetailVC: UIViewController {
         showDetailImage.image = showDetail
     }
     
+    // 메인 화면으로 돌아가는 backButton 함수
+    @IBAction func backButton(_ sender: UIButton) {
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    // 좋아요 버튼 누를 시 fill heart.
+    @IBAction func onClickedLikeButton(_ sender: Any) {
+        
+        let liked: Bool = true
+        
+        if(liked) {
+            likeButton.setImage(UIImage(named: "iconLikeFill" ), for: UIControl.State.normal)
+        }
+        
+    }
+
+    // 응모하기 창에서 화살표 버튼 클릭시 drawer 올리기.
     @IBAction func checkUpButton(_ sender: UIButton) {
         if fillView.transform == .identity {
             UIView.animate(withDuration: 1, animations: {
@@ -120,6 +134,7 @@ class ShowDetailVC: UIViewController {
         return CGFloat(degrees * .pi / degrees)
     }
     
+    // 응모하기 버튼 클릭 시 drawer 올리기.
     @IBAction func applyButtonAction(_ sender: UIButton) {
         
         if fillView.transform == .identity {
@@ -148,6 +163,7 @@ class ShowDetailVC: UIViewController {
 
 }
 
+// 배우 정보 collection view datasource
 extension ShowDetailVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -170,7 +186,7 @@ extension ShowDetailVC: UICollectionViewDataSource {
     
     
 }
-
+// 배우 정보 더미데이터로 테스트하기.
 extension ShowDetailVC {
     
     func setData() {
