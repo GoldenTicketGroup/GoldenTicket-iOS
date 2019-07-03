@@ -14,6 +14,11 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var showCollectionView: UICollectionView!
     
+    @IBOutlet weak var monthShowButton: UIButton!
+    
+    @IBOutlet weak var monthMusicalButton: UIButton!
+    
+    @IBOutlet weak var searchButton: UIButton!
     
     var showList : [Show] = []
     var showDetailList : [Detail] = []
@@ -28,6 +33,21 @@ class MainVC: UIViewController {
         showCollectionView.dataSource = self
         showCollectionView.delegate = self
         
+        monthShowButton.layer.shadowOpacity = 1
+        monthShowButton.layer.shadowRadius = 6
+        monthShowButton.layer.shadowColor = UIColor.black16.cgColor
+        monthShowButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        
+        monthMusicalButton.layer.shadowOpacity = 1
+        monthMusicalButton.layer.shadowRadius = 6
+        monthMusicalButton.layer.shadowColor = UIColor.black16.cgColor
+        monthMusicalButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        
+        searchButton.layer.cornerRadius = 20
+        searchButton.layer.shadowOpacity = 1
+        searchButton.layer.shadowRadius = 2
+        searchButton.layer.shadowColor = UIColor.black16.cgColor
+        searchButton.layer.shadowOffset = CGSize(width: 0, height: 0)
         
     }
     
@@ -41,6 +61,16 @@ class MainVC: UIViewController {
         present(dvc, animated: true)
         
     }
+    
+    @IBAction func onClickSearchButton(_ sender: Any) {
+        let storyboardSearch = UIStoryboard.init(name: "Search", bundle: nil)
+        guard let dvc = storyboardSearch.instantiateViewController(withIdentifier: "SearchVC") as? SearchVC else {
+            return
+        }
+        present(dvc, animated: true)
+    }
+    
+    
     
     // side Menu bar 의 제스쳐를 지정해주는 함수.
     

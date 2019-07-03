@@ -17,10 +17,7 @@ class CustomView: UIView {
         
         super.init(coder: aDecoder)
         
-        super.layoutSubviews()
-        
-        roundCorners(corners: [.topLeft, .topRight], radius: 20)
-        
+        dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 6)
     }
     
 }

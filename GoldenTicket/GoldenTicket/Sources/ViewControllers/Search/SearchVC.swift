@@ -7,54 +7,26 @@
 //
 
 import UIKit
+import Hero
 
 class SearchVC: UIViewController {
 
-    @IBOutlet weak var searchView: UIView!
-    
-    var searchController: UISearchController!
-    var originalDataSource : [String] = []
-    
-    var currentDataSource: [String] = []
+    @IBOutlet weak var searchField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchField.attributedPlaceholder = NSAttributedString(string: "    어떤 공연을 찾고 계신가요?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.peach])
+                
+        //텍스트 필드 customize.
 
-        
-        searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        searchView.addSubview(searchController.searchBar)
-        
-        searchController.searchBar.delegate = self
-        
-        searchController.obscuresBackgroundDuringPresentation = false
-        // Do any additional setup after loading the view.
+        searchField.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 2)
+        searchField.makeRounded(cornerRadius: 22)
+        searchField.layer.masksToBounds = false
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-extension SearchVC : UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        
-    }
-}
-
-extension SearchVC : UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

@@ -20,6 +20,9 @@ class SideMenuVC: UITableViewController {
         
         guard SideMenuManager.default.menuBlurEffectStyle == nil else {return}
         
+        // 스크롤 되지 않고 고정되게 하기위해.
+        tableView.isScrollEnabled = false
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

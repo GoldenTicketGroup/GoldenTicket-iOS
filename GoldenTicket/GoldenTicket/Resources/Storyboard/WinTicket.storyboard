@@ -32,18 +32,18 @@
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterTicketBenhur" translatesAutoresizingMaskIntoConstraints="NO" id="Nhs-Vx-qgg">
-                                <rect key="frame" x="-7" y="64" width="389" height="507"/>
+                                <rect key="frame" x="48.5" y="64" width="278" height="362"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Nhs-Vx-qgg" secondAttribute="height" multiplier="139:181" id="BGq-Eg-jk1"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTicketBottom" translatesAutoresizingMaskIntoConstraints="NO" id="EWf-ZU-iCI">
-                                <rect key="frame" x="173.5" y="577" width="28" height="16"/>
+                                <rect key="frame" x="48.5" y="432" width="278" height="161"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EWf-ZU-iCI" secondAttribute="height" multiplier="278:161" id="mBh-7s-9wN"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6l-aj-MsK" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6l-aj-MsK">
                                 <rect key="frame" x="49" y="609" width="278" height="36"/>
                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -115,8 +115,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Z6l-aj-MsK" firstAttribute="width" secondItem="Nhs-Vx-qgg" secondAttribute="width" id="77z-A6-SOH"/>
                             <constraint firstItem="EWf-ZU-iCI" firstAttribute="centerX" secondItem="jDV-cA-OKX" secondAttribute="centerX" id="BDQ-0G-jLM"/>
                             <constraint firstItem="Nhs-Vx-qgg" firstAttribute="top" secondItem="RH1-cA-A5K" secondAttribute="bottom" id="BfC-pM-jtM"/>
+                            <constraint firstItem="EWf-ZU-iCI" firstAttribute="width" secondItem="Nhs-Vx-qgg" secondAttribute="width" id="Cfm-5P-pC6"/>
                             <constraint firstItem="jDV-cA-OKX" firstAttribute="trailing" secondItem="Z6l-aj-MsK" secondAttribute="trailing" constant="48" id="PFt-43-eM5"/>
                             <constraint firstItem="jDV-cA-OKX" firstAttribute="trailing" secondItem="RH1-cA-A5K" secondAttribute="trailing" id="XAU-Jd-512"/>
                             <constraint firstItem="Nhs-Vx-qgg" firstAttribute="centerX" secondItem="jDV-cA-OKX" secondAttribute="centerX" id="ZNP-N1-Ivb"/>
@@ -134,6 +136,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="navigationBar" destination="RH1-cA-A5K" id="Saa-CD-l6q"/>
+                        <outlet property="okButton" destination="Z6l-aj-MsK" id="J79-pp-NP7"/>
                         <outlet property="ticketBottomView" destination="EWf-ZU-iCI" id="CFL-In-Ixl"/>
                     </connections>
                 </viewController>

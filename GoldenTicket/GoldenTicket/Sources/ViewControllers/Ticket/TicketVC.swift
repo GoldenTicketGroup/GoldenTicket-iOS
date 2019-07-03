@@ -15,6 +15,8 @@ class TicketVC: UIViewController {
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     
+    @IBOutlet weak var okButton: CustomButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +26,8 @@ class TicketVC: UIViewController {
         navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = false
+        
+        okButton.layer.cornerRadius = 18
         
     }
     

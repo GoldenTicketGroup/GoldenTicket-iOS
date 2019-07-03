@@ -13,7 +13,8 @@
         <!--Show DetailVC-->
         <scene sceneID="OAA-Rr-BVg">
             <objects>
-                <viewController storyboardIdentifier="ShowDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KhL-qb-0ie" customClass="ShowDetailVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K5m-ZH-ve7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="KhL-qb-0ie" customClass="ShowDetailVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="npS-0f-NeO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +94,6 @@
                         <outlet property="showTitle" destination="gj4-eL-FzT" id="ijz-r4-E9F"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K5m-ZH-ve7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="99.400299850074973"/>
         </scene>

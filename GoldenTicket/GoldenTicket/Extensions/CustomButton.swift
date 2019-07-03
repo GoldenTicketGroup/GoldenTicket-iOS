@@ -12,7 +12,8 @@ class CustomButton: UIButton {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        layer.cornerRadius = 18
+        layer.cornerRadius = 22
+        
     }
     
 }

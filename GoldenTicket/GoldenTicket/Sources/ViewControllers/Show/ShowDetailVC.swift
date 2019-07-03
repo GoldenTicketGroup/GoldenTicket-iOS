@@ -55,7 +55,12 @@ class ShowDetailVC: UIViewController {
     
     @IBOutlet weak var likeButton: UIButton!
     
-    @IBOutlet weak var checkShadowView: CustomView!
+    @IBOutlet weak var btnDrop: UIButton!
+    
+    @IBOutlet weak var tblView: UITableView!
+    
+    // drop list 테스트용 데이터
+    var timeList = ["오후 4 : 00", "오후 5 : 00", "오후 6 : 00"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,15 +69,55 @@ class ShowDetailVC: UIViewController {
         setContent()
         setData()
         
+        //drop button
+        btnDrop.layer.cornerRadius = 20
+        btnDrop.layer.borderWidth = 1
+        btnDrop.layer.borderColor = UIColor.maize.cgColor
+        btnDrop.layer.masksToBounds = true
         
         // 응모하기 뷰 그림자주기
-
+        
+        checkView.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 6)
+        checkView.makeRounded(cornerRadius: 20)
+        checkView.layer.masksToBounds = false
+        
+        //drop table view 숨기기
+        tblView.isHidden = true
+        
         
         // fillViewButton corner radius 설정해주기
         fillView.layer.cornerRadius = 22
         
         // dataSource 지정해주기
         actorCollectionView.dataSource = self
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if let index = tblView.indexPathForSelectedRow {
+            tblView.deselectRow(at: index, animated: true)
+        }
+    }
+    
+    @IBAction func onClickDropButton(_ sender: Any) {
+        if tblView.isHidden {
+            animate(toggle: true)
+        } else {
+            animate(toggle: false)
+        }
+    }
+    
+    func animate(toggle: Bool) {
+        if toggle{
+            UIView.animate(withDuration: 0.3) {
+                self.tblView.isHidden = false
+            }
+        } else {
+            UIView.animate(withDuration: 0.3) {
+                self.tblView.isHidden = true
+            }
+        }
     }
     
     // 나타낼 데이터들 지정해주기
@@ -100,7 +145,7 @@ class ShowDetailVC: UIViewController {
         let liked: Bool = true
         
         if(liked) {
-            likeButton.setImage(UIImage(named: "iconLikeFill" ), for: UIControl.State.normal)
+            likeButton.setImage(UIImage(named: "btLikeInfo" ), for: UIControl.State.normal)
         }
         
     }
@@ -109,7 +154,7 @@ class ShowDetailVC: UIViewController {
     @IBAction func checkUpButton(_ sender: UIButton) {
         if fillView.transform == .identity {
             UIView.animate(withDuration: 1, animations: {
-                self.fillView.transform = CGAffineTransform(scaleX: 22, y: 22)
+                self.fillView.transform = CGAffineTransform(scaleX: 0, y: 0)
                 self.checkView.transform = CGAffineTransform(translationX: 0, y: -93)
                 self.checkButton.transform = CGAffineTransform(rotationAngle: self.radians(180))
                 self.applyButton.transform = CGAffineTransform(translationX: 0, y: 600)
@@ -139,7 +184,7 @@ class ShowDetailVC: UIViewController {
         
         if fillView.transform == .identity {
             UIView.animate(withDuration: 1, animations: {
-                self.fillView.transform = CGAffineTransform(scaleX: 22, y: 22)
+                self.fillView.transform = CGAffineTransform(scaleX: 0, y: 0)
                 self.checkView.transform = CGAffineTransform(translationX: 0, y: -93)
                 self.checkButton.transform = CGAffineTransform(rotationAngle: self.radians(180))
                 self.applyButton.transform = CGAffineTransform(translationX: 0, y: 600)
@@ -198,4 +243,22 @@ extension ShowDetailVC {
         actorList = [actor1, actor2, actor3, actor4]
     }
 
+}
+
+extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return timeList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = timeList[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        btnDrop.setTitle("\(timeList[indexPath.row])", for: .normal)
+        animate(toggle: false)
+    }
+    
 }

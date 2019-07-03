@@ -13,145 +13,183 @@
         <!--SearchVC-->
         <scene sceneID="Q3K-Tb-VCT">
             <objects>
-                <viewController id="C5K-Px-xHI" customClass="SearchVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchVC" id="C5K-Px-xHI" customClass="SearchVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gAg-qN-bqo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAX-z3-dy7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMh-rm-cvw">
-                                        <rect key="frame" x="12" y="30" width="19" height="26"/>
-                                        <state key="normal" title="Button" image="btBack"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.97255545850000003" green="0.97253733870000003" blue="0.97254973649999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="SMh-rm-cvw" secondAttribute="bottom" constant="8" id="aCM-c8-2Mu"/>
-                                    <constraint firstItem="SMh-rm-cvw" firstAttribute="leading" secondItem="JAX-z3-dy7" secondAttribute="leading" constant="12" id="ewB-Ex-GKd"/>
-                                    <constraint firstItem="SMh-rm-cvw" firstAttribute="top" secondItem="JAX-z3-dy7" secondAttribute="top" constant="30" id="ryo-or-gV9"/>
-                                </constraints>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="jwI-8Z-8XF">
-                                <rect key="frame" x="62" y="132" width="262" height="30"/>
+                                <rect key="frame" x="62" y="154" width="262" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyr-Nw-dKs" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
                                         <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="추리">
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="판타지">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7Y-0S-9Eg" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
                                         <rect key="frame" x="92" y="0.0" width="78" height="30"/>
                                         <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="블루스퀘어">
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="로맨스">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEH-EI-uBn" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
                                         <rect key="frame" x="184" y="0.0" width="78" height="30"/>
                                         <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="세종문화회관">
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="창장뮤지컬">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="i2J-h8-u5y">
-                                <rect key="frame" x="14" y="187" width="348" height="30"/>
+                                <rect key="frame" x="14" y="209" width="348" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcn-Ip-aP0" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
                                         <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="판타지">
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="코미디">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpW-5B-9fv" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
                                         <rect key="frame" x="90" y="0.0" width="78" height="30"/>
                                         <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="스릴러">
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="대학로">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihk-ov-BHO" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
                                         <rect key="frame" x="180" y="0.0" width="78" height="30"/>
                                         <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="예술의전당">
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="라이선스">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMq-N5-Vhz" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
                                         <rect key="frame" x="270" y="0.0" width="78" height="30"/>
                                         <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="충무아트센터">
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="블루스퀘어">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="CkB-as-Eh6">
-                                <rect key="frame" x="74" y="245" width="237" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="smN-UI-WEv">
+                                <rect key="frame" x="25" y="264" width="324" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5z-Wc-7w0" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
                                         <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="로맨스">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="R5z-Wc-7w0" secondAttribute="height" multiplier="10:3" id="Fyn-yT-aoc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="관객참여형">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVI-s3-sEk" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
-                                        <rect key="frame" x="86" y="0.0" width="65" height="30"/>
+                                        <rect key="frame" x="112" y="0.0" width="100" height="30"/>
                                         <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="뮤지컬">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fVI-s3-sEk" secondAttribute="height" multiplier="10:3" id="khq-ch-nKP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="내한공연">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iP5-P8-9Uj" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
-                                        <rect key="frame" x="172" y="0.0" width="65" height="30"/>
+                                        <rect key="frame" x="224" y="0.0" width="100" height="30"/>
                                         <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="대학로연극">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="iP5-P8-9Uj" secondAttribute="height" multiplier="10:3" id="u1p-2B-t5S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="세종문화회관">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천 검색어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGO-WL-ET5">
-                                <rect key="frame" x="149" y="89" width="78" height="20.5"/>
+                                <rect key="frame" x="149" y="111" width="78" height="20.5"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="어떤 공연을 차고 계신가요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFd-Ui-35g">
+                                <rect key="frame" x="44" y="30" width="289" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="b4v-wM-9kW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUn-6a-5g9">
+                                <rect key="frame" x="12" y="39" width="19" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btBack"/>
+                                <connections>
+                                    <action selector="backButton:" destination="C5K-Px-xHI" eventType="touchUpInside" id="ypT-I3-gbV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WT-Vd-Btk">
+                                <rect key="frame" x="300" y="44" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="iconSearchMain"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfR-fc-tge">
+                                <rect key="frame" x="331" y="30" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <state key="normal" title="취소">
+                                    <color key="titleColor" red="0.62353354689999996" green="0.61954402919999996" blue="0.62353032829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gGC-h5-bEy">
+                                <rect key="frame" x="0.0" y="81" width="375" height="7"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97255545850000003" green="0.97253733870000003" blue="0.97254973649999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="i2J-h8-u5y" firstAttribute="top" secondItem="jwI-8Z-8XF" secondAttribute="bottom" constant="25" id="34d-jl-qMG"/>
-                            <constraint firstItem="JAX-z3-dy7" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" id="APY-Nm-xPf"/>
+                            <constraint firstItem="Khk-2u-R0T" firstAttribute="bottom" secondItem="smN-UI-WEv" secondAttribute="bottom" constant="373" id="CmR-IX-I1D"/>
+                            <constraint firstItem="smN-UI-WEv" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="25" id="FS9-d6-cZ5"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="i2J-h8-u5y" secondAttribute="trailing" constant="13" id="JIR-wi-qBa"/>
-                            <constraint firstItem="Khk-2u-R0T" firstAttribute="bottom" secondItem="CkB-as-Eh6" secondAttribute="bottom" constant="392" id="Rzb-hI-32g"/>
+                            <constraint firstItem="gFd-Ui-35g" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="44" id="Jal-CV-x6m"/>
+                            <constraint firstItem="gFd-Ui-35g" firstAttribute="top" secondItem="Khk-2u-R0T" secondAttribute="top" constant="10" id="QN3-d6-pES"/>
                             <constraint firstItem="jwI-8Z-8XF" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="62" id="T6V-Es-ogV"/>
                             <constraint firstItem="FGO-WL-ET5" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="149" id="TIv-Z3-6eg"/>
-                            <constraint firstItem="CkB-as-Eh6" firstAttribute="top" secondItem="i2J-h8-u5y" secondAttribute="bottom" constant="28" id="U8L-cg-PzZ"/>
-                            <constraint firstItem="Khk-2u-R0T" firstAttribute="top" secondItem="JAX-z3-dy7" secondAttribute="top" constant="20" id="VZI-YZ-f2c"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="jwI-8Z-8XF" secondAttribute="trailing" constant="51" id="bbb-6q-Pdx"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="FGO-WL-ET5" secondAttribute="trailing" constant="148" id="dMw-LN-t6r"/>
                             <constraint firstItem="i2J-h8-u5y" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="14" id="eqS-m4-eYN"/>
+                            <constraint firstItem="smN-UI-WEv" firstAttribute="top" secondItem="i2J-h8-u5y" secondAttribute="bottom" constant="25" id="gA5-Pq-lft"/>
                             <constraint firstItem="jwI-8Z-8XF" firstAttribute="top" secondItem="FGO-WL-ET5" secondAttribute="bottom" constant="22.5" id="nvQ-Vy-Ub3"/>
-                            <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="JAX-z3-dy7" secondAttribute="trailing" id="r9z-q0-8uL"/>
-                            <constraint firstItem="CkB-as-Eh6" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="74" id="yM7-HL-DnI"/>
-                            <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="CkB-as-Eh6" secondAttribute="trailing" constant="64" id="yQx-qV-dig"/>
+                            <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="gFd-Ui-35g" secondAttribute="trailing" constant="42" id="qkh-AY-dr3"/>
+                            <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="smN-UI-WEv" secondAttribute="trailing" constant="26" id="yec-VP-rKd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Khk-2u-R0T"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="searchView" destination="JAX-z3-dy7" id="Qr9-FN-5AP"/>
+                        <outlet property="searchField" destination="gFd-Ui-35g" id="7NW-T5-GG8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Q1-EI-mE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,5 +199,6 @@
     </scenes>
     <resources>
         <image name="btBack" width="19" height="26"/>
+        <image name="iconSearchMain" width="17.5" height="16.5"/>
     </resources>
 </document>
