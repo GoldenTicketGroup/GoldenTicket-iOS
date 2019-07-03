@@ -11,6 +11,8 @@ import Hero
 
 class TicketVC: UIViewController {
 
+    @IBOutlet var ticketView: UIImageView!
+    
     @IBOutlet weak var ticketBottomView: UIImageView!
     
     @IBOutlet weak var navigationBar: UINavigationBar!
@@ -20,6 +22,13 @@ class TicketVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+         // ticketView Image 에 그림자 설정해주기
+        ticketView.layer.masksToBounds = false
+        ticketView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        ticketView.layer.shadowRadius = 6
+        ticketView.layer.shadowOpacity = 0.35
+        
+        
         // bottomticketImage 에 그림자 설정해주기 - extension 파일사용
         ticketBottomView.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 6)
         

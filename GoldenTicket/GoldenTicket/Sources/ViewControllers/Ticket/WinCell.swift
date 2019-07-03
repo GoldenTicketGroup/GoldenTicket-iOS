@@ -12,6 +12,9 @@ class WinCell: UICollectionViewCell {
     
     @IBOutlet var winImage: UIImageView!
     
+    // 그림자 효과를 위해 image 아웃렛 연결
+    @IBOutlet var ticketInfo: UIImageView!
+    
     @IBOutlet var winDay: UILabel!
     
     @IBOutlet var winTitle: UILabel!
@@ -21,4 +24,5 @@ class WinCell: UICollectionViewCell {
     @IBOutlet var winLocation: UILabel!
     
     @IBOutlet var winTime: UILabel!
+    
 }

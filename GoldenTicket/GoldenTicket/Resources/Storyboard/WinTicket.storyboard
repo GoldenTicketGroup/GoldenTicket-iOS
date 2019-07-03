@@ -138,6 +138,7 @@
                         <outlet property="navigationBar" destination="RH1-cA-A5K" id="Saa-CD-l6q"/>
                         <outlet property="okButton" destination="Z6l-aj-MsK" id="J79-pp-NP7"/>
                         <outlet property="ticketBottomView" destination="EWf-ZU-iCI" id="CFL-In-Ixl"/>
+                        <outlet property="ticketView" destination="Nhs-Vx-qgg" id="QGD-km-6IG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAp-x6-YE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
