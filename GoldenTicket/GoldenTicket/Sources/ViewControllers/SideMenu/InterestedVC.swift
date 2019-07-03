@@ -150,7 +150,6 @@ extension InterestedVC
         let like7 = Like(title: "뮤지컬 벤허", likeName: "posterMainBenhur")
         let like8 = Like(title: "뮤지컬 벤허", likeName: "posterMainBenhur")
         likeList = [like1, like2, like3, like4, like5, like6, like7, like8]
-
     }
 }
 

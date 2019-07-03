@@ -10,4 +10,15 @@ import UIKit
 
 class WinCell: UICollectionViewCell {
     
+    @IBOutlet var winImage: UIImageView!
+    
+    @IBOutlet var winDay: UILabel!
+    
+    @IBOutlet var winTitle: UILabel!
+    
+    @IBOutlet var winPrice: UILabel!
+    
+    @IBOutlet var winLocation: UILabel!
+    
+    @IBOutlet var winTime: UILabel!
 }
