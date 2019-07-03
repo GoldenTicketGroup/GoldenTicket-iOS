@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Notice Table View Controller-->
+        <!--공지사항-->
         <scene sceneID="cnI-rS-YBx">
             <objects>
                 <tableViewController id="pmU-7L-c2J" customClass="NoticeTableViewController" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,10 +80,36 @@
                             <outlet property="delegate" destination="pmU-7L-c2J" id="VJg-oT-Pij"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="공지사항" id="Gyb-v9-Xvn">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="btBack" id="P8i-oR-0cd">
+                            <color key="tintColor" red="0.96078431369999995" green="0.81176470590000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0q-Rg-Eaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="178"/>
+            <point key="canvasLocation" x="916" y="177.66116941529236"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="25R-0h-luU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dly-Pc-HC8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I6t-od-jPL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pmU-7L-c2J" kind="relationship" relationship="rootViewController" id="7vg-I3-mtv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ch-Ty-JLh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="177.66116941529236"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btBack" width="19" height="26"/>
+    </resources>
 </document>
