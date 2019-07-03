@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080BF81D22CC57F400A06BBF /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080BF81C22CC57F400A06BBF /* Setting.storyboard */; };
+		080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */; };
+		080BF82122CC840400A06BBF /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82022CC840400A06BBF /* Like.swift */; };
+		080BF82422CC8D5000A06BBF /* Win.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82322CC8D5000A06BBF /* Win.swift */; };
+		080BF82622CC8EC400A06BBF /* WinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82522CC8EC400A06BBF /* WinCell.swift */; };
 		0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836ED5822C5A72D006295D3 /* Notice.storyboard */; };
 		0836EDA622C750F7006295D3 /* Win.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDA522C750F7006295D3 /* Win.storyboard */; };
 		0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAB22C75A24006295D3 /* Lottory.storyboard */; };
@@ -53,6 +58,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		080BF81C22CC57F400A06BBF /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCollectionViewCell.swift; sourceTree = "<group>"; };
+		080BF82022CC840400A06BBF /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		080BF82322CC8D5000A06BBF /* Win.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Win.swift; path = GoldenTicket/Model/Win.swift; sourceTree = SOURCE_ROOT; };
+		080BF82522CC8EC400A06BBF /* WinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinCell.swift; sourceTree = "<group>"; };
 		0836ED5822C5A72D006295D3 /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
 		0836EDA522C750F7006295D3 /* Win.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Win.storyboard; sourceTree = "<group>"; };
 		0836EDAB22C75A24006295D3 /* Lottory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottory.storyboard; sourceTree = "<group>"; };
@@ -114,6 +124,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		080BF82222CC8D1100A06BBF /* Like */ = {
+			isa = PBXGroup;
+			children = (
+				080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */,
+			);
+			path = Like;
+			sourceTree = "<group>";
+		};
 		08CBCB1822C2552D009C1199 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +194,7 @@
 				F40313F022CB1B0800BB2737 /* WinList.storyboard */,
 				F40313F922CB2FB700BB2737 /* Interested.storyboard */,
 				F40313FB22CB333B00BB2737 /* Question.storyboard */,
+				080BF81C22CC57F400A06BBF /* Setting.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -192,6 +211,8 @@
 			children = (
 				F4955C0122C8635A00530906 /* Show.swift */,
 				F43F453722C9A83200C53898 /* ShowDetail.swift */,
+				080BF82022CC840400A06BBF /* Like.swift */,
+				080BF82322CC8D5000A06BBF /* Win.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				F43F454622CA639C00C53898 /* TicketVC.swift */,
+				080BF82522CC8EC400A06BBF /* WinCell.swift */,
 			);
 			path = Ticket;
 			sourceTree = "<group>";
@@ -264,6 +286,7 @@
 		F440B39922C61AAD00B8AFD6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				080BF82222CC8D1100A06BBF /* Like */,
 				F40313F222CB1C9E00BB2737 /* SideMenu */,
 				F43F454522CA636E00C53898 /* Ticket */,
 				F43F453422C9A7F300C53898 /* Show */,
@@ -376,6 +399,7 @@
 				08CBCB2F22C2552F009C1199 /* Assets.xcassets in Resources */,
 				F40313FA22CB2FB700BB2737 /* Interested.storyboard in Resources */,
 				0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */,
+				080BF81D22CC57F400A06BBF /* Setting.storyboard in Resources */,
 				0836EDA622C750F7006295D3 /* Win.storyboard in Resources */,
 				0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */,
 				08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */,
@@ -422,18 +446,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
-				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -457,20 +474,24 @@
 				F43F454222C9F46500C53898 /* CustomView.swift in Sources */,
 				08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */,
 				F440B3AD22C6444000B8AFD6 /* UIViewController+Extensions.swift in Sources */,
+				080BF82622CC8EC400A06BBF /* WinCell.swift in Sources */,
 				F4955C0722C8936900530906 /* SearchVC.swift in Sources */,
 				F40313EF22CAF61A00BB2737 /* SideMenuVC.swift in Sources */,
 				F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */,
 				F40313FE22CB344900BB2737 /* QuestionVC.swift in Sources */,
 				F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */,
+				080BF82122CC840400A06BBF /* Like.swift in Sources */,
 				F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,
 				08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */,
 				F4955C0922C89C0F00530906 /* CustomSearchButton.swift in Sources */,
 				F43F453822C9A83200C53898 /* ShowDetail.swift in Sources */,
 				F43F453622C9A81000C53898 /* ShowDetailVC.swift in Sources */,
+				080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */,
 				F440B39F22C61BF200B8AFD6 /* NoticeTableViewController.swift in Sources */,
 				F40313F822CB2E8C00BB2737 /* InterestedVC.swift in Sources */,
 				F440B3AB22C6437400B8AFD6 /* UIColor+Extensions.swift in Sources */,
+				080BF82422CC8D5000A06BBF /* Win.swift in Sources */,
 				F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
