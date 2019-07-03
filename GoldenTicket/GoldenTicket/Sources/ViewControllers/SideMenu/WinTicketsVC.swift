@@ -24,7 +24,6 @@ class WinTicketsVC: UIViewController {
         navigationBar.isTranslucent = false
         
         // collectionView에 들어갈 당첨된 공연의 리스트
-        setWindata()
         
         // delegate 와 dataSource 의 위임자를 self 로 지정합니다.
         winCollection.dataSource = self
@@ -82,7 +81,7 @@ extension WinTicketsVC: UICollectionViewDataSource
     }
 }
 
-extension InterestedVC
+extension WinTicketsVC
 {
     func setWindata()
     {

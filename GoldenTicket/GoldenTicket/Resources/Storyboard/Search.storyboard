@@ -128,16 +128,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="어떤 공연을 차고 계신가요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFd-Ui-35g">
-                                <rect key="frame" x="44" y="30" width="289" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="b4v-wM-9kW"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUn-6a-5g9">
                                 <rect key="frame" x="12" y="39" width="19" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -164,23 +154,43 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97255545850000003" green="0.97253733870000003" blue="0.97254973649999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZR8-MV-Jj6">
+                                <rect key="frame" x="44" y="30" width="280" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Kiz-fg-QGQ"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="어떤 공연을 찾고 계신가요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFd-Ui-35g">
+                                <rect key="frame" x="58" y="30" width="209" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="b4v-wM-9kW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="i2J-h8-u5y" firstAttribute="top" secondItem="jwI-8Z-8XF" secondAttribute="bottom" constant="25" id="34d-jl-qMG"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="bottom" secondItem="smN-UI-WEv" secondAttribute="bottom" constant="373" id="CmR-IX-I1D"/>
                             <constraint firstItem="smN-UI-WEv" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="25" id="FS9-d6-cZ5"/>
+                            <constraint firstItem="ZR8-MV-Jj6" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="44" id="FaA-b5-Ba6"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="i2J-h8-u5y" secondAttribute="trailing" constant="13" id="JIR-wi-qBa"/>
-                            <constraint firstItem="gFd-Ui-35g" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="44" id="Jal-CV-x6m"/>
                             <constraint firstItem="gFd-Ui-35g" firstAttribute="top" secondItem="Khk-2u-R0T" secondAttribute="top" constant="10" id="QN3-d6-pES"/>
                             <constraint firstItem="jwI-8Z-8XF" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="62" id="T6V-Es-ogV"/>
                             <constraint firstItem="FGO-WL-ET5" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="149" id="TIv-Z3-6eg"/>
+                            <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="gFd-Ui-35g" secondAttribute="trailing" constant="108" id="ZFf-9F-sgC"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="jwI-8Z-8XF" secondAttribute="trailing" constant="51" id="bbb-6q-Pdx"/>
+                            <constraint firstItem="ZR8-MV-Jj6" firstAttribute="top" secondItem="Khk-2u-R0T" secondAttribute="top" constant="10" id="bxQ-KT-h2G"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="FGO-WL-ET5" secondAttribute="trailing" constant="148" id="dMw-LN-t6r"/>
                             <constraint firstItem="i2J-h8-u5y" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="14" id="eqS-m4-eYN"/>
                             <constraint firstItem="smN-UI-WEv" firstAttribute="top" secondItem="i2J-h8-u5y" secondAttribute="bottom" constant="25" id="gA5-Pq-lft"/>
+                            <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="ZR8-MV-Jj6" secondAttribute="trailing" constant="51" id="m6E-JM-kDD"/>
+                            <constraint firstItem="gFd-Ui-35g" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="58" id="mQN-tL-hKo"/>
                             <constraint firstItem="jwI-8Z-8XF" firstAttribute="top" secondItem="FGO-WL-ET5" secondAttribute="bottom" constant="22.5" id="nvQ-Vy-Ub3"/>
-                            <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="gFd-Ui-35g" secondAttribute="trailing" constant="42" id="qkh-AY-dr3"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="smN-UI-WEv" secondAttribute="trailing" constant="26" id="yec-VP-rKd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Khk-2u-R0T"/>
@@ -190,11 +200,12 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="searchField" destination="gFd-Ui-35g" id="7NW-T5-GG8"/>
+                        <outlet property="searchView" destination="ZR8-MV-Jj6" id="pyV-o6-qFh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Q1-EI-mE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96.799999999999997" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-44" y="167.76611694152925"/>
         </scene>
     </scenes>
     <resources>
