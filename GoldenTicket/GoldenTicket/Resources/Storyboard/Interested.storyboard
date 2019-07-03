@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b7z-mr-9ot">
-                                <rect key="frame" x="18" y="64" width="341" height="603"/>
+                                <rect key="frame" x="18" y="82" width="341" height="585"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mA7-tJ-n7Z">
                                     <size key="itemSize" width="165" height="214"/>
@@ -39,10 +39,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="165" height="214"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noH-EW-Ddy">
-                                                    <rect key="frame" x="132" y="10" width="25" height="24"/>
+                                                    <rect key="frame" x="132" y="10" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="KqS-DE-T8C"/>
+                                                        <constraint firstAttribute="width" constant="25" id="sHe-Bo-kAb"/>
+                                                    </constraints>
                                                     <state key="normal" image="iconLikeNoFill"/>
                                                     <connections>
-                                                        <action selector="likeBtn" destination="RN3-T2-kqj" eventType="touchUpInside" id="W3g-rM-zo1"/>
+                                                        <action selector="likeBtn:" destination="RN3-T2-kqj" eventType="touchUpInside" id="wmC-Yp-1sx"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -56,7 +60,7 @@
                                             <constraint firstAttribute="bottom" secondItem="yp2-Vc-7D1" secondAttribute="bottom" id="vaP-AG-dLA"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="likeImg" destination="yp2-Vc-7D1" id="OSA-3G-vGu"/>
+                                            <outlet property="ilkeBtn" destination="noH-EW-Ddy" id="AwV-56-rru"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -67,7 +71,7 @@
                             <constraint firstItem="8qk-mT-pCT" firstAttribute="bottom" secondItem="b7z-mr-9ot" secondAttribute="bottom" id="16g-Qp-0vk"/>
                             <constraint firstItem="8qk-mT-pCT" firstAttribute="trailing" secondItem="b7z-mr-9ot" secondAttribute="trailing" constant="16" id="3mx-dW-OrC"/>
                             <constraint firstItem="b7z-mr-9ot" firstAttribute="leading" secondItem="8qk-mT-pCT" secondAttribute="leading" constant="18" id="SJt-xv-fUw"/>
-                            <constraint firstItem="b7z-mr-9ot" firstAttribute="top" secondItem="8qk-mT-pCT" secondAttribute="top" id="WFo-DV-XiL"/>
+                            <constraint firstItem="b7z-mr-9ot" firstAttribute="top" secondItem="8qk-mT-pCT" secondAttribute="top" constant="18" id="WFo-DV-XiL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8qk-mT-pCT"/>
                     </view>
@@ -85,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTv-PC-qhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.79999999999995" y="-1.3493253373313345"/>
+            <point key="canvasLocation" x="836" y="-38.23088455772114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3bC-cT-hrR">

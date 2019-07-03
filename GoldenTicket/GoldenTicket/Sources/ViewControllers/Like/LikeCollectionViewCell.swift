@@ -10,13 +10,13 @@ import UIKit
 
 class LikeCollectionViewCell: UICollectionViewCell {
     // LikeCollection - LikeCollectionViewCell - ContentView - Image
-    @IBOutlet var likeImg: UIImageView!
-    // LikeCollection - LikeCollectionViewCell - ContentView - Title
+    
+    @IBOutlet var ilkeBtn: UIButton!
     
     // 해당 공연 정보의 title 저장하는 변수
     // 현재 이 뷰에서 각각 공연 정보 뷰로 넘어간다면 받아야 함
     // @IBOutlet var likeTitle: UILabel!
-    var clicked : Bool = false
+    // var clicked : Bool = false
     
     // 객체 초기화
     override func awakeFromNib() {
@@ -27,17 +27,15 @@ class LikeCollectionViewCell: UICollectionViewCell {
         
     }
     
-    @IBAction func likeBtn()
+    @IBAction func likeBtn(_ sender: UIButton)
     {
-        clicked = true
-        
-        if clicked == true
-        {
-            likeImg.image = UIImage(named: "iconLikeFill.png")
+        // 선택 되었을 때는 선택 안된 걸로, 선택 안되어있을 때는 선택 된걸로 바꾸기
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            // 관심있는 공연에 추가되어있음
         }
-        else
-        {
-            likeImg.image = UIImage(named: "iconLikeNoFill.png")
+        else {
+            // 관심있는 공연에서 삭제함
         }
     }
 }

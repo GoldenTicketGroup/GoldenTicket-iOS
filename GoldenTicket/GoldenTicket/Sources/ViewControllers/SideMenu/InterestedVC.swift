@@ -134,8 +134,8 @@ extension InterestedVC: UICollectionViewDelegateFlowLayout
     // Collection View Cell 의 width, height 를 지정할 수 있습니다.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        let width: CGFloat = (view.frame.width - 100) / 2
-        let height: CGFloat = width * 234 / 137
+        let width: CGFloat = (view.frame.width - 44) / 2
+        let height: CGFloat = width * 184 / 137
         
         return CGSize(width: width, height: height)
     }
