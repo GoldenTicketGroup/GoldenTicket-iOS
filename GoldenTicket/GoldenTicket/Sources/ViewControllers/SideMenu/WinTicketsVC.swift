@@ -11,6 +11,7 @@ import UIKit
 class WinTicketsVC: UIViewController {
 
     @IBOutlet var winCollection: UICollectionView!
+    @IBOutlet var navigationBar: UINavigationBar!
     
     var winList : [Win] = []
     
@@ -18,9 +19,9 @@ class WinTicketsVC: UIViewController {
         super.viewDidLoad()
 
         // navigationBar clear 하게 setting 하기.
-//        navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        navigationBar.shadowImage = UIImage()
-//        navigationBar.isTranslucent = false
+        navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationBar.shadowImage = UIImage()
+        navigationBar.isTranslucent = false
         
         // collectionView에 들어갈 당첨된 공연의 리스트
         

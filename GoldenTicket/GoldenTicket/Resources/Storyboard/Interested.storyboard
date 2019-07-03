@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Lz-0v-g26">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uXo-5T-g3W">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -66,13 +66,26 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVB-cZ-Ef1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="관심있는 공연" id="7oU-4H-uQx">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="btBack" id="1Ma-lZ-naP">
+                                            <color key="tintColor" red="0.96078431369999995" green="0.81176470590000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8qk-mT-pCT" firstAttribute="bottom" secondItem="b7z-mr-9ot" secondAttribute="bottom" id="16g-Qp-0vk"/>
                             <constraint firstItem="8qk-mT-pCT" firstAttribute="trailing" secondItem="b7z-mr-9ot" secondAttribute="trailing" constant="16" id="3mx-dW-OrC"/>
                             <constraint firstItem="b7z-mr-9ot" firstAttribute="leading" secondItem="8qk-mT-pCT" secondAttribute="leading" constant="18" id="SJt-xv-fUw"/>
-                            <constraint firstItem="b7z-mr-9ot" firstAttribute="top" secondItem="8qk-mT-pCT" secondAttribute="top" constant="18" id="WFo-DV-XiL"/>
+                            <constraint firstItem="b7z-mr-9ot" firstAttribute="top" secondItem="qVB-cZ-Ef1" secondAttribute="bottom" constant="18" id="WFo-DV-XiL"/>
+                            <constraint firstItem="qVB-cZ-Ef1" firstAttribute="top" secondItem="8qk-mT-pCT" secondAttribute="top" id="ukc-wv-zTK"/>
+                            <constraint firstItem="qVB-cZ-Ef1" firstAttribute="leading" secondItem="8qk-mT-pCT" secondAttribute="leading" id="upI-Ht-rPq"/>
+                            <constraint firstItem="8qk-mT-pCT" firstAttribute="trailing" secondItem="qVB-cZ-Ef1" secondAttribute="trailing" id="w03-RC-ZjG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8qk-mT-pCT"/>
                     </view>
@@ -90,25 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTv-PC-qhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="831" y="-1"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="3bC-cT-hrR">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Lz-0v-g26" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GDz-To-HhS">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="uXo-5T-g3W" kind="relationship" relationship="rootViewController" id="w95-nY-IHK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DDO-8c-IEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-10.4" y="-1.3493253373313345"/>
+            <point key="canvasLocation" x="829.60000000000002" y="-1.3493253373313345"/>
         </scene>
     </scenes>
     <resources>
