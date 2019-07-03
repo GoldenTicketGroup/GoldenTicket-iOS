@@ -11,6 +11,9 @@ import UIKit
 class WinTicketsVC: UIViewController {
 
     @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet var winCollection: UICollectionView!
+    
+    var winList: [Win] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +22,13 @@ class WinTicketsVC: UIViewController {
         navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = false
+        
+        // collectionView에 들어갈 당첨된 공연의 리스트
+        // setWindata()
+        
+        // likeCollection 의 delegate 와 dataSource 의 위임자를 self 로 지정합니다.
+        // winCollection.dataSource = self
+        // winCollection.delegate = self
         
     }
     

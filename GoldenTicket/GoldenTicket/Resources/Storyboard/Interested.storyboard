@@ -44,9 +44,10 @@
                                                         <constraint firstAttribute="height" constant="25" id="KqS-DE-T8C"/>
                                                         <constraint firstAttribute="width" constant="25" id="sHe-Bo-kAb"/>
                                                     </constraints>
-                                                    <state key="normal" image="iconLikeNoFill"/>
+                                                    <state key="normal" image="iconLikeFill"/>
+                                                    <state key="selected" image="iconLikeNoFill"/>
                                                     <connections>
-                                                        <action selector="likeBtn:" destination="RN3-T2-kqj" eventType="touchUpInside" id="wmC-Yp-1sx"/>
+                                                        <action selector="likeBtn:" destination="RN3-T2-kqj" eventType="touchUpInside" id="A15-Ho-Dhd"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -60,7 +61,7 @@
                                             <constraint firstAttribute="bottom" secondItem="yp2-Vc-7D1" secondAttribute="bottom" id="vaP-AG-dLA"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="ilkeBtn" destination="noH-EW-Ddy" id="AwV-56-rru"/>
+                                            <outlet property="likeImg" destination="yp2-Vc-7D1" id="Phn-SY-oaL"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -89,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTv-PC-qhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="-38.23088455772114"/>
+            <point key="canvasLocation" x="831" y="-1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3bC-cT-hrR">
@@ -112,6 +113,7 @@
     </scenes>
     <resources>
         <image name="btBack" width="19" height="26"/>
+        <image name="iconLikeFill" width="25" height="24"/>
         <image name="iconLikeNoFill" width="25" height="24"/>
         <image name="posterSmallBenhur" width="165" height="213.5"/>
     </resources>

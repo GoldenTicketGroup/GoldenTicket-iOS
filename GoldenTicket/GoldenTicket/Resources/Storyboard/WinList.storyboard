@@ -32,7 +32,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WinTicketCell" id="OAs-t0-esr">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WinTicketCell" id="OAs-t0-esr" customClass="WinCell" customModule="GoldenTicket" customModuleProvider="target">
                                         <rect key="frame" x="2.5" y="0.0" width="370" height="204"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -149,6 +149,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="navigationBar" destination="mhM-rz-83m" id="pws-9R-RrV"/>
+                        <outlet property="winCollection" destination="Equ-9V-wAB" id="RbR-hw-2rE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntr-di-9jC" userLabel="First Responder" sceneMemberID="firstResponder"/>

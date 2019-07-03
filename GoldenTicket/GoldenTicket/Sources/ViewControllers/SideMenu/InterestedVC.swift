@@ -20,10 +20,6 @@ class InterestedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // navigationBar clear 하게 setting 하기.
-//        navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        navigationBar.shadowImage = UIImage()
-//        navigationBar.isTranslucent = false
         
         // collectionView에 들어갈 cell의 dummy data
         setLikedata()

@@ -10,8 +10,7 @@ import UIKit
 
 class LikeCollectionViewCell: UICollectionViewCell {
     // LikeCollection - LikeCollectionViewCell - ContentView - Image
-    
-    @IBOutlet var ilkeBtn: UIButton!
+    @IBOutlet var likeImg: UIImageView!
     
     // 해당 공연 정보의 title 저장하는 변수
     // 현재 이 뷰에서 각각 공연 정보 뷰로 넘어간다면 받아야 함
