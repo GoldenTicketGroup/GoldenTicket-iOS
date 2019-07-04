@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="CvT-ee-0vu">
+            <objects>
+                <viewController id="Hzc-tl-Yew" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TMq-tR-yIx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1992"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUN-yh-3iR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1992"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUz-aH-Nd7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1992"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="znp-DP-xhk">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="395"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="znp-DP-xhk" secondAttribute="height" multiplier="75:79" id="ouB-G4-YhX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUC-50-5Ve">
+                                                <rect key="frame" x="30.5" y="414" width="314" height="76"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="cUC-50-5Ve" secondAttribute="height" multiplier="157:38" id="A46-I3-TiK"/>
+                                                </constraints>
+                                                <string key="text">7월 연휴 뭐 할지 못 정했다면,
+공연장 나들이 어때요?</string>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="공휴일 많았던 가정의 달, 5월이 끝나간다고 아쉬워하지 마세요. 6월에도 현충일을 끼고 ‘징검다리 연휴’가 있으니까요. 짧은 연휴지만 알차게 보내고 싶다면 공연장 나들이는 어떨까요? 6월에 보기 좋은 6편의 공연을 소개합니다." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBZ-gK-vBI">
+                                                <rect key="frame" x="31" y="510" width="314" height="108"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hv7-Ei-wxB">
+                                                <rect key="frame" x="101" y="641" width="175" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="안나 카레니나" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-N2-nja">
+                                                <rect key="frame" x="101" y="666" width="175" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DrW-5d-gFU">
+                                                <rect key="frame" x="67" y="762" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="cUC-50-5Ve" firstAttribute="centerX" secondItem="PUz-aH-Nd7" secondAttribute="centerX" id="0YB-qB-g8d"/>
+                                            <constraint firstItem="znp-DP-xhk" firstAttribute="centerX" secondItem="PUz-aH-Nd7" secondAttribute="centerX" id="8iw-yV-ZMf"/>
+                                            <constraint firstItem="znp-DP-xhk" firstAttribute="top" secondItem="PUz-aH-Nd7" secondAttribute="top" id="Fls-Rd-BQj"/>
+                                            <constraint firstAttribute="trailing" secondItem="znp-DP-xhk" secondAttribute="trailing" id="FxP-dr-z7U"/>
+                                            <constraint firstItem="cUC-50-5Ve" firstAttribute="top" secondItem="znp-DP-xhk" secondAttribute="bottom" constant="19" id="Njv-Fa-eY1"/>
+                                            <constraint firstItem="znp-DP-xhk" firstAttribute="leading" secondItem="PUz-aH-Nd7" secondAttribute="leading" id="gMG-BA-FPa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PUz-aH-Nd7" firstAttribute="leading" secondItem="nUN-yh-3iR" secondAttribute="leading" id="5v6-2j-DDp"/>
+                                    <constraint firstAttribute="bottom" secondItem="PUz-aH-Nd7" secondAttribute="bottom" id="Lk1-Dv-Fh0"/>
+                                    <constraint firstAttribute="trailing" secondItem="PUz-aH-Nd7" secondAttribute="trailing" id="Yx2-oj-eD4"/>
+                                    <constraint firstItem="PUz-aH-Nd7" firstAttribute="top" secondItem="nUN-yh-3iR" secondAttribute="top" id="wyh-Ib-ikt"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nUN-yh-3iR" firstAttribute="top" secondItem="TMq-tR-yIx" secondAttribute="top" id="5WX-zs-lcr"/>
+                            <constraint firstItem="PUz-aH-Nd7" firstAttribute="width" secondItem="TMq-tR-yIx" secondAttribute="width" id="I85-nv-KJ4"/>
+                            <constraint firstItem="ecr-xT-hUb" firstAttribute="bottom" secondItem="nUN-yh-3iR" secondAttribute="bottom" id="IQj-Fe-aiA"/>
+                            <constraint firstItem="PUz-aH-Nd7" firstAttribute="height" secondItem="TMq-tR-yIx" secondAttribute="height" priority="250" id="MzR-ze-1hD"/>
+                            <constraint firstItem="nUN-yh-3iR" firstAttribute="leading" secondItem="ecr-xT-hUb" secondAttribute="leading" id="wdq-Hn-UMq"/>
+                            <constraint firstItem="ecr-xT-hUb" firstAttribute="trailing" secondItem="nUN-yh-3iR" secondAttribute="trailing" id="xTs-Xo-oqJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ecr-xT-hUb"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1992"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGK-pG-nEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.8" y="0.89955022488755632"/>
+        </scene>
+    </scenes>
+</document>

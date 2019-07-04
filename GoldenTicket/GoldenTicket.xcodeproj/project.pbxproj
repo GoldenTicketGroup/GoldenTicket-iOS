@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7622C507C8009C1199 /* Login.storyboard */; };
 		08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7822C523C9009C1199 /* Lose.storyboard */; };
 		2481DFDD82AF4E446B620950 /* Pods_GoldenTicket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE8133DB7A4161E106BEBDE /* Pods_GoldenTicket.framework */; };
+		F402F30A22CDBCF90047B976 /* Contents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F402F30922CDBCF90047B976 /* Contents.storyboard */; };
 		F40313EF22CAF61A00BB2737 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40313EE22CAF61A00BB2737 /* SideMenuVC.swift */; };
 		F40313F122CB1B0800BB2737 /* WinList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40313F022CB1B0800BB2737 /* WinList.storyboard */; };
 		F40313F422CB1CE700BB2737 /* WinTicketsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40313F322CB1CE700BB2737 /* WinTicketsVC.swift */; };
@@ -81,6 +82,7 @@
 		08CBCB7822C523C9009C1199 /* Lose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lose.storyboard; sourceTree = "<group>"; };
 		5965800A7BE381549539F856 /* Pods-GoldenTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenTicket.release.xcconfig"; path = "Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket.release.xcconfig"; sourceTree = "<group>"; };
 		6DE8133DB7A4161E106BEBDE /* Pods_GoldenTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F402F30922CDBCF90047B976 /* Contents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contents.storyboard; sourceTree = "<group>"; };
 		F40313EE22CAF61A00BB2737 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		F40313F022CB1B0800BB2737 /* WinList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WinList.storyboard; sourceTree = "<group>"; };
 		F40313F322CB1CE700BB2737 /* WinTicketsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinTicketsVC.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				F40313F922CB2FB700BB2737 /* Interested.storyboard */,
 				F40313FB22CB333B00BB2737 /* Question.storyboard */,
 				080BF81C22CC57F400A06BBF /* Setting.storyboard */,
+				F402F30922CDBCF90047B976 /* Contents.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -223,6 +226,13 @@
 				6DE8133DB7A4161E106BEBDE /* Pods_GoldenTicket.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F402F30822CDBCC00047B976 /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contents;
 			sourceTree = "<group>";
 		};
 		F40313F222CB1C9E00BB2737 /* SideMenu */ = {
@@ -286,6 +296,7 @@
 		F440B39922C61AAD00B8AFD6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F402F30822CDBCC00047B976 /* Contents */,
 				080BF82222CC8D1100A06BBF /* Like */,
 				F40313F222CB1C9E00BB2737 /* SideMenu */,
 				F43F454522CA636E00C53898 /* Ticket */,
@@ -412,6 +423,7 @@
 				F43F453322C9A4AE00C53898 /* ShowDetail.storyboard in Resources */,
 				08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */,
 				F43F454922CA79C900C53898 /* NoTicket.storyboard in Resources */,
+				F402F30A22CDBCF90047B976 /* Contents.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,18 +436,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
-				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

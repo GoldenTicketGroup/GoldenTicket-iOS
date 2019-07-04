@@ -1,18 +1,18 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "filename" : "posteKillMeNowInfo.png",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "imgContentsFirstTop.png",
+      "idiom" : "universal"
     },
     {
       "idiom" : "universal",
-      "filename" : "posteKillMeNowInfo@2x.png",
+      "filename" : "imgContentsFirstTop@2x.png",
       "scale" : "2x"
     },
     {
-      "filename" : "posteKillMeNowInfo@3x.png",
       "scale" : "3x",
+      "filename" : "imgContentsFirstTop@3x.png",
       "idiom" : "universal"
     }
   ],
