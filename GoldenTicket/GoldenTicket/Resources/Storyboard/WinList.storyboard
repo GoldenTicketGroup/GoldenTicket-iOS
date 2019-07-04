@@ -13,7 +13,6 @@
         <!--당첨내역-->
         <scene sceneID="Apk-TT-YOK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ntr-di-9jC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="WinList" id="est-oN-Xv4" customClass="WinTicketsVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ix6-98-FXk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -173,6 +172,7 @@
                         <outlet property="winCollection" destination="Equ-9V-wAB" id="RbR-hw-2rE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ntr-di-9jC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="868" y="-63.418290854572717"/>
         </scene>
