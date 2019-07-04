@@ -6,7 +6,6 @@ target 'GoldenTicket' do
   use_frameworks!
 
   # Pods for GoldenTicket
-    pod 'Hero'
-    pod 'SideMenu'
-
+  pod 'Hero'
+  pod 'SideMenu'
 end

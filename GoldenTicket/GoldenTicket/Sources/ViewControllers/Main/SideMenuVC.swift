@@ -44,8 +44,8 @@ class SideMenuVC: UITableViewController {
             guard let dvc1 = storyboardWin.instantiateViewController(withIdentifier: "WinList") as? WinTicketsVC else{
                 return
             }
-            //present(dvc1, animated: true)
-            navigationController?.pushViewController(dvc1, animated: true)
+            present(dvc1, animated: true)
+            //navigationController?.pushViewController(dvc1, animated: true)
         }
         else if indexPath.row == 2 {
             let storyboardInterested = UIStoryboard.init(name: "Interested", bundle: nil)

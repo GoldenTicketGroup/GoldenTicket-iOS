@@ -159,9 +159,9 @@ extension MainVC : UICollectionViewDelegate {
 extension MainVC {
     func setShowData() {
         
-        let show1 = Show(title: "뮤지컬 벤허", time: "17:00 ~ 19:00", location: "혜화 소극장", showName: "posterMainBenhur")
+        let show1 = Show(title: "뮤지컬 벤허", time: "17:00 ~ 19:00", location: "혜화 소극장", showName: "posterMainKill")
         let show2 = Show(title: "뮤지컬 벤허", time: "17:00 ~ 19:00", location: "혜화 소극장", showName: "posterMainBenhur")
-        let show3 = Show(title: "뮤지컬 벤허", time: "17:00 ~ 19:00", location: "혜화 소극장", showName: "posterMainBenhur")
+        let show3 = Show(title: "뮤지컬 위키드", time: "17:00 ~ 19:00", location: "혜화 소극장", showName: "posterMainWicked")
         let show4 = Show(title: "뮤지컬 벤허", time: "17:00 ~ 19:00", location: "혜화 소극장", showName: "posterMainBenhur")
         showList = [show1, show2, show3, show4]
     }
