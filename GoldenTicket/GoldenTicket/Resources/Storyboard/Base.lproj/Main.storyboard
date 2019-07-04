@@ -556,8 +556,8 @@
                                                     <constraint firstAttribute="width" secondItem="gnW-aB-JL2" secondAttribute="height" multiplier="125:131" id="vDi-u3-du2"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterBenhurInfo" translatesAutoresizingMaskIntoConstraints="NO" id="Pvk-QU-lCP">
-                                                <rect key="frame" x="57" y="64" width="262" height="337"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posteKillMeNowInfo" translatesAutoresizingMaskIntoConstraints="NO" id="Pvk-QU-lCP">
+                                                <rect key="frame" x="62" y="64" width="252" height="337"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="showImage"/>
                                                 </userDefinedRuntimeAttributes>
@@ -849,13 +849,13 @@
                                             <constraint firstItem="h0w-kS-VZN" firstAttribute="leading" secondItem="800-zd-WoJ" secondAttribute="leading" id="8Ss-3V-I4D"/>
                                             <constraint firstItem="h0w-kS-VZN" firstAttribute="top" secondItem="8RS-70-l1f" secondAttribute="bottom" id="92V-Hf-qYp"/>
                                             <constraint firstItem="Yl3-F2-vLP" firstAttribute="top" secondItem="Dmj-5G-knG" secondAttribute="bottom" constant="107" id="Ff6-Jr-6NJ"/>
-                                            <constraint firstItem="Pvk-QU-lCP" firstAttribute="leading" secondItem="800-zd-WoJ" secondAttribute="leading" constant="57" id="Mok-lQ-H4s"/>
+                                            <constraint firstItem="Pvk-QU-lCP" firstAttribute="leading" secondItem="800-zd-WoJ" secondAttribute="leading" constant="62" id="LsY-Zh-0I0"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pvk-QU-lCP" secondAttribute="trailing" constant="61" id="QMk-B0-HLT"/>
                                             <constraint firstItem="gnW-aB-JL2" firstAttribute="top" secondItem="800-zd-WoJ" secondAttribute="top" constant="-20" id="bUF-ER-jxi"/>
                                             <constraint firstItem="Dmj-5G-knG" firstAttribute="centerX" secondItem="800-zd-WoJ" secondAttribute="centerX" id="hK5-aW-4fr"/>
                                             <constraint firstAttribute="bottom" secondItem="h0w-kS-VZN" secondAttribute="bottom" id="lUU-zq-A8t"/>
                                             <constraint firstItem="gnW-aB-JL2" firstAttribute="leading" secondItem="800-zd-WoJ" secondAttribute="leading" id="m70-mK-Z9l"/>
                                             <constraint firstItem="Pvk-QU-lCP" firstAttribute="top" secondItem="800-zd-WoJ" secondAttribute="top" constant="64" id="owW-DV-ioE"/>
-                                            <constraint firstAttribute="trailing" secondItem="Pvk-QU-lCP" secondAttribute="trailing" constant="56" id="u1G-Sc-TsN"/>
                                             <constraint firstItem="Yl3-F2-vLP" firstAttribute="leading" secondItem="800-zd-WoJ" secondAttribute="leading" constant="31" id="wAz-ol-ZAs"/>
                                             <constraint firstItem="Dmj-5G-knG" firstAttribute="top" secondItem="Pvk-QU-lCP" secondAttribute="bottom" constant="20" id="zHI-vS-JKB"/>
                                             <constraint firstAttribute="trailing" secondItem="gnW-aB-JL2" secondAttribute="trailing" id="zIA-dV-Lld"/>
@@ -957,6 +957,6 @@
         <image name="iconTimeMain" width="10.5" height="10.5"/>
         <image name="imgProfile" width="69" height="87"/>
         <image name="longMusicalInfo" width="376" height="5653"/>
-        <image name="posterBenhurInfo" width="262" height="337"/>
+        <image name="posteKillMeNowInfo" width="252" height="337"/>
     </resources>
 </document>

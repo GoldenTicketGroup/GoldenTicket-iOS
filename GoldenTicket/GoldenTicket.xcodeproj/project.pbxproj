@@ -28,6 +28,7 @@
 		08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7822C523C9009C1199 /* Lose.storyboard */; };
 		2481DFDD82AF4E446B620950 /* Pods_GoldenTicket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE8133DB7A4161E106BEBDE /* Pods_GoldenTicket.framework */; };
 		F402F30A22CDBCF90047B976 /* Contents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F402F30922CDBCF90047B976 /* Contents.storyboard */; };
+		F402F30C22CDD2A70047B976 /* ContentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402F30B22CDD2A70047B976 /* ContentsVC.swift */; };
 		F40313EF22CAF61A00BB2737 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40313EE22CAF61A00BB2737 /* SideMenuVC.swift */; };
 		F40313F122CB1B0800BB2737 /* WinList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40313F022CB1B0800BB2737 /* WinList.storyboard */; };
 		F40313F422CB1CE700BB2737 /* WinTicketsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40313F322CB1CE700BB2737 /* WinTicketsVC.swift */; };
@@ -83,6 +84,7 @@
 		5965800A7BE381549539F856 /* Pods-GoldenTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenTicket.release.xcconfig"; path = "Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket.release.xcconfig"; sourceTree = "<group>"; };
 		6DE8133DB7A4161E106BEBDE /* Pods_GoldenTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F402F30922CDBCF90047B976 /* Contents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contents.storyboard; sourceTree = "<group>"; };
+		F402F30B22CDD2A70047B976 /* ContentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsVC.swift; sourceTree = "<group>"; };
 		F40313EE22CAF61A00BB2737 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		F40313F022CB1B0800BB2737 /* WinList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WinList.storyboard; sourceTree = "<group>"; };
 		F40313F322CB1CE700BB2737 /* WinTicketsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinTicketsVC.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		F402F30822CDBCC00047B976 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
+				F402F30B22CDD2A70047B976 /* ContentsVC.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */,
 				F40313FE22CB344900BB2737 /* QuestionVC.swift in Sources */,
 				F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */,
+				F402F30C22CDD2A70047B976 /* ContentsVC.swift in Sources */,
 				080BF82122CC840400A06BBF /* Like.swift in Sources */,
 				F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,

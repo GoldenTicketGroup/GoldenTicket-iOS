@@ -168,7 +168,7 @@ extension MainVC {
     
     func setDetailData() {
         
-        let showD1 = Detail(background: "backImgInfo", poster: "posterBenhurInfo", title: "뮤지컬 벤허", time: "2019.06.15 17:00~19:00", bprice: "150,000", aprice: "20,000", location: "블루스퀘어 인터파크홀", detail: "longMusicalInfo")
+        let showD1 = Detail(background: "backImgInfo", poster: "posteKillMeNowInfo", title: "뮤지컬 벤허", time: "2019.06.15 17:00~19:00", bprice: "150,000", aprice: "20,000", location: "블루스퀘어 인터파크홀", detail: "longMusicalInfo")
         let showD2 = Detail(background: "backImgInfoKillMeNow", poster: "posteKillMeNowInfo", title: "뮤지컬 킬미나우", time: "2019.06.15 17:00~19:00", bprice: "150,000", aprice: "10,000", location: "예술의 전당", detail: "longInfoKillMeNow")
         
         showDetailList = [showD1, showD2, showD2, showD1]

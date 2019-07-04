@@ -69,6 +69,9 @@ class ShowDetailVC: UIViewController {
         setContent()
         setData()
         
+        //poster image customize
+        posterImage.makeRounded(cornerRadius: 10)
+        
         //drop button
         btnDrop.layer.cornerRadius = 20
         btnDrop.layer.borderWidth = 1
