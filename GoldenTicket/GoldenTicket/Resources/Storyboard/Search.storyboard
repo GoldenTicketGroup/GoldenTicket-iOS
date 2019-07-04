@@ -179,6 +179,7 @@
                         <constraints>
                             <constraint firstItem="i2J-h8-u5y" firstAttribute="top" secondItem="jwI-8Z-8XF" secondAttribute="bottom" constant="25" id="34d-jl-qMG"/>
                             <constraint firstItem="gGC-h5-bEy" firstAttribute="top" secondItem="ZR8-MV-Jj6" secondAttribute="bottom" constant="6" id="67b-2B-oDa"/>
+                            <constraint firstItem="smN-UI-WEv" firstAttribute="height" secondItem="jwI-8Z-8XF" secondAttribute="height" id="9Bh-71-pwN"/>
                             <constraint firstItem="gGC-h5-bEy" firstAttribute="top" secondItem="1WT-Vd-Btk" secondAttribute="bottom" constant="21" id="Aa9-EQ-uXv"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="bottom" secondItem="smN-UI-WEv" secondAttribute="bottom" constant="373" id="CmR-IX-I1D"/>
                             <constraint firstItem="smN-UI-WEv" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="25" id="FS9-d6-cZ5"/>
@@ -206,6 +207,7 @@
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="ZR8-MV-Jj6" secondAttribute="trailing" constant="51" id="m6E-JM-kDD"/>
                             <constraint firstItem="gFd-Ui-35g" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="58" id="mQN-tL-hKo"/>
                             <constraint firstItem="jwI-8Z-8XF" firstAttribute="top" secondItem="FGO-WL-ET5" secondAttribute="bottom" constant="22.5" id="nvQ-Vy-Ub3"/>
+                            <constraint firstItem="i2J-h8-u5y" firstAttribute="height" secondItem="jwI-8Z-8XF" secondAttribute="height" id="wPg-dQ-ijb"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="smN-UI-WEv" secondAttribute="trailing" constant="26" id="yec-VP-rKd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Khk-2u-R0T"/>
