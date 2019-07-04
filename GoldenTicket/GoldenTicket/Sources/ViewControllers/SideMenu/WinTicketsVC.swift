@@ -28,6 +28,7 @@ class WinTicketsVC: UIViewController {
         // delegate 와 dataSource 의 위임자를 self 로 지정합니다.
         winCollection.dataSource = self
         // winCollection.delegate = self
+        setWindata()
     }
     
     // back button 누르면 다시 메인 화면으로 이동하도록.

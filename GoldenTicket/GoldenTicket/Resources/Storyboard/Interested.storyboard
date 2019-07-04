@@ -72,6 +72,9 @@
                                     <navigationItem title="관심있는 공연" id="7oU-4H-uQx">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="btBack" id="1Ma-lZ-naP">
                                             <color key="tintColor" red="0.96078431369999995" green="0.81176470590000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="backButton:" destination="uXo-5T-g3W" id="omt-EA-hXR"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
