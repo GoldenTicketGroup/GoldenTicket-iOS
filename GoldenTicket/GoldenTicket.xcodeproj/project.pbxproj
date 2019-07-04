@@ -17,6 +17,7 @@
 		0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAB22C75A24006295D3 /* Lottory.storyboard */; };
 		0836EDAE22C7C2B1006295D3 /* Unpaid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAD22C7C2B1006295D3 /* Unpaid.storyboard */; };
 		0836EDB222C7C618006295D3 /* UnpaidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836EDB122C7C618006295D3 /* UnpaidViewController.swift */; };
+		0887886022CDCEDE00FE0E91 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887885F22CDCEDE00FE0E91 /* SignUpVC.swift */; };
 		08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2422C2552D009C1199 /* AppDelegate.swift */; };
 		08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2622C2552D009C1199 /* ViewController.swift */; };
 		08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB2822C2552D009C1199 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		0836EDAB22C75A24006295D3 /* Lottory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottory.storyboard; sourceTree = "<group>"; };
 		0836EDAD22C7C2B1006295D3 /* Unpaid.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Unpaid.storyboard; sourceTree = "<group>"; };
 		0836EDB122C7C618006295D3 /* UnpaidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnpaidViewController.swift; sourceTree = "<group>"; };
+		0887885F22CDCEDE00FE0E91 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		08CBCB2122C2552D009C1199 /* GoldenTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CBCB2422C2552D009C1199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CBCB2622C2552D009C1199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				F440B3A222C63C6800B8AFD6 /* LoginVC.swift */,
+				0887885F22CDCEDE00FE0E91 /* SignUpVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				F40313F822CB2E8C00BB2737 /* InterestedVC.swift in Sources */,
 				F440B3AB22C6437400B8AFD6 /* UIColor+Extensions.swift in Sources */,
 				080BF82422CC8D5000A06BBF /* Win.swift in Sources */,
+				0887886022CDCEDE00FE0E91 /* SignUpVC.swift in Sources */,
 				F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
