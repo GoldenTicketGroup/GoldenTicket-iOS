@@ -49,19 +49,22 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTicketPrizelist" translatesAutoresizingMaskIntoConstraints="NO" id="RBq-x2-Vla">
-                                                    <rect key="frame" x="168" y="16" width="171.5" height="174"/>
+                                                    <rect key="frame" x="162" y="20" width="171.5" height="170"/>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterPrizelistBenhur" translatesAutoresizingMaskIntoConstraints="NO" id="kIy-dZ-CUD">
-                                                    <rect key="frame" x="27" y="9" width="144" height="189"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posteKillMeNowInfo" translatesAutoresizingMaskIntoConstraints="NO" id="kIy-dZ-CUD">
+                                                    <rect key="frame" x="27" y="10" width="138" height="188"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="138" id="AuT-M5-XMw"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:00~19:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBj-mx-PQJ">
-                                                    <rect key="frame" x="217" y="147.5" width="60" height="12"/>
+                                                    <rect key="frame" x="211" y="151.5" width="60" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019년 06월 15일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUX-2L-Xlo">
-                                                    <rect key="frame" x="199" y="47" width="101.5" height="16"/>
+                                                    <rect key="frame" x="193" y="51" width="101.5" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="ET6-p8-uxd"/>
                                                     </constraints>
@@ -70,32 +73,32 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뮤지컬 벤허" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZF-hP-doN">
-                                                    <rect key="frame" x="199" y="64" width="69" height="18"/>
+                                                    <rect key="frame" x="193" y="68" width="69" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일반 R석 20,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBC-I8-rCA">
-                                                    <rect key="frame" x="199" y="95" width="95.5" height="14.5"/>
+                                                    <rect key="frame" x="193" y="99" width="95.5" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="블루스퀘어 인터파크 홀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqI-xZ-zte">
-                                                    <rect key="frame" x="216" y="130.5" width="93" height="12"/>
+                                                    <rect key="frame" x="210" y="134.5" width="93" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLocationLightCoral" translatesAutoresizingMaskIntoConstraints="NO" id="9zI-AN-p5H">
-                                                    <rect key="frame" x="199" y="130.5" width="10" height="14"/>
+                                                    <rect key="frame" x="193" y="134.5" width="10" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="7kQ-Iu-fSg"/>
                                                         <constraint firstAttribute="width" constant="10" id="QIm-ly-lnn"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconTimelightCoral" translatesAutoresizingMaskIntoConstraints="NO" id="wG3-Dt-8oD">
-                                                    <rect key="frame" x="199" y="148.5" width="11" height="11"/>
+                                                    <rect key="frame" x="193" y="152.5" width="11" height="11"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="11" id="37Z-VS-5aq"/>
                                                         <constraint firstAttribute="width" constant="11" id="xUV-3B-77W"/>
@@ -104,12 +107,10 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="RBq-x2-Vla" secondAttribute="trailing" constant="30.5" id="1OG-Gp-b3z"/>
-                                            <constraint firstItem="RBq-x2-Vla" firstAttribute="top" secondItem="OAs-t0-esr" secondAttribute="top" constant="16" id="3tr-Zp-Gbe"/>
+                                            <constraint firstItem="RBq-x2-Vla" firstAttribute="top" secondItem="OAs-t0-esr" secondAttribute="top" constant="20" id="3tr-Zp-Gbe"/>
                                             <constraint firstItem="wG3-Dt-8oD" firstAttribute="top" secondItem="9zI-AN-p5H" secondAttribute="bottom" constant="4" id="5QF-uO-yWc"/>
                                             <constraint firstItem="9zI-AN-p5H" firstAttribute="leading" secondItem="kIy-dZ-CUD" secondAttribute="trailing" constant="28" id="6EG-Dw-Fyw"/>
                                             <constraint firstItem="qBC-I8-rCA" firstAttribute="leading" secondItem="kIy-dZ-CUD" secondAttribute="trailing" constant="28" id="I67-0u-UK8"/>
-                                            <constraint firstItem="kIy-dZ-CUD" firstAttribute="top" secondItem="OAs-t0-esr" secondAttribute="top" constant="9" id="IbY-UT-XNT"/>
                                             <constraint firstItem="kIy-dZ-CUD" firstAttribute="leading" secondItem="OAs-t0-esr" secondAttribute="leading" constant="27" id="NvG-oZ-XcT"/>
                                             <constraint firstItem="kqI-xZ-zte" firstAttribute="leading" secondItem="9zI-AN-p5H" secondAttribute="trailing" constant="7" id="PgD-oO-eTe"/>
                                             <constraint firstAttribute="bottom" secondItem="RBq-x2-Vla" secondAttribute="bottom" constant="8" id="Pkk-oZ-cJL"/>
@@ -118,6 +119,7 @@
                                             <constraint firstItem="rZF-hP-doN" firstAttribute="leading" secondItem="kIy-dZ-CUD" secondAttribute="trailing" constant="28" id="Usa-lW-ftb"/>
                                             <constraint firstItem="rZF-hP-doN" firstAttribute="top" secondItem="cUX-2L-Xlo" secondAttribute="bottom" constant="1" id="VFR-DD-ouP"/>
                                             <constraint firstItem="wG3-Dt-8oD" firstAttribute="leading" secondItem="kIy-dZ-CUD" secondAttribute="trailing" constant="28" id="ZJW-ve-p1e"/>
+                                            <constraint firstItem="kIy-dZ-CUD" firstAttribute="top" secondItem="OAs-t0-esr" secondAttribute="top" constant="10" id="fhi-pM-2T2"/>
                                             <constraint firstItem="RBq-x2-Vla" firstAttribute="top" secondItem="cUX-2L-Xlo" secondAttribute="top" constant="-31" id="gZB-VN-sbz"/>
                                             <constraint firstItem="qBC-I8-rCA" firstAttribute="top" secondItem="rZF-hP-doN" secondAttribute="bottom" constant="13" id="hEg-Lg-hsN"/>
                                             <constraint firstItem="cUX-2L-Xlo" firstAttribute="leading" secondItem="kIy-dZ-CUD" secondAttribute="trailing" constant="28" id="idP-Tm-EhP"/>
@@ -181,6 +183,6 @@
         <image name="iconLocationLightCoral" width="9" height="12.5"/>
         <image name="iconTimelightCoral" width="10" height="10"/>
         <image name="imgTicketPrizelist" width="171.5" height="176"/>
-        <image name="posterPrizelistBenhur" width="144" height="186"/>
+        <image name="posteKillMeNowInfo" width="252" height="337"/>
     </resources>
 </document>

@@ -62,6 +62,10 @@ extension WinTicketsVC: UICollectionViewDataSource
         // 당첨된 공연의 포스터. ex) 벤허
         cell.winImage.image = like.winImage
         
+        // poster 이미지의 corner radius
+        cell.winImage.layer.masksToBounds = true;
+        cell.winImage.layer.cornerRadius = 19;
+        
         // poster image에 그림자를 넣기 위한 세팅
         cell.winImage.layer.masksToBounds = false
         cell.winImage.layer.shadowOffset = CGSize(width: 0, height: 3)
@@ -97,11 +101,11 @@ extension WinTicketsVC
 {
     func setWindata()
     {
-        let win1 = Win(day: "2019년 06월 15일", title: "뮤지컬 벤허", price: "일반 R석 20,000원", location: "블루스퀘어 인터파크 홀", time: "17:00~19:00", winName: "posterBenhurInfo")
+        let win1 = Win(day: "2019년 06월 15일", title: "뮤지컬 벤허", price: "일반 R석 20,000원", location: "블루스퀘어 인터파크 홀", time: "17:00~19:00", winName: "posteKillMeNowInfo")
         
         let win2 = Win(day: "2019년 07월 15일", title: "뮤지컬 킬미나우", price: "S석 2,000원", location: "예술의 전당", time: "17:00~19:00", winName: "posteKillMeNowInfo")
 
-        let win3 = Win(day: "2019년 12월 15일", title: "뮤지컬 인터스텔라", price: "일반 R석 10,000원", location: "올림픽공원 K-아트 홀", time: "11:00~13:00", winName: "posterBenhurInfo")
+        let win3 = Win(day: "2019년 12월 15일", title: "뮤지컬 인터스텔라", price: "일반 R석 10,000원", location: "올림픽공원 K-아트 홀", time: "11:00~13:00", winName: "posteKillMeNowInfo")
         
         let win4 = Win(day: "2019년 12월 31일", title: "헤어스프레이", price: "자유 입석 1,000원", location: "현대백화점 현대카드 홀", time: "17:00~19:00", winName: "posteKillMeNowInfo")
         
