@@ -13,22 +13,25 @@
         <!--ContentsVC-->
         <scene sceneID="CvT-ee-0vu">
             <objects>
-                <viewController id="Hzc-tl-Yew" customClass="ContentsVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contentsVC" id="Hzc-tl-Yew" customClass="ContentsVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TMq-tR-yIx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1992"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUN-yh-3iR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1992"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUN-yh-3iR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2500"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUz-aH-Nd7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1992"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUz-aH-Nd7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2500"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgContentsFirstTop" translatesAutoresizingMaskIntoConstraints="NO" id="znp-DP-xhk">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="395"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="imgContentsFirstTop" translatesAutoresizingMaskIntoConstraints="NO" id="znp-DP-xhk">
+                                                <rect key="frame" x="0.0" y="-2" width="375" height="395"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="znp-DP-xhk" secondAttribute="height" multiplier="75:79" id="ouB-G4-YhX"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="contentsImage"/>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUC-50-5Ve">
                                                 <rect key="frame" x="30.5" y="414" width="314" height="76"/>
@@ -41,31 +44,31 @@
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="공휴일 많았던 가정의 달, 5월이 끝나간다고 아쉬워하지 마세요. 6월에도 현충일을 끼고 ‘징검다리 연휴’가 있으니까요. 짧은 연휴지만 알차게 보내고 싶다면 공연장 나들이는 어떨까요? 6월에 보기 좋은 6편의 공연을 소개합니다." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBZ-gK-vBI">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" text="공휴일 많았던 가정의 달, 5월이 끝나간다고 아쉬워하지 마세요. 6월에도 현충일을 끼고 ‘징검다리 연휴’가 있으니까요. 짧은 연휴지만 알차게 보내고 싶다면 공연장 나들이는 어떨까요? 6월에 보기 좋은 6편의 공연을 소개합니다." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBZ-gK-vBI">
                                                 <rect key="frame" x="30.5" y="510" width="314" height="106"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hv7-Ei-wxB">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hv7-Ei-wxB">
                                                 <rect key="frame" x="100" y="639" width="175" height="21"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안나 카레니나" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-N2-nja">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="안나 카레니나" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-N2-nja">
                                                 <rect key="frame" x="100" y="664" width="175" height="24"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgContentsFirst01" translatesAutoresizingMaskIntoConstraints="NO" id="DrW-5d-gFU">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="imgContentsFirst01" translatesAutoresizingMaskIntoConstraints="NO" id="DrW-5d-gFU">
                                                 <rect key="frame" x="30.5" y="704" width="314" height="224"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DrW-5d-gFU" secondAttribute="height" multiplier="157:112" id="5do-QG-ehW"/>
                                                 </constraints>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BE4-rM-8jq">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BE4-rM-8jq">
                                                 <rect key="frame" x="30.5" y="973" width="314" height="291"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -78,7 +81,7 @@
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQ9-Bt-gIg">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQ9-Bt-gIg">
                                                 <rect key="frame" x="48.5" y="1288" width="278" height="40"/>
                                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
@@ -95,7 +98,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안나 카레니나" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uK9-hs-WWA">
-                                                <rect key="frame" x="133" y="1409" width="109.5" height="24"/>
+                                                <rect key="frame" x="132.5" y="1409" width="110" height="24"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -194,7 +197,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ecr-xT-hUb"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1992"/>
+                    <size key="freeformSize" width="375" height="2200"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="goInfoButton" destination="iQ9-Bt-gIg" id="Kxd-2A-yAe"/>
                     </connections>

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TicketVC-->
+        <!--No TicketVC-->
         <scene sceneID="tTn-hV-gam">
             <objects>
-                <viewController storyboardIdentifier="NoTicket" id="FTA-2U-uc4" customClass="TicketVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoTicket" id="FTA-2U-uc4" customClass="NoTicketVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vSQ-MV-8gh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,13 +27,13 @@
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characterWait" translatesAutoresizingMaskIntoConstraints="NO" id="L7f-On-3R2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="L7f-On-3R2">
                                 <rect key="frame" x="73" y="214" width="230" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="L7f-On-3R2" secondAttribute="height" multiplier="23:21" id="Kuq-m2-htt"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDY-Dp-yzl" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDY-Dp-yzl">
                                 <rect key="frame" x="56" y="586" width="263" height="35"/>
                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -43,6 +43,9 @@
                                 <state key="normal" title="공연 보러 가기">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="goShow:" destination="FTA-2U-uc4" eventType="touchUpInside" id="dfk-NT-2Fp"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p73-7c-pZD">
                                 <rect key="frame" x="93" y="500" width="190" height="8"/>
@@ -69,7 +72,7 @@
                                 </constraints>
                                 <state key="normal" image="btClose"/>
                                 <connections>
-                                    <action selector="closeButton:" destination="FTA-2U-uc4" eventType="touchUpInside" id="uSh-a0-8Cz"/>
+                                    <action selector="cancelButton:" destination="FTA-2U-uc4" eventType="touchUpInside" id="V6d-gu-EKj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,6 +99,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vwx-8x-ihf"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="goShowButton" destination="nDY-Dp-yzl" id="aNQ-Ug-pDw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jmc-RW-zn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +112,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2" width="280" height="182"/>
         <image name="btClose" width="19" height="19"/>
-        <image name="characterWait" width="229.5" height="210"/>
     </resources>
 </document>
