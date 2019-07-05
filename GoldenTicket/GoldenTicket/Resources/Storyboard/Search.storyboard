@@ -41,7 +41,7 @@
                                         <rect key="frame" x="184" y="0.0" width="78" height="30"/>
                                         <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
-                                        <state key="normal" title="창장뮤지컬">
+                                        <state key="normal" title="창작뮤지컬">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>

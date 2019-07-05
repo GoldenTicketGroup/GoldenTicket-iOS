@@ -29,6 +29,9 @@ class SearchVC: UIViewController {
     
 
     @IBAction func backButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let storyboardMain = UIStoryboard.init(name: "Main", bundle: nil)
+        let goBack = storyboardMain.instantiateViewController(withIdentifier: "MainVC")
+        
+        present(goBack, animated: true)
     }
 }
