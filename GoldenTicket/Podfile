@@ -9,4 +9,6 @@ target 'GoldenTicket' do
   pod 'Hero'
   pod 'SideMenu'
   pod 'TextFieldEffects'
+  pod 'Alamofire', '~> 4.8.2'
+  pod 'Kingfisher', '~> 4.10.1'
 end

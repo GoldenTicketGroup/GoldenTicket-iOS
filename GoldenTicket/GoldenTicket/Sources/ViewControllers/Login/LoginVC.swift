@@ -11,8 +11,11 @@ import UIKit
 class LoginVC: UIViewController {
 
     @IBOutlet var logoImageView: UIImageView!
+    
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwdTextField: UITextField!
+    
+    // 키보드에 가려지지 않기 위한 y축 constraint
     @IBOutlet var viewYcenter: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -30,7 +33,36 @@ class LoginVC: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         unregisterForKeyboardNotifications()
     }
- 
+    
+    
+    @IBAction func loginBtn(_ sender: Any) {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwdTextField.text else { return }
+        
+        AuthService.shared.login(email, password) {
+            data in
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let token):
+                UserDefaults.standard.set(token, forKey: "Token")
+                self.simpleAlert(title: "로그인 성공", message: "")
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "로그인 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "로그인 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
+    }
 }
 
 // 키보드 때문에 가려지지 않게 조정하는 extension

@@ -35,6 +35,9 @@
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtn:" destination="xbP-fh-HMr" eventType="touchUpInside" id="bO3-0v-uOr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLF-Cl-ydl">
                                 <rect key="frame" x="144" y="630" width="87" height="27"/>
@@ -161,7 +164,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Btg-s9-vje">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="419"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="442"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangleEmailLogin" translatesAutoresizingMaskIntoConstraints="NO" id="aBJ-Kz-Yho">
@@ -171,13 +174,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일로 회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYq-xn-hOs">
-                                <rect key="frame" x="116" y="113" width="143" height="24"/>
+                                <rect key="frame" x="116" y="113" width="143" height="35.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.64313725489999995" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TLW-fD-ZnX">
-                                <rect key="frame" x="62" y="167" width="251" height="270"/>
+                                <rect key="frame" x="62" y="178.5" width="251" height="270"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sj8-R1-lPc">
                                         <rect key="frame" x="0.0" y="0.0" width="251" height="50"/>
@@ -369,7 +372,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbZ-UL-dtS" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
-                                <rect key="frame" x="54.5" y="522" width="266" height="35"/>
+                                <rect key="frame" x="54.5" y="545" width="266" height="35"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="266" id="Pl3-Bd-Qw8"/>
@@ -381,7 +384,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxC-0K-Rnv">
-                                <rect key="frame" x="149.5" y="607" width="76" height="27"/>
+                                <rect key="frame" x="149.5" y="630" width="76" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                 <state key="normal" title="이메일로 로그인">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -13,6 +13,10 @@
 		080BF82422CC8D5000A06BBF /* Win.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82322CC8D5000A06BBF /* Win.swift */; };
 		080BF82622CC8EC400A06BBF /* WinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82522CC8EC400A06BBF /* WinCell.swift */; };
 		080EA9B022D08754000D074C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9AF22D08754000D074C /* APIConstants.swift */; };
+		080EA9B222D08A35000D074C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B122D08A35000D074C /* AuthService.swift */; };
+		080EA9B422D08A62000D074C /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B322D08A62000D074C /* NetworkResult.swift */; };
+		080EA9B622D08B14000D074C /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B522D08B14000D074C /* ResponseString.swift */; };
+		080EA9B822D08B74000D074C /* ResponseDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B722D08B74000D074C /* ResponseDefault.swift */; };
 		0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836ED5822C5A72D006295D3 /* Notice.storyboard */; };
 		0836EDA622C750F7006295D3 /* Win.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDA522C750F7006295D3 /* Win.storyboard */; };
 		0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAB22C75A24006295D3 /* Lottory.storyboard */; };
@@ -72,6 +76,10 @@
 		080BF82322CC8D5000A06BBF /* Win.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Win.swift; path = GoldenTicket/Model/Win.swift; sourceTree = SOURCE_ROOT; };
 		080BF82522CC8EC400A06BBF /* WinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinCell.swift; sourceTree = "<group>"; };
 		080EA9AF22D08754000D074C /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = SOURCE_ROOT; };
+		080EA9B122D08A35000D074C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = SOURCE_ROOT; };
+		080EA9B322D08A62000D074C /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = SOURCE_ROOT; };
+		080EA9B522D08B14000D074C /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
+		080EA9B722D08B74000D074C /* ResponseDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDefault.swift; sourceTree = "<group>"; };
 		0836ED5822C5A72D006295D3 /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
 		0836EDA522C750F7006295D3 /* Win.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Win.storyboard; sourceTree = "<group>"; };
 		0836EDAB22C75A24006295D3 /* Lottory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottory.storyboard; sourceTree = "<group>"; };
@@ -229,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				080EA9AF22D08754000D074C /* APIConstants.swift */,
+				080EA9B122D08A35000D074C /* AuthService.swift */,
+				080EA9B322D08A62000D074C /* NetworkResult.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -240,6 +250,8 @@
 				F43F453722C9A83200C53898 /* ShowDetail.swift */,
 				080BF82022CC840400A06BBF /* Like.swift */,
 				080BF82322CC8D5000A06BBF /* Win.swift */,
+				080EA9B522D08B14000D074C /* ResponseString.swift */,
+				080EA9B722D08B74000D074C /* ResponseDefault.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -508,7 +520,9 @@
 			files = (
 				0836EDB222C7C618006295D3 /* UnpaidViewController.swift in Sources */,
 				080EA9B022D08754000D074C /* APIConstants.swift in Sources */,
+				080EA9B822D08B74000D074C /* ResponseDefault.swift in Sources */,
 				F4955BFE22C8587300530906 /* MainShowCell.swift in Sources */,
+				080EA9B222D08A35000D074C /* AuthService.swift in Sources */,
 				F402F33B22CF0F610047B976 /* LotteryCheckCell.swift in Sources */,
 				F4955C0222C8635A00530906 /* Show.swift in Sources */,
 				F43F454722CA639C00C53898 /* TicketVC.swift in Sources */,
@@ -524,7 +538,9 @@
 				F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */,
 				F40313FE22CB344900BB2737 /* QuestionVC.swift in Sources */,
 				F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */,
+				080EA9B622D08B14000D074C /* ResponseString.swift in Sources */,
 				F402F30C22CDD2A70047B976 /* ContentsVC.swift in Sources */,
+				080EA9B422D08A62000D074C /* NetworkResult.swift in Sources */,
 				080BF82122CC840400A06BBF /* Like.swift in Sources */,
 				F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,
