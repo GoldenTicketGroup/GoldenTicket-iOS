@@ -10,7 +10,4 @@ import UIKit
 
 class LotteryCheckCell : UICollectionViewCell {
     @IBOutlet weak var lotteryShowTitle: UILabel!
-    
-    @IBOutlet weak var timeLabel: UILabel!
-    
 }
