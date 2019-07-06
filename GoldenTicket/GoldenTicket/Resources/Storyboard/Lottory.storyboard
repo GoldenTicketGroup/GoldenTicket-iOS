@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="PAA-EV-lnE">
             <objects>
-                <viewController id="oTZ-Yb-nu7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="waitLottery" id="oTZ-Yb-nu7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fss-K9-8e7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +87,9 @@
                                 <state key="normal" title="응모하기">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="yf9-al-u0k" kind="presentation" id="D0P-Vn-ndh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,15 +117,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mbW-dS-nlD"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5M-5W-IiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="141"/>
+            <point key="canvasLocation" x="-207" y="141"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mfb-uw-QVv">
             <objects>
-                <viewController id="yf9-al-u0k" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="completeLottery" id="yf9-al-u0k" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yuQ-l7-PT4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +145,7 @@
                                     <constraint firstAttribute="width" secondItem="guN-h8-NJc" secondAttribute="height" multiplier="297:235" id="z2A-NO-JEW"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oH1-k8-sHx">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oH1-k8-sHx">
                                 <rect key="frame" x="72" y="446" width="231" height="8"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -159,8 +165,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="민정님 행운을 빌어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-OC-7Im">
-                                <rect key="frame" x="123" y="510" width="129" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="행운을 빌어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-OC-7Im">
+                                <rect key="frame" x="144.5" y="510" width="86" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -181,6 +187,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZIL-eC-LNY" firstAttribute="centerX" secondItem="yuQ-l7-PT4" secondAttribute="centerX" id="3ij-Ci-dlI"/>
+                            <constraint firstItem="oH1-k8-sHx" firstAttribute="leading" secondItem="55X-SL-SBS" secondAttribute="leading" id="3q4-b4-HQ4"/>
                             <constraint firstItem="gSQ-CC-pAl" firstAttribute="centerX" secondItem="yuQ-l7-PT4" secondAttribute="centerX" id="AUR-Kn-fTK"/>
                             <constraint firstItem="iRF-V3-6Hb" firstAttribute="top" secondItem="xtk-je-Axv" secondAttribute="top" constant="80" id="EOL-M0-thi"/>
                             <constraint firstItem="eXx-OC-7Im" firstAttribute="top" secondItem="gSQ-CC-pAl" secondAttribute="bottom" constant="30" id="M0Z-Rg-Cia"/>
@@ -196,6 +203,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xtk-je-Axv"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLp-Jx-mRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

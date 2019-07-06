@@ -45,19 +45,22 @@ class ShowDetailVC: UIViewController {
     // 더미 데이터로 넣을 배우 리스트
     var actorList : [Actor] = []
     
+    //응모하기 뷰
     @IBOutlet weak var checkView: CustomView!
-    
     @IBOutlet weak var fillView: UIView!
-    
     @IBOutlet weak var checkButton: UIButton!
-    
     @IBOutlet weak var applyButton: CustomButton!
     
+    //좋아요 버튼
     @IBOutlet weak var likeButton: UIButton!
     
+    //응모하기 뷰에서 시간선택 창 만들기
     @IBOutlet weak var btnDrop: UIButton!
-    
     @IBOutlet weak var tblView: UITableView!
+    
+    //스크롤뷰
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     
     // drop list 테스트용 데이터
     var timeList = ["오후 4 : 00", "오후 5 : 00", "오후 6 : 00"]
@@ -81,18 +84,23 @@ class ShowDetailVC: UIViewController {
         // 응모하기 뷰 그림자주기
         
         checkView.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 6)
+        //checkView.roundCorners(corners: [.topRight, .topLeft], radius: 20)
         checkView.makeRounded(cornerRadius: 20)
         checkView.layer.masksToBounds = false
         
         //drop table view 숨기기
         tblView.isHidden = true
-        
+        //tblviw corner radius
+        tblView.makeRounded(cornerRadius: 8)
         
         // fillViewButton corner radius 설정해주기
         fillView.layer.cornerRadius = 22
         
         // dataSource 지정해주기
         actorCollectionView.dataSource = self
+        
+        //scroll view delegate
+        scrollView.delegate = self
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -204,12 +212,53 @@ class ShowDetailVC: UIViewController {
                 
             }
         }
+    }
+    
+    // scroll시 응모하기 뷰 내리고 올리기
+    func showMenuView() {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
+            
+            self.checkView.transform = CGAffineTransform(translationX: 0, y: 248)
+        })
         
+        self.view.layoutIfNeeded()
+    }
+    func hideMenuView() {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
+            self.checkView.transform = .identity
+        })
+        
+        self.view.layoutIfNeeded()
     }
     
     
-
+    @IBAction func selectShow(_ sender: Any) {
+        let storyboardLottery = UIStoryboard(name: "Lottory", bundle: nil)
+        let dvc = storyboardLottery.instantiateViewController(withIdentifier: "waitLottery")
+        present(dvc, animated: true)
+    }
+    
 }
+
+// 스크롤시 응모하기 뷰 올리고 내리기
+extension ShowDetailVC : UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let yVelocity = scrollView.panGestureRecognizer .velocity(in: scrollView).y
+        
+        if yVelocity > 0 {
+            print("up")
+            hideMenuView()
+            
+        } else if yVelocity < 0 {
+            print("down")
+            showMenuView()
+        }
+        
+    }
+}
+
 
 // 배우 정보 collection view datasource
 extension ShowDetailVC: UICollectionViewDataSource {

@@ -272,59 +272,137 @@
                                                 <color key="textColor" red="0.62353354692459106" green="0.61954402923583984" blue="0.62353032827377319" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Llk-PQ-Bnc">
-                                                <rect key="frame" x="0.0" y="452" width="375" height="85"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzM-Db-wGe">
+                                                <rect key="frame" x="0.0" y="452" width="375" height="87"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wor-PC-kwc">
-                                                    <size key="itemSize" width="375" height="85"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="lotteryCell" id="hut-XH-sWz" customClass="LotteryCheckCell" customModule="GoldenTicket" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Llk-PQ-Bnc">
+                                                        <rect key="frame" x="62" y="0.0" width="250" height="55"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Y0-FO-f84">
-                                                                    <rect key="frame" x="138" y="20" width="100" height="10"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wor-PC-kwc">
+                                                            <size key="itemSize" width="250" height="55"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="lotteryCell" id="hut-XH-sWz" customClass="LotteryCheckCell" customModule="GoldenTicket" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="55"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="55"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Y0-FO-f84">
+                                                                            <rect key="frame" x="75" y="20" width="100" height="10"/>
+                                                                            <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공연이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSH-Qg-t2P">
+                                                                            <rect key="frame" x="25.5" y="10" width="200" height="24"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="200" id="Wnf-w0-Mc5"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당첨 확인까지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kin-u8-Li8">
+                                                                            <rect key="frame" x="95" y="35" width="60" height="14"/>
+                                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                                            <color key="textColor" red="0.62353354689999996" green="0.61954402919999996" blue="0.62353032829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="공연이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSH-Qg-t2P">
-                                                                    <rect key="frame" x="88" y="10" width="200" height="24"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="당첨 확인까지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kin-u8-Li8">
-                                                                    <rect key="frame" x="158" y="35" width="60" height="14"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
-                                                                    <color key="textColor" red="0.62353354689999996" green="0.61954402919999996" blue="0.62353032829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3v-hA-V54">
-                                                                    <rect key="frame" x="38" y="50" width="300" height="35"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
-                                                                    <color key="textColor" red="0.87280452249999996" green="0.60975462199999997" blue="0.4705588818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </view>
+                                                                <constraints>
+                                                                    <constraint firstItem="gSH-Qg-t2P" firstAttribute="top" secondItem="hut-XH-sWz" secondAttribute="top" constant="10" id="AJv-ve-s1c"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="kin-u8-Li8" secondAttribute="bottom" constant="6" id="Cll-30-QLl"/>
+                                                                    <constraint firstItem="4Y0-FO-f84" firstAttribute="top" secondItem="gSH-Qg-t2P" secondAttribute="bottom" constant="-14" id="DNK-71-G7a"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="kin-u8-Li8" secondAttribute="trailing" constant="95" id="MPc-iA-ckA"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="gSH-Qg-t2P" secondAttribute="trailing" constant="24.5" id="XvS-sW-DyD"/>
+                                                                    <constraint firstItem="kin-u8-Li8" firstAttribute="leading" secondItem="hut-XH-sWz" secondAttribute="leading" constant="95" id="h5M-L8-kD1"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="4Y0-FO-f84" secondAttribute="trailing" constant="75" id="kdY-7k-dZc"/>
+                                                                    <constraint firstItem="kin-u8-Li8" firstAttribute="top" secondItem="4Y0-FO-f84" secondAttribute="bottom" constant="5" id="mHQ-ym-Mzx"/>
+                                                                    <constraint firstItem="gSH-Qg-t2P" firstAttribute="leading" secondItem="hut-XH-sWz" secondAttribute="leading" constant="25.5" id="oRM-Tb-Isz"/>
+                                                                    <constraint firstItem="4Y0-FO-f84" firstAttribute="leading" secondItem="hut-XH-sWz" secondAttribute="leading" constant="75" id="uFl-3z-xIv"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <outlet property="lotteryShowTitle" destination="gSH-Qg-t2P" id="Vy7-tV-wMx"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
                                                         <connections>
-                                                            <outlet property="lotteryShowTitle" destination="gSH-Qg-t2P" id="Vy7-tV-wMx"/>
-                                                            <outlet property="timeLabel" destination="T3v-hA-V54" id="pVU-20-lZS"/>
+                                                            <outlet property="dataSource" destination="HcJ-Ym-6tT" id="guN-Qn-UOf"/>
                                                         </connections>
-                                                    </collectionViewCell>
-                                                </cells>
-                                            </collectionView>
+                                                    </collectionView>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTV-A3-zvr">
+                                                        <rect key="frame" x="62" y="55" width="250" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-Zj-08n">
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                                                <color key="textColor" red="0.87280452249999996" green="0.60975462199999997" blue="0.4705588818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40C-IL-EL3">
+                                                                <rect key="frame" x="0.0" y="-23" width="250" height="55"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                                                <state key="normal" title="당첨확인">
+                                                                    <color key="titleColor" red="0.87280452249999996" green="0.60975462199999997" blue="0.4705588818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YV1-WU-1Nc">
+                                                        <rect key="frame" x="62" y="55" width="250" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHV-ey-Pwn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="32"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                                                <color key="textColor" red="0.87280452249999996" green="0.60975462199999997" blue="0.4705588818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKe-Zw-CtY">
+                                                                <rect key="frame" x="0.0" y="-23" width="250" height="55"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
+                                                                <state key="normal" title="당첨확인">
+                                                                    <color key="titleColor" red="0.87280452249999996" green="0.60975462199999997" blue="0.4705588818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDr-9C-1c4">
+                                                        <rect key="frame" x="334" y="32" width="13" height="23"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="imgnextMain"/>
+                                                        <connections>
+                                                            <action selector="rightButton:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="fPo-Eq-vs3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2o-9b-mIF">
+                                                        <rect key="frame" x="29" y="32" width="13" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="iconNextMain"/>
+                                                        <connections>
+                                                            <action selector="leftButton:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="ocM-wk-Sif"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -381,10 +459,18 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="firstLotteryCheckButton" destination="40C-IL-EL3" id="aI9-Mx-r9S"/>
+                        <outlet property="firstLotteryView" destination="wTV-A3-zvr" id="j98-SI-XgF"/>
+                        <outlet property="firstTimeLabel" destination="YeX-Zj-08n" id="JhI-bZ-8hl"/>
                         <outlet property="lotteryCollectionView" destination="Llk-PQ-Bnc" id="npe-xN-HhY"/>
+                        <outlet property="lotteryLeftButton" destination="R2o-9b-mIF" id="XqY-c0-Er1"/>
+                        <outlet property="lotteryRightButton" destination="bDr-9C-1c4" id="QDw-Rr-6Yj"/>
                         <outlet property="monthMusicalButton" destination="Qfp-9F-v4S" id="GtF-PR-j0n"/>
                         <outlet property="monthShowButton" destination="Wgv-bU-G3p" id="Jpy-gu-Mj4"/>
                         <outlet property="searchButton" destination="E2G-TD-Yt9" id="qbT-g5-Ic3"/>
+                        <outlet property="secondLotteryCheckButton" destination="SKe-Zw-CtY" id="WY0-Wb-dHh"/>
+                        <outlet property="secondLotteryView" destination="YV1-WU-1Nc" id="4l0-7m-N4F"/>
+                        <outlet property="secondTimeLabel" destination="eHV-ey-Pwn" id="5Je-Bj-Ya2"/>
                         <outlet property="showCollectionView" destination="jbq-Mf-F18" id="Fi0-yQ-Xm8"/>
                     </connections>
                 </viewController>
@@ -800,109 +886,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-ef-Wbu">
-                                                <rect key="frame" x="0.0" y="560" width="375" height="200"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-6Y-ir8">
-                                                        <rect key="frame" x="165" y="1" width="44" height="44"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcn-Tx-PWm">
-                                                        <rect key="frame" x="177" y="15" width="20" height="15"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" red="0.93514388800000003" green="0.81616985799999997" blue="0.37243670229999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <state key="normal" image="btUp"/>
-                                                        <connections>
-                                                            <action selector="checkUpButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="2kd-e0-7La"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAh-LE-mEz" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
-                                                        <rect key="frame" x="40" y="138" width="293" height="44"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                        <state key="normal" title="선택완료">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="applyButtonAction:" destination="txR-zd-iJi" eventType="touchUpInside" id="ER3-3a-JoG"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rr9-pM-dWi">
-                                                        <rect key="frame" x="51" y="63" width="28" height="20"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2d-2f-AaJ">
-                                                        <rect key="frame" x="93" y="53" width="232" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                        <state key="normal" title="시간을 선택해주세요">
-                                                            <color key="titleColor" red="0.15289732810000001" green="0.1490764916" blue="0.14509755369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="onClickDropButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="Ke0-7K-fCS"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmh-rd-Y0C">
-                                                        <rect key="frame" x="289" y="61" width="24" height="24"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" image="iconDown"/>
-                                                        <connections>
-                                                            <action selector="onClickDropButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="Qlp-Om-O6G"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-jf-mul" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
-                                                        <rect key="frame" x="40" y="49" width="293" height="44"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                        <state key="normal" title="응모하기">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="applyButtonAction:" destination="txR-zd-iJi" eventType="touchUpInside" id="wqV-zZ-iYU"/>
-                                                        </connections>
-                                                    </button>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bef-xL-40M">
-                                                        <rect key="frame" x="93" y="93" width="232" height="94"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="ObI-PR-asv" style="IBUITableViewCellStyleDefault" id="t4t-E8-Kil">
-                                                                <rect key="frame" x="0.0" y="28" width="232" height="44"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t4t-E8-Kil" id="XGW-nE-MRg">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="232" height="43.5"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ObI-PR-asv">
-                                                                            <rect key="frame" x="15" y="0.0" width="202" height="43.5"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
-                                                                            <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                    <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </tableViewCellContentView>
-                                                            </tableViewCell>
-                                                        </prototypes>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="txR-zd-iJi" id="HEi-Go-WCw"/>
-                                                            <outlet property="delegate" destination="txR-zd-iJi" id="BCG-Yd-TDv"/>
-                                                        </connections>
-                                                    </tableView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="gKX-ut-xWO"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -934,6 +917,109 @@
                                     <constraint firstItem="800-zd-WoJ" firstAttribute="leading" secondItem="mXR-yO-Gad" secondAttribute="leading" id="jgM-ZW-dX5"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-ef-Wbu">
+                                <rect key="frame" x="0.0" y="556" width="375" height="220"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-6Y-ir8">
+                                        <rect key="frame" x="165" y="1" width="44" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcn-Tx-PWm">
+                                        <rect key="frame" x="177" y="15" width="20" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.93514388800000003" green="0.81616985799999997" blue="0.37243670229999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="btUp"/>
+                                        <connections>
+                                            <action selector="checkUpButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="2kd-e0-7La"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAh-LE-mEz" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="138" width="293" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="선택완료">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectShow:" destination="txR-zd-iJi" eventType="touchUpInside" id="41J-XB-cfX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rr9-pM-dWi">
+                                        <rect key="frame" x="51" y="63" width="28" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2d-2f-AaJ">
+                                        <rect key="frame" x="93" y="53" width="232" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="시간을 선택해주세요">
+                                            <color key="titleColor" red="0.15289732810000001" green="0.1490764916" blue="0.14509755369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickDropButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="Ke0-7K-fCS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmh-rd-Y0C">
+                                        <rect key="frame" x="289" y="61" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="iconDown"/>
+                                        <connections>
+                                            <action selector="onClickDropButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="Qlp-Om-O6G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-jf-mul" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="49" width="293" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <state key="normal" title="응모하기">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="applyButtonAction:" destination="txR-zd-iJi" eventType="touchUpInside" id="yIk-Th-cfD"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bef-xL-40M">
+                                        <rect key="frame" x="100" y="93" width="219" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="ObI-PR-asv" style="IBUITableViewCellStyleDefault" id="t4t-E8-Kil">
+                                                <rect key="frame" x="0.0" y="28" width="219" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t4t-E8-Kil" id="XGW-nE-MRg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="219" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ObI-PR-asv">
+                                                            <rect key="frame" x="15" y="0.0" width="189" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="txR-zd-iJi" id="HEi-Go-WCw"/>
+                                            <outlet property="delegate" destination="txR-zd-iJi" id="BCG-Yd-TDv"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="lnd-t0-bIl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -944,12 +1030,12 @@
                             <constraint firstItem="mXR-yO-Gad" firstAttribute="top" secondItem="a4a-oJ-NbP" secondAttribute="top" priority="250" id="EBG-Qg-CrM"/>
                             <constraint firstItem="mXR-yO-Gad" firstAttribute="trailing" secondItem="uIv-Ge-VB4" secondAttribute="trailing" id="FfP-pb-Xre"/>
                             <constraint firstItem="doJ-rU-vfr" firstAttribute="top" secondItem="uIv-Ge-VB4" secondAttribute="top" constant="10" id="Jeb-Jz-yVV"/>
-                            <constraint firstItem="nBg-ef-Wbu" firstAttribute="bottom" secondItem="uIv-Ge-VB4" secondAttribute="bottom" constant="93" id="UV2-Qo-9qI"/>
                             <constraint firstItem="mXR-yO-Gad" firstAttribute="bottom" secondItem="uIv-Ge-VB4" secondAttribute="bottom" id="UhG-nP-Hxh"/>
-                            <constraint firstItem="nBg-ef-Wbu" firstAttribute="leading" secondItem="uIv-Ge-VB4" secondAttribute="leading" id="auo-pZ-mEh"/>
+                            <constraint firstItem="nBg-ef-Wbu" firstAttribute="leading" secondItem="uIv-Ge-VB4" secondAttribute="leading" id="Z9K-2B-iLe"/>
+                            <constraint firstItem="uIv-Ge-VB4" firstAttribute="trailing" secondItem="nBg-ef-Wbu" secondAttribute="trailing" id="bKW-9k-AJw"/>
                             <constraint firstItem="800-zd-WoJ" firstAttribute="width" secondItem="a4a-oJ-NbP" secondAttribute="width" id="cI1-Qz-P7T"/>
+                            <constraint firstItem="nBg-ef-Wbu" firstAttribute="bottom" secondItem="uIv-Ge-VB4" secondAttribute="bottom" constant="109" id="jNn-vB-QaG"/>
                             <constraint firstItem="doJ-rU-vfr" firstAttribute="leading" secondItem="uIv-Ge-VB4" secondAttribute="leading" constant="12" id="ly4-8V-F0r"/>
-                            <constraint firstItem="uIv-Ge-VB4" firstAttribute="trailing" secondItem="nBg-ef-Wbu" secondAttribute="trailing" id="qtE-aW-eiG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uIv-Ge-VB4"/>
                     </view>
@@ -966,6 +1052,7 @@
                         <outlet property="fillView" destination="eaa-6Y-ir8" id="OmY-uz-r6C"/>
                         <outlet property="likeButton" destination="9jJ-wz-Z0A" id="ZuR-eo-qmI"/>
                         <outlet property="posterImage" destination="Pvk-QU-lCP" id="gev-Ku-Afe"/>
+                        <outlet property="scrollView" destination="mXR-yO-Gad" id="YPU-Xf-wWq"/>
                         <outlet property="showAfterPriceLabel" destination="abw-Wf-CIc" id="eXM-GZ-6Sj"/>
                         <outlet property="showBeforePriceLabel" destination="DPD-q5-Geh" id="Kgy-p0-a1y"/>
                         <outlet property="showDetailImage" destination="h0w-kS-VZN" id="7Ve-Ib-zve"/>
@@ -1015,10 +1102,12 @@
         <image name="iconLikeNoFill" width="25" height="24"/>
         <image name="iconLocationCoral" width="10" height="14"/>
         <image name="iconLocationMain" width="9.5" height="13"/>
+        <image name="iconNextMain" width="13" height="22"/>
         <image name="iconSearchMain" width="17.5" height="16.5"/>
         <image name="iconTimeCoral" width="11.5" height="11.5"/>
         <image name="iconTimeMain" width="10.5" height="10.5"/>
         <image name="imgProfile" width="69" height="87"/>
+        <image name="imgnextMain" width="13" height="22.5"/>
         <image name="longMusicalInfo" width="376" height="5653"/>
         <image name="posteKillMeNowInfo" width="252" height="337"/>
     </resources>
