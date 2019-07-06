@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="df6-01-1ms">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,32 +29,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4E-Ma-LwP">
-                                <rect key="frame" x="80" y="180" width="30" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4E-Ma-LwP">
+                                <rect key="frame" x="35" y="180" width="29.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLu-dl-qJw">
-                                <rect key="frame" x="80" y="233" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLu-dl-qJw">
+                                <rect key="frame" x="35" y="244" width="44.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="전화번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3o-jj-vPN">
-                                <rect key="frame" x="80" y="299" width="59" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3o-jj-vPN">
+                                <rect key="frame" x="35" y="308" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="사용자 이름" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-p3-OQY" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="131" y="168" width="217" height="44"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="사용자 이름" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-p3-OQY" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="105" y="157" width="238" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="251" id="luD-LE-olF"/>
-                                    <constraint firstAttribute="height" constant="44" id="z5W-1J-UMX"/>
+                                    <constraint firstAttribute="height" constant="44" id="5eE-KF-ydK"/>
+                                    <constraint firstAttribute="width" constant="238" id="8Jk-Ou-wmB"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -74,11 +71,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="사용자 이메일" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXF-17-kZV" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="131" y="233" width="217" height="44"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="사용자 이메일" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXF-17-kZV" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="105" y="221" width="238" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="251" id="0k6-Ov-m9x"/>
-                                    <constraint firstAttribute="height" constant="44" id="OVj-Fg-ccQ"/>
+                                    <constraint firstAttribute="width" constant="238" id="NJ2-6o-NLM"/>
+                                    <constraint firstAttribute="height" constant="44" id="kUj-5E-JUc"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -98,11 +95,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="010-1234-5678" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buf-fz-QSE" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="131" y="311" width="217" height="44"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="010-1234-5678" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buf-fz-QSE" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="105" y="285" width="238" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="251" id="PWT-PN-mzM"/>
-                                    <constraint firstAttribute="height" constant="44" id="xkq-m1-3UE"/>
+                                    <constraint firstAttribute="width" constant="238" id="gXy-bE-jX1"/>
+                                    <constraint firstAttribute="height" constant="44" id="okY-iS-Q5U"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -124,6 +121,20 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j0F-TZ-2di" firstAttribute="trailing" secondItem="KVy-p3-OQY" secondAttribute="trailing" constant="32" id="6Cx-6r-eVM"/>
+                            <constraint firstItem="iLu-dl-qJw" firstAttribute="leading" secondItem="j0F-TZ-2di" secondAttribute="leading" constant="35" id="8S6-TF-utB"/>
+                            <constraint firstItem="v4E-Ma-LwP" firstAttribute="top" secondItem="j0F-TZ-2di" secondAttribute="top" constant="160" id="DxM-J7-VCK"/>
+                            <constraint firstItem="j0F-TZ-2di" firstAttribute="trailing" secondItem="buf-fz-QSE" secondAttribute="trailing" constant="32" id="EVG-95-uIg"/>
+                            <constraint firstItem="H3o-jj-vPN" firstAttribute="leading" secondItem="j0F-TZ-2di" secondAttribute="leading" constant="35" id="EeD-Pr-zkj"/>
+                            <constraint firstItem="KVy-p3-OQY" firstAttribute="bottom" secondItem="v4E-Ma-LwP" secondAttribute="bottom" id="Meu-2X-fR1"/>
+                            <constraint firstItem="H3o-jj-vPN" firstAttribute="bottom" secondItem="buf-fz-QSE" secondAttribute="bottom" id="bIg-fY-62a"/>
+                            <constraint firstItem="v4E-Ma-LwP" firstAttribute="leading" secondItem="j0F-TZ-2di" secondAttribute="leading" constant="35" id="dHx-qG-nSx"/>
+                            <constraint firstItem="H3o-jj-vPN" firstAttribute="top" secondItem="iLu-dl-qJw" secondAttribute="bottom" constant="43" id="fKn-1r-16j"/>
+                            <constraint firstItem="iLu-dl-qJw" firstAttribute="bottom" secondItem="dXF-17-kZV" secondAttribute="bottom" id="ji8-d4-hmt"/>
+                            <constraint firstItem="j0F-TZ-2di" firstAttribute="trailing" secondItem="dXF-17-kZV" secondAttribute="trailing" constant="32" id="jiE-yK-AdQ"/>
+                            <constraint firstItem="iLu-dl-qJw" firstAttribute="top" secondItem="v4E-Ma-LwP" secondAttribute="bottom" constant="43" id="yI9-RD-IDo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="j0F-TZ-2di"/>
                     </view>
                     <connections>

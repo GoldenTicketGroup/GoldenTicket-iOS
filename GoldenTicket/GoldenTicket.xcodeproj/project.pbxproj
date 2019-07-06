@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08004B8222D0974000BA8AC0 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B8122D0974000BA8AC0 /* SplashVC.swift */; };
+		08004B8522D0DE5900BA8AC0 /* splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 08004B8422D0DE5900BA8AC0 /* splash.gif */; };
+		08004B8922D0DF8700BA8AC0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B8622D0DF8700BA8AC0 /* AuthService.swift */; };
+		08004B8A22D0DF8700BA8AC0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B8722D0DF8700BA8AC0 /* APIConstants.swift */; };
+		08004B8B22D0DF8700BA8AC0 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B8822D0DF8700BA8AC0 /* NetworkResult.swift */; };
+		08004B8D22D0E5AE00BA8AC0 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08004B8C22D0E5AE00BA8AC0 /* Splash.storyboard */; };
 		080BF81D22CC57F400A06BBF /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080BF81C22CC57F400A06BBF /* Setting.storyboard */; };
 		080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */; };
 		080BF82122CC840400A06BBF /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82022CC840400A06BBF /* Like.swift */; };
 		080BF82422CC8D5000A06BBF /* Win.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82322CC8D5000A06BBF /* Win.swift */; };
 		080BF82622CC8EC400A06BBF /* WinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82522CC8EC400A06BBF /* WinCell.swift */; };
-		080EA9B022D08754000D074C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9AF22D08754000D074C /* APIConstants.swift */; };
-		080EA9B222D08A35000D074C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B122D08A35000D074C /* AuthService.swift */; };
-		080EA9B422D08A62000D074C /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B322D08A62000D074C /* NetworkResult.swift */; };
 		080EA9B622D08B14000D074C /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B522D08B14000D074C /* ResponseString.swift */; };
 		080EA9B822D08B74000D074C /* ResponseDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B722D08B74000D074C /* ResponseDefault.swift */; };
 		0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836ED5822C5A72D006295D3 /* Notice.storyboard */; };
@@ -30,7 +33,6 @@
 		08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB2822C2552D009C1199 /* Main.storyboard */; };
 		08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2B22C2552D009C1199 /* GoldenTicket.xcdatamodeld */; };
 		08CBCB2F22C2552F009C1199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB2E22C2552F009C1199 /* Assets.xcassets */; };
-		08CBCB3222C2552F009C1199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB3022C2552F009C1199 /* LaunchScreen.storyboard */; };
 		08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */; };
 		08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7622C507C8009C1199 /* Login.storyboard */; };
 		08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7822C523C9009C1199 /* Lose.storyboard */; };
@@ -70,14 +72,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08004B8122D0974000BA8AC0 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		08004B8422D0DE5900BA8AC0 /* splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash.gif; sourceTree = "<group>"; };
+		08004B8622D0DF8700BA8AC0 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		08004B8722D0DF8700BA8AC0 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		08004B8822D0DF8700BA8AC0 /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		08004B8C22D0E5AE00BA8AC0 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		080BF81C22CC57F400A06BBF /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCollectionViewCell.swift; sourceTree = "<group>"; };
 		080BF82022CC840400A06BBF /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		080BF82322CC8D5000A06BBF /* Win.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Win.swift; path = GoldenTicket/Model/Win.swift; sourceTree = SOURCE_ROOT; };
 		080BF82522CC8EC400A06BBF /* WinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinCell.swift; sourceTree = "<group>"; };
-		080EA9AF22D08754000D074C /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = SOURCE_ROOT; };
-		080EA9B122D08A35000D074C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = SOURCE_ROOT; };
-		080EA9B322D08A62000D074C /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = SOURCE_ROOT; };
 		080EA9B522D08B14000D074C /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
 		080EA9B722D08B74000D074C /* ResponseDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDefault.swift; sourceTree = "<group>"; };
 		0836ED5822C5A72D006295D3 /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
@@ -94,7 +99,6 @@
 		08CBCB2922C2552D009C1199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08CBCB2C22C2552D009C1199 /* GoldenTicket.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoldenTicket.xcdatamodel; sourceTree = "<group>"; };
 		08CBCB2E22C2552F009C1199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		08CBCB3122C2552F009C1199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08CBCB3322C2552F009C1199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		08CBCB7622C507C8009C1199 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -148,6 +152,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08004B8322D0981500BA8AC0 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				08004B8C22D0E5AE00BA8AC0 /* Splash.storyboard */,
+				08004B8422D0DE5900BA8AC0 /* splash.gif */,
+				08004B8122D0974000BA8AC0 /* SplashVC.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		080BF82222CC8D1100A06BBF /* Like */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,7 +224,7 @@
 		08CBCB3B22C255CF009C1199 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				08CBCB3022C2552F009C1199 /* LaunchScreen.storyboard */,
+				08004B8322D0981500BA8AC0 /* Splash */,
 				08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */,
 				08CBCB7622C507C8009C1199 /* Login.storyboard */,
 				08CBCB2822C2552D009C1199 /* Main.storyboard */,
@@ -236,9 +250,9 @@
 		08CBCB3E22C255FB009C1199 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
-				080EA9AF22D08754000D074C /* APIConstants.swift */,
-				080EA9B122D08A35000D074C /* AuthService.swift */,
-				080EA9B322D08A62000D074C /* NetworkResult.swift */,
+				08004B8722D0DF8700BA8AC0 /* APIConstants.swift */,
+				08004B8622D0DF8700BA8AC0 /* AuthService.swift */,
+				08004B8822D0DF8700BA8AC0 /* NetworkResult.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -446,7 +460,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08CBCB3222C2552F009C1199 /* LaunchScreen.storyboard in Resources */,
 				0836EDAE22C7C2B1006295D3 /* Unpaid.storyboard in Resources */,
 				08CBCB2F22C2552F009C1199 /* Assets.xcassets in Resources */,
 				F40313FA22CB2FB700BB2737 /* Interested.storyboard in Resources */,
@@ -464,8 +477,10 @@
 				F4955C0422C88D1C00530906 /* Search.storyboard in Resources */,
 				F43F453322C9A4AE00C53898 /* ShowDetail.storyboard in Resources */,
 				08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */,
+				08004B8522D0DE5900BA8AC0 /* splash.gif in Resources */,
 				F43F454922CA79C900C53898 /* NoTicket.storyboard in Resources */,
 				F402F30A22CDBCF90047B976 /* Contents.storyboard in Resources */,
+				08004B8D22D0E5AE00BA8AC0 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,10 +534,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0836EDB222C7C618006295D3 /* UnpaidViewController.swift in Sources */,
-				080EA9B022D08754000D074C /* APIConstants.swift in Sources */,
 				080EA9B822D08B74000D074C /* ResponseDefault.swift in Sources */,
+				08004B8A22D0DF8700BA8AC0 /* APIConstants.swift in Sources */,
 				F4955BFE22C8587300530906 /* MainShowCell.swift in Sources */,
-				080EA9B222D08A35000D074C /* AuthService.swift in Sources */,
 				F402F33B22CF0F610047B976 /* LotteryCheckCell.swift in Sources */,
 				F4955C0222C8635A00530906 /* Show.swift in Sources */,
 				F43F454722CA639C00C53898 /* TicketVC.swift in Sources */,
@@ -539,16 +553,18 @@
 				F40313FE22CB344900BB2737 /* QuestionVC.swift in Sources */,
 				F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */,
 				080EA9B622D08B14000D074C /* ResponseString.swift in Sources */,
+				08004B8222D0974000BA8AC0 /* SplashVC.swift in Sources */,
 				F402F30C22CDD2A70047B976 /* ContentsVC.swift in Sources */,
-				080EA9B422D08A62000D074C /* NetworkResult.swift in Sources */,
 				080BF82122CC840400A06BBF /* Like.swift in Sources */,
 				F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,
 				08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */,
+				08004B8922D0DF8700BA8AC0 /* AuthService.swift in Sources */,
 				089C13BF22D06BB600F91DD9 /* EditInfoViewController.swift in Sources */,
 				F4955C0922C89C0F00530906 /* CustomSearchButton.swift in Sources */,
 				F43F453822C9A83200C53898 /* ShowDetail.swift in Sources */,
 				F43F453622C9A81000C53898 /* ShowDetailVC.swift in Sources */,
+				08004B8B22D0DF8700BA8AC0 /* NetworkResult.swift in Sources */,
 				080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */,
 				F440B39F22C61BF200B8AFD6 /* NoticeTableViewController.swift in Sources */,
 				F40313F822CB2E8C00BB2737 /* InterestedVC.swift in Sources */,
@@ -569,14 +585,6 @@
 				08CBCB2922C2552D009C1199 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		08CBCB3022C2552F009C1199 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08CBCB3122C2552F009C1199 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -704,7 +712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 39X44DH4RN;
 				INFOPLIST_FILE = GoldenTicket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -723,7 +731,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 39X44DH4RN;
 				INFOPLIST_FILE = GoldenTicket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

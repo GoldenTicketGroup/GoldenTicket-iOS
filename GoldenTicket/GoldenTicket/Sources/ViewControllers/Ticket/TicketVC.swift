@@ -22,6 +22,11 @@ class TicketVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // navigationBar clear 하게 setting 하기.
+        navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationBar.shadowImage = UIImage()
+        navigationBar.isTranslucent = false
+        
          // ticketView Image 에 그림자 설정해주기
         ticketView.layer.masksToBounds = false
         ticketView.layer.shadowOffset = CGSize(width: 0, height: 3)

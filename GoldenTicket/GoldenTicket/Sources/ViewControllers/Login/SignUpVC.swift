@@ -49,8 +49,42 @@ class SignUpVC: UIViewController {
         unregisterForKeyboardNotifications()
     }
     
+    // 뒤로 가기 버튼
     @IBAction func backBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    // 회원 가입 버튼
+    @IBAction func signupBtn(_ sender: Any) {
+        guard let name = userName.text else { return }
+        guard let email = userEmail.text else { return }
+        guard let phone = userPhone.text else { return }
+        guard let password = userPasswd.text else { return }
+        guard let check = checkPasswd.text else { return }
+        
+        AuthService.shared.signup(name, email, phone, password) {
+            data in
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let token):
+                UserDefaults.standard.set(token, forKey: "Token")
+                self.simpleAlert(title: "회원가입 성공", message: "")
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "회원가입 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "회원가입 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
     }
 }
 
