@@ -12,13 +12,18 @@ class ContentsVC: UIViewController {
     
     @IBOutlet weak var goInfoButton: UIButton!
     
+    @IBOutlet weak var goInfoButton2: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        goInfoButton.layer.cornerRadius = 20
+        goInfoButton.makeRounded(cornerRadius: 20)
+        goInfoButton2.makeRounded(cornerRadius: 20)
     }
     
-
+    @IBAction func cancleButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -173,6 +173,7 @@ class ShowDetailVC: UIViewController {
                 
             }
         } else {
+            tblView.isHidden = true
             UIView.animate(withDuration: 1, animations: {
                 self.fillView.transform = .identity
                 self.checkView.transform = .identity
@@ -216,7 +217,7 @@ class ShowDetailVC: UIViewController {
     
     // scroll시 응모하기 뷰 내리고 올리기
     func showMenuView() {
-        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
             
             self.checkView.transform = CGAffineTransform(translationX: 0, y: 248)
         })
@@ -224,7 +225,7 @@ class ShowDetailVC: UIViewController {
         self.view.layoutIfNeeded()
     }
     func hideMenuView() {
-        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
             self.checkView.transform = .identity
         })
         
