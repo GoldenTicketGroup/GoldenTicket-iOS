@@ -59,7 +59,6 @@
 		F43F454722CA639C00C53898 /* TicketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F454622CA639C00C53898 /* TicketVC.swift */; };
 		F43F454922CA79C900C53898 /* NoTicket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F454822CA79C900C53898 /* NoTicket.storyboard */; };
 		F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */; };
-		F440B39F22C61BF200B8AFD6 /* NoticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */; };
 		F440B3A122C61C5800B8AFD6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */; };
 		F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A222C63C6800B8AFD6 /* LoginVC.swift */; };
 		F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A822C640A100B8AFD6 /* CustomButton.swift */; };
@@ -129,7 +128,6 @@
 		F43F454622CA639C00C53898 /* TicketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketVC.swift; sourceTree = "<group>"; };
 		F43F454822CA79C900C53898 /* NoTicket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoTicket.storyboard; sourceTree = "<group>"; };
 		F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
-		F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewController.swift; sourceTree = "<group>"; };
 		F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F440B3A222C63C6800B8AFD6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F440B3A822C640A100B8AFD6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 				08CBCB7822C523C9009C1199 /* Lose.storyboard */,
 				0836EDA522C750F7006295D3 /* Win.storyboard */,
 				0836EDAD22C7C2B1006295D3 /* Unpaid.storyboard */,
-				0836ED5822C5A72D006295D3 /* Notice.storyboard */,
 				F4955C0322C88D1C00530906 /* Search.storyboard */,
 				F43F453222C9A4AE00C53898 /* ShowDetail.storyboard */,
 				F43F454322CA45B700C53898 /* WinTicket.storyboard */,
@@ -244,6 +241,7 @@
 				F40313F022CB1B0800BB2737 /* WinList.storyboard */,
 				F40313F922CB2FB700BB2737 /* Interested.storyboard */,
 				F40313FB22CB333B00BB2737 /* Question.storyboard */,
+				0836ED5822C5A72D006295D3 /* Notice.storyboard */,
 				080BF81C22CC57F400A06BBF /* Setting.storyboard */,
 				089C13BB22D06AB800F91DD9 /* EditInfo.storyboard */,
 				F402F30922CDBCF90047B976 /* Contents.storyboard */,
@@ -382,7 +380,6 @@
 			isa = PBXGroup;
 			children = (
 				F440B39C22C61BA500B8AFD6 /* NoticeViewController.swift */,
-				F440B39E22C61BF200B8AFD6 /* NoticeTableViewController.swift */,
 			);
 			path = Notice;
 			sourceTree = "<group>";
@@ -574,7 +571,6 @@
 				F43F453622C9A81000C53898 /* ShowDetailVC.swift in Sources */,
 				08004B8B22D0DF8700BA8AC0 /* NetworkResult.swift in Sources */,
 				080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */,
-				F440B39F22C61BF200B8AFD6 /* NoticeTableViewController.swift in Sources */,
 				F40313F822CB2E8C00BB2737 /* InterestedVC.swift in Sources */,
 				F440B3AB22C6437400B8AFD6 /* UIColor+Extensions.swift in Sources */,
 				080BF82422CC8D5000A06BBF /* Win.swift in Sources */,

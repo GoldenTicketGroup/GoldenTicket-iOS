@@ -139,6 +139,9 @@
                     </view>
                     <connections>
                         <outlet property="navigationBar" destination="brj-YI-J2t" id="x5C-XJ-eLQ"/>
+                        <outlet property="userEmail" destination="dXF-17-kZV" id="1rE-h2-9kh"/>
+                        <outlet property="userName" destination="KVy-p3-OQY" id="WOB-oC-Mqb"/>
+                        <outlet property="userPhone" destination="buf-fz-QSE" id="5Eh-xf-ls3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0T-NH-Np1" userLabel="First Responder" sceneMemberID="firstResponder"/>

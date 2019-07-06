@@ -12,6 +12,10 @@ class EditInfoViewController: UIViewController {
 
     @IBOutlet var navigationBar: UINavigationBar!
     
+    @IBOutlet var userName: UITextField!
+    @IBOutlet var userEmail: UITextField!
+    @IBOutlet var userPhone: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
