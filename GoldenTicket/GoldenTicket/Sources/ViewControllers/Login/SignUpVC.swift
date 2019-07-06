@@ -23,6 +23,9 @@ class SignUpVC: UIViewController {
     @IBOutlet var userPasswd: UITextField!
     @IBOutlet var checkPasswd: UITextField!
     
+    // 비밀번호 확인 uiView
+    @IBOutlet var checkView: UIView!
+    
     // 이메일로 회원가입
     @IBOutlet var emailLabel: UILabel!
     
@@ -62,27 +65,38 @@ class SignUpVC: UIViewController {
         guard let password = userPasswd.text else { return }
         guard let check = checkPasswd.text else { return }
         
-        AuthService.shared.signup(name, email, phone, password) {
-            data in
-            
-            switch data {
+        // 비밀번호와 비밀번호 확인이 일치하지 않는다면
+        if password != check {
+            // 흔드는 효과를 준다.
+            checkView.shake()
+            return
+        }
+        else {
+            // 통신을 시도합니다.
+            AuthService.shared.signup(name, email, phone, password) {
+                data in
                 
-            // 매개변수에 어떤 값을 가져올 것인지
-            case .success(let token):
-                UserDefaults.standard.set(token, forKey: "Token")
-                self.simpleAlert(title: "회원가입 성공", message: "")
-                
-            case .requestErr(let message):
-                self.simpleAlert(title: "회원가입 실패", message: "\(message)")
-                
-            case .pathErr:
-                print(".pathErr")
-                
-            case .serverErr:
-                print(".serverErr")
-                
-            case .networkFail:
-                self.simpleAlert(title: "회원가입 실패", message: "네트워크 상태를 확인해주세요.")
+                switch data {
+                    
+                // 매개변수에 어떤 값을 가져올 것인지
+                case .success(let token):
+                    UserDefaults.standard.set(token, forKey: "Token")
+                    self.simpleAlert(title: "회원가입 성공", message: "")
+                    // 회원가입 완료 후에는 로그인 페이지로 이동
+                    self.dismiss(animated: true, completion: nil)
+                    
+                case .requestErr(let message):
+                    self.simpleAlert(title: "회원가입 실패", message: "\(message)")
+                    
+                case .pathErr:
+                    print(".pathErr")
+                    
+                case .serverErr:
+                    print(".serverErr")
+                    
+                case .networkFail:
+                    self.simpleAlert(title: "회원가입 실패", message: "네트워크 상태를 확인해주세요.")
+                }
             }
         }
     }

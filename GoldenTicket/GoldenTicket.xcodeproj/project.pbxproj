@@ -12,7 +12,9 @@
 		08004B8922D0DF8700BA8AC0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B8622D0DF8700BA8AC0 /* AuthService.swift */; };
 		08004B8A22D0DF8700BA8AC0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B8722D0DF8700BA8AC0 /* APIConstants.swift */; };
 		08004B8B22D0DF8700BA8AC0 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B8822D0DF8700BA8AC0 /* NetworkResult.swift */; };
-		08004B8D22D0E5AE00BA8AC0 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08004B8C22D0E5AE00BA8AC0 /* Splash.storyboard */; };
+		08004B8F22D0EBAD00BA8AC0 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08004B8E22D0EBAD00BA8AC0 /* Splash.storyboard */; };
+		08004B9322D0EF7600BA8AC0 /* ShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9222D0EF7600BA8AC0 /* ShowService.swift */; };
+		08004B9522D0F42300BA8AC0 /* UIView+shake+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9422D0F42300BA8AC0 /* UIView+shake+Extensions.swift */; };
 		080BF81D22CC57F400A06BBF /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080BF81C22CC57F400A06BBF /* Setting.storyboard */; };
 		080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */; };
 		080BF82122CC840400A06BBF /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82022CC840400A06BBF /* Like.swift */; };
@@ -77,7 +79,9 @@
 		08004B8622D0DF8700BA8AC0 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		08004B8722D0DF8700BA8AC0 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		08004B8822D0DF8700BA8AC0 /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
-		08004B8C22D0E5AE00BA8AC0 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		08004B8E22D0EBAD00BA8AC0 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		08004B9222D0EF7600BA8AC0 /* ShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowService.swift; sourceTree = "<group>"; };
+		08004B9422D0F42300BA8AC0 /* UIView+shake+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+shake+Extensions.swift"; sourceTree = "<group>"; };
 		080BF81C22CC57F400A06BBF /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCollectionViewCell.swift; sourceTree = "<group>"; };
 		080BF82022CC840400A06BBF /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
@@ -155,9 +159,9 @@
 		08004B8322D0981500BA8AC0 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				08004B8C22D0E5AE00BA8AC0 /* Splash.storyboard */,
 				08004B8422D0DE5900BA8AC0 /* splash.gif */,
 				08004B8122D0974000BA8AC0 /* SplashVC.swift */,
+				08004B8E22D0EBAD00BA8AC0 /* Splash.storyboard */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -252,6 +256,7 @@
 			children = (
 				08004B8722D0DF8700BA8AC0 /* APIConstants.swift */,
 				08004B8622D0DF8700BA8AC0 /* AuthService.swift */,
+				08004B9222D0EF7600BA8AC0 /* ShowService.swift */,
 				08004B8822D0DF8700BA8AC0 /* NetworkResult.swift */,
 			);
 			path = APIServices;
@@ -333,6 +338,7 @@
 				F440B3A022C61C5800B8AFD6 /* UIView+Extensions.swift */,
 				F440B3AC22C6444000B8AFD6 /* UIViewController+Extensions.swift */,
 				F440B3AA22C6437400B8AFD6 /* UIColor+Extensions.swift */,
+				08004B9422D0F42300BA8AC0 /* UIView+shake+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -480,7 +486,7 @@
 				08004B8522D0DE5900BA8AC0 /* splash.gif in Resources */,
 				F43F454922CA79C900C53898 /* NoTicket.storyboard in Resources */,
 				F402F30A22CDBCF90047B976 /* Contents.storyboard in Resources */,
-				08004B8D22D0E5AE00BA8AC0 /* Splash.storyboard in Resources */,
+				08004B8F22D0EBAD00BA8AC0 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +546,7 @@
 				F402F33B22CF0F610047B976 /* LotteryCheckCell.swift in Sources */,
 				F4955C0222C8635A00530906 /* Show.swift in Sources */,
 				F43F454722CA639C00C53898 /* TicketVC.swift in Sources */,
+				08004B9522D0F42300BA8AC0 /* UIView+shake+Extensions.swift in Sources */,
 				F4955BFA22C857F000530906 /* MainVC.swift in Sources */,
 				F40313F422CB1CE700BB2737 /* WinTicketsVC.swift in Sources */,
 				F440B3A122C61C5800B8AFD6 /* UIView+Extensions.swift in Sources */,
@@ -549,6 +556,7 @@
 				080BF82622CC8EC400A06BBF /* WinCell.swift in Sources */,
 				F4955C0722C8936900530906 /* SearchVC.swift in Sources */,
 				F40313EF22CAF61A00BB2737 /* SideMenuVC.swift in Sources */,
+				08004B9322D0EF7600BA8AC0 /* ShowService.swift in Sources */,
 				F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */,
 				F40313FE22CB344900BB2737 /* QuestionVC.swift in Sources */,
 				F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */,

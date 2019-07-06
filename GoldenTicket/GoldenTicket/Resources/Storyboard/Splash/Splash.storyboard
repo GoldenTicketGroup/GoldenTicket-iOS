@@ -10,38 +10,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LaunchScreen-->
+        <!--SplashVC-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController title="LaunchScreen" id="01J-lp-oVM" customClass="SplashVC" customModule="GoldenTicket" sceneMemberID="viewController">
+                <viewController id="01J-lp-oVM" customClass="SplashVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="imgbackSplash" translatesAutoresizingMaskIntoConstraints="NO" id="2Wf-EN-ZET">
-                                <rect key="frame" x="0.0" y="52" width="375" height="615"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="2Wf-EN-ZET" secondAttribute="height" multiplier="25:41" id="oLj-Ss-EYi"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgbackSplash" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-tV-yT6">
+                                <rect key="frame" x="0.0" y="46" width="375" height="621"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characterSplash" translatesAutoresizingMaskIntoConstraints="NO" id="h3g-lw-she">
-                                <rect key="frame" x="86" y="236.5" width="203" height="194"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2019 GoldenTicket. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
+                                <rect key="frame" x="0.0" y="633.5" width="375" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTn-Co-mIw">
+                                <rect key="frame" x="87" y="196" width="201" height="189"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2Wf-EN-ZET" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="23T-hs-iOx"/>
-                            <constraint firstItem="h3g-lw-she" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="82V-fa-Fpf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h3g-lw-she" secondAttribute="trailing" constant="86" id="HU9-wW-7yZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h3g-lw-she" secondAttribute="bottom" constant="236.5" id="Hzb-oS-UdP"/>
-                            <constraint firstItem="h3g-lw-she" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="216.49999999999997" id="JRk-4f-Y5A"/>
-                            <constraint firstItem="2Wf-EN-ZET" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nX8-Fg-crB"/>
-                            <constraint firstItem="2Wf-EN-ZET" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pJ7-0q-VzQ"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
+                            <constraint firstItem="Nma-tV-yT6" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="5y6-qV-Ogv"/>
+                            <constraint firstItem="fTn-Co-mIw" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="87" id="A4f-SC-7Ax"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="Nma-tV-yT6" secondAttribute="bottom" id="Ctc-Lt-lTY"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="Nma-tV-yT6" secondAttribute="trailing" id="Hi5-SD-N9S"/>
+                            <constraint firstItem="Nma-tV-yT6" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="26" id="IP8-0z-MeD"/>
+                            <constraint firstItem="fTn-Co-mIw" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="176" id="S7p-BK-tAH"/>
+                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="SfN-ll-jLj"/>
+                            <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="fTn-Co-mIw" secondAttribute="bottom" constant="282" id="gUP-C9-yaz"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="fTn-Co-mIw" secondAttribute="trailing" constant="87" id="yGc-c3-7a8"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="h3g-lw-she" id="8PB-zk-7Z6"/>
+                        <outlet property="imageView" destination="fTn-Co-mIw" id="kdl-4n-rLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -50,7 +57,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="characterSplash" width="203" height="194.5"/>
         <image name="imgbackSplash" width="375" height="615"/>
     </resources>
 </document>

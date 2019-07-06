@@ -10,6 +10,8 @@ struct APIConstants {
     // 전역 변수로 사용할 수 있게 APIConstants 선언하여 사용
     static let BaseURL = "http://13.209.208.24:3000"
     static let AuthURL = BaseURL + "/auth"
-    static let LoginURL = "http://13.209.208.24:3000/auth/signin" // 로그인
-    static let SignupURL = "http://13.209.208.24:3000/auth/signup" // 회원가입
+    static let LoginURL = BaseURL + "/auth/signin" // 로그인
+    static let SignupURL = BaseURL + "/auth/signup" // 회원가입
+    
+    static let ShowURL = BaseURL + "/show/home"
 }
