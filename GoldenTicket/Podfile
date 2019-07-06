@@ -8,4 +8,5 @@ target 'GoldenTicket' do
   # Pods for GoldenTicket
   pod 'Hero'
   pod 'SideMenu'
+  pod 'TextFieldEffects'
 end

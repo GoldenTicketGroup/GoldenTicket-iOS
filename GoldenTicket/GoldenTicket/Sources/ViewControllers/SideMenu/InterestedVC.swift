@@ -13,6 +13,7 @@ class InterestedVC: UIViewController {
 
     // UICollectionView 의 Outlet 변수
     @IBOutlet var likeCollection: UICollectionView!
+    @IBOutlet var navigationBar: UINavigationBar!
     
     // UICollectionView 에 들어가게 될 모델 타입의 배열을 생성합니다.
     var likeList: [Like] = []
@@ -20,6 +21,10 @@ class InterestedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // navigationBar clear 하게 setting 하기.
+        navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationBar.shadowImage = UIImage()
+        navigationBar.isTranslucent = false
         
         // collectionView에 들어갈 cell의 dummy data
         setLikedata()

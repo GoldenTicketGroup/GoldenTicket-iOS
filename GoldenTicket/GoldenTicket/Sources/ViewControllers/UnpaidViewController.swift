@@ -11,11 +11,8 @@ import UIKit
 class UnpaidViewController: UIViewController {
 
     
-    @IBOutlet var myView: UIView!
-    @IBOutlet var imgYcontraints: NSLayoutConstraint!
     @IBOutlet var ticketImgView: UIImageView!
     @IBOutlet var ticketView: UIImageView!
-    @IBOutlet var widthconstraints: NSLayoutConstraint!
     
     // var height: CGFloat = CGRectGetHeight(self.myView.bounds)
     
@@ -31,13 +28,6 @@ class UnpaidViewController: UIViewController {
         ticketView.layer.shadowOffset = CGSize(width: 0, height: 0)
         ticketView.layer.shadowRadius = 6
         ticketView.layer.shadowOpacity = 0.16
-
-        
-        let height = self.myView.frame.size.height
-        self.imgYcontraints.constant = height * 0.5
-        
-        let width = self.myView.frame.size.width
-        self.widthconstraints.constant = width * 0.8
     }
     
 }

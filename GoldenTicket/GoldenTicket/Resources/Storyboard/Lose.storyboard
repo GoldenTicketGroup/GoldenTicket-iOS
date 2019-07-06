@@ -64,7 +64,7 @@
                                     <constraint firstAttribute="width" constant="264" id="Wb5-Jr-cDa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" title="응모 하러 가기">
+                                <state key="normal" title="다른 공연 찾아보기">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>

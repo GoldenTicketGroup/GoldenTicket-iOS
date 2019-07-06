@@ -103,6 +103,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="likeCollection" destination="b7z-mr-9ot" id="cJB-oF-mpj"/>
+                        <outlet property="navigationBar" destination="qVB-cZ-Ef1" id="wfw-Pp-YqK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTv-PC-qhz" userLabel="First Responder" sceneMemberID="firstResponder"/>

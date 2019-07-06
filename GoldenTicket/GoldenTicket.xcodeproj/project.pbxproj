@@ -12,12 +12,15 @@
 		080BF82122CC840400A06BBF /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82022CC840400A06BBF /* Like.swift */; };
 		080BF82422CC8D5000A06BBF /* Win.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82322CC8D5000A06BBF /* Win.swift */; };
 		080BF82622CC8EC400A06BBF /* WinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82522CC8EC400A06BBF /* WinCell.swift */; };
+		080EA9B022D08754000D074C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9AF22D08754000D074C /* APIConstants.swift */; };
 		0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836ED5822C5A72D006295D3 /* Notice.storyboard */; };
 		0836EDA622C750F7006295D3 /* Win.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDA522C750F7006295D3 /* Win.storyboard */; };
 		0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAB22C75A24006295D3 /* Lottory.storyboard */; };
 		0836EDAE22C7C2B1006295D3 /* Unpaid.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAD22C7C2B1006295D3 /* Unpaid.storyboard */; };
 		0836EDB222C7C618006295D3 /* UnpaidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0836EDB122C7C618006295D3 /* UnpaidViewController.swift */; };
 		0887886022CDCEDE00FE0E91 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0887885F22CDCEDE00FE0E91 /* SignUpVC.swift */; };
+		089C13BC22D06AB800F91DD9 /* EditInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089C13BB22D06AB800F91DD9 /* EditInfo.storyboard */; };
+		089C13BF22D06BB600F91DD9 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C13BE22D06BB600F91DD9 /* EditInfoViewController.swift */; };
 		08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2422C2552D009C1199 /* AppDelegate.swift */; };
 		08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CBCB2622C2552D009C1199 /* ViewController.swift */; };
 		08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB2822C2552D009C1199 /* Main.storyboard */; };
@@ -68,12 +71,15 @@
 		080BF82022CC840400A06BBF /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		080BF82322CC8D5000A06BBF /* Win.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Win.swift; path = GoldenTicket/Model/Win.swift; sourceTree = SOURCE_ROOT; };
 		080BF82522CC8EC400A06BBF /* WinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinCell.swift; sourceTree = "<group>"; };
+		080EA9AF22D08754000D074C /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = SOURCE_ROOT; };
 		0836ED5822C5A72D006295D3 /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
 		0836EDA522C750F7006295D3 /* Win.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Win.storyboard; sourceTree = "<group>"; };
 		0836EDAB22C75A24006295D3 /* Lottory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottory.storyboard; sourceTree = "<group>"; };
 		0836EDAD22C7C2B1006295D3 /* Unpaid.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Unpaid.storyboard; sourceTree = "<group>"; };
 		0836EDB122C7C618006295D3 /* UnpaidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnpaidViewController.swift; sourceTree = "<group>"; };
 		0887885F22CDCEDE00FE0E91 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		089C13BB22D06AB800F91DD9 /* EditInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditInfo.storyboard; sourceTree = "<group>"; };
+		089C13BE22D06BB600F91DD9 /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
 		08CBCB2122C2552D009C1199 /* GoldenTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CBCB2422C2552D009C1199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CBCB2622C2552D009C1199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +148,14 @@
 			path = Like;
 			sourceTree = "<group>";
 		};
+		089C13BD22D06B2400F91DD9 /* EditInfo */ = {
+			isa = PBXGroup;
+			children = (
+				089C13BE22D06BB600F91DD9 /* EditInfoViewController.swift */,
+			);
+			path = EditInfo;
+			sourceTree = "<group>";
+		};
 		08CBCB1822C2552D009C1199 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +219,7 @@
 				F40313F922CB2FB700BB2737 /* Interested.storyboard */,
 				F40313FB22CB333B00BB2737 /* Question.storyboard */,
 				080BF81C22CC57F400A06BBF /* Setting.storyboard */,
+				089C13BB22D06AB800F91DD9 /* EditInfo.storyboard */,
 				F402F30922CDBCF90047B976 /* Contents.storyboard */,
 			);
 			path = Storyboard;
@@ -213,6 +228,7 @@
 		08CBCB3E22C255FB009C1199 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
+				080EA9AF22D08754000D074C /* APIConstants.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -306,6 +322,7 @@
 		F440B39922C61AAD00B8AFD6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				089C13BD22D06B2400F91DD9 /* EditInfo */,
 				F402F30822CDBCC00047B976 /* Contents */,
 				080BF82222CC8D1100A06BBF /* Like */,
 				F40313F222CB1C9E00BB2737 /* SideMenu */,
@@ -425,6 +442,7 @@
 				080BF81D22CC57F400A06BBF /* Setting.storyboard in Resources */,
 				0836EDA622C750F7006295D3 /* Win.storyboard in Resources */,
 				0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */,
+				089C13BC22D06AB800F91DD9 /* EditInfo.storyboard in Resources */,
 				08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */,
 				08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */,
 				08CBCB2A22C2552D009C1199 /* Main.storyboard in Resources */,
@@ -489,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0836EDB222C7C618006295D3 /* UnpaidViewController.swift in Sources */,
+				080EA9B022D08754000D074C /* APIConstants.swift in Sources */,
 				F4955BFE22C8587300530906 /* MainShowCell.swift in Sources */,
 				F402F33B22CF0F610047B976 /* LotteryCheckCell.swift in Sources */,
 				F4955C0222C8635A00530906 /* Show.swift in Sources */,
@@ -510,6 +529,7 @@
 				F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,
 				08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */,
+				089C13BF22D06BB600F91DD9 /* EditInfoViewController.swift in Sources */,
 				F4955C0922C89C0F00530906 /* CustomSearchButton.swift in Sources */,
 				F43F453822C9A83200C53898 /* ShowDetail.swift in Sources */,
 				F43F453622C9A81000C53898 /* ShowDetailVC.swift in Sources */,
