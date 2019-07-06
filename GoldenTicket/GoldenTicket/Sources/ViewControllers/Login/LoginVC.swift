@@ -47,7 +47,10 @@ class LoginVC: UIViewController {
             // 매개변수에 어떤 값을 가져올 것인지
             case .success(let token):
                 UserDefaults.standard.set(token, forKey: "Token")
-                self.simpleAlert(title: "로그인 성공", message: "")
+                //self.simpleAlert(title: "로그인 성공", message: "")
+                
+                let storyboardMain = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC")
+                self.present(storyboardMain, animated: true)
                 
             case .requestErr(let message):
                 self.simpleAlert(title: "로그인 실패", message: "\(message)")

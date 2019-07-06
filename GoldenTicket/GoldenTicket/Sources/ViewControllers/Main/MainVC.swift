@@ -104,7 +104,7 @@ class MainVC: UIViewController {
     //첫번째 응모한 공연에 대한 시간 프린터
     @objc func timePrinter1() -> Void {
         // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime: "07/06/2019 05:30:30 p")
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime: "07/06/2019 12:30:30 p")
         
         let sec = time.second!
         let min = time.minute!
@@ -128,16 +128,17 @@ class MainVC: UIViewController {
         
         firstTimeLabel.text = hour + " : " + minute + " : " + second
         
-        if sec == 0 && min == 0 && sec == 0 {
+        if sec <= 0 && min <= 0 && sec <= 0 {
             firstLotteryCheckButton.isHidden = false
             firstTimeLabel.isHidden = true
         }
     }
     
+    //두번째 응모한 공연에 대한 시간 프린터
     @objc func timePrinter2() -> Void {
         
         // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime: "07/06/2019 04:18:30 p")
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime: "07/06/2019 09:18:30 p")
         
         let sec = time.second!
         let min = time.minute!
@@ -161,7 +162,7 @@ class MainVC: UIViewController {
         
         secondTimeLabel.text = hour + " : " + minute + " : " + second
         
-        if sec == 0 && min == 0 && sec == 0 {
+        if sec <= 0 && min <= 0 && sec <= 0 {
             secondLotteryCheckButton.isHidden = false
             secondTimeLabel.isHidden = true
         }
