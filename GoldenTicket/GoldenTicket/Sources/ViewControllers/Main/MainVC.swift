@@ -12,6 +12,8 @@ import SideMenu
 
 class MainVC: UIViewController {
     
+    @IBOutlet var userName: UILabel!
+    
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
     

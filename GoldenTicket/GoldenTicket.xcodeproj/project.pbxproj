@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		08004B8222D0974000BA8AC0 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B8122D0974000BA8AC0 /* SplashVC.swift */; };
 		08004B8522D0DE5900BA8AC0 /* splash.gif in Resources */ = {isa = PBXBuildFile; fileRef = 08004B8422D0DE5900BA8AC0 /* splash.gif */; };
-		08004B8922D0DF8700BA8AC0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B8622D0DF8700BA8AC0 /* AuthService.swift */; };
-		08004B8A22D0DF8700BA8AC0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B8722D0DF8700BA8AC0 /* APIConstants.swift */; };
-		08004B8B22D0DF8700BA8AC0 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B8822D0DF8700BA8AC0 /* NetworkResult.swift */; };
 		08004B8F22D0EBAD00BA8AC0 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08004B8E22D0EBAD00BA8AC0 /* Splash.storyboard */; };
-		08004B9322D0EF7600BA8AC0 /* ShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9222D0EF7600BA8AC0 /* ShowService.swift */; };
 		08004B9522D0F42300BA8AC0 /* UIView+shake+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9422D0F42300BA8AC0 /* UIView+shake+Extensions.swift */; };
+		08004B9A22D1D47700BA8AC0 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9622D1D47700BA8AC0 /* NetworkResult.swift */; };
+		08004B9B22D1D47700BA8AC0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9722D1D47700BA8AC0 /* APIConstants.swift */; };
+		08004B9C22D1D47700BA8AC0 /* ShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9822D1D47700BA8AC0 /* ShowService.swift */; };
+		08004B9D22D1D47700BA8AC0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9922D1D47700BA8AC0 /* AuthService.swift */; };
 		080BF81D22CC57F400A06BBF /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080BF81C22CC57F400A06BBF /* Setting.storyboard */; };
 		080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */; };
 		080BF82122CC840400A06BBF /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82022CC840400A06BBF /* Like.swift */; };
@@ -79,12 +79,12 @@
 /* Begin PBXFileReference section */
 		08004B8122D0974000BA8AC0 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		08004B8422D0DE5900BA8AC0 /* splash.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash.gif; sourceTree = "<group>"; };
-		08004B8622D0DF8700BA8AC0 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		08004B8722D0DF8700BA8AC0 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
-		08004B8822D0DF8700BA8AC0 /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		08004B8E22D0EBAD00BA8AC0 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
-		08004B9222D0EF7600BA8AC0 /* ShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowService.swift; sourceTree = "<group>"; };
 		08004B9422D0F42300BA8AC0 /* UIView+shake+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+shake+Extensions.swift"; sourceTree = "<group>"; };
+		08004B9622D1D47700BA8AC0 /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		08004B9722D1D47700BA8AC0 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		08004B9822D1D47700BA8AC0 /* ShowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowService.swift; sourceTree = "<group>"; };
+		08004B9922D1D47700BA8AC0 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		080BF81C22CC57F400A06BBF /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCollectionViewCell.swift; sourceTree = "<group>"; };
 		080BF82022CC840400A06BBF /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
@@ -261,10 +261,10 @@
 		08CBCB3E22C255FB009C1199 /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
-				08004B8722D0DF8700BA8AC0 /* APIConstants.swift */,
-				08004B8622D0DF8700BA8AC0 /* AuthService.swift */,
-				08004B9222D0EF7600BA8AC0 /* ShowService.swift */,
-				08004B8822D0DF8700BA8AC0 /* NetworkResult.swift */,
+				08004B9722D1D47700BA8AC0 /* APIConstants.swift */,
+				08004B9622D1D47700BA8AC0 /* NetworkResult.swift */,
+				08004B9922D1D47700BA8AC0 /* AuthService.swift */,
+				08004B9822D1D47700BA8AC0 /* ShowService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -551,7 +551,7 @@
 			files = (
 				0836EDB222C7C618006295D3 /* UnpaidViewController.swift in Sources */,
 				080EA9B822D08B74000D074C /* ResponseDefault.swift in Sources */,
-				08004B8A22D0DF8700BA8AC0 /* APIConstants.swift in Sources */,
+				08004B9B22D1D47700BA8AC0 /* APIConstants.swift in Sources */,
 				F4955BFE22C8587300530906 /* MainShowCell.swift in Sources */,
 				F402F33B22CF0F610047B976 /* LotteryCheckCell.swift in Sources */,
 				F4955C0222C8635A00530906 /* Show.swift in Sources */,
@@ -568,31 +568,31 @@
 				080BF82622CC8EC400A06BBF /* WinCell.swift in Sources */,
 				F4955C0722C8936900530906 /* SearchVC.swift in Sources */,
 				F40313EF22CAF61A00BB2737 /* SideMenuVC.swift in Sources */,
-				08004B9322D0EF7600BA8AC0 /* ShowService.swift in Sources */,
 				F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */,
 				F40313FE22CB344900BB2737 /* QuestionVC.swift in Sources */,
 				F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */,
 				080EA9B622D08B14000D074C /* ResponseString.swift in Sources */,
 				08004B8222D0974000BA8AC0 /* SplashVC.swift in Sources */,
+				08004B9C22D1D47700BA8AC0 /* ShowService.swift in Sources */,
 				F402F30C22CDD2A70047B976 /* ContentsVC.swift in Sources */,
 				080BF82122CC840400A06BBF /* Like.swift in Sources */,
 				F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,
 				F4FE455222D239FB00E6C6B0 /* SettingVC.swift in Sources */,
 				08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */,
-				08004B8922D0DF8700BA8AC0 /* AuthService.swift in Sources */,
 				089C13BF22D06BB600F91DD9 /* EditInfoViewController.swift in Sources */,
 				F4955C0922C89C0F00530906 /* CustomSearchButton.swift in Sources */,
 				F43F453822C9A83200C53898 /* ShowDetail.swift in Sources */,
 				F43F453622C9A81000C53898 /* ShowDetailVC.swift in Sources */,
-				08004B8B22D0DF8700BA8AC0 /* NetworkResult.swift in Sources */,
 				080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */,
 				F40313F822CB2E8C00BB2737 /* InterestedVC.swift in Sources */,
 				F440B3AB22C6437400B8AFD6 /* UIColor+Extensions.swift in Sources */,
 				080BF82422CC8D5000A06BBF /* Win.swift in Sources */,
+				08004B9D22D1D47700BA8AC0 /* AuthService.swift in Sources */,
 				0887886022CDCEDE00FE0E91 /* SignUpVC.swift in Sources */,
 				F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */,
 				F402F33F22CF31C80047B976 /* NoTicketVC.swift in Sources */,
+				08004B9A22D1D47700BA8AC0 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

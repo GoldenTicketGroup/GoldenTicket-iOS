@@ -22,6 +22,7 @@ struct ShowService {
             "query string" : "id"
         ]
         
+<<<<<<< HEAD
         let body: Parameters = [
             "showId" : show_idx,
             "imageURL" : image_url,
@@ -29,6 +30,9 @@ struct ShowService {
         ]
         
         Alamofire.request(URL, method: .get, parameters: body, encoding: JSONEncoding.default, headers: header)
+=======
+        Alamofire.request(URL, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: header)
+>>>>>>> 90753ad062afc891a47f359c2aba0cbb2e6d46af
             .responseData { response in
                 
                 switch response.result {
