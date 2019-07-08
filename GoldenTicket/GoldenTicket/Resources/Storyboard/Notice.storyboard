@@ -13,7 +13,7 @@
         <!--Notice View Controller-->
         <scene sceneID="9HF-8b-LCy">
             <objects>
-                <viewController id="tgx-CQ-bTm" customClass="NoticeViewController" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="noticeVC" id="tgx-CQ-bTm" customClass="NoticeViewController" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p6s-ad-gHC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +55,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="A7K-ia-p91"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="navigationBar" destination="6ht-kO-3Zd" id="Tfh-Y9-lQP"/>
                         <outlet property="noticeTable" destination="sDb-RO-zsI" id="GH6-5R-FQJ"/>

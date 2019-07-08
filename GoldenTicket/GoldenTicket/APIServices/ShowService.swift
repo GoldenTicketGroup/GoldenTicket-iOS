@@ -13,16 +13,22 @@ struct ShowService {
     
     static let shared = ShowService()
     
-    func getShow(showid: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
+    func getShow(_ show_idx: Int, _ image_url : String, _ draw_available: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         
-        let URL = APIConstants.ShowURL + "/\(showid)"
+        let URL = APIConstants.ShowURL + "/\(show_idx)"
         
         let header: HTTPHeaders = [
             "Content-Type" : "application/json",
             "query string" : "id"
         ]
         
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
+        let body: Parameters = [
+            "showId" : show_idx,
+            "imageURL" : image_url,
+            "drawAvailable" : draw_available
+        ]
+        
+        Alamofire.request(URL, method: .get, parameters: body, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
                 
                 switch response.result {
