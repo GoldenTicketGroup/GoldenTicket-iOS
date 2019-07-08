@@ -472,6 +472,7 @@
                         <outlet property="secondLotteryView" destination="YV1-WU-1Nc" id="4l0-7m-N4F"/>
                         <outlet property="secondTimeLabel" destination="eHV-ey-Pwn" id="5Je-Bj-Ya2"/>
                         <outlet property="showCollectionView" destination="jbq-Mf-F18" id="Fi0-yQ-Xm8"/>
+                        <outlet property="userName" destination="KRz-ed-Jqd" id="oGg-SE-Mob"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMz-Je-kpp" userLabel="First Responder" sceneMemberID="firstResponder"/>

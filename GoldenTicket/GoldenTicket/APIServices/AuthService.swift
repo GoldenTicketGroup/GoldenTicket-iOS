@@ -44,17 +44,14 @@ struct AuthService {
                 // 통신 성공 - 네트워크 연결
                 case .success:
                     if let value = response.result.value {
-                        
-                        // 서버가 보내는 http Header에 담긴 status code
-                        // Rest API에서 통신을 성공했던 실패했던 네트워크 통신이 성공했기 때문에 발생
-                        // 서버가 예측한 질문에 대해 응답이 왔다면 200 status code
-                        // 이제부터 서버 개발자가 분기할 코드에 대해 작성함 ex) 택배와 택배기사
+                       
                         if let status = response.response?.statusCode {
                             
                             switch status {
                             case 200:
                                 do {
                                     let decoder = JSONDecoder()
+                                    print(value)
                                     let result = try decoder.decode(ResponseString.self, from: value)
                                     
                                     // ResponseString에 있는 success로 분기 처리
@@ -62,6 +59,7 @@ struct AuthService {
                                         
                                     // NetWorkResult에 있는 case로 분류
                                     case true:
+                                        print("success")
                                         completion(.success(result.data))
                                     case false:
                                         completion(.requestErr(result.message))
@@ -69,6 +67,8 @@ struct AuthService {
                                 }
                                 catch {
                                     completion(.pathErr)
+                                    print(error.localizedDescription)
+                                    print(APIConstants.LoginURL)
                                 }
                             case 400:
                                 completion(.pathErr)

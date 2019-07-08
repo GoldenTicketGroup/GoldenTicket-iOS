@@ -22,7 +22,7 @@ struct ShowService {
             "query string" : "id"
         ]
         
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
+        Alamofire.request(URL, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
                 
                 switch response.result {
