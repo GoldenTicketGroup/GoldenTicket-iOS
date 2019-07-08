@@ -17,5 +17,12 @@ class MainShowCell: UICollectionViewCell {
     @IBOutlet weak var showLocation: UILabel!
     
     @IBOutlet weak var showTime: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        showImage.layer.cornerRadius = 20
+        showImage.layer.masksToBounds = true
+    }
 
 }

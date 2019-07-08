@@ -315,6 +315,7 @@ extension MainVC: UICollectionViewDataSource {
             cell.showTime.text = show.running_time
             cell.showTitle.text = show.name
             
+            
             return cell
             
         }
