@@ -62,6 +62,7 @@ class LoginVC: UIViewController {
                 
                 let storyboardMain = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC")
                 self.present(storyboardMain, animated: true)
+                print("abcdef")
                 
             case .requestErr(let message):
                 self.simpleAlert(title: "로그인 실패", message: "\(message)")

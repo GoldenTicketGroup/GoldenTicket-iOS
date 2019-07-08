@@ -9,6 +9,7 @@
 import UIKit
 import Hero
 import SideMenu
+import Kingfisher
 
 class MainVC: UIViewController {
     
@@ -238,13 +239,6 @@ class MainVC: UIViewController {
         let storyboardNone = UIStoryboard.init(name: "NoTicket", bundle: nil)
         let dvcN = storyboardNone.instantiateViewController(withIdentifier: "NoTicket")
         present(dvcN, animated: true)
-        
-//        let storyboardWin = UIStoryboard.init(name: "WinTicket", bundle: nil)
-//        guard let dvc = storyboardWin.instantiateViewController(withIdentifier: "TicketVC") as? TicketVC else{
-//            return
-//        }
-//        present(dvc, animated: true)
-        
     }
     
     @IBAction func onClickSearchButton(_ sender: Any) {
@@ -313,13 +307,17 @@ extension MainVC: UICollectionViewDataSource {
             
             let show = showList[indexPath.row]
             
-            cell.showImage.image = show.showImage
-            cell.showLocation.text = show.showLocation
-            cell.showTime.text = show.showTime
-            cell.showTitle.text = show.showTitle
+            // kingfisher로 url 통해서 이미지 불러오기
+            // cell.MainShowCell의 아웃렛 이름 = show(모델).swift.서버 이름
+            cell.showImage.imageFromUrl(show.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/1562055837775.jpg")
+            cell.showLocation.text = show.location
+            cell.showTime.text = show.running_time
+            cell.showTitle.text = show.name
             
             return cell
-        } else {
+            
+        }
+        else {
             let lotteryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "lotteryCell", for: indexPath) as! LotteryCheckCell
             let lottery = lotteryList[indexPath.row]
             
@@ -329,6 +327,7 @@ extension MainVC: UICollectionViewDataSource {
         }
     }
 }
+
 extension MainVC : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -357,11 +356,33 @@ extension MainVC : UICollectionViewDelegate {
 extension MainVC {
     func setShowData() {
         
-        let show1 = Show(title: "뮤지컬 벤허", time: "17:00 ~ 19:00", location: "혜화 소극장", showName: "posterMainKill")
-        let show2 = Show(title: "뮤지컬 벤허", time: "17:00 ~ 19:00", location: "혜화 소극장", showName: "posterMainBenhur")
-        let show3 = Show(title: "뮤지컬 위키드", time: "17:00 ~ 19:00", location: "혜화 소극장", showName: "posterMainWicked")
-        let show4 = Show(title: "뮤지컬 벤허", time: "17:00 ~ 19:00", location: "혜화 소극장", showName: "posterMainBenhur")
-        showList = [show1, show2, show3, show4]
+        ShowService.shared.showHome() {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                
+                self.showList = res as! [Show]
+                self.showCollectionView.reloadData()
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "로그인 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "로그인 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
     }
     
     func setDetailData() {

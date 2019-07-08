@@ -13,16 +13,15 @@ struct ShowService {
     
     static let shared = ShowService()
     
-    func getShow(showid: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
+    func showHome(completion: @escaping (NetworkResult<Any>) -> Void) {
         
-        let URL = APIConstants.ShowURL + "/\(showid)"
+        let URL = APIConstants.ShowURL
         
         let header: HTTPHeaders = [
-            "Content-Type" : "application/json",
-            "query string" : "id"
+            "Content-Type" : "application/json"
         ]
         
-        Alamofire.request(URL, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: header)
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
                 
                 switch response.result {
@@ -36,7 +35,9 @@ struct ShowService {
                             case 200:
                                 do {
                                     let decoder = JSONDecoder()
-                                    let result = try decoder.decode(ResponseString.self, from: value)
+                                    
+                                    // Show.swift codable
+                                    let result = try decoder.decode(ResponseArray<Show>.self, from: value)
                                     
                                     switch result.success {
                                     case true:

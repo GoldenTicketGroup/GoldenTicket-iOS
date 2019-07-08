@@ -11,17 +11,27 @@ import UIKit
 
 // 서버와 연결한 뒤에는 codable 로 작성
 // 지금은 colloection view 가 제대로 나타나는지를 위한 테스트용 더미데이터
-struct Show {
-    var showImage: UIImage?
-    var showTitle: String
-    var showLocation: String
-    var showTime: String
-    
-    init(title: String, time: String, location: String, showName: String) {
-        self.showImage = UIImage(named: showName)
-        self.showTitle = title
-        self.showLocation = location
-        self.showTime = time
-    }
-    
+struct Show: Codable {
+    let show_idx:Int
+    let image_url:String
+    let name:String
+    let location:String
+    let running_time:String
 }
+
+/*
+struct ShowData:Codable {
+    let show_idx:Int
+    let image_url:String
+    let name:String
+    let location:String
+    let running_time:String
+}
+ 
+ struct Show: Codable {
+ let showImage: Int?
+ let showTitle: String
+ let showLocation: String
+ let showTime: String
+ }
+*/

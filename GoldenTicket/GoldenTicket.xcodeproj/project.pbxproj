@@ -15,6 +15,7 @@
 		08004B9B22D1D47700BA8AC0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9722D1D47700BA8AC0 /* APIConstants.swift */; };
 		08004B9C22D1D47700BA8AC0 /* ShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9822D1D47700BA8AC0 /* ShowService.swift */; };
 		08004B9D22D1D47700BA8AC0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9922D1D47700BA8AC0 /* AuthService.swift */; };
+		08004B9F22D31B5300BA8AC0 /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9E22D31B5300BA8AC0 /* ResponseArray.swift */; };
 		080BF81D22CC57F400A06BBF /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080BF81C22CC57F400A06BBF /* Setting.storyboard */; };
 		080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */; };
 		080BF82122CC840400A06BBF /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82022CC840400A06BBF /* Like.swift */; };
@@ -85,6 +86,7 @@
 		08004B9722D1D47700BA8AC0 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		08004B9822D1D47700BA8AC0 /* ShowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowService.swift; sourceTree = "<group>"; };
 		08004B9922D1D47700BA8AC0 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		08004B9E22D31B5300BA8AC0 /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
 		080BF81C22CC57F400A06BBF /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCollectionViewCell.swift; sourceTree = "<group>"; };
 		080BF82022CC840400A06BBF /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				080BF82322CC8D5000A06BBF /* Win.swift */,
 				080EA9B522D08B14000D074C /* ResponseString.swift */,
 				080EA9B722D08B74000D074C /* ResponseDefault.swift */,
+				08004B9E22D31B5300BA8AC0 /* ResponseArray.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				F402F30C22CDD2A70047B976 /* ContentsVC.swift in Sources */,
 				080BF82122CC840400A06BBF /* Like.swift in Sources */,
 				F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */,
+				08004B9F22D31B5300BA8AC0 /* ResponseArray.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,
 				F4FE455222D239FB00E6C6B0 /* SettingVC.swift in Sources */,
 				08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */,
