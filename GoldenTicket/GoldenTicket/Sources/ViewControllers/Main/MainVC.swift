@@ -98,7 +98,17 @@ class MainVC: UIViewController {
         
         timer1.fire()
         timer2.fire()
+    } // viewDidLoad
+    
+    
+    // 화면이 새로 뜨면 회원 정보 새로 불러오기
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // 수정한 회원 정보의 이름일 수도 있다.
+        let user = UserDefaults.standard
+        self.userName.text = user.string(forKey: "name")
     }
+    
     
     // 응모한 공연이 있을 시 남은 시간을 보여주는 뷰에 팔요한 시간 계산기, timer
     func timeCalculator(dateFormat: String, endTime: String, startTime: Date = Date()) -> DateComponents {
