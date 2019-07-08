@@ -182,6 +182,9 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="8E2-yh-g4I" kind="presentation" id="wKi-N7-LC5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,6 +213,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLp-Jx-mRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="786" y="141"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="Wht-yL-GZg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainVC" id="8E2-yh-g4I" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0eY-H4-Ou6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1419" y="140"/>
         </scene>
     </scenes>
     <resources>
