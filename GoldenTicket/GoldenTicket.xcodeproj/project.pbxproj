@@ -75,6 +75,8 @@
 		F4FE454E22D1CF9000E6C6B0 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE454D22D1CF9000E6C6B0 /* UIImageView+Extensions.swift */; };
 		F4FE455022D232B800E6C6B0 /* mainLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = F4FE454F22D232B800E6C6B0 /* mainLogo.gif */; };
 		F4FE455222D239FB00E6C6B0 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE455122D239FB00E6C6B0 /* SettingVC.swift */; };
+		F4FE455622D30D4800E6C6B0 /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE455522D30D4800E6C6B0 /* TutorialVC.swift */; };
+		F4FE455822D3105800E6C6B0 /* TutorialLastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE455722D3105800E6C6B0 /* TutorialLastVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +151,8 @@
 		F4FE454D22D1CF9000E6C6B0 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		F4FE454F22D232B800E6C6B0 /* mainLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mainLogo.gif; sourceTree = "<group>"; };
 		F4FE455122D239FB00E6C6B0 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		F4FE455522D30D4800E6C6B0 /* TutorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
+		F4FE455722D3105800E6C6B0 /* TutorialLastVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialLastVC.swift; sourceTree = "<group>"; };
 		F92DF9CEA0A33B3C51D5E98C /* Pods-GoldenTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenTicket.debug.xcconfig"; path = "Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -367,6 +371,7 @@
 		F440B39922C61AAD00B8AFD6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F4FE455422D30D2F00E6C6B0 /* Tutorial */,
 				089C13BD22D06B2400F91DD9 /* EditInfo */,
 				F402F30822CDBCC00047B976 /* Contents */,
 				080BF82222CC8D1100A06BBF /* Like */,
@@ -416,6 +421,15 @@
 				F4955C0622C8936900530906 /* SearchVC.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		F4FE455422D30D2F00E6C6B0 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				F4FE455522D30D4800E6C6B0 /* TutorialVC.swift */,
+				F4FE455722D3105800E6C6B0 /* TutorialLastVC.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,12 +600,14 @@
 				08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */,
 				089C13BF22D06BB600F91DD9 /* EditInfoViewController.swift in Sources */,
 				F4955C0922C89C0F00530906 /* CustomSearchButton.swift in Sources */,
+				F4FE455622D30D4800E6C6B0 /* TutorialVC.swift in Sources */,
 				F43F453822C9A83200C53898 /* ShowDetail.swift in Sources */,
 				F43F453622C9A81000C53898 /* ShowDetailVC.swift in Sources */,
 				080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */,
 				F40313F822CB2E8C00BB2737 /* InterestedVC.swift in Sources */,
 				F440B3AB22C6437400B8AFD6 /* UIColor+Extensions.swift in Sources */,
 				080BF82422CC8D5000A06BBF /* Win.swift in Sources */,
+				F4FE455822D3105800E6C6B0 /* TutorialLastVC.swift in Sources */,
 				08004B9D22D1D47700BA8AC0 /* AuthService.swift in Sources */,
 				0887886022CDCEDE00FE0E91 /* SignUpVC.swift in Sources */,
 				F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */,

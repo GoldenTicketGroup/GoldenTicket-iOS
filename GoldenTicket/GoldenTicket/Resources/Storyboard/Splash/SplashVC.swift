@@ -27,13 +27,13 @@ class SplashVC: UIViewController {
             print(error)
         }
         
-        perform(#selector(SplashVC.showLogin), with: nil, afterDelay: 2.1)
+        perform(#selector(SplashVC.showTutorial), with: nil, afterDelay: 2.1)
         
     }
-    @objc func showLogin() {
-        let storyboard = UIStoryboard.init(name: "Login", bundle: nil)
-        let login = storyboard.instantiateViewController(withIdentifier: "loginVC")
-        present(login, animated: true)
+    @objc func showTutorial() {
+        let storyboard = UIStoryboard.init(name: "Tutorial", bundle: nil)
+        let tutorial = storyboard.instantiateViewController(withIdentifier: "tutorial")
+        present(tutorial, animated: true)
     }
 
 }
