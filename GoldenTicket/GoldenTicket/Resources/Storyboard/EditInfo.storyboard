@@ -13,7 +13,7 @@
         <!--Edit Info View Controller-->
         <scene sceneID="GWb-dC-j4p">
             <objects>
-                <viewController id="df6-01-1ms" customClass="EditInfoViewController" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditVC" id="df6-01-1ms" customClass="EditInfoViewController" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Zk-bn-L5z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,9 @@
                                     <navigationItem title="회원 정보 수정" id="uko-aH-bBW">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="btBack" id="foN-WT-Hzc">
                                             <color key="tintColor" red="0.96078431369999995" green="0.81176470590000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="backButton:" destination="df6-01-1ms" id="SwK-59-dCD"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -137,6 +140,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j0F-TZ-2di"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="navigationBar" destination="brj-YI-J2t" id="x5C-XJ-eLQ"/>
                         <outlet property="userEmail" destination="dXF-17-kZV" id="1rE-h2-9kh"/>

@@ -79,6 +79,16 @@ class SideMenuVC: UITableViewController {
     @IBAction func buttonClose(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func editButton(_ sender: Any) {
+        
+        let storyboardEdit = UIStoryboard.init(name: "EditInfo", bundle: nil)
+        
+        let dvc = storyboardEdit.instantiateViewController(withIdentifier: "EditVC")
+        
+        present(dvc, animated: true)
+        
+    }
 }
 
 

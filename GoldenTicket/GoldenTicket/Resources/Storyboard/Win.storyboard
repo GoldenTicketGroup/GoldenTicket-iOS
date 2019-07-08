@@ -61,7 +61,7 @@
                                     <constraint firstAttribute="height" constant="35" id="Zyy-Ra-IdG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" title="다른 공연 보기">
+                                <state key="normal" title="결제하기">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
