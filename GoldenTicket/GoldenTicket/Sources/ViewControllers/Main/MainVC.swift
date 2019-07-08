@@ -79,6 +79,13 @@ class MainVC: UIViewController {
         showCollectionView.dataSource = self
         showCollectionView.delegate = self
         
+        // 로그인한 사용자 이름으로 메인 label 반영
+        let user = UserDefaults.standard
+        
+        // 저장된 값을 꺼내어 각 컨트롤에 적용
+        self.userName.text = user.string(forKey: "name")
+        
+        
         // 월 공연, 월 뮤지컬, 검색버튼 customize
         monthShowButton.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 6)
         monthMusicalButton.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 6)

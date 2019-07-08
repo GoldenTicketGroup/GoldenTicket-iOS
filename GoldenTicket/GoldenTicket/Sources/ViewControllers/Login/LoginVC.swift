@@ -54,9 +54,9 @@ class LoginVC: UIViewController {
 //                let user_name = (name as! DataClass).name
 //                UserDefaults.standard.set(user_name, forKey: "name")
 //
-//                let user_email = (email as! DataClass).email
+//                let user_email = (useremail as! DataClass).email
 //                UserDefaults.standard.set(user_email, forKey: "email")
-//                
+//
 //                let user_phone = (phone as! DataClass).phone
 //                UserDefaults.standard.set(user_phone, forKey: "phone")
                 
