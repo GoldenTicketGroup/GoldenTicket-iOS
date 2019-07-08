@@ -46,24 +46,19 @@ class LoginVC: UIViewController {
                 
             // 매개변수에 어떤 값을 가져올 것인지
             case .success(let token):
-<<<<<<< HEAD
-                UserDefaults.standard.set(token, forKey: "Token")
-                self.simpleAlert(title: "로그인 성공", message: "")
-=======
                 
                 // ResponseString.swift 파일의 DataClass 구조체에서 token 값만 받아오겠다.
-                let token_string = (token as! DataClass).token 
+                let token_string = (token as! DataClass).token
                 UserDefaults.standard.set(token_string, forKey: "token")
                 
-//                let user_name = (name as! DataClass).name
-//                UserDefaults.standard.set(user_name, forKey: "name")
-//
-//                let user_email = (email as! DataClass).email
-//                UserDefaults.standard.set(user_email, forKey: "email")
-//                
-//                let user_phone = (phone as! DataClass).phone
-//                UserDefaults.standard.set(user_phone, forKey: "phone")
->>>>>>> 90753ad062afc891a47f359c2aba0cbb2e6d46af
+                //                let user_name = (name as! DataClass).name
+                //                UserDefaults.standard.set(user_name, forKey: "name")
+                //
+                //                let user_email = (useremail as! DataClass).email
+                //                UserDefaults.standard.set(user_email, forKey: "email")
+                //
+                //                let user_phone = (phone as! DataClass).phone
+                //                UserDefaults.standard.set(user_phone, forKey: "phone")
                 
                 let storyboardMain = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC")
                 self.present(storyboardMain, animated: true)
@@ -165,4 +160,3 @@ extension LoginVC: UIGestureRecognizerDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
-
