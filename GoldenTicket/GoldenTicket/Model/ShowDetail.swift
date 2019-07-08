@@ -14,8 +14,14 @@ import UIKit
 // 필요한 데이터들 모두 적어둠, 아래 주석 처리는 일단 테스트에서 제외
 
 //공연의 기본정보를 나타내는 Detail struct
-struct Detail {
-    
+struct ShowDetail: Codable {
+    let showIdx: Int
+    let imageURL: String
+    let name, location, originalPrice, discountPrice: String
+    let schedule: [Schedule]
+    let artist: [Artist]
+    let poster: [Poster]
+    /*
     var backgroundImage : UIImage?
     var posterImage : UIImage?
     var showTitle: String?
@@ -35,10 +41,32 @@ struct Detail {
         self.showTime = time
         self.showLocation = location
         self.showDetailImage = UIImage(named: detail)
-
     }
+ */
 }
 
+// MARK: - Artist
+struct Artist: Codable {
+    let artistIdx: Int
+    let name, role: String
+    let imageURL: String
+}
+
+// MARK: - Poster
+struct Poster: Codable {
+    let posterIdx: Int
+    let imageURL: String
+}
+
+// MARK: - Schedule
+struct Schedule: Codable {
+    let scheduleIdx: Int
+    let time: String
+    let drawAvailable: Int
+}
+
+
+/*
 //공연하는 배우들을 나타내는 Actor struct.
 
 struct Actor {
@@ -56,3 +84,4 @@ struct Actor {
     }
     
 }
+*/

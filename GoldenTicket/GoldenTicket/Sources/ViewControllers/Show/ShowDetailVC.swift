@@ -33,17 +33,17 @@ class ShowDetailVC: UIViewController {
     @IBOutlet weak var showDetailImage: UIImageView!
     
     // detail view에 필요한 정보들.
-    var backgroundImg : UIImage?
-    var posterImg : UIImage?
+    var backgroundImg : UIImageView?
+    var posterImg : UIImageView?
     var showName : String?
     var showBeforePrice : String?
     var showAfterPrice : String?
     var showTime : String?
     var showLocation : String?
-    var showDetail : UIImage?
+    var showDetail : UIImageView?
     
     // 더미 데이터로 넣을 배우 리스트
-    var actorList : [Actor] = []
+    // var actorList : [Actor] = []
     
     //응모하기 뷰
     @IBOutlet weak var checkView: CustomView!
@@ -133,6 +133,7 @@ class ShowDetailVC: UIViewController {
     
     // 나타낼 데이터들 지정해주기
     func setContent() {
+        /*
         backgroundImage.image = backgroundImg
         posterImage.image = posterImg
         showTitle.text = showName
@@ -141,6 +142,7 @@ class ShowDetailVC: UIViewController {
         showTimeLabel.text = showTime
         showLocationLabel.text = showLocation
         showDetailImage.image = showDetail
+         */
     }
     
     // 메인 화면으로 돌아가는 backButton 함수
@@ -266,18 +268,18 @@ extension ShowDetailVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return actorList.count
-        
+        // return actorList.count
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActorCVCell", for: indexPath) as! ActorCVCell
         
-        let actor = actorList[indexPath.row]
-        
-        cell.actorImage.image = actor.actorImage
-        cell.actorName.text = actor.actorName
-        cell.castingName.text = actor.castingName
+//        let actor = actorList[indexPath.row]
+//
+//        cell.actorImage.image = actor.actorImage
+//        cell.actorName.text = actor.actorName
+//        cell.castingName.text = actor.castingName
         
         return cell
     }
@@ -288,12 +290,14 @@ extension ShowDetailVC: UICollectionViewDataSource {
 extension ShowDetailVC {
     
     func setData() {
+        /*
         let actor1 = Actor(image: "imgCasting01", name: "카이", casting: "유다 벤허")
         let actor2 = Actor(image: "imgCasting02", name: "문종원", casting: "메셀라")
         let actor3 = Actor(image: "imgCasting03", name: "김지우", casting: "에스더")
         let actor4 = Actor(image: "imgCasting04", name: "이병준", casting: "퀸터스")
         
         actorList = [actor1, actor2, actor3, actor4]
+         */
     }
 
 }
