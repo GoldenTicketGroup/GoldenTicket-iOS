@@ -168,5 +168,77 @@ struct AuthService {
         }
     }
     
+    /**
+     회원 정보 수정 통신 메소드
+     **/
     
+    func editInfo(_ name: String, _ email: String, _ phone: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+        
+        let token = UserDefaults.standard
+        print("\(token.string(forKey: "token"))")
+        let header: HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "token" : "\(token.string(forKey: "token")!)"
+        ]
+        
+        let body: Parameters = [
+            "name": name,
+            "email": email,
+            "phone": phone
+        ]
+        
+        // method는 서버가 명시한대로 적어주면 되고
+        // parametersms body이고 그 안에 id, password
+        // encoding : json 타입을 읽어올 방법
+        
+        Alamofire.request(APIConstants.EditUserURL, method: .put, parameters: body, encoding: JSONEncoding.default, headers: header)
+            .responseData { response in
+                // parameter 위치
+                switch response.result {
+                    
+                // 통신 성공 - 네트워크 연결
+                case .success:
+                    if let value = response.result.value {
+                        
+                        if let status = response.response?.statusCode {
+                            
+                            switch status {
+                            case 200:
+                                do {
+                                    let decoder = JSONDecoder()
+                                    let result = try decoder.decode(ResponseString.self, from: value)
+                                    
+                                    // ResponseString에 있는 success로 분기 처리
+                                    switch result.success {
+                                        
+                                    // NetWorkResult에 있는 case로 분류
+                                    case true:
+                                        completion(.success(result.data))
+                                    case false:
+                                        completion(.requestErr(result.message))
+                                    }
+                                }
+                                catch {
+                                    completion(.pathErr)
+                                }
+                            case 400:
+                                completion(.pathErr)
+                            case 500:
+                                completion(.serverErr)
+                            default:
+                                break
+                            }// switch
+                        }// iflet
+                    }
+                    break
+                    
+                // 통신 실패 - 네트워크 연결
+                case .failure(let err):
+                    print(err.localizedDescription)
+                    completion(.networkFail)
+                    // .networkFail이라는 반환 값이 넘어감
+                    break
+                }
+        }
+    }
 } // struct

@@ -122,15 +122,32 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UT-b1-8oa" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
+                                <rect key="frame" x="55.5" y="611" width="264" height="35"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="fEj-HG-U3t"/>
+                                    <constraint firstAttribute="height" constant="35" id="kBl-gW-PhR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="수정">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="editInfo:" destination="df6-01-1ms" eventType="touchUpInside" id="kk3-3k-POH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="1UT-b1-8oa" firstAttribute="centerX" secondItem="8Zk-bn-L5z" secondAttribute="centerX" id="3MU-fh-Ahe"/>
                             <constraint firstItem="j0F-TZ-2di" firstAttribute="trailing" secondItem="KVy-p3-OQY" secondAttribute="trailing" constant="32" id="6Cx-6r-eVM"/>
                             <constraint firstItem="iLu-dl-qJw" firstAttribute="leading" secondItem="j0F-TZ-2di" secondAttribute="leading" constant="35" id="8S6-TF-utB"/>
                             <constraint firstItem="v4E-Ma-LwP" firstAttribute="top" secondItem="j0F-TZ-2di" secondAttribute="top" constant="160" id="DxM-J7-VCK"/>
                             <constraint firstItem="j0F-TZ-2di" firstAttribute="trailing" secondItem="buf-fz-QSE" secondAttribute="trailing" constant="32" id="EVG-95-uIg"/>
                             <constraint firstItem="H3o-jj-vPN" firstAttribute="leading" secondItem="j0F-TZ-2di" secondAttribute="leading" constant="35" id="EeD-Pr-zkj"/>
                             <constraint firstItem="KVy-p3-OQY" firstAttribute="bottom" secondItem="v4E-Ma-LwP" secondAttribute="bottom" id="Meu-2X-fR1"/>
+                            <constraint firstItem="j0F-TZ-2di" firstAttribute="bottom" secondItem="1UT-b1-8oa" secondAttribute="bottom" constant="21" id="b7g-Hr-NuC"/>
                             <constraint firstItem="H3o-jj-vPN" firstAttribute="bottom" secondItem="buf-fz-QSE" secondAttribute="bottom" id="bIg-fY-62a"/>
                             <constraint firstItem="v4E-Ma-LwP" firstAttribute="leading" secondItem="j0F-TZ-2di" secondAttribute="leading" constant="35" id="dHx-qG-nSx"/>
                             <constraint firstItem="H3o-jj-vPN" firstAttribute="top" secondItem="iLu-dl-qJw" secondAttribute="bottom" constant="43" id="fKn-1r-16j"/>
