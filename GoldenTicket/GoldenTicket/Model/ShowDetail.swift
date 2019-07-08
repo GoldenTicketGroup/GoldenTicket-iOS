@@ -18,51 +18,29 @@ struct ShowDetail: Codable {
     let showIdx: Int
     let imageURL: String
     let name, location, originalPrice, discountPrice: String
-    let schedule: [Schedule]
-    let artist: [Artist]
-    let poster: [Poster]
-    /*
-    var backgroundImage : UIImage?
-    var posterImage : UIImage?
-    var showTitle: String?
-    var showBeforePrice : String?
-    var showAfterPrice : String?
-    var showTime : String?
-    var showLocation : String?
-    var showDetailImage : UIImage?
-    
-    init (background : String, poster : String, title: String, time: String, bprice: String, aprice:String, location: String, detail: String) {
-        
-        self.backgroundImage = UIImage(named: background)
-        self.posterImage = UIImage(named: poster)
-        self.showTitle = title
-        self.showBeforePrice = bprice
-        self.showAfterPrice = aprice
-        self.showTime = time
-        self.showLocation = location
-        self.showDetailImage = UIImage(named: detail)
-    }
- */
+    let schedule: [Schedule]?
+    let artist: [Artist]?
+    let poster: [Poster]?
 }
 
 // MARK: - Artist
 struct Artist: Codable {
-    let artistIdx: Int
-    let name, role: String
-    let imageURL: String
+    let artistIdx: Int?
+    let name, role: String?
+    let imageURL: String?
 }
 
 // MARK: - Poster
 struct Poster: Codable {
-    let posterIdx: Int
-    let imageURL: String
+    let posterIdx: Int?
+    let imageURL: String?
 }
 
 // MARK: - Schedule
 struct Schedule: Codable {
-    let scheduleIdx: Int
-    let time: String
-    let drawAvailable: Int
+    let scheduleIdx: Int?
+    let time: String?
+    let drawAvailable: Int?
 }
 
 

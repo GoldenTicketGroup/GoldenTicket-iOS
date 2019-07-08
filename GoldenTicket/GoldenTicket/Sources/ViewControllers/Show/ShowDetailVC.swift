@@ -13,6 +13,8 @@ import Hero
 class ShowDetailVC: UIViewController {
 
     
+    var actorList = [Artist]()
+    
     // 배우들을 보여주는 collection view.
     @IBOutlet weak var actorCollectionView: UICollectionView!
     
@@ -258,7 +260,6 @@ extension ShowDetailVC : UIScrollViewDelegate {
             print("down")
             showMenuView()
         }
-        
     }
 }
 
@@ -268,18 +269,16 @@ extension ShowDetailVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        // return actorList.count
-        return 2
+        return actorList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActorCVCell", for: indexPath) as! ActorCVCell
         
-//        let actor = actorList[indexPath.row]
-//
-//        cell.actorImage.image = actor.actorImage
-//        cell.actorName.text = actor.actorName
-//        cell.castingName.text = actor.castingName
+        let actor = actorList[indexPath.row]
+        cell.actorImage.imageFromUrl(actor.imageURL, defaultImgPath:  "https://sopt24server.s3.ap-northeast-2.amazonaws.com/img_casting_01.jpg")
+        cell.actorName.text = actor.name
+        cell.castingName.text = actor.role
         
         return cell
     }

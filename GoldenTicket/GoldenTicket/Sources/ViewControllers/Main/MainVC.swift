@@ -14,8 +14,7 @@ import Kingfisher
 class MainVC: UIViewController {
     
     @IBOutlet var userName: UILabel!
-    // var show_id: Int?   // 상세 공연 정보 인덱스
-    let show_id = String(20)   // 우선 20으로 초기화
+    var show_id: Int?   // 상세 공연 정보 인덱스
     
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
@@ -336,21 +335,23 @@ extension MainVC : UICollectionViewDelegate {
         
         let dvc = storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
         
-        let showdetail = showDetailList[indexPath.row]
-        
-        // 아직 없음
-        // dvc.backgroundImg = showdetail.backgroundImage
-        //dvc.posterImg.imageFromURL(showdetail.imageURL, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
-        dvc.showName = showdetail.name
+        // dvc.backgroundImg = showDetailList[indexPath.row].backgroundImage
+        // dvc.posterImg.imageFromURL(ShowDetail.imageURL, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
+        dvc.showName = showDetailList[indexPath.row].name
         //dvc.showPrice = show.showPrice
-        dvc.showBeforePrice = showdetail.originalPrice
-        dvc.showAfterPrice = showdetail.discountPrice
-        //dvc.showTime = showdetail.schedule.
-        dvc.showLocation = showdetail.location
-        //dvc.showDetail = showdetail.showDetailImage
+        dvc.showBeforePrice = showDetailList[indexPath.row].originalPrice
+        dvc.showAfterPrice = showDetailList[indexPath.row].discountPrice
+        
+        var scheduleList = [Schedule]()
+        dvc.showTime = scheduleList[indexPath.row].time
+        
+        dvc.showLocation = showDetailList[indexPath.row].location
+        
+//        var posterList = [Poster]()
+//        dvc.showDetail = posterList[indexPath.row]
         
         present(dvc, animated: true)
-        //navigationController?.pushViewController(dvc, animated: true)
+        navigationController?.pushViewController(dvc, animated: true)
     }
 }
 
@@ -374,7 +375,7 @@ extension MainVC {
                 self.showCollectionView.reloadData()
                 
             case .requestErr(let message):
-                self.simpleAlert(title: "로그인 실패", message: "\(message)")
+                self.simpleAlert(title: "메인 공연 조회 실패", message: "\(message)")
                 
             case .pathErr:
                 print(".pathErr")
@@ -383,16 +384,16 @@ extension MainVC {
                 print(".serverErr")
                 
             case .networkFail:
-                self.simpleAlert(title: "로그인 실패", message: "네트워크 상태를 확인해주세요.")
+                self.simpleAlert(title: "메인 공연 조회 실패", message: "네트워크 상태를 확인해주세요.")
             }
         }
     }
     
     func setDetailData() {
         
-        // guard let idx = show_id else { return }
+        guard let idx = show_id else { return }
         
-        ShowService.shared.showDetail(show_id) {
+        ShowService.shared.showDetail(idx) {
             [weak self]
             data in
             
@@ -404,10 +405,9 @@ extension MainVC {
             case .success(let res):
                 
                 self.showDetailList = res as! [ShowDetail]
-                //self.showDetailList.reloadData()
                 
             case .requestErr(let message):
-                self.simpleAlert(title: "로그인 실패", message: "\(message)")
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")
                 
             case .pathErr:
                 print(".pathErr")
@@ -416,7 +416,7 @@ extension MainVC {
                 print(".serverErr")
                 
             case .networkFail:
-                self.simpleAlert(title: "로그인 실패", message: "네트워크 상태를 확인해주세요.")
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
             }
         }
     }

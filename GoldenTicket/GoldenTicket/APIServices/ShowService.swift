@@ -78,7 +78,7 @@ struct ShowService {
      공연 상세 조회 통신 메소드
      **/
     
-    func showDetail(_ show_id: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+    func showDetail(_ show_id: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let URL = APIConstants.ShowURL + "/\(show_id)"
         

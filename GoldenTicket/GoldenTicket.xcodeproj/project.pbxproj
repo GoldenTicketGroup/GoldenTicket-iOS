@@ -51,7 +51,6 @@
 		F40313FA22CB2FB700BB2737 /* Interested.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40313F922CB2FB700BB2737 /* Interested.storyboard */; };
 		F40313FC22CB333B00BB2737 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40313FB22CB333B00BB2737 /* Question.storyboard */; };
 		F40313FE22CB344900BB2737 /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40313FD22CB344900BB2737 /* QuestionVC.swift */; };
-		F43F453322C9A4AE00C53898 /* ShowDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F453222C9A4AE00C53898 /* ShowDetail.storyboard */; };
 		F43F453622C9A81000C53898 /* ShowDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F453522C9A81000C53898 /* ShowDetailVC.swift */; };
 		F43F453822C9A83200C53898 /* ShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F453722C9A83200C53898 /* ShowDetail.swift */; };
 		F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F453F22C9EB5500C53898 /* ActorCVCell.swift */; };
@@ -127,7 +126,6 @@
 		F40313F922CB2FB700BB2737 /* Interested.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interested.storyboard; sourceTree = "<group>"; };
 		F40313FB22CB333B00BB2737 /* Question.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
 		F40313FD22CB344900BB2737 /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
-		F43F453222C9A4AE00C53898 /* ShowDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowDetail.storyboard; sourceTree = "<group>"; };
 		F43F453522C9A81000C53898 /* ShowDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailVC.swift; sourceTree = "<group>"; };
 		F43F453722C9A83200C53898 /* ShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetail.swift; sourceTree = "<group>"; };
 		F43F453F22C9EB5500C53898 /* ActorCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCVCell.swift; sourceTree = "<group>"; };
@@ -250,7 +248,6 @@
 				0836EDA522C750F7006295D3 /* Win.storyboard */,
 				0836EDAD22C7C2B1006295D3 /* Unpaid.storyboard */,
 				F4955C0322C88D1C00530906 /* Search.storyboard */,
-				F43F453222C9A4AE00C53898 /* ShowDetail.storyboard */,
 				F43F454322CA45B700C53898 /* WinTicket.storyboard */,
 				F43F454822CA79C900C53898 /* NoTicket.storyboard */,
 				F40313F022CB1B0800BB2737 /* WinList.storyboard */,
@@ -508,7 +505,6 @@
 				F43F454422CA45B700C53898 /* WinTicket.storyboard in Resources */,
 				F40313F122CB1B0800BB2737 /* WinList.storyboard in Resources */,
 				F4955C0422C88D1C00530906 /* Search.storyboard in Resources */,
-				F43F453322C9A4AE00C53898 /* ShowDetail.storyboard in Resources */,
 				08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */,
 				08004B8522D0DE5900BA8AC0 /* splash.gif in Resources */,
 				F43F454922CA79C900C53898 /* NoTicket.storyboard in Resources */,
