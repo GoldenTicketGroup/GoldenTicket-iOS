@@ -45,20 +45,20 @@ class LoginVC: UIViewController {
             switch data {
                 
             // 매개변수에 어떤 값을 가져올 것인지
-            case .success(let token):
+            case .success(let data):
                 
-                // ResponseString.swift 파일의 DataClass 구조체에서 token 값만 받아오겠다.
-                let token_string = (token as! DataClass).token
-                UserDefaults.standard.set(token_string, forKey: "token")
+                // DataClass 에서 받은 유저 정보 반환
+                let user_data = data as! DataClass
                 
-//                let user_name = (name as! DataClass).name
-//                UserDefaults.standard.set(user_name, forKey: "name")
-//
-//                let user_email = (useremail as! DataClass).email
-//                UserDefaults.standard.set(user_email, forKey: "email")
-//
-//                let user_phone = (phone as! DataClass).phone
-//                UserDefaults.standard.set(user_phone, forKey: "phone")
+                // 사용자의 토큰, 이름, 이메일, 전화번호 받아오기
+                let token = user_data.token
+                UserDefaults.standard.set(token, forKey: "token")
+                UserDefaults.standard.set(user_data.name, forKey: "name")
+                UserDefaults.standard.set(user_data.email, forKey: "email")
+                UserDefaults.standard.set(user_data.phone, forKey: "phone")
+
+//                let token = (token as! DataClass).token
+//                UserDefaults.standard.set(token, forKey: "token")
                 
                 let storyboardMain = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC")
                 self.present(storyboardMain, animated: true)

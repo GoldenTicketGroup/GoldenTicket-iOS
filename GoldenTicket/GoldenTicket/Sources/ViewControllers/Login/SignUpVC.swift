@@ -80,12 +80,7 @@ class SignUpVC: UIViewController {
                     
                 // 매개변수에 어떤 값을 가져올 것인지
                 case .success(let token):
-                    
-                    // name, email, phone, password 서버로 post
-                    UserDefaults.standard.set(token, forKey: "Token")
-                    
-                    // 회원가입 성!공!
-                    self.simpleAlert(title: "회원가입 성공", message: "")
+                    print("회원가입 성공")
                     // 회원가입 완료 후에는 로그인 페이지로 이동
                     self.dismiss(animated: true, completion: nil)
                     
