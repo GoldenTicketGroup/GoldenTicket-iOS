@@ -13,7 +13,7 @@
         <!--Title-->
         <scene sceneID="37a-wT-LUC">
             <objects>
-                <viewController id="nDL-gz-e4q" sceneMemberID="viewController">
+                <viewController id="nDL-gz-e4q" customClass="LoseVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J67-9m-aQ2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,10 +71,11 @@
                                     <segue destination="1Vo-i6-c46" kind="presentation" id="DnV-zC-Wxc"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="characterFail" translatesAutoresizingMaskIntoConstraints="NO" id="CVc-6x-aax">
-                                <rect key="frame" x="32" y="196" width="310" height="211"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characterFail" translatesAutoresizingMaskIntoConstraints="NO" id="CVc-6x-aax">
+                                <rect key="frame" x="32.5" y="196" width="310" height="211"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="CVc-6x-aax" secondAttribute="height" multiplier="310:211" id="RbJ-L6-02T"/>
+                                    <constraint firstAttribute="width" constant="310" id="pnq-zc-4Oo"/>
+                                    <constraint firstAttribute="height" constant="211" id="yJz-cb-ZQA"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4j-ua-1nk" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
@@ -97,11 +98,11 @@
                             <constraint firstItem="cD8-j5-sMt" firstAttribute="centerX" secondItem="J67-9m-aQ2" secondAttribute="centerX" id="3JT-pw-C0K"/>
                             <constraint firstItem="CVc-6x-aax" firstAttribute="top" secondItem="YkF-xZ-TNQ" secondAttribute="bottom" constant="39" id="5Ai-Ro-L1q"/>
                             <constraint firstItem="5sm-fB-fwF" firstAttribute="centerX" secondItem="J67-9m-aQ2" secondAttribute="centerX" id="5mj-bw-gBm"/>
+                            <constraint firstItem="WBy-HU-fop" firstAttribute="top" secondItem="CVc-6x-aax" secondAttribute="bottom" constant="43" id="63K-ag-iS4"/>
                             <constraint firstItem="YkF-xZ-TNQ" firstAttribute="top" secondItem="O9f-wF-lAU" secondAttribute="bottom" id="Hcd-yL-DDy"/>
                             <constraint firstItem="O9f-wF-lAU" firstAttribute="top" secondItem="jQV-Iy-JSZ" secondAttribute="top" constant="81" id="KF5-Dc-3X6"/>
                             <constraint firstItem="cD8-j5-sMt" firstAttribute="centerX" secondItem="J67-9m-aQ2" secondAttribute="centerX" id="VFn-VZ-avw"/>
                             <constraint firstItem="30h-zu-jgh" firstAttribute="top" secondItem="WBy-HU-fop" secondAttribute="bottom" id="W8K-Lv-g8d"/>
-                            <constraint firstItem="WBy-HU-fop" firstAttribute="top" secondItem="CVc-6x-aax" secondAttribute="bottom" constant="42" id="bBV-TH-2T6"/>
                             <constraint firstItem="WBy-HU-fop" firstAttribute="centerX" secondItem="J67-9m-aQ2" secondAttribute="centerX" id="d6z-cW-I19"/>
                             <constraint firstItem="jQV-Iy-JSZ" firstAttribute="bottom" secondItem="cD8-j5-sMt" secondAttribute="bottom" constant="21" id="dFH-LS-g4I"/>
                             <constraint firstItem="K4j-ua-1nk" firstAttribute="centerX" secondItem="J67-9m-aQ2" secondAttribute="centerX" id="djQ-eI-asz"/>
@@ -119,6 +120,9 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="imageView" destination="CVc-6x-aax" id="GPw-RC-l7o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4D-97-Jho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

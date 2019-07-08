@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="-207" y="141"/>
         </scene>
-        <!--View Controller-->
+        <!--Lottory FinVC-->
         <scene sceneID="Mfb-uw-QVv">
             <objects>
-                <viewController storyboardIdentifier="completeLottery" id="yf9-al-u0k" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="completeLottery" id="yf9-al-u0k" customClass="LottoryFinVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yuQ-l7-PT4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,9 +140,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characterComplete" translatesAutoresizingMaskIntoConstraints="NO" id="guN-h8-NJc">
-                                <rect key="frame" x="38.5" y="165" width="298" height="236"/>
+                                <rect key="frame" x="39" y="165" width="297" height="236"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="guN-h8-NJc" secondAttribute="height" multiplier="297:235" id="z2A-NO-JEW"/>
+                                    <constraint firstAttribute="width" constant="297" id="C8I-1P-r5P"/>
+                                    <constraint firstAttribute="height" constant="236" id="fdr-LF-qab"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oH1-k8-sHx">
@@ -209,6 +210,9 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="imageView" destination="guN-h8-NJc" id="fPI-Sc-IfH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLp-Jx-mRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

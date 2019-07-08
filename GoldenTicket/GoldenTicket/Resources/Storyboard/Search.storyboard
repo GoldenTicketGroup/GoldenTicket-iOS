@@ -210,17 +210,71 @@
                                     <action selector="goSearch:" destination="C5K-Px-xHI" eventType="touchUpInside" id="AI9-Fd-zTo"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SnG-NV-goL">
+                                <rect key="frame" x="0.0" y="88" width="375" height="579"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kxl-hc-qIs">
+                                    <size key="itemSize" width="165" height="213"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="18" minY="10" maxX="0.0" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchCell" id="FQD-fa-LlK" customClass="SearchCVCell" customModule="GoldenTicket" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="10" width="165" height="213"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="213"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g1G-29-t78">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="213"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtq-wA-TvY">
+                                                    <rect key="frame" x="132" y="10" width="25" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="pB7-PK-Oeq"/>
+                                                        <constraint firstAttribute="width" constant="25" id="yeM-Ha-bJe"/>
+                                                    </constraints>
+                                                    <state key="normal" image="iconLikeNoFill"/>
+                                                    <connections>
+                                                        <action selector="likeButton:" destination="FQD-fa-LlK" eventType="touchUpInside" id="d99-IW-Pqn"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="g1G-29-t78" firstAttribute="top" secondItem="FQD-fa-LlK" secondAttribute="top" id="DAF-8b-E48"/>
+                                            <constraint firstAttribute="bottom" secondItem="g1G-29-t78" secondAttribute="bottom" id="FR1-a9-hlJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="g1G-29-t78" secondAttribute="trailing" id="Gae-2m-F87"/>
+                                            <constraint firstItem="wtq-wA-TvY" firstAttribute="top" secondItem="FQD-fa-LlK" secondAttribute="top" constant="10" id="KDv-Sw-115"/>
+                                            <constraint firstItem="g1G-29-t78" firstAttribute="leading" secondItem="FQD-fa-LlK" secondAttribute="leading" id="dFk-Jm-DbV"/>
+                                            <constraint firstAttribute="trailing" secondItem="wtq-wA-TvY" secondAttribute="trailing" constant="8" id="gau-H5-NId"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="showImage" destination="g1G-29-t78" id="7bp-WZ-kwl"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="C5K-Px-xHI" id="Z5F-Sc-9Be"/>
+                                    <outlet property="delegate" destination="C5K-Px-xHI" id="k8S-dj-Xql"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="i2J-h8-u5y" firstAttribute="top" secondItem="jwI-8Z-8XF" secondAttribute="bottom" constant="25" id="34d-jl-qMG"/>
+                            <constraint firstItem="SnG-NV-goL" firstAttribute="trailing" secondItem="Khk-2u-R0T" secondAttribute="trailing" id="5AA-wN-L2p"/>
                             <constraint firstItem="gGC-h5-bEy" firstAttribute="top" secondItem="ZR8-MV-Jj6" secondAttribute="bottom" constant="6" id="67b-2B-oDa"/>
+                            <constraint firstItem="SnG-NV-goL" firstAttribute="top" secondItem="gGC-h5-bEy" secondAttribute="bottom" id="6HJ-c1-y3A"/>
                             <constraint firstItem="smN-UI-WEv" firstAttribute="height" secondItem="jwI-8Z-8XF" secondAttribute="height" id="9Bh-71-pwN"/>
                             <constraint firstItem="gGC-h5-bEy" firstAttribute="top" secondItem="1WT-Vd-Btk" secondAttribute="bottom" constant="21" id="Aa9-EQ-uXv"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="bottom" secondItem="smN-UI-WEv" secondAttribute="bottom" constant="373" id="CmR-IX-I1D"/>
                             <constraint firstItem="smN-UI-WEv" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="25" id="FS9-d6-cZ5"/>
                             <constraint firstItem="1WT-Vd-Btk" firstAttribute="leading" secondItem="gFd-Ui-35g" secondAttribute="trailing" constant="25" id="FWL-AV-tva"/>
                             <constraint firstItem="ZR8-MV-Jj6" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="44" id="FaA-b5-Ba6"/>
+                            <constraint firstItem="SnG-NV-goL" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" id="I5N-Fa-V5p"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="i2J-h8-u5y" secondAttribute="trailing" constant="13" id="JIR-wi-qBa"/>
                             <constraint firstItem="lfR-fc-tge" firstAttribute="leading" secondItem="1WT-Vd-Btk" secondAttribute="trailing" constant="19" id="Jfy-a6-35F"/>
                             <constraint firstItem="gFd-Ui-35g" firstAttribute="top" secondItem="Khk-2u-R0T" secondAttribute="top" constant="10" id="QN3-d6-pES"/>
@@ -240,6 +294,7 @@
                             <constraint firstItem="BUn-6a-5g9" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="12" id="jR1-d1-hk6"/>
                             <constraint firstItem="gGC-h5-bEy" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" id="jao-SD-WXo"/>
                             <constraint firstItem="BUn-6a-5g9" firstAttribute="top" secondItem="Khk-2u-R0T" secondAttribute="top" constant="19" id="k1H-Vg-RIe"/>
+                            <constraint firstItem="SnG-NV-goL" firstAttribute="bottom" secondItem="Khk-2u-R0T" secondAttribute="bottom" id="lVC-k8-5JQ"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="ZR8-MV-Jj6" secondAttribute="trailing" constant="51" id="m6E-JM-kDD"/>
                             <constraint firstItem="gFd-Ui-35g" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="58" id="mQN-tL-hKo"/>
                             <constraint firstItem="jwI-8Z-8XF" firstAttribute="top" secondItem="FGO-WL-ET5" secondAttribute="bottom" constant="22.5" id="nvQ-Vy-Ub3"/>
@@ -252,6 +307,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="collectionView" destination="SnG-NV-goL" id="WdB-NV-BI0"/>
                         <outlet property="searchField" destination="gFd-Ui-35g" id="7NW-T5-GG8"/>
                         <outlet property="searchView" destination="ZR8-MV-Jj6" id="pyV-o6-qFh"/>
                     </connections>
@@ -263,6 +319,7 @@
     </scenes>
     <resources>
         <image name="btBack" width="19" height="26"/>
+        <image name="iconLikeNoFill" width="25" height="24"/>
         <image name="iconSearchMain" width="17.5" height="16.5"/>
     </resources>
 </document>

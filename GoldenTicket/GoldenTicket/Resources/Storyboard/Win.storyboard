@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WinVC-->
         <scene sceneID="WDW-at-6R8">
             <objects>
-                <viewController id="OMd-WM-cmE" sceneMemberID="viewController">
+                <viewController id="OMd-WM-cmE" customClass="WinVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O2j-1I-6Gv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,6 +26,10 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characterWin" translatesAutoresizingMaskIntoConstraints="NO" id="DHA-od-14o">
                                 <rect key="frame" x="56.5" y="158" width="262" height="281"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="262" id="JcT-p1-RxX"/>
+                                    <constraint firstAttribute="height" constant="281" id="O55-M2-UEO"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="축하합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiW-no-rCf">
                                 <rect key="frame" x="141" y="461" width="93" height="24"/>
@@ -53,7 +57,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogk-yd-nlM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogk-yd-nlM" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
                                 <rect key="frame" x="55.5" y="611" width="264" height="35"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -64,6 +68,9 @@
                                 <state key="normal" title="결제하기">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GTS-jK-F10" kind="presentation" id="bvN-0e-jGA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,10 +92,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fJz-Yj-ZEn"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="imageView" destination="DHA-od-14o" id="bLD-wQ-duR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsf-Tf-CPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="45" y="143"/>
+        </scene>
+        <!--unpaidVC-->
+        <scene sceneID="r0q-y3-eMC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Unpaid" referencedIdentifier="unpaidVC" id="GTS-jK-F10" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zMQ-ME-XAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="142"/>
         </scene>
     </scenes>
     <resources>

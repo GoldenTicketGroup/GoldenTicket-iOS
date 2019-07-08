@@ -11,12 +11,18 @@ import Hero
 
 class SearchVC: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     @IBOutlet weak var searchField: UITextField!
     
     @IBOutlet weak var searchView: UIView!
     
+    var searchShowList : [SearchShow] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.isHidden = true
         
         searchField.attributedPlaceholder = NSAttributedString(string: "어떤 공연을 찾고 계신가요?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.peach])
                 
@@ -37,10 +43,38 @@ class SearchVC: UIViewController {
     
     
     @IBAction func goSearch(_ sender: Any) {
-        if searchField.text == "뮤지컬" {
-            print("제대로 입력됨.")
-        } else {
-            return
+        
+        guard let searchWord = searchField.text else { return }
+        
+        if searchField.text ==  searchWord {
+            
+            SearchService.shared.searchShow(searchWord) {
+                data in
+                // guard let 'self' = self else {return}
+                
+                print(searchWord)
+                
+                switch data {
+                case .success(let res) :
+                    
+                    self.searchShowList = res as! [SearchShow]
+                    self.collectionView.reloadData()
+                    self.collectionView.isHidden = false
+                    
+                case .requestErr(let message):
+                    self.simpleAlert(title: "실패", message: "\(message)")
+                    
+                case .pathErr:
+                    print(".pathErr")
+                    
+                case .serverErr:
+                    print(".serverErr")
+                    
+                case .networkFail:
+                    self.simpleAlert(title: "불러오기 실패", message: "네트워크 상태를 확인해주세요.")
+                }
+            }
+            
         }
     }
     
@@ -56,6 +90,7 @@ class SearchVC: UIViewController {
         switch sender.titleLabel?.text {
         case "판타지":
             print("판타지")
+            collectionView.isHidden = false
             break
         case "로맨스":
             print("로맨스")
@@ -94,3 +129,26 @@ class SearchVC: UIViewController {
     
     
 }
+
+extension SearchVC : UICollectionViewDataSource
+{
+    
+    // UICollectionView 에 얼마나 많은 아이템을 담을 지 설정합니다.
+    // 현재는 likeList 배열의 count 갯수 만큼 반환합니다.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return searchShowList.count
+    }
+    
+    // 각 index 에 해당하는 셀에 데이터를 주입합니다.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "searchCell", for: indexPath) as! SearchCVCell
+        let show = searchShowList[indexPath.row]
+        
+        cell.showImage.imageFromUrl(show.imageURL, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
+        
+        return cell
+    }
+}
+

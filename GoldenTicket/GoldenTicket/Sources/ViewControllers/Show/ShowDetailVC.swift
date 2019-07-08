@@ -63,7 +63,7 @@ class ShowDetailVC: UIViewController {
     
     
     // drop list 테스트용 데이터
-    var timeList = ["오후 4 : 00", "오후 5 : 00", "오후 6 : 00"]
+    var timeList = ["오후 4 : 00", "오후 5 : 00"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,8 +90,6 @@ class ShowDetailVC: UIViewController {
         
         //drop table view 숨기기
         tblView.isHidden = true
-        //tblviw corner radius
-        tblView.makeRounded(cornerRadius: 8)
         
         // fillViewButton corner radius 설정해주기
         fillView.layer.cornerRadius = 22
