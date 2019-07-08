@@ -698,6 +698,9 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="userName" destination="Xgd-WG-XHr" id="RhI-KJ-52J"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="st8-AV-MVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

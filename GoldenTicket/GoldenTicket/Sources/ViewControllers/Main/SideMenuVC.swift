@@ -12,6 +12,8 @@ import SideMenu
 
 class SideMenuVC: UITableViewController {
 
+    @IBOutlet var userName: UILabel!
+    
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
@@ -23,6 +25,11 @@ class SideMenuVC: UITableViewController {
         // 스크롤 되지 않고 고정되게 하기위해.
         tableView.isScrollEnabled = false
         
+        // 로그인한 사용자 이름으로 메인 label 반영
+        let user = UserDefaults.standard
+        
+        // 저장된 값을 꺼내어 각 컨트롤에 적용
+        self.userName.text = user.string(forKey: "name")
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -200,6 +200,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="navigationBar" destination="HN9-2f-q4G" id="ZR2-5u-4mr"/>
+                        <outlet property="userName" destination="l4g-iA-Vyb" id="Zrb-rc-qeC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htr-Au-hHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
