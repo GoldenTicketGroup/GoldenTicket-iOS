@@ -14,4 +14,5 @@ struct APIConstants {
     static let SignupURL = BaseURL + "/auth/signup" // 회원가입
     static let EditUserURL = BaseURL + "/auth/user" // 회원 정보 수정
     static let ShowURL = BaseURL + "/show/home"
+    static let InterestURL = BaseURL + "/show/heart"
 }

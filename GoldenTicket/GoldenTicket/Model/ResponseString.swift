@@ -15,7 +15,7 @@ struct ResponseString: Codable {
     let status: Int
     let success: Bool
     let message: String
-    let data: DataClass!
+    let data: DataClass?
 }
 
 // MARK: - DataClass

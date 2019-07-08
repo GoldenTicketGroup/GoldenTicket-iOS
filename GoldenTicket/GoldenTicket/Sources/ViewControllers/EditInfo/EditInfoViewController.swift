@@ -60,19 +60,14 @@ class EditInfoViewController: UIViewController {
                 
                 switch data {
                     
-                // 매개변수에 어떤 값을 가져올 것인지
+                // data가 nil이니까 서버는 갔다왔고 ==> 수정 됨
                 case .success(let data):
                     print("회원정보 수정 성공")
                     
-                    // DataClass 에서 받은 유저 정보 반환
-                    let user_data = data as! DataClass
-                    
-                    // 사용자의 토큰, 이름, 이메일, 전화번호 받아오기
-                    let token = user_data.token
-                    UserDefaults.standard.set(token, forKey: "token")
-                    UserDefaults.standard.set(user_data.name, forKey: "name")
-                    UserDefaults.standard.set(user_data.email, forKey: "email")
-                    UserDefaults.standard.set(user_data.phone, forKey: "phone")
+                    // UserDefaults 값만 수정해주면 ok
+                    UserDefaults.standard.set(name, forKey: "name")
+                    UserDefaults.standard.set(email, forKey: "email")
+                    UserDefaults.standard.set(phone, forKey: "phone")
                     
                     // 회원가입 완료 후에는 로그인 페이지로 이동
                     self.dismiss(animated: true, completion: nil)
