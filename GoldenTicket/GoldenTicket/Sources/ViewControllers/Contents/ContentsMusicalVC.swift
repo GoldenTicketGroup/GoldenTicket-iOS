@@ -1,25 +1,23 @@
 //
-//  ContentsVC.swift
+//  ContentsMusicalVC.swift
 //  GoldenTicket
 //
-//  Created by 안재은 on 04/07/2019.
+//  Created by 안재은 on 07/07/2019.
 //  Copyright © 2019 황수빈. All rights reserved.
 //
 
 import UIKit
 
-class ContentsVC: UIViewController {
-    
-    @IBOutlet weak var goInfoButton: UIButton!
-    
+class ContentsMusicalVC: UIViewController {
+    @IBOutlet weak var goInfoButton1: UIButton!
     @IBOutlet weak var goInfoButton2: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        goInfoButton.makeRounded(cornerRadius: 20)
+        goInfoButton1.makeRounded(cornerRadius: 20)
         goInfoButton2.makeRounded(cornerRadius: 20)
     }
-    
+
     @IBAction func cancleButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

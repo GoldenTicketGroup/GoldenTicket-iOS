@@ -54,6 +54,18 @@ class SideMenuVC: UITableViewController {
             }
             present(dvc2, animated: true)
         }
+        else if indexPath.row == 4 {
+            let storyboardNotice = UIStoryboard.init(name: "Notice", bundle: nil)
+            guard let dvc3 = storyboardNotice.instantiateViewController(withIdentifier: "noticeVC") as? NoticeViewController else {
+                return
+            }
+            present(dvc3, animated: true)
+        }
+        else if indexPath.row == 5 {
+            let storyboardSetting = UIStoryboard.init(name: "Setting", bundle: nil)
+            let dvc4 = storyboardSetting.instantiateViewController(withIdentifier: "settingVC")
+            present(dvc4, animated: true)
+        }
         else if indexPath.row == 6 {
             let storyboardQuestion = UIStoryboard.init(name: "Question", bundle: nil)
             guard let dvc5 = storyboardQuestion.instantiateViewController(withIdentifier: "QuestionVC") as? QuestionVC else {

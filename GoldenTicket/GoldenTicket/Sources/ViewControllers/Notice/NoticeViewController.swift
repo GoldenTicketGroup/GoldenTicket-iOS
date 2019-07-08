@@ -103,7 +103,7 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //header.contentView.layer.borderWidth = 0.5
         
         header.contentView.layer.masksToBounds = true
-        header.textLabel?.font = UIFont(name: "AppleSDGothicNeo", size: 17)
+        header.textLabel?.font = UIFont(name: "AppleSDGothicNeo", size: 12)
         header.textLabel?.textColor = UIColor.black
         
         let textLabel = UILabel(frame: CGRect(x: header.frame.width - 360, y: 45, width: 100, height: 15))
@@ -132,7 +132,7 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as UITableViewCell
         let section = self.sectionItems[indexPath.section] as! NSArray
         cell.textLabel?.textColor = UIColor.lightGray
-        cell.textLabel?.font = UIFont(name: "AppleSDGothicNeo" , size: 13)
+        cell.textLabel?.font = UIFont(name: "AppleSDGothicNeo" , size: 11)
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = section[indexPath.row] as? String
         

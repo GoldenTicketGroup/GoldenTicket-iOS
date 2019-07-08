@@ -13,20 +13,33 @@ import SwiftOverlayShims
 class SplashVC: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.imageView.image = UIImage.gif(name: "splash")
-        
+        self.imageView.image = UIImage.gif(name: "mainLogo")
+
         do {
-            let imageData = try Data(contentsOf: Bundle.main.url(forResource: "splash", withExtension: "gif")!)
+            let imageData = try Data(contentsOf: Bundle.main.url(forResource: "mainLogo", withExtension: "gif")!)
             self.imageView.image = UIImage.gif(data: imageData)
+            
         } catch {
             print(error)
         }
+        
+        perform(#selector(SplashVC.showLogin), with: nil, afterDelay: 2.1)
+        
     }
-    
+    @objc func showLogin() {
+        let storyboard = UIStoryboard.init(name: "Login", bundle: nil)
+        let login = storyboard.instantiateViewController(withIdentifier: "loginVC")
+        present(login, animated: true)
+    }
+
+}
+
+
+
 
     /*
     // MARK: - Navigation
@@ -38,4 +51,4 @@ class SplashVC: UIViewController {
     }
     */
 
-}
+

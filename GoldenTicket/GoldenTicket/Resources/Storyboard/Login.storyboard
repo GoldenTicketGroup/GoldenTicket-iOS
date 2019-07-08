@@ -13,7 +13,7 @@
         <!--LoginVC-->
         <scene sceneID="YPw-A0-0Xu">
             <objects>
-                <viewController id="xbP-fh-HMr" customClass="LoginVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="xbP-fh-HMr" customClass="LoginVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9A3-zd-mcK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

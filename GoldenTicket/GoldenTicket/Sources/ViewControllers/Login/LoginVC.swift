@@ -48,7 +48,7 @@ class LoginVC: UIViewController {
             case .success(let token):
                 
                 // ResponseString.swift 파일의 DataClass 구조체에서 token 값만 받아오겠다.
-                let token_string = (token as! DataClass).token 
+                let token_string = (token as! DataClass).token
                 UserDefaults.standard.set(token_string, forKey: "token")
                 
 //                let user_name = (name as! DataClass).name

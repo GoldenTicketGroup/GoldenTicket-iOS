@@ -4,6 +4,7 @@ PODS:
   - Kingfisher (4.10.1)
   - SideMenu (5.0.3)
   - SwiftGifOrigin (1.7.0)
+  - SwiftyGif (5.1.1)
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - Kingfisher (~> 4.10.1)
   - SideMenu
   - SwiftGifOrigin (~> 1.7.0)
+  - SwiftyGif
   - TextFieldEffects
 
 SPEC REPOS:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - Kingfisher
     - SideMenu
     - SwiftGifOrigin
+    - SwiftyGif
     - TextFieldEffects
 
 SPEC CHECKSUMS:
@@ -29,8 +32,9 @@ SPEC CHECKSUMS:
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
+  SwiftyGif: f7702483db93586a41f04f4927cd682852a2fa10
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 8dc624946a1df146cd7c1b7e1449b34cd91202e6
+PODFILE CHECKSUM: 7a7959a4d67aea7b980cbfaa1221cd3a8459960f
 
 COCOAPODS: 1.7.3

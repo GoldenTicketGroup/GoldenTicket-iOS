@@ -113,7 +113,7 @@ class MainVC: UIViewController {
     //첫번째 응모한 공연에 대한 시간 프린터
     @objc func timePrinter1() -> Void {
         // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime: "07/06/2019 12:30:30 p")
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss", endTime: "07/07/2019 04:30:30")
         
         let sec = time.second!
         let min = time.minute!
@@ -147,7 +147,7 @@ class MainVC: UIViewController {
     @objc func timePrinter2() -> Void {
         
         // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime: "07/06/2019 09:18:30 p")
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime: "07/07/2019 04:18:30 p")
         
         let sec = time.second!
         let min = time.minute!
@@ -278,7 +278,9 @@ class MainVC: UIViewController {
     
     @IBAction func monthMusical(_ sender: Any) {
         
-        
+        let storyboardContent = UIStoryboard.init(name: "Contents", bundle: nil)
+        let dvc = storyboardContent.instantiateViewController(withIdentifier: "contents2")
+        present(dvc, animated: true)
     }
     
     

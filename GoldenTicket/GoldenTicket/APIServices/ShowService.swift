@@ -27,7 +27,7 @@ struct ShowService {
                 
                 switch response.result {
                     
-                    // 통신 성공
+                // 통신 성공
                 case .success:
                     if let value = response.result.value {
                         if let status = response.response?.statusCode {
@@ -59,7 +59,7 @@ struct ShowService {
                     }
                     break
                     
-                    // 통신 실패
+                // 통신 실패
                 case .failure(let err):
                     print(err.localizedDescription)
                     completion(.networkFail)
@@ -68,4 +68,3 @@ struct ShowService {
         }
     }
 }
-

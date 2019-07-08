@@ -70,6 +70,10 @@
 		F4955C0422C88D1C00530906 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4955C0322C88D1C00530906 /* Search.storyboard */; };
 		F4955C0722C8936900530906 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4955C0622C8936900530906 /* SearchVC.swift */; };
 		F4955C0922C89C0F00530906 /* CustomSearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4955C0822C89C0F00530906 /* CustomSearchButton.swift */; };
+		F4FE454C22D18CB200E6C6B0 /* ContentsMusicalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE454B22D18CB200E6C6B0 /* ContentsMusicalVC.swift */; };
+		F4FE454E22D1CF9000E6C6B0 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE454D22D1CF9000E6C6B0 /* UIImageView+Extensions.swift */; };
+		F4FE455022D232B800E6C6B0 /* mainLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = F4FE454F22D232B800E6C6B0 /* mainLogo.gif */; };
+		F4FE455222D239FB00E6C6B0 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE455122D239FB00E6C6B0 /* SettingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +143,10 @@
 		F4955C0322C88D1C00530906 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		F4955C0622C8936900530906 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		F4955C0822C89C0F00530906 /* CustomSearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchButton.swift; sourceTree = "<group>"; };
+		F4FE454B22D18CB200E6C6B0 /* ContentsMusicalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsMusicalVC.swift; sourceTree = "<group>"; };
+		F4FE454D22D1CF9000E6C6B0 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		F4FE454F22D232B800E6C6B0 /* mainLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mainLogo.gif; sourceTree = "<group>"; };
+		F4FE455122D239FB00E6C6B0 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		F92DF9CEA0A33B3C51D5E98C /* Pods-GoldenTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenTicket.debug.xcconfig"; path = "Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +167,7 @@
 			children = (
 				08004B8422D0DE5900BA8AC0 /* splash.gif */,
 				08004B8122D0974000BA8AC0 /* SplashVC.swift */,
+				F4FE454F22D232B800E6C6B0 /* mainLogo.gif */,
 				08004B8E22D0EBAD00BA8AC0 /* Splash.storyboard */,
 			);
 			path = Splash;
@@ -285,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				F402F30B22CDD2A70047B976 /* ContentsVC.swift */,
+				F4FE454B22D18CB200E6C6B0 /* ContentsMusicalVC.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -295,6 +305,7 @@
 				F40313F322CB1CE700BB2737 /* WinTicketsVC.swift */,
 				F40313F722CB2E8C00BB2737 /* InterestedVC.swift */,
 				F40313FD22CB344900BB2737 /* QuestionVC.swift */,
+				F4FE455122D239FB00E6C6B0 /* SettingVC.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -337,6 +348,7 @@
 				F440B3AC22C6444000B8AFD6 /* UIViewController+Extensions.swift */,
 				F440B3AA22C6437400B8AFD6 /* UIColor+Extensions.swift */,
 				08004B9422D0F42300BA8AC0 /* UIView+shake+Extensions.swift */,
+				F4FE454D22D1CF9000E6C6B0 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -465,6 +477,7 @@
 			files = (
 				0836EDAE22C7C2B1006295D3 /* Unpaid.storyboard in Resources */,
 				08CBCB2F22C2552F009C1199 /* Assets.xcassets in Resources */,
+				F4FE455022D232B800E6C6B0 /* mainLogo.gif in Resources */,
 				F40313FA22CB2FB700BB2737 /* Interested.storyboard in Resources */,
 				0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */,
 				080BF81D22CC57F400A06BBF /* Setting.storyboard in Resources */,
@@ -545,10 +558,12 @@
 				F43F454722CA639C00C53898 /* TicketVC.swift in Sources */,
 				08004B9522D0F42300BA8AC0 /* UIView+shake+Extensions.swift in Sources */,
 				F4955BFA22C857F000530906 /* MainVC.swift in Sources */,
+				F4FE454C22D18CB200E6C6B0 /* ContentsMusicalVC.swift in Sources */,
 				F40313F422CB1CE700BB2737 /* WinTicketsVC.swift in Sources */,
 				F440B3A122C61C5800B8AFD6 /* UIView+Extensions.swift in Sources */,
 				F43F454222C9F46500C53898 /* CustomView.swift in Sources */,
 				08CBCB2722C2552D009C1199 /* ViewController.swift in Sources */,
+				F4FE454E22D1CF9000E6C6B0 /* UIImageView+Extensions.swift in Sources */,
 				F440B3AD22C6444000B8AFD6 /* UIViewController+Extensions.swift in Sources */,
 				080BF82622CC8EC400A06BBF /* WinCell.swift in Sources */,
 				F4955C0722C8936900530906 /* SearchVC.swift in Sources */,
@@ -563,6 +578,7 @@
 				080BF82122CC840400A06BBF /* Like.swift in Sources */,
 				F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */,
 				08CBCB2D22C2552D009C1199 /* GoldenTicket.xcdatamodeld in Sources */,
+				F4FE455222D239FB00E6C6B0 /* SettingVC.swift in Sources */,
 				08CBCB2522C2552D009C1199 /* AppDelegate.swift in Sources */,
 				089C13BF22D06BB600F91DD9 /* EditInfoViewController.swift in Sources */,
 				F4955C0922C89C0F00530906 /* CustomSearchButton.swift in Sources */,
@@ -716,7 +732,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39X44DH4RN;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GoldenTicket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -735,7 +751,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39X44DH4RN;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GoldenTicket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -63,14 +63,17 @@ extension WinTicketsVC: UICollectionViewDataSource
         cell.winImage.image = like.winImage
         
         // poster 이미지의 corner radius
-        cell.winImage.layer.masksToBounds = true;
-        cell.winImage.layer.cornerRadius = 19;
+//        cell.winImage.layer.masksToBounds = true;
+//        cell.winImage.layer.cornerRadius = 19;
+        
         
         // poster image에 그림자를 넣기 위한 세팅
-        cell.winImage.layer.masksToBounds = false
-        cell.winImage.layer.shadowOffset = CGSize(width: 0, height: 3)
-        cell.winImage.layer.shadowRadius = 6
-        cell.winImage.layer.shadowOpacity = 0.35
+//        cell.winImage.layer.masksToBounds = false
+//        cell.winImage.layer.shadowOffset = CGSize(width: 0, height: 3)
+//        cell.winImage.layer.shadowRadius = 6
+//        cell.winImage.layer.shadowOpacity = 0.35
+//        cell.winImage.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 3), opacity: 0.35, radius: 6)
+        cell.winImage.makeRounded(cornerRadius: 20)
         
         // 당첨된 공연의 날짜. ex) 2019년 06월 15일
         cell.winDay.text = like.winDay
@@ -88,11 +91,12 @@ extension WinTicketsVC: UICollectionViewDataSource
         cell.winTime.text = like.winTime
         
         // ticket image에 그림자를 넣기 위한 세팅
-        cell.ticketInfo.layer.masksToBounds = false
-        cell.ticketInfo.layer.shadowOpacity = 1
-        cell.ticketInfo.layer.shadowRadius = 6
-        cell.ticketInfo.layer.shadowColor = UIColor.black16.cgColor
-        cell.ticketInfo.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        cell.ticketInfo.layer.masksToBounds = false
+//        cell.ticketInfo.layer.shadowOpacity = 1
+//        cell.ticketInfo.layer.shadowRadius = 6
+//        cell.ticketInfo.layer.shadowColor = UIColor.black16.cgColor
+//        cell.ticketInfo.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.ticketInfo.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 6)
         return cell
     }
 }
