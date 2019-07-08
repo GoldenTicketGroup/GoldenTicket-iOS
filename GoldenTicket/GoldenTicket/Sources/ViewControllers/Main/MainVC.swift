@@ -14,6 +14,8 @@ import Kingfisher
 class MainVC: UIViewController {
     
     @IBOutlet var userName: UILabel!
+    // var show_id: Int?   // 상세 공연 정보 인덱스
+    let show_id = String(20)   // 우선 20으로 초기화
     
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
@@ -61,7 +63,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     
     var showList : [Show] = []
-    var showDetailList : [Detail] = []
+    var showDetailList : [ShowDetail] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -334,17 +336,18 @@ extension MainVC : UICollectionViewDelegate {
         
         let dvc = storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
         
-        let show = showDetailList[indexPath.row]
+        let showdetail = showDetailList[indexPath.row]
         
-        dvc.backgroundImg = show.backgroundImage
-        dvc.posterImg = show.posterImage
-        dvc.showName = show.showTitle
+        // 아직 없음
+        // dvc.backgroundImg = showdetail.backgroundImage
+        //dvc.posterImg.imageFromURL(showdetail.imageURL, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
+        dvc.showName = showdetail.name
         //dvc.showPrice = show.showPrice
-        dvc.showBeforePrice = show.showBeforePrice
-        dvc.showAfterPrice = show.showAfterPrice
-        dvc.showTime = show.showTime
-        dvc.showLocation = show.showLocation
-        dvc.showDetail = show.showDetailImage
+        dvc.showBeforePrice = showdetail.originalPrice
+        dvc.showAfterPrice = showdetail.discountPrice
+        //dvc.showTime = showdetail.schedule.
+        dvc.showLocation = showdetail.location
+        //dvc.showDetail = showdetail.showDetailImage
         
         present(dvc, animated: true)
         //navigationController?.pushViewController(dvc, animated: true)
@@ -387,9 +390,34 @@ extension MainVC {
     
     func setDetailData() {
         
-        let showD1 = Detail(background: "backImgInfo", poster: "posteKillMeNowInfo", title: "뮤지컬 벤허", time: "2019.06.15 17:00~19:00", bprice: "150,000", aprice: "20,000", location: "블루스퀘어 인터파크홀", detail: "longMusicalInfo")
-        let showD2 = Detail(background: "backImgInfoKillMeNow", poster: "posteKillMeNowInfo", title: "뮤지컬 킬미나우", time: "2019.06.15 17:00~19:00", bprice: "150,000", aprice: "10,000", location: "예술의 전당", detail: "longInfoKillMeNow")
+        // guard let idx = show_id else { return }
         
-        showDetailList = [showD1, showD2, showD2, showD1]
+        ShowService.shared.showDetail(show_id) {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                
+                self.showDetailList = res as! [ShowDetail]
+                //self.showDetailList.reloadData()
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "로그인 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "로그인 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
     }
 }

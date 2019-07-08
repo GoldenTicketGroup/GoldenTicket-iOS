@@ -61,6 +61,7 @@ class EditInfoViewController: UIViewController {
                 switch data {
                     
                 // data가 nil이니까 서버는 갔다왔고 ==> 수정 됨
+                // 서버에서 따로 받아야하는 data 없음.
                 case .success(let data):
                     print("회원정보 수정 성공")
                     
