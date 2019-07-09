@@ -131,7 +131,7 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as UITableViewCell
         let section = self.sectionItems[indexPath.section] as! NSArray
-        cell.textLabel?.textColor = UIColor.lightGray
+        cell.textLabel?.textColor = UIColor.darkGray
         cell.textLabel?.font = UIFont(name: "AppleSDGothicNeo" , size: 11)
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = section[indexPath.row] as? String
