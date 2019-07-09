@@ -2,16 +2,16 @@
 //  ResponseShow.swift
 //  GoldenTicket
 //
-//  Created by 황수빈 on 08/07/2019.
+//  Created by 황수빈 on 09/07/2019.
 //  Copyright © 2019 황수빈. All rights reserved.
 //
 
 import Foundation
 
-// MARK: - ResponseArray
-struct ResponseArray<T: Codable>: Codable  {
+// MARK: - ResponseShow
+struct ResponseShow: Codable {
     let status: Int
     let success: Bool
     let message: String
-    let data: [T]?
+    let data: ShowDetail!
 }

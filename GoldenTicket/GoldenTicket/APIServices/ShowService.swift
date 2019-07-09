@@ -80,7 +80,7 @@ struct ShowService {
     
     func showDetail(_ show_id: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         
-        let URL = APIConstants.ShowURL + "/\(show_id)"
+        let URL = APIConstants.ShowDetailURL + "/\(show_id)"
         
         let header: HTTPHeaders = [
             "Content-Type" : "application/json"
@@ -95,14 +95,22 @@ struct ShowService {
                 case .success:
                     if let value = response.result.value {
                         if let status = response.response?.statusCode {
+                            print("통신상태 : \(status)")
                             
                             switch status {
                             case 200:
                                 do {
+                                    print("접근주소 : \(URL)")
+                                    print("-----start decode-----")
                                     let decoder = JSONDecoder()
                                     
-                                    // Show.swift codable
-                                    let result = try decoder.decode(ResponseArray<ShowDetail>.self, from: value)
+                                    // ShowDetail.swift model
+                                    // ResponseShow.swift codable
+                                    
+                                    print("서버에서 받는 데이타 : \(value)")   // 1503 bytes
+                                    
+                                    let result = try decoder.decode(ResponseShow.self, from: value)
+                                    print("finish decode")
                                     
                                     switch result.success {
                                     case true:
@@ -112,6 +120,7 @@ struct ShowService {
                                     }
                                 } catch {
                                     completion(.pathErr)
+                                    print(error.localizedDescription)   // 에러 출력
                                 }
                             case 400:
                                 completion(.pathErr)

@@ -18,6 +18,9 @@ struct APIConstants {
     
     /* 공연 정보(Show) */
     static let ShowURL = BaseURL + "/show/home"
+    static let ShowDetailURL = BaseURL + "/show/detail"
     static let InterestURL = BaseURL + "/show/heart"
-
+    
+    /* 검색 (Search) */
+    static let SearchURL = BaseURL + "/search/text"
 }
