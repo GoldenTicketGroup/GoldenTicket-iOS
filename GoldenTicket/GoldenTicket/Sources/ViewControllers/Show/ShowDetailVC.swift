@@ -157,12 +157,14 @@ class ShowDetailVC: UIViewController {
     }
     
     // 좋아요 버튼 누를 시 fill heart.
-    @IBAction func onClickedLikeButton(_ sender: Any) {
+    @IBAction func onClickedLikeButton(_ sender: UIButton) {
         
-        let liked: Bool = true
-        
-        if(liked) {
-            likeButton.setImage(UIImage(named: "btLikeInfo" ), for: UIControl.State.normal)
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            // 관심있는 공연에 추가되어있음
+        }
+        else {
+            // 관심있는 공연에서 삭제함
         }
         
     }
@@ -300,9 +302,15 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         let timeArray = timeList[indexPath.row]
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.maize
+        cell.selectedBackgroundView = backgroundView
         
         cell.textLabel!.text = timeArray.time
         
