@@ -10,6 +10,7 @@ import UIKit
 
 class TutorialVC: UIViewController {
 
+    
     @IBOutlet weak var tutorialPoster: UIImageView!
     
     @IBOutlet weak var tutorialBottom: UIImageView!
@@ -18,13 +19,13 @@ class TutorialVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tutorialPoster.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 3)
         tutorialBottom.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 3)
         
         tutorialButtonImg.makeRounded(cornerRadius: 14)
     }
     
-
     /*
     // MARK: - Navigation
 

@@ -14,6 +14,8 @@ class SideMenuVC: UITableViewController {
 
     @IBOutlet var userName: UILabel!
     
+    @IBOutlet weak var winCount: UILabel!
+    
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
@@ -30,6 +32,15 @@ class SideMenuVC: UITableViewController {
         
         // 저장된 값을 꺼내어 각 컨트롤에 적용
         self.userName.text = user.string(forKey: "name")
+        
+        let storyboardWin = UIStoryboard.init(name: "WinList", bundle: nil)
+        guard let dvc1 = storyboardWin.instantiateViewController(withIdentifier: "WinList") as? WinTicketsVC else{
+            return
+        }
+        let dvc2 = storyboardWin.instantiateViewController(withIdentifier: "WinList") as! WinTicketsVC
+        print(dvc2.winList.count)
+        print(dvc1.winList.count)
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,6 +62,7 @@ class SideMenuVC: UITableViewController {
             guard let dvc1 = storyboardWin.instantiateViewController(withIdentifier: "WinList") as? WinTicketsVC else{
                 return
             }
+            
             present(dvc1, animated: true)
             //navigationController?.pushViewController(dvc1, animated: true)
         }

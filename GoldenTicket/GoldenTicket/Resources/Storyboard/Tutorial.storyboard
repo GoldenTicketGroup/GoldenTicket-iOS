@@ -161,7 +161,7 @@
         <!--View Controller-->
         <scene sceneID="iAa-OE-oQf">
             <objects>
-                <viewController id="mOQ-5h-IIN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialMid" id="mOQ-5h-IIN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dSA-de-sTB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,7 +253,7 @@
         <!--Tutorial LastVC-->
         <scene sceneID="rmb-lj-6ib">
             <objects>
-                <viewController id="Yxk-O3-3Oy" customClass="TutorialLastVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialLast" id="Yxk-O3-3Oy" customClass="TutorialLastVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yf2-RE-G5N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
