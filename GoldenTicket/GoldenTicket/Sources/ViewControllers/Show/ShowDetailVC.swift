@@ -15,6 +15,7 @@ class ShowDetailVC: UIViewController {
     var actorList : [Artist] = []
     var timeList : [Schedule] = []
     var showIdx : Int?
+    var selectedRow : String?
     
     // 배우들을 보여주는 collection view.
     @IBOutlet weak var actorCollectionView: UICollectionView!
@@ -46,6 +47,11 @@ class ShowDetailVC: UIViewController {
     var showLocation : String?
     var detailPoster : UIImageView?
     
+    // MainVC 에서 storyboard로 전달 받는 actor 변수 선언
+    var serverActorImage : UIImageView?
+    var serverActorName : String?
+    var serverCastingName : String?
+    
     //응모하기 뷰
     @IBOutlet weak var checkView: CustomView!
     @IBOutlet weak var fillView: UIView!
@@ -67,7 +73,7 @@ class ShowDetailVC: UIViewController {
 
         // 테스트용 더미 데이터 세팅해두기.
         setContent()
-        //setActorData()
+        // setActorData()
         
         //poster image customize
         posterImage.makeRounded(cornerRadius: 10)
@@ -103,6 +109,10 @@ class ShowDetailVC: UIViewController {
         
         if let index = tblView.indexPathForSelectedRow {
             tblView.deselectRow(at: index, animated: true)
+            
+            
+            // 선택된 테이블의 cell의 index 값으로 cell title 얻어오기
+            self.selectedRow = tblView.cellForRow(at: index)?.textLabel!.text
         }
     }
     
@@ -274,9 +284,9 @@ extension ShowDetailVC: UICollectionViewDataSource {
         
         let actor = actorList[indexPath.row]
         
-        cell.actorImage.imageFromUrl(actor.image_url, defaultImgPath:  "https://sopt24server.s3.ap-northeast-2.amazonaws.com/img_casting_01.jpg")
-        cell.actorName.text = actor.name
-        cell.castingName.text = actor.role
+        cell.actorImage.image = serverActorImage?.image
+        cell.actorName.text = serverActorName
+        cell.castingName.text = serverCastingName
         
         return cell
     }
@@ -301,7 +311,7 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 선택된 인덱스의 값의 타이틀이 보여지는 코드
-        btnDrop.setTitle("\(timeList[indexPath.row])", for: .normal)
+        btnDrop.setTitle("\(selectedRow!)", for: .normal)
         animate(toggle: false)
     }
     
