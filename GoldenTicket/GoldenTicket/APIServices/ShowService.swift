@@ -121,6 +121,7 @@ struct ShowService {
                                 } catch {
                                     completion(.pathErr)
                                     print(error.localizedDescription)   // 에러 출력
+                                    debugPrint(error) // check which key is missing
                                 }
                             case 400:
                                 completion(.pathErr)
