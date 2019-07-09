@@ -57,7 +57,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="i2J-h8-u5y">
-                                <rect key="frame" x="14" y="209" width="348" height="30"/>
+                                <rect key="frame" x="14" y="199" width="348" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcn-Ip-aP0" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
@@ -106,7 +106,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="smN-UI-WEv">
-                                <rect key="frame" x="25" y="264" width="324" height="30"/>
+                                <rect key="frame" x="25" y="244" width="324" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5z-Wc-7w0" customClass="CustomSearchButton" customModule="GoldenTicket" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
@@ -267,19 +267,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="i2J-h8-u5y" firstAttribute="top" secondItem="jwI-8Z-8XF" secondAttribute="bottom" constant="25" id="34d-jl-qMG"/>
                             <constraint firstItem="SnG-NV-goL" firstAttribute="trailing" secondItem="Khk-2u-R0T" secondAttribute="trailing" id="5AA-wN-L2p"/>
                             <constraint firstItem="gGC-h5-bEy" firstAttribute="top" secondItem="ZR8-MV-Jj6" secondAttribute="bottom" constant="6" id="67b-2B-oDa"/>
                             <constraint firstItem="SnG-NV-goL" firstAttribute="top" secondItem="gGC-h5-bEy" secondAttribute="bottom" id="6HJ-c1-y3A"/>
                             <constraint firstItem="smN-UI-WEv" firstAttribute="height" secondItem="jwI-8Z-8XF" secondAttribute="height" id="9Bh-71-pwN"/>
                             <constraint firstItem="gGC-h5-bEy" firstAttribute="top" secondItem="1WT-Vd-Btk" secondAttribute="bottom" constant="21" id="Aa9-EQ-uXv"/>
-                            <constraint firstItem="Khk-2u-R0T" firstAttribute="bottom" secondItem="smN-UI-WEv" secondAttribute="bottom" constant="373" id="CmR-IX-I1D"/>
+                            <constraint firstItem="smN-UI-WEv" firstAttribute="top" secondItem="i2J-h8-u5y" secondAttribute="bottom" constant="15" id="EDG-tE-LmC"/>
                             <constraint firstItem="smN-UI-WEv" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="25" id="FS9-d6-cZ5"/>
                             <constraint firstItem="1WT-Vd-Btk" firstAttribute="leading" secondItem="gFd-Ui-35g" secondAttribute="trailing" constant="25" id="FWL-AV-tva"/>
                             <constraint firstItem="ZR8-MV-Jj6" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="44" id="FaA-b5-Ba6"/>
                             <constraint firstItem="SnG-NV-goL" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" id="I5N-Fa-V5p"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="i2J-h8-u5y" secondAttribute="trailing" constant="13" id="JIR-wi-qBa"/>
                             <constraint firstItem="lfR-fc-tge" firstAttribute="leading" secondItem="1WT-Vd-Btk" secondAttribute="trailing" constant="19" id="Jfy-a6-35F"/>
+                            <constraint firstItem="i2J-h8-u5y" firstAttribute="top" secondItem="jwI-8Z-8XF" secondAttribute="bottom" constant="15" id="LmF-LE-7lZ"/>
                             <constraint firstItem="gFd-Ui-35g" firstAttribute="top" secondItem="Khk-2u-R0T" secondAttribute="top" constant="10" id="QN3-d6-pES"/>
                             <constraint firstItem="jwI-8Z-8XF" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="62" id="T6V-Es-ogV"/>
                             <constraint firstItem="FGO-WL-ET5" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="149" id="TIv-Z3-6eg"/>
@@ -293,7 +293,7 @@
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="FGO-WL-ET5" secondAttribute="trailing" constant="148" id="dMw-LN-t6r"/>
                             <constraint firstItem="i2J-h8-u5y" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="14" id="eqS-m4-eYN"/>
                             <constraint firstItem="lfR-fc-tge" firstAttribute="top" secondItem="Khk-2u-R0T" secondAttribute="top" constant="11" id="g8o-2E-cMS"/>
-                            <constraint firstItem="smN-UI-WEv" firstAttribute="top" secondItem="i2J-h8-u5y" secondAttribute="bottom" constant="25" id="gA5-Pq-lft"/>
+                            <constraint firstItem="Khk-2u-R0T" firstAttribute="bottom" secondItem="smN-UI-WEv" secondAttribute="bottom" constant="393" id="gDz-bM-Loo"/>
                             <constraint firstItem="BUn-6a-5g9" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="12" id="jR1-d1-hk6"/>
                             <constraint firstItem="gGC-h5-bEy" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" id="jao-SD-WXo"/>
                             <constraint firstItem="BUn-6a-5g9" firstAttribute="top" secondItem="Khk-2u-R0T" secondAttribute="top" constant="19" id="k1H-Vg-RIe"/>

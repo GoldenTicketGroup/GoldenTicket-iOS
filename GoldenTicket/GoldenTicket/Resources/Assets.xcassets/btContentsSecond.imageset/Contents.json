@@ -6,14 +6,14 @@
       "filename" : "btContentsSecond.png"
     },
     {
-      "filename" : "btContentsSecond@2x.png",
+      "scale" : "2x",
       "idiom" : "universal",
-      "scale" : "2x"
+      "filename" : "btContentsSecond@2x.png"
     },
     {
-      "filename" : "btContentsSecond@3x.png",
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "btContentsSecond@3x.png"
     }
   ],
   "info" : {

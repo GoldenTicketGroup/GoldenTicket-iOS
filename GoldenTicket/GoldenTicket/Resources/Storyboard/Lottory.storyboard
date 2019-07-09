@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="티켓을 판매합니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BF-hw-2Gp">
-                                <rect key="frame" x="138.5" y="164" width="98" height="16"/>
+                                <rect key="frame" x="138.5" y="161" width="98" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당첨이 되지 않거나" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiR-db-w0X">
                                 <rect key="frame" x="131.5" y="452" width="112" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -65,14 +65,14 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당첨 후 결제가 이루어지지 않으면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VQ-Kl-6aG">
-                                <rect key="frame" x="89" y="480" width="197" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <rect key="frame" x="89" y="480" width="197.5" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관람이 불가하오니 유의해주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFM-Ob-6si">
-                                <rect key="frame" x="90.5" y="508" width="194" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <rect key="frame" x="91" y="508" width="193.5" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -103,10 +103,10 @@
                             <constraint firstItem="ZEt-eW-soW" firstAttribute="centerX" secondItem="Fss-K9-8e7" secondAttribute="centerX" id="5s4-ph-eOZ"/>
                             <constraint firstItem="ZPc-dA-QH4" firstAttribute="centerX" secondItem="Fss-K9-8e7" secondAttribute="centerX" id="7VM-S9-pbB"/>
                             <constraint firstItem="mbW-dS-nlD" firstAttribute="bottom" secondItem="8AY-3J-qVc" secondAttribute="bottom" constant="21" id="8Ai-7H-ptr"/>
-                            <constraint firstItem="5BF-hw-2Gp" firstAttribute="top" secondItem="ZPc-dA-QH4" secondAttribute="bottom" constant="10" id="J4h-BX-tAr"/>
+                            <constraint firstItem="5BF-hw-2Gp" firstAttribute="top" secondItem="ZPc-dA-QH4" secondAttribute="bottom" constant="7" id="Edj-zN-NTl"/>
                             <constraint firstItem="ZEt-eW-soW" firstAttribute="bottom" secondItem="NiR-db-w0X" secondAttribute="bottom" id="PDX-TY-mSA"/>
+                            <constraint firstItem="0Ak-Tv-oYo" firstAttribute="top" secondItem="5BF-hw-2Gp" secondAttribute="bottom" constant="40" id="Pdg-7f-pRX"/>
                             <constraint firstItem="NiR-db-w0X" firstAttribute="top" secondItem="0Ak-Tv-oYo" secondAttribute="bottom" constant="25" id="RSA-qk-phY"/>
-                            <constraint firstItem="0Ak-Tv-oYo" firstAttribute="top" secondItem="5BF-hw-2Gp" secondAttribute="bottom" constant="37" id="TUV-jb-2Io"/>
                             <constraint firstItem="5BF-hw-2Gp" firstAttribute="centerX" secondItem="Fss-K9-8e7" secondAttribute="centerX" id="Z3l-9X-rdh"/>
                             <constraint firstItem="NiR-db-w0X" firstAttribute="centerX" secondItem="Fss-K9-8e7" secondAttribute="centerX" id="ZoH-uc-Jhd"/>
                             <constraint firstItem="ZPc-dA-QH4" firstAttribute="top" secondItem="MlC-U5-FDP" secondAttribute="bottom" constant="10" id="ck6-c9-3yu"/>
@@ -147,28 +147,28 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oH1-k8-sHx">
-                                <rect key="frame" x="72" y="446" width="231" height="8"/>
+                                <rect key="frame" x="56" y="448" width="258" height="8"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="AyX-NS-iD8"/>
-                                    <constraint firstAttribute="width" constant="231" id="hPf-9c-QG6"/>
+                                    <constraint firstAttribute="width" constant="258" id="BLR-2w-xe1"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당첨 결과는 공연 시작 2시간 전, 발표됩니다. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55X-SL-SBS">
-                                <rect key="frame" x="72" y="438" width="231" height="16"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <rect key="frame" x="56" y="438" width="263" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="푸시알림이 설정되어 있는지 확인해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSQ-CC-pAl">
-                                <rect key="frame" x="79" y="464" width="217" height="16"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <rect key="frame" x="63" y="466" width="249" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="행운을 빌어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-OC-7Im">
-                                <rect key="frame" x="144.5" y="510" width="86" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <rect key="frame" x="144.5" y="514" width="86" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

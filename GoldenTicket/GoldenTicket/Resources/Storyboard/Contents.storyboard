@@ -47,17 +47,24 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="showText"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="공휴일 많았던 가정의 달, 5월이 끝나간다고 아쉬워하지 마세요. 6월에도 현충일을 끼고 ‘징검다리 연휴’가 있으니까요. 짧은 연휴지만 알차게 보내고 싶다면 공연장 나들이는 어떨까요? 6월에 보기 좋은 6편의 공연을 소개합니다." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOy-SJ-dRQ">
-                                                <rect key="frame" x="30.5" y="512" width="314" height="106"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOy-SJ-dRQ">
+                                                <rect key="frame" x="30.5" y="512" width="314" height="130"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="zot-IL-Qca"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="공휴일 많았던 가정의 달, 5월이 끝나간다고 아쉬워하지 마세요. 6월에도 현충일을 끼고 ‘징검다리 연휴’가 있으니까요. 짧은 연휴지만 알차게 보내고 싶다면 공연장 나들이는 어떨까요? 6월에 보기 좋은 6편의 공연을 소개합니다.">
+                                                        <attributes>
+                                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="볼거리 많은 대극장 뮤지컬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DE-DQ-57T">
-                                                <rect key="frame" x="37.5" y="641" width="300" height="21"/>
+                                                <rect key="frame" x="37.5" y="665" width="300" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="dZz-NU-lur"/>
                                                 </constraints>
@@ -66,7 +73,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0za-fr-Lga">
-                                                <rect key="frame" x="127" y="680" width="121" height="10"/>
+                                                <rect key="frame" x="127" y="704" width="121" height="10"/>
                                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="uIe-VS-SfY"/>
@@ -77,7 +84,7 @@
                                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안나 카레니나" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7O-MW-Szh">
-                                                <rect key="frame" x="100" y="666" width="175" height="24"/>
+                                                <rect key="frame" x="100" y="690" width="175" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="175" id="iN8-v3-1Ig"/>
                                                 </constraints>
@@ -86,36 +93,77 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgContentsFirst01" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-Ur-mT4">
-                                                <rect key="frame" x="30" y="706" width="315" height="225"/>
+                                                <rect key="frame" x="30" y="730" width="315" height="225"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Lgn-Ur-mT4" secondAttribute="height" multiplier="7:5" id="f5P-Gs-EtL"/>
                                                 </constraints>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1D-Ow-ch6">
-                                                <rect key="frame" x="30.5" y="975" width="314" height="301"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1D-Ow-ch6">
+                                                <rect key="frame" x="30.5" y="999" width="314" height="277"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="DQe-tH-Mdq"/>
                                                 </constraints>
-                                                <string key="text">지난 2018년 국내 첫선을 보였던 뮤지컬 &lt;안나 카레니나&gt;가 돌아왔습니다. 톨스토이의 동명 소설을 원작으로 한 러시아 뮤지컬인데요.
-
-
-사랑 없는 결혼생활을 이어나던 귀 부인 안나가 젊고 매력적인 장교 브론스키와 사랑에 빠지면서 일어나는 일을 그렸습니다. LED 스크린을 활용한 연출과 화려한 조명, 스케이트 장면을 비롯한 격정적인 안무 등, 기존 브로드웨이 뮤지컬과는 다른 러시아 뮤지컬만의  독특한 매력을 느껴보고 싶은분께 추천합니다.</string>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">지난 2018년 국내 첫선을 보였던 뮤지컬 &lt;안나 카레니나&gt;가 돌아왔습니다. 톨스토이의 동명 소설을 원작으로 한 러시아 뮤지컬인데요.
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">사랑 없는 결혼생활을 이어나던 귀 부인 안나가 젊고 매력적인 장교 브론스키와 사랑에 빠지면서 일어나는 일을 그렸습니다. LED 스크린을 활용한 연출과 화려한 조명, 스케이트 장면을 비롯한 격정적인 안무 등, 기존 브로드웨이 뮤지컬과는 다른 러시아 뮤지컬만의  독특한 매력을 느껴보고 싶은분께 추천합니다.</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgO-Qj-RpM">
-                                                <rect key="frame" x="30.5" y="1689" width="314" height="291"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgO-Qj-RpM">
+                                                <rect key="frame" x="30.5" y="1689" width="314" height="334"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="291" id="9QG-hi-XxI"/>
+                                                    <constraint firstAttribute="height" constant="334" id="BdZ-5d-idk"/>
                                                     <constraint firstAttribute="width" constant="314" id="chB-kF-BVL"/>
                                                 </constraints>
-                                                <string key="text">깊이 있는 주제와 묵직한 감동이 있는 연극을 찾는다면 &lt;킬미 나우&gt;는 어떨까요?
-
-
-선천적 지체장애를 가졌지만 독립을 꿈꾸는 17세 소년 ‘조이’와 자신의 삶을 포기한 채 아들에게 헌신하며 살아온 아버지 ‘제이크’의 삶을 그린 작품인데요, 장애인 인권, 존엄사, 가족애 등에 대해 깊이 있는 질문을 던집니다. 평소 ‘인간다운 삶이란 무엇인지’에 대해 고민했던 분이라면 뜻깊은 작품으로 남을 듯 합니다. 이번 2019년 공연엔 초연부터 참여해온 이석준, 윤나무를 비롯해 장현성, 서영주, 서정연, 양소민 등의 배우가 출연합니다.</string>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">깊이 있는 주제와 묵직한 감동이 있는 연극을 찾는다면 &lt;킬미 나우&gt;는 어떨까요?
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">선천적 지체장애를 가졌지만 독립을 꿈꾸는 17세 소년 ‘조이’와 자신의 삶을 포기한 채 아들에게 헌신하며 살아온 아버지 ‘제이크’의 삶을 그린 작품인데요, 장애인 인권, 존엄사, 가족애 등에 대해 깊이 있는 질문을 던집니다. 평소 ‘인간다운 삶이란 무엇인지’에 대해 고민했던 분이라면 뜻깊은 작품으로 남을 듯 합니다. 이번 2019년 공연엔 초연부터 참여해온 이석준, 윤나무를 비롯해 장현성, 서영주, 서정연, 양소민 등의 배우가 출연합니다.</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glF-Ho-e7h">
@@ -155,7 +203,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klN-5a-C22">
-                                                <rect key="frame" x="48.5" y="2004" width="278" height="40"/>
+                                                <rect key="frame" x="48.5" y="2047" width="278" height="40"/>
                                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="kCa-RZ-q1W"/>
@@ -195,13 +243,13 @@
                                             <constraint firstItem="15g-4W-npz" firstAttribute="centerX" secondItem="r55-YN-3LG" secondAttribute="centerX" id="SGh-0G-wcx"/>
                                             <constraint firstItem="a7F-OM-bjC" firstAttribute="centerX" secondItem="r55-YN-3LG" secondAttribute="centerX" id="V1P-8C-cul"/>
                                             <constraint firstItem="klN-5a-C22" firstAttribute="top" secondItem="WgO-Qj-RpM" secondAttribute="bottom" constant="24" id="WK6-4b-boA"/>
+                                            <constraint firstAttribute="bottom" secondItem="klN-5a-C22" secondAttribute="bottom" constant="113" id="Wr5-mQ-GWw"/>
                                             <constraint firstItem="0za-fr-Lga" firstAttribute="centerX" secondItem="FfX-9Z-3Rk" secondAttribute="centerX" id="Z6N-sy-p9H"/>
                                             <constraint firstItem="Y1D-Ow-ch6" firstAttribute="top" secondItem="Lgn-Ur-mT4" secondAttribute="bottom" constant="44" id="ZBc-gg-0HL"/>
                                             <constraint firstItem="UOy-SJ-dRQ" firstAttribute="centerX" secondItem="r55-YN-3LG" secondAttribute="centerX" id="Zh3-Mq-6cC"/>
                                             <constraint firstItem="0za-fr-Lga" firstAttribute="leading" secondItem="r55-YN-3LG" secondAttribute="leading" constant="127" id="bLT-8F-Ttf"/>
                                             <constraint firstItem="WgO-Qj-RpM" firstAttribute="top" secondItem="KbY-B3-CW3" secondAttribute="bottom" constant="16" id="bbs-BZ-CYG"/>
                                             <constraint firstItem="FfX-9Z-3Rk" firstAttribute="top" secondItem="r55-YN-3LG" secondAttribute="top" constant="1422" id="cvW-6m-1NC"/>
-                                            <constraint firstAttribute="bottom" secondItem="klN-5a-C22" secondAttribute="bottom" constant="156" id="ept-qI-0MY"/>
                                             <constraint firstItem="7DE-DQ-57T" firstAttribute="centerX" secondItem="r55-YN-3LG" secondAttribute="centerX" id="hK5-wf-nvO"/>
                                             <constraint firstItem="Lfe-UK-rCZ" firstAttribute="top" secondItem="r55-YN-3LG" secondAttribute="top" constant="-20" id="hXh-fT-9Bi"/>
                                             <constraint firstItem="a7F-OM-bjC" firstAttribute="top" secondItem="glF-Ho-e7h" secondAttribute="bottom" constant="43" id="j8J-IS-OGn"/>
@@ -266,7 +314,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="2200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAp-MT-lFd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2230"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2229"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgContentsSecTop" translatesAutoresizingMaskIntoConstraints="NO" id="xOA-xE-Z1y">
                                                 <rect key="frame" x="0.0" y="-20" width="375" height="395"/>
@@ -291,20 +339,26 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="musicalText"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXz-zM-U2Z">
-                                                <rect key="frame" x="30.5" y="512" width="314" height="106"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXz-zM-U2Z">
+                                                <rect key="frame" x="30.5" y="512" width="314" height="103"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="48M-W0-4tK"/>
                                                 </constraints>
-                                                <string key="text">무더운 여름에는 시원한 공연장에서 뮤캉스 어때요? 
-눈과 귀를 즐겁게 해줄 화려한 무대와 음악으로 더위를
-날려보세요. 7월에 보기 좋은 2편의 공연을 소개합니다.</string>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">무더운 여름에는 시원한 공연장에서 뮤캉스 어때요? 
+눈과 귀를 즐겁게 해줄 화려한 무대와 음악으로 더위를 날려보세요. 7월에 보기 좋은 2편의 공연을 소개합니다.</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="절대 놓쳐서는 안될" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kp6-uc-9fG">
-                                                <rect key="frame" x="37.5" y="641" width="300" height="21"/>
+                                                <rect key="frame" x="37.5" y="638" width="300" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="uBt-3M-e2n"/>
                                                 </constraints>
@@ -313,7 +367,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KL7-n7-QZb">
-                                                <rect key="frame" x="127" y="680" width="121" height="10"/>
+                                                <rect key="frame" x="127" y="677" width="121" height="10"/>
                                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="bEb-3o-1Pm"/>
@@ -324,7 +378,7 @@
                                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;스쿨 오브 락&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bL-oA-sW6">
-                                                <rect key="frame" x="100" y="666" width="175" height="24"/>
+                                                <rect key="frame" x="100" y="663" width="175" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="175" id="g6b-AE-lJX"/>
                                                 </constraints>
@@ -333,38 +387,52 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgContentsSec01" translatesAutoresizingMaskIntoConstraints="NO" id="K7n-Z8-wWm">
-                                                <rect key="frame" x="30" y="706" width="315" height="225"/>
+                                                <rect key="frame" x="30" y="703" width="315" height="225"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="K7n-Z8-wWm" secondAttribute="height" multiplier="7:5" id="QUM-3u-ma0"/>
                                                 </constraints>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yz-Ec-eoK">
-                                                <rect key="frame" x="30.5" y="975" width="314" height="301"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yz-Ec-eoK">
+                                                <rect key="frame" x="30.5" y="972" width="314" height="304"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="FZk-02-vWf"/>
                                                 </constraints>
-                                                <string key="text">작곡가이자 프로듀서인 세계적 거장 앤드루 로이드 웨버의 &lt;스쿨 오브 락&gt;은 영국 뮤지컬 최초로 브로드웨에서 월드 프리미어 공연을 선보인 작품인데요, 올해 6월부터 한국에서도 만나보실 수 있게 되었습니다.
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <mutableString key="content">작곡가이자 프로듀서인 세계적 거장 앤드루 로이드 웨버의 &lt;스쿨 오브 락&gt;은 영국 뮤지컬 최초로 브로드웨에서 월드 프리미어 공연을 선보인 작품인데요, 올해 6월부터 한국에서도 만나보실 수 있게 되었습니다.
 
 뮤지컬 &lt;스쿨 오브 락&gt;은 전미 박스 오피스 1위를 기록한 세계적인 음악 영화 &lt;스쿨 오브 락&gt;을 앤드루 로이디 웨버가 뮤지컬로 재탄생 시킨 작품입니다.
 
-어디에서도 들을 수 없던 라이브 연주, 작은 체구에서 나온다고 하기엔 믿기지 않을 정도로 엄청난 에너지를 갖고 있는 배우들이 무대를 장악합니다. 그리고 배우들이 직접 악기를 연주함으로써 모두 함께 하나의 음악이 만들어지는 과정들을 지켜본다는 것은 뮤지컬 &lt;스쿨 오브락&gt;에서만 볼 수 있는 묘미입니다.</string>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+어디에서도 들을 수 없던 라이브 연주, 작은 체구에서 나온다고 하기엔 믿기지 않을 정도로 엄청난 에너지를 갖고 있는 배우들이 무대를 장악합니다. 그리고 배우들이 직접 악기를 연주함으로써 모두 함께 하나의 음악이 만들어지는 과정들을 지켜본다는 것은 뮤지컬 &lt;스쿨 오브락&gt;에서만 볼 수 있는 묘미입니다.</mutableString>
+                                                        <attributes>
+                                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O14-Sk-meK">
-                                                <rect key="frame" x="30.5" y="1689" width="314" height="316"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O14-Sk-meK">
+                                                <rect key="frame" x="30.5" y="1689" width="314" height="355"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="355" id="XJi-fl-zVv"/>
                                                     <constraint firstAttribute="width" constant="314" id="ddl-t5-xbe"/>
-                                                    <constraint firstAttribute="height" constant="316" id="h2r-Bd-kxz"/>
                                                 </constraints>
-                                                <string key="text">다양한 장르가 혼합된 ‘록키호러쇼’는 기존 뮤지컬 서사 구조에 반하는 도발적인 매력을 자랑합니다. 작품은 막 약혼한 자넷과 브래드가 우연히 프랑큰 퍼터의 성을 방문하며 겪게 되는 하룻밤의 이야기를 그립니다.
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <mutableString key="content">다양한 장르가 혼합된 ‘록키호러쇼’는 기존 뮤지컬 서사 구조에 반하는 도발적인 매력을 자랑합니다. 작품은 막 약혼한 자넷과 브래드가 우연히 프랑큰 퍼터의 성을 방문하며 겪게 되는 하룻밤의 이야기를 그립니다.
 
 종잡을 수 없는 방향으로 이끄는 독특한 설정의 캐릭터들과 과장된 대사는 극의 매력을 더합니다. 여름과 가장 잘어울리는 장르로 손꼽히는 공포와 스릴러가 관객들의 관심을 자극하죠.   
 
-저마다의 개성을 살린 화려하고 독특한 메이크업, 코르셋과 망사 스타킹 등 파격적인 비주얼의 의상 또한 &lt;록키호러쇼&gt;의 볼거리 중 하나입니다. ‘콜백’(call-back) 이라 불리는 특별한 관람 문화도 인기인데요, &lt;록키 호러쇼&gt;에서는 관객들이 배우들의 대사에 반응하거나 극 중 캐릭터와 같은 행동을 하며 극을 이끄는 주체가 되기도 하니 가만히 앉아서 보는 공연이 지루해지신 분들께 추천합니다.</string>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+저마다의 개성을 살린 화려하고 독특한 메이크업, 코르셋과 망사 스타킹 등 파격적인 비주얼의 의상 또한 &lt;록키호러쇼&gt;의 볼거리 중 하나입니다. ‘콜백’(call-back) 이라 불리는 특별한 관람 문화도 인기인데요, &lt;록키 호러쇼&gt;에서는 관객들이 배우들의 대사에 반응하거나 극 중 캐릭터와 같은 행동을 하며 극을 이끄는 주체가 되기도 하니 가만히 앉아서 보는 공연이 지루해지신 분들께 추천합니다.</mutableString>
+                                                        <attributes>
+                                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpA-qS-DRy">
@@ -404,7 +472,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvl-3o-cL7">
-                                                <rect key="frame" x="48.5" y="2034" width="278" height="40"/>
+                                                <rect key="frame" x="48.5" y="2073" width="278" height="40"/>
                                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Dpb-FT-Omb"/>
@@ -427,6 +495,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="bvl-3o-cL7" secondAttribute="bottom" constant="116" id="2jw-Tt-8nM"/>
                                             <constraint firstItem="3bL-oA-sW6" firstAttribute="centerX" secondItem="DAp-MT-lFd" secondAttribute="centerX" id="3IO-ec-v2n"/>
                                             <constraint firstItem="09n-HH-Pgo" firstAttribute="centerX" secondItem="DAp-MT-lFd" secondAttribute="centerX" id="419-z5-ESb"/>
                                             <constraint firstAttribute="trailing" secondItem="bvl-3o-cL7" secondAttribute="trailing" constant="48.5" id="6hW-0i-YZi"/>
@@ -437,7 +506,6 @@
                                             <constraint firstItem="KL7-n7-QZb" firstAttribute="top" secondItem="kp6-uc-9fG" secondAttribute="bottom" constant="18" id="Bwq-WT-zDH"/>
                                             <constraint firstItem="KG4-PF-Zme" firstAttribute="top" secondItem="z2L-j2-DGM" secondAttribute="bottom" constant="16" id="DuS-wx-rpU"/>
                                             <constraint firstItem="O14-Sk-meK" firstAttribute="top" secondItem="KG4-PF-Zme" secondAttribute="bottom" constant="16" id="E6p-Gi-Zub"/>
-                                            <constraint firstAttribute="bottom" secondItem="bvl-3o-cL7" secondAttribute="bottom" constant="156" id="PYL-e8-YM1"/>
                                             <constraint firstItem="xOA-xE-Z1y" firstAttribute="top" secondItem="DAp-MT-lFd" secondAttribute="top" constant="-20" id="S5S-dc-hrm"/>
                                             <constraint firstItem="z2L-j2-DGM" firstAttribute="top" secondItem="09n-HH-Pgo" secondAttribute="bottom" constant="4" id="TKc-vb-ejg"/>
                                             <constraint firstItem="KL7-n7-QZb" firstAttribute="centerX" secondItem="oia-NP-xXL" secondAttribute="centerX" id="VAB-vc-HZG"/>
