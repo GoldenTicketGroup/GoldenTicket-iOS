@@ -384,7 +384,7 @@ extension MainVC {
             data in
             
             guard let `self` = self else { return }
-            // print("data : \(data)")
+            //print("data : \(data)")
             switch data {
                 
             // 매개변수에 어떤 값을 가져올 것인지
