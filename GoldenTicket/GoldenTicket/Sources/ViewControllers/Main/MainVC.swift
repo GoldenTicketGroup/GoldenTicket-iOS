@@ -413,7 +413,7 @@ extension MainVC {
                 
                 // 2. Poster Struct
                 let poster = showDetail.poster
-                dvc.showDetail?.imageFromUrl(poster![0].image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
+                dvc.showDetail?.imageFromUrl(poster![0].image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
                 
                 // dvc.backgroundImg = showDetail.backgroundImage
                 
