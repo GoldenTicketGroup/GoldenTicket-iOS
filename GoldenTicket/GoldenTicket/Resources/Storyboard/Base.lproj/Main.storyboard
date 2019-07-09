@@ -348,7 +348,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-Zj-08n">
-                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="32"/>
+                                                                <rect key="frame" x="0.0" y="-8" width="250" height="32"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                                                                 <color key="textColor" red="0.87280452249999996" green="0.60975462199999997" blue="0.4705588818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -371,7 +371,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHV-ey-Pwn">
-                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="32"/>
+                                                                <rect key="frame" x="0.0" y="-8" width="250" height="32"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                                                                 <color key="textColor" red="0.87280452249999996" green="0.60975462199999997" blue="0.4705588818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -724,6 +724,10 @@
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posteKillMeNowInfo" translatesAutoresizingMaskIntoConstraints="NO" id="Pvk-QU-lCP">
                                                 <rect key="frame" x="62" y="64" width="252" height="337"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="252" id="Lbs-3u-ebl"/>
+                                                    <constraint firstAttribute="height" constant="337" id="NDc-2Z-OEL"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="showImage"/>
                                                 </userDefinedRuntimeAttributes>
@@ -909,11 +913,11 @@
                                             <constraint firstAttribute="trailing" secondItem="Yl3-F2-vLP" secondAttribute="trailing" constant="285" id="00g-wu-Vjy"/>
                                             <constraint firstItem="8RS-70-l1f" firstAttribute="leading" secondItem="800-zd-WoJ" secondAttribute="leading" id="65I-N8-I2D"/>
                                             <constraint firstAttribute="trailing" secondItem="8RS-70-l1f" secondAttribute="trailing" id="6jy-AB-Q5O"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pvk-QU-lCP" secondAttribute="trailing" constant="61" id="7T2-fx-QS7"/>
                                             <constraint firstItem="h0w-kS-VZN" firstAttribute="leading" secondItem="800-zd-WoJ" secondAttribute="leading" id="8Ss-3V-I4D"/>
                                             <constraint firstItem="h0w-kS-VZN" firstAttribute="top" secondItem="8RS-70-l1f" secondAttribute="bottom" id="92V-Hf-qYp"/>
                                             <constraint firstItem="Yl3-F2-vLP" firstAttribute="top" secondItem="Dmj-5G-knG" secondAttribute="bottom" constant="107" id="Ff6-Jr-6NJ"/>
-                                            <constraint firstItem="Pvk-QU-lCP" firstAttribute="leading" secondItem="800-zd-WoJ" secondAttribute="leading" constant="62" id="LsY-Zh-0I0"/>
-                                            <constraint firstAttribute="trailing" secondItem="Pvk-QU-lCP" secondAttribute="trailing" constant="61" id="QMk-B0-HLT"/>
+                                            <constraint firstItem="Pvk-QU-lCP" firstAttribute="leading" secondItem="800-zd-WoJ" secondAttribute="leading" constant="62" id="LM7-tf-Xmr"/>
                                             <constraint firstItem="gnW-aB-JL2" firstAttribute="top" secondItem="800-zd-WoJ" secondAttribute="top" constant="-20" id="bUF-ER-jxi"/>
                                             <constraint firstItem="Dmj-5G-knG" firstAttribute="centerX" secondItem="800-zd-WoJ" secondAttribute="centerX" id="hK5-aW-4fr"/>
                                             <constraint firstAttribute="bottom" secondItem="h0w-kS-VZN" secondAttribute="bottom" id="lUU-zq-A8t"/>
@@ -1081,7 +1085,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Oa-NE-dME" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3749.5999999999999" y="781.25937031484261"/>
+            <point key="canvasLocation" x="3750" y="712"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="ZZX-2w-Pyx">
@@ -1109,7 +1113,7 @@
         <image name="btBack" width="19" height="26"/>
         <image name="btClose" width="19" height="19"/>
         <image name="btContentsFirst" width="209" height="127"/>
-        <image name="btContentsSecond" width="209" height="127"/>
+        <image name="btContentsSecond" width="209" height="128"/>
         <image name="btHambergerMain" width="29" height="27"/>
         <image name="btTicketMain" width="33" height="31"/>
         <image name="btUp" width="19.5" height="11.5"/>
