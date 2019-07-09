@@ -67,7 +67,7 @@ class ShowDetailVC: UIViewController {
 
         // 테스트용 더미 데이터 세팅해두기.
         setContent()
-        setActorData()
+        //setActorData()
         
         //poster image customize
         posterImage.makeRounded(cornerRadius: 10)
