@@ -7,9 +7,9 @@
 //
 
 import UIKit
-
 class SettingVC: UITableViewController {
 
+    
     @IBOutlet weak var navigationBar: UINavigationBar!
     
     @IBOutlet var userName: UILabel!
@@ -45,7 +45,7 @@ class SettingVC: UITableViewController {
         
         //let cell = super.tableView(tableView, cellForRowAt: indexPath) as! UITableViewVibrantCell
         
-        if indexPath.row == 5 {
+        if indexPath.section == 1 && indexPath.row == 2 {
             
             let alert = UIAlertController(title:"로그아웃 하시겠습니까?",message: "",preferredStyle: .alert)
             
@@ -67,7 +67,19 @@ class SettingVC: UITableViewController {
             }))
             alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
             
+            
+            //UserDefaults.standard.removePersistentDomain(forName: "token")
+            UserDefaults.standard.removeObject(forKey: "token")
+            UserDefaults.standard.synchronize()
+//            let token = UserDefaults.standard
+//            let dictionary = defaults.dictionaryRepresentation()
+//            dictionary.keys.forEach {key in
+//                defaults.removeObject(forKey: "token")
+//            }
+            
             self.present(alert, animated: true)
+            // print(token.string(forKey: "token"))
+            // token 삭제해도 nil이 아닌 쓰레기 값이 들어감
         }
     }
 }
