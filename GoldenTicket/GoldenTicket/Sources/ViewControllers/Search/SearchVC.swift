@@ -128,6 +128,7 @@ extension SearchVC : UICollectionViewDataSource
     // 현재는 likeList 배열의 count 갯수 만큼 반환합니다.
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
+        print(searchShowList.count)
         return searchShowList.count
     }
     
@@ -137,7 +138,7 @@ extension SearchVC : UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "searchCell", for: indexPath) as! SearchCVCell
         let show = searchShowList[indexPath.row]
         
-        cell.showImage.imageFromUrl(show.imageURL, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
+        cell.showImage.imageFromUrl(show.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
         
         return cell
     }
@@ -150,9 +151,9 @@ extension SearchVC : UICollectionViewDelegateFlowLayout
     // Collection View Cell 의 width, height 를 지정할 수 있습니다.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        let width: CGFloat = (view.frame.width - 44) / 2
-        let height: CGFloat = width * 184 / 137
-        
+        let width: CGFloat = (view.frame.width - 21) / 2
+        let height: CGFloat = 236
+
         return CGSize(width: width, height: height)
     }
 }
