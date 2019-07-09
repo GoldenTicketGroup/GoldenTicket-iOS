@@ -410,12 +410,17 @@ extension MainVC {
                 dvc.backgroundImg = UIImageView()
                 dvc.backgroundImg!.imageFromUrl(showDetail.background_image, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/backimg_benhur_info.jpg")
                 
+                print("이미지 url", showDetail.background_image)
+                
                 // 2. Poster Struct
                 let poster = showDetail.poster
-                dvc.showDetail?.imageFromUrl(poster![0].image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
+                dvc.detailPoster = UIImageView()
+                dvc.detailPoster!.imageFromUrl(poster![0].image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
                 
                 // dvc.backgroundImg = showDetail.backgroundImage
                 
+                // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
+                dvc.timeList = showDetail.schedule!
                 self.present(dvc, animated: true)
                 self.navigationController?.pushViewController(dvc, animated: true)
                 

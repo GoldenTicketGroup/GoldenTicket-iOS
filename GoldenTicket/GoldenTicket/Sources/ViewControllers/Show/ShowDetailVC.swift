@@ -44,7 +44,7 @@ class ShowDetailVC: UIViewController {
     var showAfterPrice : String?
     var showTime : String?
     var showLocation : String?
-    var showDetail : UIImageView?
+    var detailPoster : UIImageView?
     
     //응모하기 뷰
     @IBOutlet weak var checkView: CustomView!
@@ -136,7 +136,7 @@ class ShowDetailVC: UIViewController {
         showAfterPriceLabel.text = showAfterPrice
         showTimeLabel.text = showTime
         showLocationLabel.text = showLocation
-        showDetailImage.image = showDetail?.image
+        showDetailImage.image = detailPoster?.image
     }
     
     // 메인 화면으로 돌아가는 backButton 함수
@@ -160,7 +160,7 @@ class ShowDetailVC: UIViewController {
     // 응모하기 창에서 화살표 버튼 클릭시 drawer 올리기.
     @IBAction func checkUpButton(_ sender: UIButton) {
         
-        setTimeData()
+        // setTimeData() 여기서 서버에서 받아온 타입 리스트 설정
         
         if fillView.transform == .identity {
             UIView.animate(withDuration: 1, animations: {
@@ -274,10 +274,6 @@ extension ShowDetailVC: UICollectionViewDataSource {
         
         let actor = actorList[indexPath.row]
         
-        // 임시로 인덱스 지정
-        self.showIdx = 20
-        self.setActorData()
-        
         cell.actorImage.imageFromUrl(actor.image_url, defaultImgPath:  "https://sopt24server.s3.ap-northeast-2.amazonaws.com/img_casting_01.jpg")
         cell.actorName.text = actor.name
         cell.castingName.text = actor.role
@@ -287,43 +283,6 @@ extension ShowDetailVC: UICollectionViewDataSource {
     
 }
 
-// 배우 정보 더미데이터로 테스트하기.
-extension ShowDetailVC {
-    
-    func setActorData() {
-        
-        guard let idx = self.showIdx else { return }
-        
-        ShowService.shared.showDetail(showIdx: idx) {
-            [weak self]
-            data in
-            
-            guard let `self` = self else { return }
-            
-            switch data {
-                
-            // 매개변수에 어떤 값을 가져올 것인지
-            case .success(let res):
-                
-                self.actorList = res as! [Artist]
-                print("actorlist \(self.actorList)")
-                self.actorCollectionView.reloadData()
-                
-            case .requestErr(let message):
-                self.simpleAlert(title: "공연 배우 조회 실패", message: "\(message)")
-                
-            case .pathErr:
-                print(".pathErr")
-                
-            case .serverErr:
-                print(".serverErr")
-                
-            case .networkFail:
-                self.simpleAlert(title: "공연 배우 조회 실패", message: "네트워크 상태를 확인해주세요.")
-            }
-        }
-    }
-}
 
 extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -341,47 +300,9 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 선택된 인덱스의 값의 타이틀이 보여지는 코드
         btnDrop.setTitle("\(timeList[indexPath.row])", for: .normal)
         animate(toggle: false)
     }
     
-}
-
-// 테스트용 더미 데이터 세팅.
-extension ShowDetailVC {
-    
-    func setTimeData() {
-        
-        print("call setTimeData()")
-        guard let idx = self.showIdx else { return }
-        print("time \(idx)")
-        
-        ShowService.shared.showDetail(showIdx: idx) {
-            [weak self]
-            data in
-            
-            guard let `self` = self else { return }
-            
-            switch data {
-                
-            // 매개변수에 어떤 값을 가져올 것인지
-            case .success(let res):
-                print("time \(res)")
-                self.timeList = res as! [Schedule]
-                self.tblView.reloadData()
-                
-            case .requestErr(let message):
-                self.simpleAlert(title: "시간 조회 실패", message: "\(message)")
-                
-            case .pathErr:
-                print(".pathErr")
-                
-            case .serverErr:
-                print(".serverErr")
-                
-            case .networkFail:
-                self.simpleAlert(title: "시간 조회 실패", message: "네트워크 상태를 확인해주세요.")
-            }
-        }
-    }
 }
