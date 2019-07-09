@@ -13,7 +13,8 @@ import Hero
 class ShowDetailVC: UIViewController {
 
     
-    var actorList = [Artist]()
+    var actorList : [Artist] = []
+    var showIdx : Int?
     
     // 배우들을 보여주는 collection view.
     @IBOutlet weak var actorCollectionView: UICollectionView!
@@ -72,7 +73,7 @@ class ShowDetailVC: UIViewController {
 
         // 테스트용 더미 데이터 세팅해두기.
         setContent()
-        setData()
+        setActorData()
         
         //poster image customize
         posterImage.makeRounded(cornerRadius: 10)
@@ -133,16 +134,47 @@ class ShowDetailVC: UIViewController {
     
     // 나타낼 데이터들 지정해주기
     func setContent() {
-        /*
-        backgroundImage.image = backgroundImg
-        posterImage.image = posterImg
-        showTitle.text = showName
-        showBeforePriceLabel.text = showBeforePrice
-        showAfterPriceLabel.text = showAfterPrice
-        showTimeLabel.text = showTime
-        showLocationLabel.text = showLocation
-        showDetailImage.image = showDetail
-         */
+        
+        guard let idx = self.showIdx else { return }
+        
+        ShowService.shared.showDetail(showIdx: idx) {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                
+                let showDetail = res as! ShowDetail
+                
+                // 2. ShowDetail Struct
+                self.backgroundImage?.imageFromUrl(showDetail.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
+                self.posterImage?.imageFromUrl(showDetail.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
+                self.showTitle.text = showDetail.name
+                self.showBeforePriceLabel.text = showDetail.original_price
+                self.showAfterPriceLabel.text = showDetail.discount_price
+                
+                self.showTimeLabel.text = showDetail.schedule![0].time
+                self.showLocationLabel.text = showDetail.location
+                // self.showDetailImage.image = showDetail
+                
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
     }
     
     // 메인 화면으로 돌아가는 backButton 함수
@@ -274,6 +306,11 @@ extension ShowDetailVC: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActorCVCell", for: indexPath) as! ActorCVCell
         
         let actor = actorList[indexPath.row]
+        
+        // 임시로 인덱스 지정
+        self.showIdx = 20
+        self.setActorData()
+        
         cell.actorImage.imageFromUrl(actor.image_url, defaultImgPath:  "https://sopt24server.s3.ap-northeast-2.amazonaws.com/img_casting_01.jpg")
         cell.actorName.text = actor.name
         cell.castingName.text = actor.role
@@ -281,22 +318,42 @@ extension ShowDetailVC: UICollectionViewDataSource {
         return cell
     }
     
-    
 }
 // 배우 정보 더미데이터로 테스트하기.
 extension ShowDetailVC {
     
-    func setData() {
-        /*
-        let actor1 = Actor(image: "imgCasting01", name: "카이", casting: "유다 벤허")
-        let actor2 = Actor(image: "imgCasting02", name: "문종원", casting: "메셀라")
-        let actor3 = Actor(image: "imgCasting03", name: "김지우", casting: "에스더")
-        let actor4 = Actor(image: "imgCasting04", name: "이병준", casting: "퀸터스")
+    func setActorData() {
         
-        actorList = [actor1, actor2, actor3, actor4]
-         */
+        guard let idx = self.showIdx else { return }
+        
+        ShowService.shared.showDetail(showIdx: idx) {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                
+                self.actorList = res as! [Artist]
+                self.actorCollectionView.reloadData()
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "공연 배우 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "공연 배우 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
     }
-
 }
 
 extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{

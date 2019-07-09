@@ -399,14 +399,12 @@ extension MainVC {
                 let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
                 
                 // 2. ShowDetail Struct
+                dvc.posterImg?.imageFromUrl(showDetail.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
                 dvc.showName = showDetail.name
                 dvc.showLocation = showDetail.location
+                dvc.showTime = showDetail.duration
                 dvc.showBeforePrice = showDetail.original_price
                 dvc.showAfterPrice = showDetail.discount_price
-                dvc.posterImg?.imageFromUrl(showDetail.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
-                
-                // 2. Schedule Struct
-                dvc.showTime = showDetail.schedule![0].time
                 
                 // 2. Poster Struct
                 let poster = showDetail.poster
