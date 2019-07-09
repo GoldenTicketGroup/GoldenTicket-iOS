@@ -14,7 +14,7 @@ import Kingfisher
 class MainVC: UIViewController {
     
     @IBOutlet var userName: UILabel!
-    var show_id: Int?   // 상세 공연 정보 인덱스
+    var show_id = 20 // 상세 공연 정보 인덱스
     
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
@@ -334,23 +334,31 @@ extension MainVC : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        // Todo : Main Collection View와 서버에서 전달받은 index로 Alamofire 통신
+        
         let dvc = storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
         
-        // dvc.backgroundImg = showDetailList[indexPath.row].backgroundImage
-        // dvc.posterImg.imageFromURL(ShowDetail.imageURL, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
-        dvc.showName = showDetailList[indexPath.row].name
-        //dvc.showPrice = show.showPrice
-        dvc.showBeforePrice = showDetailList[indexPath.row].originalPrice
-        dvc.showAfterPrice = showDetailList[indexPath.row].discountPrice
+        // data setting
+        self.setDetailData()
         
-        var scheduleList = [Schedule]()
-        dvc.showTime = scheduleList[indexPath.row].time
+        let showDetail = showDetailList[indexPath.row]
         
-        dvc.showLocation = showDetailList[indexPath.row].location
+        // ShowDetail Struct
+        dvc.showName = showDetail.name
+        dvc.showLocation = showDetail.location
+        dvc.showBeforePrice = showDetail.originalPrice
+        dvc.showAfterPrice = showDetail.discountPrice
+        dvc.posterImg?.imageFromUrl(showDetail.imageURL, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
         
-//        var posterList = [Poster]()
-//        dvc.showDetail = posterList[indexPath.row]
+        // Schedule Struct
+        dvc.showTime = showDetail.schedule![indexPath.row].time
         
+        // Poster Struct
+        let poster = showDetail.poster
+        dvc.showDetail?.imageFromUrl(poster![indexPath.row].imageURL, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
+        
+        // dvc.backgroundImg = showDetail.backgroundImage
+       
         present(dvc, animated: true)
         navigationController?.pushViewController(dvc, animated: true)
     }
@@ -392,14 +400,14 @@ extension MainVC {
     
     func setDetailData() {
         
-        guard let idx = show_id else { return }
+        // guard let idx = show_id else { return }
         
-        ShowService.shared.showDetail(idx) {
+        ShowService.shared.showDetail(show_id) {
             [weak self]
             data in
-            
+            print("in")
             guard let `self` = self else { return }
-            
+            print("out")
             switch data {
                 
             // 매개변수에 어떤 값을 가져올 것인지

@@ -23,43 +23,22 @@ struct ShowDetail: Codable {
     let poster: [Poster]?
 }
 
+// MARK: - Schedule
+struct Schedule: Codable {
+    let scheduleIdx: Int
+    let time: String
+    let drawAvailable: Int
+}
+
 // MARK: - Artist
 struct Artist: Codable {
-    let artistIdx: Int?
-    let name, role: String?
-    let imageURL: String?
+    let artistIdx: Int
+    let name, role: String
+    let imageURL: String
 }
 
 // MARK: - Poster
 struct Poster: Codable {
-    let posterIdx: Int?
-    let imageURL: String?
+    let posterIdx: Int
+    let imageURL: String
 }
-
-// MARK: - Schedule
-struct Schedule: Codable {
-    let scheduleIdx: Int?
-    let time: String?
-    let drawAvailable: Int?
-}
-
-
-/*
-//공연하는 배우들을 나타내는 Actor struct.
-
-struct Actor {
-    
-    var actorImage : UIImage?
-    var actorName : String
-    var castingName : String
-    
-    init (image : String, name: String, casting: String) {
-        
-        self.actorImage = UIImage(named: image)
-        self.actorName = name
-        self.castingName = casting
-        
-    }
-    
-}
-*/
