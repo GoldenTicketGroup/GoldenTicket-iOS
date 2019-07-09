@@ -38,9 +38,6 @@
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고객" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRz-ed-Jqd">
                                                 <rect key="frame" x="31" y="68" width="42" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="KRz-ed-Jqd" secondAttribute="height" multiplier="42:29" id="6cI-0Q-u1l"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -65,21 +62,21 @@
                                                     <constraint firstAttribute="height" constant="308" id="c8y-EG-s4A"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="19" minimumInteritemSpacing="19" id="4cT-jP-QQe">
-                                                    <size key="itemSize" width="224" height="308"/>
+                                                    <size key="itemSize" width="231" height="308"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="23" minY="0.0" maxX="23" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainShowCell" id="igK-Fm-naD" customClass="MainShowCell" customModule="GoldenTicket" customModuleProvider="target">
-                                                        <rect key="frame" x="23" y="0.0" width="224" height="308"/>
+                                                        <rect key="frame" x="23" y="0.0" width="231" height="308"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="224" height="308"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="231" height="308"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="49F-WZ-zHV">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="224" height="308"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="231" height="308"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="showImage"/>
                                                                     </userDefinedRuntimeAttributes>
@@ -100,7 +97,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYK-Zv-8wV">
-                                                                    <rect key="frame" x="46" y="260" width="70" height="13"/>
+                                                                    <rect key="frame" x="46" y="260" width="77" height="13"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -111,8 +108,8 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconTimeMain" translatesAutoresizingMaskIntoConstraints="NO" id="IhB-Zn-vk7">
                                                                     <rect key="frame" x="25" y="277" width="13" height="13"/>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4l-bq-p92">
-                                                                    <rect key="frame" x="46" y="277" width="70" height="13"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4l-bq-p92">
+                                                                    <rect key="frame" x="46" y="277" width="155" height="13"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -129,7 +126,6 @@
                                                             <constraint firstItem="49F-WZ-zHV" firstAttribute="leading" secondItem="igK-Fm-naD" secondAttribute="leading" id="XWG-4A-Dd8"/>
                                                             <constraint firstItem="frq-0G-eGv" firstAttribute="top" secondItem="igK-Fm-naD" secondAttribute="top" constant="232" id="ZSN-OK-Y7D"/>
                                                             <constraint firstItem="IhB-Zn-vk7" firstAttribute="top" secondItem="Nmf-Wz-LHU" secondAttribute="bottom" constant="4" id="ZxP-bH-76I"/>
-                                                            <constraint firstItem="sYK-Zv-8wV" firstAttribute="trailing" secondItem="C4l-bq-p92" secondAttribute="trailing" id="a8w-SJ-ihi"/>
                                                             <constraint firstItem="49F-WZ-zHV" firstAttribute="top" secondItem="igK-Fm-naD" secondAttribute="top" id="cow-dS-Gwt"/>
                                                             <constraint firstItem="Nmf-Wz-LHU" firstAttribute="leading" secondItem="igK-Fm-naD" secondAttribute="leading" constant="25" id="dZo-tn-7Hf"/>
                                                             <constraint firstItem="IhB-Zn-vk7" firstAttribute="top" secondItem="C4l-bq-p92" secondAttribute="top" id="dhR-gp-xGc"/>
@@ -490,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMz-Je-kpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3751" y="-277"/>
+            <point key="canvasLocation" x="3749.5999999999999" y="-277.06146926536735"/>
         </scene>
         <!--Side MenuVC-->
         <scene sceneID="bBM-g1-drP">
