@@ -26,10 +26,10 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = false
-        sectionNames = [ "하루에 응모 가능 개수가 정해져 있나요?", "결제 완료 후 티켓 취소가 가능한가요?", "좌석은 어떻게 정해지나요?" ];
-        sectionItems = [ ["결제 완료 후 티켓 취소 및 변경은 불가합니다." + "\n" + "감사합니다."],
-                         ["결제 완료 후 티켓 취소 및 변경은 불가합니다." + "\n" + "감사합니다."],
-                         ["결제 완료 후 티켓 취소 및 변경은 불가합니다." + "\n" + "감사합니다."]
+        sectionNames = [ "하루에 응모 가능 개수가 정해져 있나요?", "당첨자 선정은 어떻게 이루어지나요?", "응모 전에 좌석을 선택하거나 알 수는 없나요?" ];
+        sectionItems = [ ["하루 최대 2개의 공연에 응모하실 수 있습니다." + "\n" + "감사합니다."],
+                         ["당첨자 선정은 랜덤 추첨을 통해 선정됩니다." + "\n" + "감사합니다."],
+                         ["좌석은 당첨 후 결제가 완료되었을 때 공연측으로부터 배정받게 됩니다." + "\n" + "특정 좌석을 미리 선택할 수 없습니다." + "\n" + "감사합니다."]
         ];
         self.tableView!.tableFooterView = UIView()
         tableView.isScrollEnabled = false
@@ -105,6 +105,7 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         header.contentView.layer.masksToBounds = true
         header.textLabel?.font = UIFont(name: "AppleSDGothicNeo", size: 17)
         header.textLabel?.textColor = UIColor.black
+        header.textLabel?.numberOfLines = 0
         
         let textLabel = UILabel(frame: CGRect(x: header.frame.width - 360, y: 45, width: 100, height: 15))
         textLabel.text = "2019-07-11"

@@ -252,14 +252,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou3-Xp-7h6">
-                                                <rect key="frame" x="16" y="30" width="16" height="22"/>
+                                                <rect key="frame" x="16" y="30" width="29" height="27"/>
                                                 <state key="normal" image="btHambergerMain"/>
                                                 <connections>
                                                     <segue destination="G85-yn-wn5" kind="presentation" id="lTV-DF-B40"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-FN-U4B">
-                                                <rect key="frame" x="343" y="29" width="16" height="22"/>
+                                                <rect key="frame" x="326" y="29" width="33" height="31"/>
                                                 <state key="normal" image="btTicketMain"/>
                                                 <connections>
                                                     <action selector="showTicket:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="HtV-qi-0l1"/>
@@ -424,7 +424,6 @@
                                             <constraint firstItem="hgm-4k-ZaD" firstAttribute="leading" secondItem="DnM-XU-7Dj" secondAttribute="leading" id="Apa-CH-8Do"/>
                                             <constraint firstItem="sxh-Dl-sVI" firstAttribute="top" secondItem="DnM-XU-7Dj" secondAttribute="top" constant="70" id="Cez-Ho-fhf"/>
                                             <constraint firstItem="1Bi-hp-t8I" firstAttribute="top" secondItem="E2G-TD-Yt9" secondAttribute="bottom" constant="18" id="Cxo-tW-TAI"/>
-                                            <constraint firstAttribute="trailing" secondItem="sxh-Dl-sVI" secondAttribute="trailing" constant="270" id="Oe7-K3-csI"/>
                                             <constraint firstAttribute="trailing" secondItem="jbq-Mf-F18" secondAttribute="trailing" id="QUn-bD-iRv"/>
                                             <constraint firstItem="1Bi-hp-t8I" firstAttribute="top" secondItem="aXk-CH-Ur5" secondAttribute="bottom" constant="96" id="UGZ-r6-AiL"/>
                                             <constraint firstItem="sxh-Dl-sVI" firstAttribute="leading" secondItem="KRz-ed-Jqd" secondAttribute="trailing" constant="12" id="UW3-nw-HMx"/>
@@ -700,6 +699,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="userName" destination="Xgd-WG-XHr" id="RhI-KJ-52J"/>
+                        <outlet property="winCount" destination="oVm-iw-fhH" id="2YY-wj-gwe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="st8-AV-MVa" userLabel="First Responder" sceneMemberID="firstResponder"/>

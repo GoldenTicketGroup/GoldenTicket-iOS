@@ -29,6 +29,9 @@ class WinTicketsVC: UIViewController {
         winCollection.dataSource = self
         // winCollection.delegate = self
         setWindata()
+        
+        print(winList.count)
+        
     }
     
     // back button 누르면 다시 메인 화면으로 이동하도록.
@@ -46,6 +49,7 @@ extension WinTicketsVC: UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         // 당첨내역 리스트에 담긴 공연 수 만큼 반환하기
+
         return winList.count
     }
     
