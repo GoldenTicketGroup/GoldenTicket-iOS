@@ -92,8 +92,7 @@ struct ShowService {
             .responseData { response in
                 
                 //print(response.error?.localizedDescription)
-                
-                print("응답 \(response)")
+                // print("응답 \(response)")
                 switch response.result {
                     
                 // 통신 성공
@@ -113,7 +112,7 @@ struct ShowService {
                                     // 데이터 encoding 하는 방법
                                     // print("데이터",String(data:value, encoding: .utf8))
                                     let result = try decoder.decode(ResponseShow.self, from: value)
-                                    print("finish decode")
+                                    // print("finish decode")
                                     
                                     switch result.success {
                                     case true:
@@ -123,8 +122,8 @@ struct ShowService {
                                     }
                                 } catch {
                                     completion(.pathErr)
-                                    print(error.localizedDescription)   // 에러 출력
-                                    debugPrint(error) // check which key is missing
+                                    // print(error.localizedDescription)   // 에러 출력
+                                    // debugPrint(error) // check which key is missing
                                 }
                             case 400:
                                 completion(.pathErr)

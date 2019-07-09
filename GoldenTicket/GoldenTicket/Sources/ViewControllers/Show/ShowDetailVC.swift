@@ -131,7 +131,6 @@ class ShowDetailVC: UIViewController {
         
         backgroundImage.image = backgroundImg?.image
         posterImage.image = posterImg?.image
-        print(posterImg)
         showTitle.text = showName
         showBeforePriceLabel.text = showBeforePrice
         showAfterPriceLabel.text = showAfterPrice
@@ -160,6 +159,9 @@ class ShowDetailVC: UIViewController {
 
     // 응모하기 창에서 화살표 버튼 클릭시 drawer 올리기.
     @IBAction func checkUpButton(_ sender: UIButton) {
+        
+        setTimeData()
+        
         if fillView.transform == .identity {
             UIView.animate(withDuration: 1, animations: {
                 self.fillView.transform = CGAffineTransform(scaleX: 0, y: 0)
@@ -177,10 +179,8 @@ class ShowDetailVC: UIViewController {
                 self.checkButton.transform = .identity
                 self.applyButton.transform = .identity
             }) {(true) in
-                
             }
         }
-        
     }
     
     // 버튼 애니메이션이 제대로 180 도 회전되도록 지정해주기
@@ -286,6 +286,7 @@ extension ShowDetailVC: UICollectionViewDataSource {
     }
     
 }
+
 // 배우 정보 더미데이터로 테스트하기.
 extension ShowDetailVC {
     
@@ -305,6 +306,7 @@ extension ShowDetailVC {
             case .success(let res):
                 
                 self.actorList = res as! [Artist]
+                print("actorlist \(self.actorList)")
                 self.actorCollectionView.reloadData()
                 
             case .requestErr(let message):
@@ -330,7 +332,11 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = timeList[indexPath.row].time
+        
+        let timeArray = timeList[indexPath.row]
+        
+        cell.textLabel!.text = timeArray.time
+        
         return cell
     }
     
@@ -339,4 +345,43 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
         animate(toggle: false)
     }
     
+}
+
+// 테스트용 더미 데이터 세팅.
+extension ShowDetailVC {
+    
+    func setTimeData() {
+        
+        print("call setTimeData()")
+        guard let idx = self.showIdx else { return }
+        print("time \(idx)")
+        
+        ShowService.shared.showDetail(showIdx: idx) {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                print("time \(res)")
+                self.timeList = res as! [Schedule]
+                self.tblView.reloadData()
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "시간 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "시간 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
+    }
 }

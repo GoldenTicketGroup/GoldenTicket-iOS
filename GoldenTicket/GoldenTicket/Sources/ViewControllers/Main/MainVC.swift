@@ -378,13 +378,13 @@ extension MainVC {
         
         guard let idx = self.showIdx else { return }
         
-        print("idx : \(idx)")
+        // print("idx : \(idx)")
         ShowService.shared.showDetail(showIdx: idx) {
             [weak self]
             data in
             
             guard let `self` = self else { return }
-            print("data : \(data)")
+            // print("data : \(data)")
             switch data {
                 
             // 매개변수에 어떤 값을 가져올 것인지
@@ -401,15 +401,14 @@ extension MainVC {
                 // 2. ShowDetail Struct
                 dvc.posterImg = UIImageView()
                 // posterImg가 있을 때 imageFromUrl을 호출하는데, 초기화 안된 상태이고 nil이니까 초기화를 해줘야 한다.
-                dvc.posterImg!.imageFromUrl(showDetail.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
+                dvc.posterImg!.imageFromUrl(showDetail.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_main_benhur.jpg")
                 dvc.showName = showDetail.name
                 dvc.showLocation = showDetail.location
                 dvc.showTime = showDetail.duration
                 dvc.showBeforePrice = showDetail.original_price
                 dvc.showAfterPrice = showDetail.discount_price
-                
                 dvc.backgroundImg = UIImageView()
-                dvc.backgroundImg?.imageFromUrl(showDetail.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/backimg_benhur_info.jpg")
+                dvc.backgroundImg!.imageFromUrl(showDetail.background_image, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/backimg_benhur_info.jpg")
                 
                 // 2. Poster Struct
                 let poster = showDetail.poster
