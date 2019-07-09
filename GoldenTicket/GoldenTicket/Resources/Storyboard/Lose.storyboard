@@ -31,28 +31,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sm-fB-fwF">
-                                <rect key="frame" x="94.5" y="485.5" width="186" height="8"/>
+                                <rect key="frame" x="75.5" y="516" width="224" height="8"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="ex2-Zc-Pn5"/>
-                                    <constraint firstAttribute="width" constant="186" id="sEC-JM-4Bc"/>
+                                    <constraint firstAttribute="width" constant="224" id="yIa-pv-a8K"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보고 싶은 공연의 알림을 설정해두세요. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuV-mI-eym">
-                                <rect key="frame" x="95" y="478.5" width="185" height="15"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <rect key="frame" x="72" y="506" width="231" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="걱정하지 마세요. 매일 새로운" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBy-HU-fop">
-                                <rect key="frame" x="119" y="450" width="137" height="14"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <rect key="frame" x="102" y="450" width="171" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="골든티켓에 응모할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30h-zu-jgh">
-                                <rect key="frame" x="114" y="464" width="147.5" height="14.5"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <rect key="frame" x="95.5" y="478" width="184" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -102,7 +102,6 @@
                             <constraint firstItem="YkF-xZ-TNQ" firstAttribute="top" secondItem="O9f-wF-lAU" secondAttribute="bottom" id="Hcd-yL-DDy"/>
                             <constraint firstItem="O9f-wF-lAU" firstAttribute="top" secondItem="jQV-Iy-JSZ" secondAttribute="top" constant="81" id="KF5-Dc-3X6"/>
                             <constraint firstItem="cD8-j5-sMt" firstAttribute="centerX" secondItem="J67-9m-aQ2" secondAttribute="centerX" id="VFn-VZ-avw"/>
-                            <constraint firstItem="30h-zu-jgh" firstAttribute="top" secondItem="WBy-HU-fop" secondAttribute="bottom" id="W8K-Lv-g8d"/>
                             <constraint firstItem="WBy-HU-fop" firstAttribute="centerX" secondItem="J67-9m-aQ2" secondAttribute="centerX" id="d6z-cW-I19"/>
                             <constraint firstItem="jQV-Iy-JSZ" firstAttribute="bottom" secondItem="cD8-j5-sMt" secondAttribute="bottom" constant="21" id="dFH-LS-g4I"/>
                             <constraint firstItem="K4j-ua-1nk" firstAttribute="centerX" secondItem="J67-9m-aQ2" secondAttribute="centerX" id="djQ-eI-asz"/>
@@ -111,8 +110,9 @@
                             <constraint firstItem="YkF-xZ-TNQ" firstAttribute="centerX" secondItem="J67-9m-aQ2" secondAttribute="centerX" id="hvG-Gq-0dw"/>
                             <constraint firstItem="zuV-mI-eym" firstAttribute="centerX" secondItem="J67-9m-aQ2" secondAttribute="centerX" id="iEi-Dw-atH"/>
                             <constraint firstItem="CVc-6x-aax" firstAttribute="centerX" secondItem="J67-9m-aQ2" secondAttribute="centerX" id="j70-PK-rMj"/>
-                            <constraint firstItem="zuV-mI-eym" firstAttribute="top" secondItem="30h-zu-jgh" secondAttribute="bottom" id="nEF-jO-ATu"/>
                             <constraint firstItem="5sm-fB-fwF" firstAttribute="bottom" secondItem="zuV-mI-eym" secondAttribute="bottom" id="tNu-0A-n0b"/>
+                            <constraint firstItem="30h-zu-jgh" firstAttribute="top" secondItem="WBy-HU-fop" secondAttribute="bottom" constant="10" id="xpy-kR-Rsr"/>
+                            <constraint firstItem="zuV-mI-eym" firstAttribute="top" secondItem="30h-zu-jgh" secondAttribute="bottom" constant="10" id="xv8-Uc-wXi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jQV-Iy-JSZ"/>
                     </view>

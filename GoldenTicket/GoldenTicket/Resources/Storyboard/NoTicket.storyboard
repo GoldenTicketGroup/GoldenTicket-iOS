@@ -48,22 +48,12 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p73-7c-pZD">
-                                <rect key="frame" x="93" y="500" width="190" height="8"/>
+                                <rect key="frame" x="76" y="534" width="225" height="8"/>
                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="iq6-W0-FaW"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5m-Tv-IZk">
-                                <rect key="frame" x="82" y="457" width="210" height="63"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">매일매일 새로운 행운의 기회가
-쏟아지고 있어요!
-어떤 공연이 있는지 둘러보러 가볼까요?</string>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="13"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D9-N9-J3P">
                                 <rect key="frame" x="335" y="38" width="16" height="16"/>
                                 <constraints>
@@ -75,27 +65,58 @@
                                     <action selector="cancelButton:" destination="FTA-2U-uc4" eventType="touchUpInside" id="V6d-gu-EKj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쏟아지고 있어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3a-2O-pPp">
+                                <rect key="frame" x="138" y="496" width="99" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="7Bc-mZ-Bks"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 공연이 있는지 둘러보러 가볼까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYg-0B-7yW">
+                                <rect key="frame" x="72" y="524" width="231" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="wpi-ac-lPA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매일매일 새로운 행운의 기회가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tif-e3-hVM">
+                                <rect key="frame" x="97" y="468" width="181" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="uSt-kF-QDr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mYg-0B-7yW" firstAttribute="centerX" secondItem="Vwx-8x-ihf" secondAttribute="centerX" id="0ki-tp-hdH"/>
                             <constraint firstItem="7D9-N9-J3P" firstAttribute="top" secondItem="Vwx-8x-ihf" secondAttribute="top" constant="18" id="1uE-bT-jVN"/>
+                            <constraint firstItem="nDY-Dp-yzl" firstAttribute="top" secondItem="p73-7c-pZD" secondAttribute="bottom" constant="44" id="5vX-Is-Mi8"/>
                             <constraint firstItem="Vwx-8x-ihf" firstAttribute="trailing" secondItem="nDY-Dp-yzl" secondAttribute="trailing" constant="56" id="6h1-ur-izN"/>
-                            <constraint firstItem="k5m-Tv-IZk" firstAttribute="top" secondItem="L7f-On-3R2" secondAttribute="bottom" constant="33" id="9qt-Qy-Cqf"/>
                             <constraint firstItem="3Hc-oM-G4D" firstAttribute="top" secondItem="Vwx-8x-ihf" secondAttribute="top" constant="78" id="Ftx-HO-hns"/>
-                            <constraint firstItem="nDY-Dp-yzl" firstAttribute="top" secondItem="p73-7c-pZD" secondAttribute="bottom" constant="78" id="HXM-h0-goL"/>
+                            <constraint firstItem="p73-7c-pZD" firstAttribute="top" secondItem="mYg-0B-7yW" secondAttribute="bottom" constant="-8" id="IxT-VL-XkE"/>
                             <constraint firstItem="Vwx-8x-ihf" firstAttribute="trailing" secondItem="7D9-N9-J3P" secondAttribute="trailing" constant="24" id="MB2-k0-zT3"/>
                             <constraint firstItem="L7f-On-3R2" firstAttribute="leading" secondItem="Vwx-8x-ihf" secondAttribute="leading" constant="73" id="MnO-wk-CAu"/>
                             <constraint firstItem="Vwx-8x-ihf" firstAttribute="bottom" secondItem="nDY-Dp-yzl" secondAttribute="bottom" constant="46" id="NUI-bv-gke"/>
                             <constraint firstItem="L7f-On-3R2" firstAttribute="top" secondItem="3Hc-oM-G4D" secondAttribute="bottom" constant="44" id="Nfv-s7-22h"/>
+                            <constraint firstItem="y3a-2O-pPp" firstAttribute="top" secondItem="Tif-e3-hVM" secondAttribute="bottom" constant="10" id="NiT-D2-k1l"/>
                             <constraint firstItem="nDY-Dp-yzl" firstAttribute="leading" secondItem="Vwx-8x-ihf" secondAttribute="leading" constant="56" id="P2O-vc-BlK"/>
-                            <constraint firstItem="k5m-Tv-IZk" firstAttribute="leading" secondItem="Vwx-8x-ihf" secondAttribute="leading" constant="82" id="aD3-31-MDP"/>
+                            <constraint firstItem="y3a-2O-pPp" firstAttribute="centerX" secondItem="Vwx-8x-ihf" secondAttribute="centerX" id="YLn-re-dum"/>
+                            <constraint firstItem="Tif-e3-hVM" firstAttribute="centerX" secondItem="Vwx-8x-ihf" secondAttribute="centerX" id="YjQ-qz-EIl"/>
                             <constraint firstItem="Vwx-8x-ihf" firstAttribute="trailing" secondItem="3Hc-oM-G4D" secondAttribute="trailing" constant="118" id="ebk-s5-fq3"/>
-                            <constraint firstItem="Vwx-8x-ihf" firstAttribute="trailing" secondItem="k5m-Tv-IZk" secondAttribute="trailing" constant="83" id="hnh-u4-HuI"/>
+                            <constraint firstItem="p73-7c-pZD" firstAttribute="leading" secondItem="Vwx-8x-ihf" secondAttribute="leading" constant="76" id="f6Y-xa-X77"/>
+                            <constraint firstItem="Vwx-8x-ihf" firstAttribute="trailing" secondItem="p73-7c-pZD" secondAttribute="trailing" constant="74" id="fZb-is-bHF"/>
+                            <constraint firstItem="mYg-0B-7yW" firstAttribute="top" secondItem="y3a-2O-pPp" secondAttribute="bottom" constant="10" id="hgl-Yx-VaD"/>
                             <constraint firstItem="3Hc-oM-G4D" firstAttribute="leading" secondItem="Vwx-8x-ihf" secondAttribute="leading" constant="118" id="nPS-Wh-Rl5"/>
-                            <constraint firstItem="p73-7c-pZD" firstAttribute="leading" secondItem="Vwx-8x-ihf" secondAttribute="leading" constant="93" id="oPh-PJ-gAJ"/>
+                            <constraint firstItem="Tif-e3-hVM" firstAttribute="top" secondItem="L7f-On-3R2" secondAttribute="bottom" constant="44" id="qf5-ZH-yrv"/>
                             <constraint firstItem="Vwx-8x-ihf" firstAttribute="trailing" secondItem="L7f-On-3R2" secondAttribute="trailing" constant="72" id="sP0-9k-W6Z"/>
-                            <constraint firstItem="Vwx-8x-ihf" firstAttribute="trailing" secondItem="p73-7c-pZD" secondAttribute="trailing" constant="92" id="w8i-kO-W3d"/>
-                            <constraint firstItem="p73-7c-pZD" firstAttribute="top" secondItem="L7f-On-3R2" secondAttribute="bottom" constant="76" id="yOl-CZ-Fxh"/>
+                            <constraint firstItem="nDY-Dp-yzl" firstAttribute="top" secondItem="mYg-0B-7yW" secondAttribute="bottom" constant="44" id="zgI-GH-B4s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vwx-8x-ihf"/>
                     </view>
