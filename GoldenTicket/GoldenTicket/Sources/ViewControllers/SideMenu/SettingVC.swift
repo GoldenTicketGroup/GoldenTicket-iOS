@@ -26,12 +26,20 @@ class SettingVC: UITableViewController {
         
         // 저장된 값을 꺼내어 각 컨트롤에 적용
         self.userName.text = user.string(forKey: "name")
+        
+        
     }
     
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let header = view as? UITableViewHeaderFooterView {
+            header.backgroundView?.backgroundColor = UIColor.white
+            header.textLabel?.textColor = UIColor.blueGrey
+        }
+    }
     /*
     // MARK: - Navigation
 

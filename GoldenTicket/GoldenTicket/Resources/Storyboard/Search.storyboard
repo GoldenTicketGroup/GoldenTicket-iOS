@@ -210,25 +210,28 @@
                                     <action selector="goSearch:" destination="C5K-Px-xHI" eventType="touchUpInside" id="AI9-Fd-zTo"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SnG-NV-goL">
-                                <rect key="frame" x="0.0" y="88" width="375" height="579"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SnG-NV-goL">
+                                <rect key="frame" x="0.0" y="370" width="375" height="579"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kxl-hc-qIs">
                                     <size key="itemSize" width="165" height="213"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="18" minY="10" maxX="0.0" maxY="10"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchCell" id="FQD-fa-LlK" customClass="SearchCVCell" customModule="GoldenTicket" customModuleProvider="target">
-                                        <rect key="frame" x="18" y="10" width="165" height="213"/>
+                                        <rect key="frame" x="10" y="10" width="165" height="213"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="165" height="213"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g1G-29-t78">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posteKillMeNowInfo" translatesAutoresizingMaskIntoConstraints="NO" id="g1G-29-t78">
                                                     <rect key="frame" x="0.0" y="0.0" width="165" height="213"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="g1G-29-t78" secondAttribute="height" multiplier="55:71" id="fOk-1g-AaH"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtq-wA-TvY">
                                                     <rect key="frame" x="132" y="10" width="25" height="24"/>
@@ -321,5 +324,6 @@
         <image name="btBack" width="19" height="26"/>
         <image name="iconLikeNoFill" width="25" height="24"/>
         <image name="iconSearchMain" width="17.5" height="16.5"/>
+        <image name="posteKillMeNowInfo" width="252" height="337"/>
     </resources>
 </document>

@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Foundation
 
 struct SearchShow : Codable {
-    let showIdx : Int
+    let showIdx : Int?
     let imageURL : String?
-    let name : String
+    let name : String?
 }

@@ -23,4 +23,5 @@ struct APIConstants {
     
     /* 검색 (Search) */
     static let SearchURL = BaseURL + "/search/text"
+    static let SearchKeywordURL = BaseURL + "/search"
 }

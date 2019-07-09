@@ -89,7 +89,7 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 60;
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 300
     }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat{
         return 0;
