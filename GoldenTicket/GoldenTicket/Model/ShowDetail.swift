@@ -14,31 +14,39 @@ import UIKit
 // 필요한 데이터들 모두 적어둠, 아래 주석 처리는 일단 테스트에서 제외
 
 //공연의 기본정보를 나타내는 Detail struct
+//struct ShowDetail: Codable {
+//    let showIdx: Int
+//    let imageURL: String
+//    let name, location, originalprice, discountPrice: String
+//    let schedule: [Schedule]?
+//    let artist: [Artist]?
+//    let poster: [Poster]?
+//}
+
 struct ShowDetail: Codable {
-    let showIdx: Int
-    let imageURL: String
-    let name, location, originalPrice, discountPrice: String
+    let show_idx: Int
+    let image_url: String
+    let name, location, original_price, discount_price: String
     let schedule: [Schedule]?
     let artist: [Artist]?
     let poster: [Poster]?
 }
-
 // MARK: - Schedule
 struct Schedule: Codable {
-    let scheduleIdx: Int
+    let schedule_idx: Int
     let time: String
-    let drawAvailable: Int
+    let draw_available: Int
 }
 
 // MARK: - Artist
 struct Artist: Codable {
-    let artistIdx: Int
+    let artist_idx: Int
     let name, role: String
-    let imageURL: String
+    let image_url: String
 }
 
 // MARK: - Poster
 struct Poster: Codable {
-    let posterIdx: Int
-    let imageURL: String
+    let poster_idx: Int
+    let image_url: String
 }

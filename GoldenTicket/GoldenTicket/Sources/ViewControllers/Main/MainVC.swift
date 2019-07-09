@@ -14,7 +14,7 @@ import Kingfisher
 class MainVC: UIViewController {
     
     @IBOutlet var userName: UILabel!
-    var show_id = 20 // 상세 공연 정보 인덱스
+    var showIdx: Int?
     
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
@@ -67,9 +67,8 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //더미 데이터들 세팅하기.
+        // 세팅하기.
         setShowData()
-        setDetailData()
         setupSideMenu()
 
         //
@@ -334,33 +333,10 @@ extension MainVC : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        // Todo : Main Collection View와 서버에서 전달받은 index로 Alamofire 통신
-        
-        let dvc = storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
-        
+        // 임시로 인덱스 지정
+        self.showIdx = 20
         // data setting
         self.setDetailData()
-        
-        let showDetail = showDetailList[indexPath.row]
-        
-        // ShowDetail Struct
-        dvc.showName = showDetail.name
-        dvc.showLocation = showDetail.location
-        dvc.showBeforePrice = showDetail.originalPrice
-        dvc.showAfterPrice = showDetail.discountPrice
-        dvc.posterImg?.imageFromUrl(showDetail.imageURL, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
-        
-        // Schedule Struct
-        dvc.showTime = showDetail.schedule![indexPath.row].time
-        
-        // Poster Struct
-        let poster = showDetail.poster
-        dvc.showDetail?.imageFromUrl(poster![indexPath.row].imageURL, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
-        
-        // dvc.backgroundImg = showDetail.backgroundImage
-       
-        present(dvc, animated: true)
-        navigationController?.pushViewController(dvc, animated: true)
     }
 }
 
@@ -400,20 +376,47 @@ extension MainVC {
     
     func setDetailData() {
         
-        // guard let idx = show_id else { return }
+        // Todo : 1. Main Collection View와 2. 서버에서 전달받은 index로 Alamofire 통신
+        guard let idx = self.showIdx else { return }
         
-        ShowService.shared.showDetail(show_id) {
+        ShowService.shared.showDetail(showIdx: idx) {
             [weak self]
             data in
-            print("in")
+            
             guard let `self` = self else { return }
-            print("out")
+            
             switch data {
                 
             // 매개변수에 어떤 값을 가져올 것인지
             case .success(let res):
                 
-                self.showDetailList = res as! [ShowDetail]
+                // 배열이 아니라서 배열로 받을 필요가 없었음
+                // self.showDetailList = res as! [ShowDetail]
+                // print("any data",self.showDetailList)
+                
+                // 1. 공연 하나에 대한 정보만 받아오면 된다.
+                let showDetail = res as! ShowDetail
+                let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
+                
+                // 2. ShowDetail Struct
+                dvc.showName = showDetail.name
+                dvc.showLocation = showDetail.location
+                dvc.showBeforePrice = showDetail.original_price
+                dvc.showAfterPrice = showDetail.discount_price
+                dvc.posterImg?.imageFromUrl(showDetail.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
+                
+                // 2. Schedule Struct
+                dvc.showTime = showDetail.schedule![0].time
+                
+                // 2. Poster Struct
+                let poster = showDetail.poster
+                dvc.showDetail?.imageFromUrl(poster![0].image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
+                
+                // dvc.backgroundImg = showDetail.backgroundImage
+                
+                self.present(dvc, animated: true)
+                self.navigationController?.pushViewController(dvc, animated: true)
+                
                 
             case .requestErr(let message):
                 self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")

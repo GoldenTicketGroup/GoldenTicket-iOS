@@ -303,9 +303,9 @@
 				F4FE456F22D38DAE00E6C6B0 /* SearchShow.swift */,
 				080BF82022CC840400A06BBF /* Like.swift */,
 				080BF82322CC8D5000A06BBF /* Win.swift */,
+				08004B9E22D31B5300BA8AC0 /* ResponseArray.swift */,
 				080EA9B522D08B14000D074C /* ResponseString.swift */,
 				080EA9B722D08B74000D074C /* ResponseDefault.swift */,
-				08004B9E22D31B5300BA8AC0 /* ResponseArray.swift */,
 				08099F0D22D42B1B00142C85 /* ResponseShow.swift */,
 			);
 			path = Model;
