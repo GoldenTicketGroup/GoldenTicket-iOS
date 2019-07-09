@@ -11,14 +11,14 @@ import Hero
 
 
 class ShowDetailVC: UIViewController {
-
     
     var actorList : [Artist] = []
+    var timeList : [Schedule] = []
     var showIdx : Int?
     
     // 배우들을 보여주는 collection view.
     @IBOutlet weak var actorCollectionView: UICollectionView!
-    
+
     @IBOutlet weak var backgroundImage: UIImageView!
     
     @IBOutlet weak var posterImage: UIImageView!
@@ -35,7 +35,8 @@ class ShowDetailVC: UIViewController {
 
     @IBOutlet weak var showDetailImage: UIImageView!
     
-    // detail view에 필요한 정보들.
+    
+    // MainVC 에서 storyboard로 전달 받는 dvc outlet
     var backgroundImg : UIImageView?
     var posterImg : UIImageView?
     var showName : String?
@@ -44,9 +45,6 @@ class ShowDetailVC: UIViewController {
     var showTime : String?
     var showLocation : String?
     var showDetail : UIImageView?
-    
-    // 더미 데이터로 넣을 배우 리스트
-    // var actorList : [Actor] = []
     
     //응모하기 뷰
     @IBOutlet weak var checkView: CustomView!
@@ -63,10 +61,6 @@ class ShowDetailVC: UIViewController {
     
     //스크롤뷰
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    
-    // drop list 테스트용 데이터
-    var timeList = ["오후 4 : 00", "오후 5 : 00"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,46 +129,15 @@ class ShowDetailVC: UIViewController {
     // 나타낼 데이터들 지정해주기
     func setContent() {
         
-        guard let idx = self.showIdx else { return }
-        
-        ShowService.shared.showDetail(showIdx: idx) {
-            [weak self]
-            data in
-            
-            guard let `self` = self else { return }
-            
-            switch data {
-                
-            // 매개변수에 어떤 값을 가져올 것인지
-            case .success(let res):
-                
-                let showDetail = res as! ShowDetail
-                
-                // 2. ShowDetail Struct
-                self.backgroundImage?.imageFromUrl(showDetail.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
-                self.posterImage?.imageFromUrl(showDetail.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_benhur_info.jpg")
-                self.showTitle.text = showDetail.name
-                self.showBeforePriceLabel.text = showDetail.original_price
-                self.showAfterPriceLabel.text = showDetail.discount_price
-                
-                self.showTimeLabel.text = showDetail.schedule![0].time
-                self.showLocationLabel.text = showDetail.location
-                // self.showDetailImage.image = showDetail
-                
-                
-            case .requestErr(let message):
-                self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")
-                
-            case .pathErr:
-                print(".pathErr")
-                
-            case .serverErr:
-                print(".serverErr")
-                
-            case .networkFail:
-                self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
-            }
-        }
+        backgroundImage.image = backgroundImg?.image
+        posterImage.image = posterImg?.image
+        print(posterImg)
+        showTitle.text = showName
+        showBeforePriceLabel.text = showBeforePrice
+        showAfterPriceLabel.text = showAfterPrice
+        showTimeLabel.text = showTime
+        showLocationLabel.text = showLocation
+        showDetailImage.image = showDetail?.image
     }
     
     // 메인 화면으로 돌아가는 backButton 함수
@@ -294,6 +257,10 @@ extension ShowDetailVC : UIScrollViewDelegate {
 }
 
 
+/* Artist, Schedule 은 통신 해야 함 */
+
+
+
 // 배우 정보 collection view datasource
 extension ShowDetailVC: UICollectionViewDataSource {
     
@@ -363,7 +330,7 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = timeList[indexPath.row]
+        cell.textLabel?.text = timeList[indexPath.row].time
         return cell
     }
     
