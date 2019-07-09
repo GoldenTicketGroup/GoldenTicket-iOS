@@ -290,7 +290,7 @@
                                     <constraint firstAttribute="width" constant="118" id="z9h-i5-Uq1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" title="다음">
+                                <state key="normal" title="시작">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>

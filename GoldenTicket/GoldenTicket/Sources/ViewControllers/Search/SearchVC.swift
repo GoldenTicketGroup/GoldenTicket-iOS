@@ -63,15 +63,16 @@ class SearchVC: UIViewController {
                     
                 case .requestErr(let message):
                     self.simpleAlert(title: "실패", message: "\(message)")
-                    
+                    self.collectionView.isHidden = true
                 case .pathErr:
                     print(".pathErr")
-                    
+                    self.collectionView.isHidden = true
                 case .serverErr:
                     print(".serverErr")
-                    
+                    self.collectionView.isHidden = true
                 case .networkFail:
                     self.simpleAlert(title: "불러오기 실패", message: "네트워크 상태를 확인해주세요.")
+                    self.collectionView.isHidden = true
                 }
             }
             
@@ -87,44 +88,34 @@ class SearchVC: UIViewController {
     //print 는 제대로 눌러지는지 테스트용
     @IBAction func recSearchButton(_ sender: UIButton) {
         
-        switch sender.titleLabel?.text {
-        case "판타지":
-            print("판타지")
-            collectionView.isHidden = false
-            break
-        case "로맨스":
-            print("로맨스")
-            break
-        case "창작뮤지컬":
-            print("창작뮤지컬")
-            break
-        case "대학로":
-            print("대학로")
-            break
-        case "라이선스":
-            print("라이선스")
-            break
-        case "블루스퀘어":
-            print("블루스퀘어")
-            break
-        case "관객참여형":
-            print("관객참여형")
-            break
-        case "내한공연":
-            print("내한공연")
-            break
-        case "세종문화회관":
-            print("세종문화회관")
-            break
-        case "코미디":
-            print("코미디")
-            break
-        default:
-            print("로맨스")
-            break
+        guard let keyword = sender.titleLabel?.text else {return}
+        print(keyword)
+        
+        if sender.titleLabel?.text == keyword {
+            SearchService.shared.keywordSearch(keyword) {
+                data in
+                switch data {
+                case .success(let res) :
+                    
+                    self.searchShowList = res as! [SearchShow]
+                    self.collectionView.reloadData()
+                    self.collectionView.isHidden = false
+                    
+                case .requestErr(let message):
+                    self.simpleAlert(title: "실패", message: "\(message)")
+                    self.collectionView.isHidden = true
+                case .pathErr:
+                    print(".pathErr")
+                    self.collectionView.isHidden = true
+                case .serverErr:
+                    print(".serverErr")
+                    self.collectionView.isHidden = true
+                case .networkFail:
+                    self.simpleAlert(title: "불러오기 실패", message: "네트워크 상태를 확인해주세요.")
+                    self.collectionView.isHidden = true
+                }
+            }
         }
-        
-        
     }
     
     
@@ -152,3 +143,14 @@ extension SearchVC : UICollectionViewDataSource
     }
 }
 
+extension SearchVC : UICollectionViewDelegateFlowLayout
+{
+    // Collection View Cell 의 width, height 를 지정할 수 있습니다.
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let width: CGFloat = (view.frame.width - 44) / 2
+        let height: CGFloat = width * 184 / 137
+        
+        return CGSize(width: width, height: height)
+    }
+}
