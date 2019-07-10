@@ -172,7 +172,7 @@
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0N-kJ-cOX">
-                                <rect key="frame" x="81.5" y="-12.5" width="212" height="108.5"/>
+                                <rect key="frame" x="72.5" y="-21.5" width="230" height="117.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="d0N-kJ-cOX" secondAttribute="height" multiplier="211:108" id="bIb-7g-8nJ"/>
@@ -184,7 +184,7 @@
 결제 시 취소와 환불이 불가합니다.
 
 입금 확인 후 안내 문자가 발송됩니다.</string>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>

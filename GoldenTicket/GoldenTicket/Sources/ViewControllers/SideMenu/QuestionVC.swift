@@ -99,7 +99,7 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //recast your view as a UITableViewHeaderFooterView
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
         header.contentView.backgroundColor = UIColor.white
-        header.contentView.layer.borderColor = UIColor.lightGray.cgColor
+        header.contentView.layer.borderColor = UIColor.darkGray.cgColor
         //header.contentView.layer.borderWidth = 0.5
         
         header.contentView.layer.masksToBounds = true
@@ -132,7 +132,7 @@ class QuestionVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as UITableViewCell
         let section = self.sectionItems[indexPath.section] as! NSArray
-        cell.textLabel?.textColor = UIColor.lightGray
+        cell.textLabel?.textColor = UIColor.darkGray
         cell.textLabel?.font = UIFont(name: "AppleSDGothicNeo" , size: 13)
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = section[indexPath.row] as? String

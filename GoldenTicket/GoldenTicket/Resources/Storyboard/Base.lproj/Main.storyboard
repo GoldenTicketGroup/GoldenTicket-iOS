@@ -351,7 +351,7 @@
                                                                 <rect key="frame" x="0.0" y="-8" width="250" height="32"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
-                                                                <color key="textColor" red="0.87280452249999996" green="0.60975462199999997" blue="0.4705588818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="textColor" red="0.94325107340000003" green="0.65697437520000002" blue="0.50585037470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40C-IL-EL3">
@@ -360,7 +360,7 @@
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                                                                 <state key="normal" title="당첨확인">
-                                                                    <color key="titleColor" red="0.87280452249999996" green="0.60975462199999997" blue="0.4705588818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="titleColor" red="0.94325107340000003" green="0.65697437520000002" blue="0.50585037470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
                                                             </button>
                                                         </subviews>
@@ -374,7 +374,7 @@
                                                                 <rect key="frame" x="0.0" y="-8" width="250" height="32"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
-                                                                <color key="textColor" red="0.87280452249999996" green="0.60975462199999997" blue="0.4705588818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="textColor" red="0.94325107336044312" green="0.65697437524795532" blue="0.50585037469863892" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKe-Zw-CtY">
@@ -383,7 +383,7 @@
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                                                                 <state key="normal" title="당첨확인">
-                                                                    <color key="titleColor" red="0.87280452249999996" green="0.60975462199999997" blue="0.4705588818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="titleColor" red="0.94325107340000003" green="0.65697437520000002" blue="0.50585037470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
                                                             </button>
                                                         </subviews>
@@ -897,6 +897,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jJ-wz-Z0A">
                                                 <rect key="frame" x="343" y="29" width="16" height="22"/>
                                                 <state key="normal" image="iconLikeNoFill"/>
+                                                <state key="selected" image="iconLikeFill"/>
                                                 <connections>
                                                     <action selector="onClickedLikeButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="VAR-1z-Gdx"/>
                                                 </connections>
@@ -938,8 +939,8 @@
                                     <constraint firstItem="800-zd-WoJ" firstAttribute="leading" secondItem="mXR-yO-Gad" secondAttribute="leading" id="jgM-ZW-dX5"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-ef-Wbu">
-                                <rect key="frame" x="0.0" y="556" width="375" height="220"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-ef-Wbu">
+                                <rect key="frame" x="0.0" y="448" width="375" height="220"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-6Y-ir8">
                                         <rect key="frame" x="165" y="1" width="44" height="44"/>
@@ -1120,6 +1121,7 @@
         <image name="btwhiteBackMain" width="330" height="127"/>
         <image name="cancelLine" width="91.5" height="4"/>
         <image name="iconDown" width="24" height="24"/>
+        <image name="iconLikeFill" width="25" height="24"/>
         <image name="iconLikeNoFill" width="25" height="24"/>
         <image name="iconLocationCoral" width="10" height="14"/>
         <image name="iconLocationMain" width="9.5" height="13"/>
