@@ -256,6 +256,7 @@ class MainVC: UIViewController {
     
     @IBAction func lotteryCheckOne(_ sender: Any) {
         
+        //일단 랜덤으로 당첨/ 당첨 안됨 확인하도록
         let num = arc4random_uniform(1)
         print(num)
         if num == 0 {
@@ -273,7 +274,7 @@ class MainVC: UIViewController {
     
     
     @IBAction func lotteryCheckTwo(_ sender: Any) {
-        let num = arc4random_uniform(2)
+        let num = arc4random_uniform(1)
         print(num)
         if num == 0 {
             let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
@@ -389,7 +390,7 @@ extension MainVC : UICollectionViewDelegate {
 }
 
 
-// 테스트용 더미 데이터 세팅.
+// 통신 데이터 세팅.
 extension MainVC {
     func setShowData() {
         
