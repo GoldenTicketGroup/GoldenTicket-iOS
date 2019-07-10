@@ -50,11 +50,11 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mOQ-5h-IIN" kind="presentation" id="mJH-vo-FfR"/>
+                                    <segue destination="mOQ-5h-IIN" kind="presentation" identifier="right" id="mJH-vo-FfR"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterBenhurTutorial" translatesAutoresizingMaskIntoConstraints="NO" id="zbU-WZ-n5x">
-                                <rect key="frame" x="78" y="201.5" width="219" height="282"/>
+                                <rect key="frame" x="179.5" y="201.5" width="16" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zbU-WZ-n5x" secondAttribute="height" multiplier="73:94" id="XY9-FI-4Ir"/>
                                 </constraints>
@@ -122,6 +122,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6eE-TE-iBW" firstAttribute="top" secondItem="wnI-pf-fyk" secondAttribute="top" constant="508" id="3fh-W4-Vre"/>
                             <constraint firstItem="oGq-9X-7E5" firstAttribute="top" secondItem="wnI-pf-fyk" secondAttribute="top" constant="90" id="9D7-EJ-Oej"/>
@@ -144,24 +145,34 @@
                             <constraint firstItem="UNT-Rf-gYB" firstAttribute="centerX" secondItem="bWu-gc-0Q4" secondAttribute="centerX" id="zYA-N8-bbK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wnI-pf-fyk"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lkv-xx-d6i" appends="YES" id="bi2-KM-txd"/>
+                        </connections>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="swipeRecognizer" destination="lkv-xx-d6i" id="JHX-gU-6Kg"/>
                         <outlet property="tutorialBottom" destination="ZK9-Sk-5N1" id="t60-sW-VG0"/>
                         <outlet property="tutorialButtonImg" destination="8Vb-xU-5Ri" id="w8G-mS-xdo"/>
                         <outlet property="tutorialPoster" destination="zbU-WZ-n5x" id="bvu-lc-OJ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMp-qx-bKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="lkv-xx-d6i">
+                    <connections>
+                        <outlet property="delegate" destination="ovX-Fz-9B3" id="SFD-Ht-oef"/>
+                        <segue destination="mOQ-5h-IIN" kind="presentation" id="WJa-ps-5Pj"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-111" y="139"/>
+            <point key="canvasLocation" x="-137" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial MidVC-->
         <scene sceneID="iAa-OE-oQf">
             <objects>
-                <viewController storyboardIdentifier="tutorialMid" id="mOQ-5h-IIN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialMid" id="mOQ-5h-IIN" customClass="TutorialMidVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dSA-de-sTB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,6 +235,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Lm8-Gy-JX7" firstAttribute="top" secondItem="Ycf-Nc-E5c" secondAttribute="top" constant="508" id="1s4-dh-Bto"/>
                             <constraint firstItem="Ycf-Nc-E5c" firstAttribute="bottom" secondItem="4NM-Kd-sko" secondAttribute="bottom" constant="25" id="8Gi-Ok-2uj"/>
@@ -241,12 +253,30 @@
                             <constraint firstItem="Ycf-Nc-E5c" firstAttribute="trailing" secondItem="4NM-Kd-sko" secondAttribute="trailing" constant="17" id="tZJ-PM-mcr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ycf-Nc-E5c"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4dr-G5-rER" appends="YES" id="9rn-Qs-PRh"/>
+                            <outletCollection property="gestureRecognizers" destination="DKd-UT-vHu" appends="YES" id="srR-XB-XIp"/>
+                        </connections>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="swipeRecognizer" destination="4dr-G5-rER" id="hOf-tp-f2p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YET-kG-w48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="4dr-G5-rER">
+                    <connections>
+                        <action selector="swipeAction:" destination="mOQ-5h-IIN" id="Ynj-sX-Keb"/>
+                        <segue destination="Yxk-O3-3Oy" kind="presentation" id="zn0-iN-3Cb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="DKd-UT-vHu">
+                    <connections>
+                        <segue destination="ovX-Fz-9B3" kind="presentation" id="Cgo-f6-gTj"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="673" y="139"/>
         </scene>
@@ -322,6 +352,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="dPs-qv-3wK" firstAttribute="top" secondItem="QzZ-rB-kKd" secondAttribute="top" constant="90" id="1MA-HU-mxU"/>
                             <constraint firstItem="dPs-qv-3wK" firstAttribute="centerX" secondItem="Yf2-RE-G5N" secondAttribute="centerX" id="2YE-7c-KrG"/>
@@ -340,6 +371,9 @@
                             <constraint firstItem="QzZ-rB-kKd" firstAttribute="trailing" secondItem="IkO-aa-FbD" secondAttribute="trailing" constant="163" id="qzU-6X-ubf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QzZ-rB-kKd"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Xc1-rY-WEm" appends="YES" id="Ly8-FO-AUA"/>
+                        </connections>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
@@ -349,8 +383,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xg-BK-MNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Xc1-rY-WEm">
+                    <connections>
+                        <segue destination="mOQ-5h-IIN" kind="presentation" id="v81-t3-p90"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1425" y="139"/>
+            <point key="canvasLocation" x="1580" y="139"/>
         </scene>
         <!--loginVC-->
         <scene sceneID="Vmk-rD-vLY">
@@ -369,4 +408,8 @@
         <image name="indicatorYellowcircle" width="10" height="10"/>
         <image name="posterBenhurTutorial" width="219" height="282"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rT9-Lg-X2h"/>
+        <segue reference="WJa-ps-5Pj"/>
+    </inferredMetricsTieBreakers>
 </document>

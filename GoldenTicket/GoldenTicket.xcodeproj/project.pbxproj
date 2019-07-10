@@ -47,6 +47,7 @@
 		F4012DA722D5DDE500F71861 /* Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA622D5DDE500F71861 /* Lottery.swift */; };
 		F4012DA922D5E42400F71861 /* LotteryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA822D5E42400F71861 /* LotteryList.swift */; };
 		F4012DAB22D5E9DF00F71861 /* ResponseLottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DAA22D5E9DF00F71861 /* ResponseLottery.swift */; };
+		F4012DAD22D64B4300F71861 /* TutorialMidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DAC22D64B4300F71861 /* TutorialMidVC.swift */; };
 		F402F30A22CDBCF90047B976 /* Contents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F402F30922CDBCF90047B976 /* Contents.storyboard */; };
 		F402F30C22CDD2A70047B976 /* ContentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402F30B22CDD2A70047B976 /* ContentsVC.swift */; };
 		F402F33B22CF0F610047B976 /* LotteryCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402F33A22CF0F610047B976 /* LotteryCheckCell.swift */; };
@@ -138,6 +139,7 @@
 		F4012DA622D5DDE500F71861 /* Lottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottery.swift; sourceTree = "<group>"; };
 		F4012DA822D5E42400F71861 /* LotteryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryList.swift; sourceTree = "<group>"; };
 		F4012DAA22D5E9DF00F71861 /* ResponseLottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLottery.swift; sourceTree = "<group>"; };
+		F4012DAC22D64B4300F71861 /* TutorialMidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMidVC.swift; sourceTree = "<group>"; };
 		F402F30922CDBCF90047B976 /* Contents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contents.storyboard; sourceTree = "<group>"; };
 		F402F30B22CDD2A70047B976 /* ContentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsVC.swift; sourceTree = "<group>"; };
 		F402F33A22CF0F610047B976 /* LotteryCheckCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryCheckCell.swift; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 			children = (
 				F4FE455522D30D4800E6C6B0 /* TutorialVC.swift */,
 				F4FE455722D3105800E6C6B0 /* TutorialLastVC.swift */,
+				F4012DAC22D64B4300F71861 /* TutorialMidVC.swift */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				08099F0E22D42B1B00142C85 /* ResponseShow.swift in Sources */,
 				089C13BF22D06BB600F91DD9 /* EditInfoViewController.swift in Sources */,
 				F4955C0922C89C0F00530906 /* CustomSearchButton.swift in Sources */,
+				F4012DAD22D64B4300F71861 /* TutorialMidVC.swift in Sources */,
 				F4FE455622D30D4800E6C6B0 /* TutorialVC.swift in Sources */,
 				F43F453822C9A83200C53898 /* ShowDetail.swift in Sources */,
 				F43F453622C9A81000C53898 /* ShowDetailVC.swift in Sources */,

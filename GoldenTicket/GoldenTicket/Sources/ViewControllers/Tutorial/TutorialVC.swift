@@ -10,6 +10,7 @@ import UIKit
 
 class TutorialVC: UIViewController {
 
+    @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
     
     @IBOutlet weak var tutorialPoster: UIImageView!
     
@@ -23,9 +24,11 @@ class TutorialVC: UIViewController {
         tutorialPoster.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 3)
         tutorialBottom.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 3)
         
+        swipeRecognizer.direction = .left
         tutorialButtonImg.makeRounded(cornerRadius: 14)
     }
     
+
     /*
     // MARK: - Navigation
 
