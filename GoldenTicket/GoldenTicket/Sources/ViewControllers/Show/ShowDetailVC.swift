@@ -154,11 +154,11 @@ class ShowDetailVC: UIViewController {
     // 좋아요 버튼 누를 시 fill heart.
     @IBAction func onClickedLikeButton(_ sender: UIButton) {
         
+        sender.isSelected = !sender.isSelected
         guard let idx = self.showIdx else { return }
-        
         // 선택되어 있으면
         if sender.isSelected {
-            
+            print("좋아요")
             // 좋아요 취소 통신
             LikeService.shared.pickNoLike(idx) {
                 [weak self]
@@ -189,6 +189,7 @@ class ShowDetailVC: UIViewController {
         }
             
         else {
+            print("좋아요 취소")
                 // 좋아요 통신
                 LikeService.shared.pickLike(idx) {
                     [weak self]
