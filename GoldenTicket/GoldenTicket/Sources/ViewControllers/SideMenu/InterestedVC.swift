@@ -14,6 +14,7 @@ class InterestedVC: UIViewController {
     // UICollectionView 의 Outlet 변수
     @IBOutlet var likeCollection: UICollectionView!
     @IBOutlet var navigationBar: UINavigationBar!
+    @IBOutlet var imgNoFavorite: UIImageView!
     
     // UICollectionView 에 들어가게 될 모델 타입의 배열을 생성합니다.
     var likeList: [Like] = []
@@ -27,7 +28,16 @@ class InterestedVC: UIViewController {
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = false
         
-        // collectionView에 들어갈 cell의 dummy data
+        if likeList.count == 0 {
+            // 관심있는 공연 있으면 이미지 보이기
+            imgNoFavorite.isHidden = false
+        }
+        else {
+            // 관심있는 공연 없으면 이미지 숨기기
+            imgNoFavorite.isHidden = true
+        }
+        
+        // collectionView에 들어갈 cell의 data setting
         setLikedata()
         
         // likeCollection 의 delegate 와 dataSource 의 위임자를 self 로 지정합니다.
@@ -99,7 +109,7 @@ extension InterestedVC: UICollectionViewDataSource
         let like = likeList[indexPath.row]
         
         cell.likeImg.imageFromUrl(like.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_main_benhur.jpg")
-        // cell.likeTitle.text = like.name
+            // cell.likeTitle.text = like.name
         return cell
     }
 }

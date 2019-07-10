@@ -80,11 +80,12 @@ struct ShowService {
     
     func showDetail(showIdx: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         
-        
+        let token = UserDefaults.standard
         let URL = APIConstants.ShowDetailURL + "/\(showIdx)"
         
         let header: HTTPHeaders = [
-            "Content-Type" : "application/json"
+            "Content-Type" : "application/json",
+            "token" : "\(token.string(forKey: "token")!)"  // token 보내야 함 ( 좋아요 통신 때문에 )
         ]
         
         

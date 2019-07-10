@@ -16,6 +16,7 @@ struct ShowDetail: Codable {
     let show_idx: Int
     let image_url: String
     let name, location, duration, original_price, discount_price, background_image: String
+    let is_liked: Int
     let schedule: [Schedule]?
     let artist: [Artist]?
     let poster: [Poster]?

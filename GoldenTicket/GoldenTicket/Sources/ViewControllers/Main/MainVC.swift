@@ -411,6 +411,8 @@ extension MainVC {
                 dvc.showBeforePrice = showDetail.original_price
                 dvc.showAfterPrice = showDetail.discount_price
                 
+                print("showDetail is liked \(showDetail.is_liked)")
+                
                 // image URL 얻어오기
                 let imageUrlString = showDetail.background_image
                 let imageUrl = URL(string: imageUrlString)!

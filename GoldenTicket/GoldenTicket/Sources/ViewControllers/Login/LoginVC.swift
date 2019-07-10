@@ -34,6 +34,16 @@ class LoginVC: UIViewController {
         unregisterForKeyboardNotifications()
     }
     
+    /* textField Delegate Method */
+    func textFieldShouldReturn (_ textField: UITextField) -> Bool {
+        if textField == self.emailTextField {
+            textField.resignFirstResponder()
+            self.passwdTextField.becomeFirstResponder()   // email 입력 후 비밀번호로 이동
+        }
+        textField.resignFirstResponder()
+        return true
+    }
+    
     
     @IBAction func loginBtn(_ sender: Any) {
         guard let email = emailTextField.text else { return }

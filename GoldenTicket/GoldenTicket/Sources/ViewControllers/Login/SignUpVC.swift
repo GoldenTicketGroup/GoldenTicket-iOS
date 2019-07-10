@@ -52,6 +52,29 @@ class SignUpVC: UIViewController {
         unregisterForKeyboardNotifications()
     }
     
+    
+    func textFieldShouldReturn (_ textField: UITextField) -> Bool {   //delegate method
+        if textField == self.userName {
+            textField.resignFirstResponder()
+            self.userEmail.becomeFirstResponder()   // ID 입력 후 비번으로 이동
+        }
+        else if textField == self.userEmail {
+            textField.resignFirstResponder()
+            self.userPhone.becomeFirstResponder()         // 비번 입력 후 이름으로 이동
+        }
+        else if textField == self.userPhone {
+            textField.resignFirstResponder()
+            self.userPasswd.becomeFirstResponder()         // 비번 입력 후 이름으로 이동
+        }
+        else if textField == self.userPasswd {
+            textField.resignFirstResponder()
+            self.checkPasswd.becomeFirstResponder()         // 비번 입력 후 이름으로 이동
+        }
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
     // 뒤로 가기 버튼
     @IBAction func backBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)

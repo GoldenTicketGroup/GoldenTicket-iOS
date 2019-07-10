@@ -144,38 +144,80 @@ class ShowDetailVC: UIViewController {
         showAfterPriceLabel.text = showAfterPrice
         showTimeLabel.text = showTime
         showLocationLabel.text = showLocation
-//      showDetailImage.image = detailPoster?.image
-        
-        /*
-         현재는 showDetailImage라는 UIImageView()에 받아오지만
-         collectionView로 할 경우 cell에 대한 정보는 이렇게 받아온다.
-         
-        let poster = posterList[indexpath.row]
-        cell.posterImage.imageFromUrl(poster.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
-        */
     }
     
     // 메인 화면으로 돌아가는 backButton 함수
     @IBAction func backButton(_ sender: UIButton) {
-        
         self.dismiss(animated: true, completion: nil)
-        
     }
     
     // 좋아요 버튼 누를 시 fill heart.
     @IBAction func onClickedLikeButton(_ sender: UIButton) {
         
-        sender.isSelected = !sender.isSelected
-        if sender.isSelected {
-            // 관심있는 공연에 추가되어있음
-            
-        }
-        else {
-            // 관심있는 공연에서 삭제함
-        }
+        guard let idx = self.showIdx else { return }
         
+        // 선택되어 있으면
+        if sender.isSelected {
+            
+            // 좋아요 취소 통신
+            LikeService.shared.pickNoLike(idx) {
+                [weak self]
+                data in
+                
+                guard let `self` = self else { return }
+                //print("data : \(data)")
+                switch data {
+                    
+                // 매개변수에 어떤 값을 가져올 것인지
+                case .success(let res):
+                    sender.isSelected = false
+                    print("좋아요 취소 성공")
+                    
+                case .requestErr(let message):
+                    self.simpleAlert(title: "좋아요 추가 실패", message: "\(message)")
+                    
+                case .pathErr:
+                    print(".pathErr")
+                    
+                case .serverErr:
+                    print(".serverErr")
+                    
+                case .networkFail:
+                    self.simpleAlert(title: "좋아요 추가 실패", message: "네트워크 상태를 확인해주세요.")
+                }
+            }
+        }
+            
+        else {
+                // 좋아요 통신
+                LikeService.shared.pickLike(idx) {
+                    [weak self]
+                    data in
+                    
+                    guard let `self` = self else { return }
+                    //print("data : \(data)")
+                    switch data {
+                        
+                    // 매개변수에 어떤 값을 가져올 것인지
+                    case .success(let res):
+                        print("좋아요 성공")
+                        sender.isSelected = true   // 버튼 선택 안된걸로 바꿈
+                        
+                    case .requestErr(let message):
+                        self.simpleAlert(title: "좋아요 추가 실패", message: "\(message)")
+                        
+                    case .pathErr:
+                        print(".pathErr")
+                        
+                    case .serverErr:
+                        print(".serverErr")
+                        
+                    case .networkFail:
+                        self.simpleAlert(title: "좋아요 추가 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
     }
-
+    }
     // 응모하기 창에서 화살표 버튼 클릭시 drawer 올리기.
     @IBAction func checkUpButton(_ sender: UIButton) {
         
@@ -369,5 +411,5 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
         btnDrop.setTitle("\(selectedRow!)", for: .normal)
         animate(toggle: false)
     }
-    
 }
+
