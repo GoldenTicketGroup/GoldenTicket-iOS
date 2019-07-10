@@ -32,19 +32,19 @@
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTicketBody" translatesAutoresizingMaskIntoConstraints="NO" id="wLd-5J-kuz">
-                                <rect key="frame" x="48.5" y="65" width="278" height="362"/>
+                                <rect key="frame" x="173.5" y="65" width="28" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wLd-5J-kuz" secondAttribute="height" multiplier="139:181" id="QTH-Io-Lb1"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTicketBottom" translatesAutoresizingMaskIntoConstraints="NO" id="xhu-RH-NZz">
-                                <rect key="frame" x="48.5" y="432" width="278" height="161"/>
+                                <rect key="frame" x="173.5" y="106" width="28" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xhu-RH-NZz" secondAttribute="height" multiplier="278:161" id="bPv-Dn-f5e"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0z-IM-OGy" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
-                                <rect key="frame" x="48.5" y="606" width="278" height="35"/>
+                                <rect key="frame" x="48.5" y="135" width="278" height="35"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="n1G-hA-QbV"/>
@@ -88,7 +88,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPc-oe-TkQ">
-                                <rect key="frame" x="83" y="199" width="209" height="1"/>
+                                <rect key="frame" x="83" y="-127" width="209" height="1"/>
                                 <color key="backgroundColor" red="0.6588235294117647" green="0.6588235294117647" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="oQ7-ou-C1Q"/>
@@ -96,7 +96,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RX5-Tf-muR">
-                                <rect key="frame" x="83" y="213" width="61.5" height="44.5"/>
+                                <rect key="frame" x="83" y="-113" width="61.5" height="44.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="결제 금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foK-pn-I1X">
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="18.5"/>
@@ -116,7 +116,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hkz-CS-uFB">
-                                <rect key="frame" x="83" y="271" width="209" height="1"/>
+                                <rect key="frame" x="83" y="-55" width="209" height="1"/>
                                 <color key="backgroundColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="OXa-d5-OrD"/>
@@ -124,7 +124,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IwP-Pp-G9Z">
-                                <rect key="frame" x="83" y="283" width="108" height="44"/>
+                                <rect key="frame" x="83" y="-43" width="108" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="받는 이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQr-eT-T2C">
                                         <rect key="frame" x="0.0" y="0.0" width="43" height="18"/>
@@ -144,7 +144,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJm-TL-0KS">
-                                <rect key="frame" x="83" y="336" width="209" height="1"/>
+                                <rect key="frame" x="83" y="10" width="209" height="1"/>
                                 <color key="backgroundColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="7WU-Bc-jYo"/>
@@ -152,7 +152,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2BB-F2-ZcJ">
-                                <rect key="frame" x="82" y="344" width="133" height="44"/>
+                                <rect key="frame" x="82" y="18" width="133" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계좌 번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ken-JX-YY2">
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="18"/>

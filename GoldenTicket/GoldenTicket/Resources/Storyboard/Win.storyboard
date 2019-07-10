@@ -13,7 +13,7 @@
         <!--WinVC-->
         <scene sceneID="WDW-at-6R8">
             <objects>
-                <viewController id="OMd-WM-cmE" customClass="WinVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="winVC" id="OMd-WM-cmE" customClass="WinVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O2j-1I-6Gv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

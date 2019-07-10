@@ -13,7 +13,7 @@
         <!--Title-->
         <scene sceneID="37a-wT-LUC">
             <objects>
-                <viewController id="nDL-gz-e4q" customClass="LoseVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loseVC" id="nDL-gz-e4q" customClass="LoseVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J67-9m-aQ2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
