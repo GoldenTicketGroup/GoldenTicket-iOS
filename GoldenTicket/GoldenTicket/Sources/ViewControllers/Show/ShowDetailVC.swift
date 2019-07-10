@@ -37,6 +37,8 @@ class ShowDetailVC: UIViewController {
 
     @IBOutlet weak var showDetailImage: UIImageView!
     
+    @IBOutlet weak var showDetailCollectionView: UICollectionView!
+    
     
     // MainVC 에서 storyboard로 전달 받는 dvc outlet
     var backgroundImg : UIImageView?
@@ -144,7 +146,7 @@ class ShowDetailVC: UIViewController {
         showAfterPriceLabel.text = showAfterPrice
         showTimeLabel.text = showTime
         showLocationLabel.text = showLocation
-        showDetailImage.image = detailPoster?.image
+//        showDetailImage.image = detailPoster?.image
         
         /*
          현재는 showDetailImage라는 UIImageView()에 받아오지만
@@ -284,20 +286,60 @@ extension ShowDetailVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        if collectionView == self.showDetailCollectionView {
+            return posterList.count
+        }
         return artistList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActorCVCell", for: indexPath) as! ActorCVCell
+        if collectionView == self.showDetailCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShowDetailCVCell", for: indexPath) as! ShowDetailCVCell
+            
+            let poster = posterList[indexPath.row]
+            
+            //cell.posterImage.imageFromUrl(poster.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
+            cell.posterImage.imageFromUrl(poster.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
+            
+            return cell
+            
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActorCVCell", for: indexPath) as! ActorCVCell
+            
+            // Want to get Actor Collection Cell
+            let actor = artistList[indexPath.row]
+            
+            cell.actorImage.imageFromUrl(actor.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/img_casting_01.jpg")
+            cell.actorName.text = actor.name
+            cell.castingName.text = actor.role
+            
+            return cell
+        }
+    }
+}
+
+extension ShowDetailVC : UICollectionViewDelegateFlowLayout {
+    // collection view cell의 width, height 지정
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         
-        // Want to get Actor Collection Cell
-        let actor = artistList[indexPath.row]
+        let width : CGFloat = view.frame.width
+        let height : CGFloat = view.frame.height - 2
         
-        cell.actorImage.imageFromUrl(actor.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/img_casting_01.jpg")
-        cell.actorName.text = actor.name
-        cell.castingName.text = actor.role
+        return CGSize(width: width, height: height)
+    }
+    // 수직 방향에서의 spacing
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return cell
+        return 0
+    }
+    //수평방향에서의 spacing
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    // 섹션 내부의 여백
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
 

@@ -125,6 +125,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="goShowButton" destination="nDY-Dp-yzl" id="aNQ-Ug-pDw"/>
+                        <outlet property="imageView" destination="L7f-On-3R2" id="TQb-iy-8c3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jmc-RW-zn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
