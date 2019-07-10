@@ -77,13 +77,6 @@ class InterestedVC: UIViewController {
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    /*
-    @IBAction func goToDetailViewController(sender: AnyObject) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "detailFeed") as! ToyDetailVC
-        self.present(vc, animated: true, completion: nil)
-    }
-    */
 }
 
 // UICollectionViewDataSource 를 채택합니다.
