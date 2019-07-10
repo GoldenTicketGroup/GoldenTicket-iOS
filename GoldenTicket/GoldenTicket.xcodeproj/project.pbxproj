@@ -17,6 +17,7 @@
 		08004B9D22D1D47700BA8AC0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9922D1D47700BA8AC0 /* AuthService.swift */; };
 		08004B9F22D31B5300BA8AC0 /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08004B9E22D31B5300BA8AC0 /* ResponseArray.swift */; };
 		0808EDDF22D4ABCA002E05CF /* UnpaidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808EDDE22D4ABCA002E05CF /* UnpaidViewController.swift */; };
+		0808EDE122D5BB54002E05CF /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0808EDE022D5BB54002E05CF /* LikeService.swift */; };
 		08099F0E22D42B1B00142C85 /* ResponseShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08099F0D22D42B1B00142C85 /* ResponseShow.swift */; };
 		080BF81D22CC57F400A06BBF /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080BF81C22CC57F400A06BBF /* Setting.storyboard */; };
 		080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */; };
@@ -98,6 +99,7 @@
 		08004B9922D1D47700BA8AC0 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		08004B9E22D31B5300BA8AC0 /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
 		0808EDDE22D4ABCA002E05CF /* UnpaidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnpaidViewController.swift; sourceTree = "<group>"; };
+		0808EDE022D5BB54002E05CF /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
 		08099F0D22D42B1B00142C85 /* ResponseShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseShow.swift; sourceTree = "<group>"; };
 		080BF81C22CC57F400A06BBF /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				08004B9922D1D47700BA8AC0 /* AuthService.swift */,
 				08004B9822D1D47700BA8AC0 /* ShowService.swift */,
 				F4FE457122D393E300E6C6B0 /* SearchService.swift */,
+				0808EDE022D5BB54002E05CF /* LikeService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				F40313EF22CAF61A00BB2737 /* SideMenuVC.swift in Sources */,
 				F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */,
 				F40313FE22CB344900BB2737 /* QuestionVC.swift in Sources */,
+				0808EDE122D5BB54002E05CF /* LikeService.swift in Sources */,
 				F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */,
 				080EA9B622D08B14000D074C /* ResponseString.swift in Sources */,
 				08004B8222D0974000BA8AC0 /* SplashVC.swift in Sources */,

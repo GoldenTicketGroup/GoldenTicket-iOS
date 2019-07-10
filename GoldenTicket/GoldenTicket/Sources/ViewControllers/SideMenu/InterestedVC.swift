@@ -17,6 +17,7 @@ class InterestedVC: UIViewController {
     
     // UICollectionView 에 들어가게 될 모델 타입의 배열을 생성합니다.
     var likeList: [Like] = []
+    var showIdx : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -139,15 +140,33 @@ extension InterestedVC
 {
     func setLikedata()
     {
-        let like1 = Like(title: "뮤지컬 벤허", likeName: "posterMainBenhur")
-        let like2 = Like(title: "뮤지컬 벤허", likeName: "posterMainBenhur")
-        let like3 = Like(title: "뮤지컬 벤허", likeName: "posterMainBenhur")
-        let like4 = Like(title: "뮤지컬 벤허", likeName: "posterMainBenhur")
-        let like5 = Like(title: "뮤지컬 벤허", likeName: "posterMainBenhur")
-        let like6 = Like(title: "뮤지컬 벤허", likeName: "posterMainBenhur")
-        let like7 = Like(title: "뮤지컬 벤허", likeName: "posterMainBenhur")
-        let like8 = Like(title: "뮤지컬 벤허", likeName: "posterMainBenhur")
-        likeList = [like1, like2, like3, like4, like5, like6, like7, like8]
+        guard let idx = self.showIdx else { return }
+        // 통신을 시도합니다.
+        LikeService.shared.pickLike(showIdx: idx) {
+            data in
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                
+                self.likeList = res as! [Like]
+                self.likeCollection.reloadData()
+                print("좋아요 성공")
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "좋아요 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "좋아요 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
     }
 }
 
