@@ -16,4 +16,10 @@ class ActorCVCell: UICollectionViewCell {
     
     @IBOutlet weak var castingName: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        actorImage.makeRounded(cornerRadius: 38)
+    }
+    
 }

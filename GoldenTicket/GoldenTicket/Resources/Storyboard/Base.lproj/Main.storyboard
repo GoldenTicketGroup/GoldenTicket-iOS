@@ -940,7 +940,7 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-ef-Wbu">
-                                <rect key="frame" x="0.0" y="448" width="375" height="220"/>
+                                <rect key="frame" x="0.0" y="706" width="375" height="220"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-6Y-ir8">
                                         <rect key="frame" x="165" y="1" width="44" height="44"/>
