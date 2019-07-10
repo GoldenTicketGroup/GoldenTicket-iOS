@@ -413,24 +413,23 @@ extension MainVC {
                 
                 print("이미지 url", showDetail.background_image)
                 
-                // 2. Poster Struct
-                let poster = showDetail.poster
-                dvc.detailPoster = UIImageView()
-                dvc.detailPoster!.imageFromUrl(poster![5].image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
                 
                 // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
                 dvc.timeList = showDetail.schedule!
                 self.present(dvc, animated: true)
                 self.navigationController?.pushViewController(dvc, animated: true)
                 
-                /*
+                
+                // 2. Poster Struct
+                let poster = showDetail.poster
+                dvc.posterList = poster!
+
                 // 2. Actor Struct
-                let actorDetail = res as! [Artist]
-                dvc.serverActorImage = UIImageView()
-                dvc.serverActorImage!.imageFromUrl(actorDetail[0].image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/img_casting_01.jpg")
-                dvc.serverActorName = actorDetail[0].name
-                dvc.serverCastingName = actorDetail[0].role
-                */
+                let artistDetail = showDetail.artist
+                // let artistDetail = res as! [Artist]
+                
+                // dvc에 있는 배우들 리스트에 서버 통신해서 꽂아주기
+                dvc.artistList = artistDetail!
                 
             case .requestErr(let message):
                 self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")

@@ -12,7 +12,8 @@ import Hero
 
 class ShowDetailVC: UIViewController {
     
-    var actorList : [Artist] = []
+    var artistList : [Artist] = []
+    var posterList : [Poster] = []
     var timeList : [Schedule] = []
     var showIdx : Int?
     var selectedRow : String?
@@ -46,11 +47,6 @@ class ShowDetailVC: UIViewController {
     var showTime : String?
     var showLocation : String?
     var detailPoster : UIImageView?
-    
-    // MainVC 에서 storyboard로 전달 받는 actor 변수 선언
-    var serverActorImage : UIImageView?
-    var serverActorName : String?
-    var serverCastingName : String?
     
     //응모하기 뷰
     @IBOutlet weak var checkView: CustomView!
@@ -104,6 +100,8 @@ class ShowDetailVC: UIViewController {
         scrollView.delegate = self
     }
     
+    
+    /* 어떻게 하면 선택된 cell 값의 title을 얻어올 수 있을까? */
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
@@ -147,6 +145,14 @@ class ShowDetailVC: UIViewController {
         showTimeLabel.text = showTime
         showLocationLabel.text = showLocation
         showDetailImage.image = detailPoster?.image
+        
+        /*
+         현재는 showDetailImage라는 UIImageView()에 받아오지만
+         collectionView로 할 경우 cell에 대한 정보는 이렇게 받아온다.
+         
+        let poster = posterList[indexpath.row]
+        cell.posterImage.imageFromUrl(poster.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
+        */
     }
     
     // 메인 화면으로 돌아가는 backButton 함수
@@ -276,23 +282,22 @@ extension ShowDetailVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return actorList.count
+        return artistList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActorCVCell", for: indexPath) as! ActorCVCell
         
-        let actor = actorList[indexPath.row]
+        // Want to get Actor Collection Cell
+        let actor = artistList[indexPath.row]
         
-        cell.actorImage.image = serverActorImage?.image
-        cell.actorName.text = serverActorName
-        cell.castingName.text = serverCastingName
+        cell.actorImage.imageFromUrl(actor.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/img_casting_01.jpg")
+        cell.actorName.text = actor.name
+        cell.castingName.text = actor.role
         
         return cell
     }
-    
 }
-
 
 extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -311,6 +316,7 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 선택된 인덱스의 값의 타이틀이 보여지는 코드
+        self.selectedRow = timeList[indexPath.row].time
         btnDrop.setTitle("\(selectedRow!)", for: .normal)
         animate(toggle: false)
     }

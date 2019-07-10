@@ -888,14 +888,14 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-rU-vfr">
-                                                <rect key="frame" x="12" y="30" width="19" height="26"/>
+                                                <rect key="frame" x="12" y="30" width="16" height="22"/>
                                                 <state key="normal" image="btBack"/>
                                                 <connections>
                                                     <action selector="backButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="355-g7-rou"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jJ-wz-Z0A">
-                                                <rect key="frame" x="334" y="29" width="25" height="24"/>
+                                                <rect key="frame" x="343" y="29" width="16" height="22"/>
                                                 <state key="normal" image="iconLikeNoFill"/>
                                                 <connections>
                                                     <action selector="onClickedLikeButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="VAR-1z-Gdx"/>

@@ -69,9 +69,9 @@ class SettingVC: UITableViewController {
             
             
             //UserDefaults.standard.removePersistentDomain(forName: "token")
-            UserDefaults.standard.removeObject(forKey: "token")
-            UserDefaults.standard.synchronize()
-//            let token = UserDefaults.standard
+            // UserDefaults.standard.set(forKey: "token", value: nil)
+            // UserDefaults.standard.synchronize()
+            let token = UserDefaults.standard
 //            let dictionary = defaults.dictionaryRepresentation()
 //            dictionary.keys.forEach {key in
 //                defaults.removeObject(forKey: "token")
