@@ -323,7 +323,7 @@ extension ShowDetailVC : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         
         let width : CGFloat = view.frame.width
-        let height : CGFloat = view.frame.height
+        let height : CGFloat = view.frame.height - 2
         
         return CGSize(width: width, height: height)
     }
