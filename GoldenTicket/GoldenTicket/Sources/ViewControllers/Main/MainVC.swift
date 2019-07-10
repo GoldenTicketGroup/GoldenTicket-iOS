@@ -16,6 +16,9 @@ class MainVC: UIViewController {
     @IBOutlet var userName: UILabel!
     var showIdx: Int?
     
+    // time label 시간 통신
+    var lotteryTime : String?
+    
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
     
@@ -250,6 +253,46 @@ class MainVC: UIViewController {
         present(dvc, animated: true)
     }
     
+    
+    @IBAction func lotteryCheckOne(_ sender: Any) {
+        
+        let num = arc4random_uniform(1)
+        print(num)
+        if num == 0 {
+            let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
+            let win = storyboardWin.instantiateViewController(withIdentifier: "winVC")
+            
+            present(win, animated: true)
+        } else {
+            let storyboardLose = UIStoryboard.init(name: "Lose", bundle: nil)
+            let lose = storyboardLose.instantiateViewController(withIdentifier: "loseVC")
+            
+            present(lose, animated: true)
+        }
+    }
+    
+    
+    @IBAction func lotteryCheckTwo(_ sender: Any) {
+        let num = arc4random_uniform(2)
+        print(num)
+        if num == 0 {
+            let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
+            let win = storyboardWin.instantiateViewController(withIdentifier: "winVC")
+            
+            present(win, animated: true)
+        } else if num == 1 {
+            let storyboardLose = UIStoryboard.init(name: "Lose", bundle: nil)
+            let lose = storyboardLose.instantiateViewController(withIdentifier: "loseVC")
+            
+            present(lose, animated: true)
+        } else {
+            
+        }
+    }
+    
+    
+    
+    
     // side Menu bar 의 제스쳐를 지정해주는 함수.
     func setupSideMenu() {
         
@@ -278,6 +321,8 @@ class MainVC: UIViewController {
         let storyboardContent = UIStoryboard.init(name: "Contents", bundle: nil)
         let dvc = storyboardContent.instantiateViewController(withIdentifier: "contentsVC")
         present(dvc, animated: true)
+        
+        
         
     }
     

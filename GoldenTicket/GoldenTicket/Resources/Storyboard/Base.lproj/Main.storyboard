@@ -362,6 +362,9 @@
                                                                 <state key="normal" title="당첨확인">
                                                                     <color key="titleColor" red="0.94325107340000003" green="0.65697437520000002" blue="0.50585037470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="lotteryCheckOne:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="soN-bu-nwl"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -385,6 +388,9 @@
                                                                 <state key="normal" title="당첨확인">
                                                                     <color key="titleColor" red="0.94325107340000003" green="0.65697437520000002" blue="0.50585037470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="lotteryCheckTwo:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="Nbl-LK-Y1G"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

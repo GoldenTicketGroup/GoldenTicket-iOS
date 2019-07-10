@@ -45,6 +45,8 @@
 		F4012DA322D5D11E00F71861 /* noTicket.gif in Resources */ = {isa = PBXBuildFile; fileRef = F4012DA222D5D11E00F71861 /* noTicket.gif */; };
 		F4012DA522D5DAB200F71861 /* LotteryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA422D5DAB200F71861 /* LotteryService.swift */; };
 		F4012DA722D5DDE500F71861 /* Lottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA622D5DDE500F71861 /* Lottery.swift */; };
+		F4012DA922D5E42400F71861 /* LotteryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA822D5E42400F71861 /* LotteryList.swift */; };
+		F4012DAB22D5E9DF00F71861 /* ResponseLottery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DAA22D5E9DF00F71861 /* ResponseLottery.swift */; };
 		F402F30A22CDBCF90047B976 /* Contents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F402F30922CDBCF90047B976 /* Contents.storyboard */; };
 		F402F30C22CDD2A70047B976 /* ContentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402F30B22CDD2A70047B976 /* ContentsVC.swift */; };
 		F402F33B22CF0F610047B976 /* LotteryCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402F33A22CF0F610047B976 /* LotteryCheckCell.swift */; };
@@ -134,6 +136,8 @@
 		F4012DA222D5D11E00F71861 /* noTicket.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = noTicket.gif; sourceTree = "<group>"; };
 		F4012DA422D5DAB200F71861 /* LotteryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryService.swift; sourceTree = "<group>"; };
 		F4012DA622D5DDE500F71861 /* Lottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottery.swift; sourceTree = "<group>"; };
+		F4012DA822D5E42400F71861 /* LotteryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryList.swift; sourceTree = "<group>"; };
+		F4012DAA22D5E9DF00F71861 /* ResponseLottery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLottery.swift; sourceTree = "<group>"; };
 		F402F30922CDBCF90047B976 /* Contents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contents.storyboard; sourceTree = "<group>"; };
 		F402F30B22CDD2A70047B976 /* ContentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsVC.swift; sourceTree = "<group>"; };
 		F402F33A22CF0F610047B976 /* LotteryCheckCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryCheckCell.swift; sourceTree = "<group>"; };
@@ -318,6 +322,8 @@
 				080EA9B722D08B74000D074C /* ResponseDefault.swift */,
 				08099F0D22D42B1B00142C85 /* ResponseShow.swift */,
 				F4012DA622D5DDE500F71861 /* Lottery.swift */,
+				F4012DA822D5E42400F71861 /* LotteryList.swift */,
+				F4012DAA22D5E9DF00F71861 /* ResponseLottery.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -634,6 +640,7 @@
 			files = (
 				080EA9B822D08B74000D074C /* ResponseDefault.swift in Sources */,
 				08004B9B22D1D47700BA8AC0 /* APIConstants.swift in Sources */,
+				F4012DAB22D5E9DF00F71861 /* ResponseLottery.swift in Sources */,
 				F4955BFE22C8587300530906 /* MainShowCell.swift in Sources */,
 				F402F33B22CF0F610047B976 /* LotteryCheckCell.swift in Sources */,
 				F4FE456322D36F3700E6C6B0 /* LoseVC.swift in Sources */,
@@ -661,6 +668,7 @@
 				08004B8222D0974000BA8AC0 /* SplashVC.swift in Sources */,
 				08004B9C22D1D47700BA8AC0 /* ShowService.swift in Sources */,
 				F4012DA522D5DAB200F71861 /* LotteryService.swift in Sources */,
+				F4012DA922D5E42400F71861 /* LotteryList.swift in Sources */,
 				F402F30C22CDD2A70047B976 /* ContentsVC.swift in Sources */,
 				080BF82122CC840400A06BBF /* Like.swift in Sources */,
 				F440B3A322C63C6900B8AFD6 /* LoginVC.swift in Sources */,
