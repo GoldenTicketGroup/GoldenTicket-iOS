@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import SwiftGifOrigin
+import SwiftOverlayShims
 
 class NoTicketVC: UIViewController {
 
     @IBOutlet weak var goShowButton: UIButton!
+    @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
+        self.imageView.image = UIImage.gif(name: "noTicket")
+        
+        do {
+            let imageData = try Data(contentsOf: Bundle.main.url(forResource: "noTicket", withExtension: "gif")!)
+            self.imageView.image = UIImage.gif(data: imageData)
+            
+        } catch {
+            print(error)
+        }
         // Do any additional setup after loading the view.
         goShowButton.layer.cornerRadius = 17.5
         goShowButton.layer.masksToBounds = true

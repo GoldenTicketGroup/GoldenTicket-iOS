@@ -32,19 +32,19 @@
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTicketBody" translatesAutoresizingMaskIntoConstraints="NO" id="wLd-5J-kuz">
-                                <rect key="frame" x="173.5" y="65" width="28" height="36"/>
+                                <rect key="frame" x="48.5" y="65" width="278" height="362"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wLd-5J-kuz" secondAttribute="height" multiplier="139:181" id="QTH-Io-Lb1"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTicketBottom" translatesAutoresizingMaskIntoConstraints="NO" id="xhu-RH-NZz">
-                                <rect key="frame" x="173.5" y="106" width="28" height="16"/>
+                                <rect key="frame" x="48.5" y="432" width="278" height="161"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xhu-RH-NZz" secondAttribute="height" multiplier="278:161" id="bPv-Dn-f5e"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0z-IM-OGy" customClass="CustomButton" customModule="GoldenTicket" customModuleProvider="target">
-                                <rect key="frame" x="48.5" y="135" width="278" height="35"/>
+                                <rect key="frame" x="48.5" y="606" width="278" height="35"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="n1G-hA-QbV"/>
@@ -88,7 +88,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPc-oe-TkQ">
-                                <rect key="frame" x="83" y="-127" width="209" height="1"/>
+                                <rect key="frame" x="83" y="199" width="209" height="1"/>
                                 <color key="backgroundColor" red="0.6588235294117647" green="0.6588235294117647" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="oQ7-ou-C1Q"/>
@@ -96,7 +96,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RX5-Tf-muR">
-                                <rect key="frame" x="83" y="-113" width="61.5" height="44.5"/>
+                                <rect key="frame" x="83" y="213" width="61.5" height="44.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="결제 금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foK-pn-I1X">
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="18.5"/>
@@ -116,7 +116,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hkz-CS-uFB">
-                                <rect key="frame" x="83" y="-55" width="209" height="1"/>
+                                <rect key="frame" x="83" y="271" width="209" height="1"/>
                                 <color key="backgroundColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="OXa-d5-OrD"/>
@@ -124,7 +124,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IwP-Pp-G9Z">
-                                <rect key="frame" x="83" y="-43" width="108" height="44"/>
+                                <rect key="frame" x="83" y="283" width="108" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="받는 이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQr-eT-T2C">
                                         <rect key="frame" x="0.0" y="0.0" width="43" height="18"/>
@@ -144,7 +144,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJm-TL-0KS">
-                                <rect key="frame" x="83" y="10" width="209" height="1"/>
+                                <rect key="frame" x="83" y="336" width="209" height="1"/>
                                 <color key="backgroundColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="7WU-Bc-jYo"/>
@@ -152,7 +152,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2BB-F2-ZcJ">
-                                <rect key="frame" x="82" y="18" width="133" height="44"/>
+                                <rect key="frame" x="82" y="344" width="133" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계좌 번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ken-JX-YY2">
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="18"/>
@@ -171,20 +171,37 @@
                                     <constraint firstAttribute="width" secondItem="2BB-F2-ZcJ" secondAttribute="height" multiplier="133:44" id="LQZ-Fe-FtO"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0N-kJ-cOX">
-                                <rect key="frame" x="72.5" y="-21.5" width="230" height="117.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0N-kJ-cOX">
+                                <rect key="frame" x="52" y="465" width="272" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="d0N-kJ-cOX" secondAttribute="height" multiplier="211:108" id="bIb-7g-8nJ"/>
-                                </constraints>
-                                <string key="text">골든티켓 결제는 무통장입금으로만 가능합니다.
-
+                                <attributedString key="attributedText">
+                                    <fragment content="결제는 ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="무통장입금">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">으로만 가능합니다.
 30분 내 미입금 시 자동 취소됩니다.
-
 결제 시 취소와 환불이 불가합니다.
-
 입금 확인 후 안내 문자가 발송됩니다.</string>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -192,7 +209,6 @@
                         <constraints>
                             <constraint firstItem="xhu-RH-NZz" firstAttribute="top" secondItem="wLd-5J-kuz" secondAttribute="bottom" constant="5" id="1An-Qa-CLO"/>
                             <constraint firstItem="qoO-Xb-dai" firstAttribute="top" secondItem="bFn-GM-nCE" secondAttribute="bottom" constant="23" id="36B-Qv-nNj"/>
-                            <constraint firstItem="4sL-Uy-VcI" firstAttribute="bottom" secondItem="d0N-kJ-cOX" secondAttribute="bottom" constant="100" id="7Zn-Kk-X1S"/>
                             <constraint firstItem="4sL-Uy-VcI" firstAttribute="trailing" secondItem="E9I-pN-bc0" secondAttribute="trailing" constant="224" id="Af1-PW-IV4"/>
                             <constraint firstItem="IwP-Pp-G9Z" firstAttribute="top" secondItem="Hkz-CS-uFB" secondAttribute="bottom" constant="11" id="BIi-Z9-E74"/>
                             <constraint firstItem="2BB-F2-ZcJ" firstAttribute="leading" secondItem="4sL-Uy-VcI" secondAttribute="leading" constant="82" id="DAy-CY-fx7"/>
@@ -210,7 +226,6 @@
                             <constraint firstItem="wLd-5J-kuz" firstAttribute="top" secondItem="bFn-GM-nCE" secondAttribute="bottom" constant="1" id="SQN-qa-MwD"/>
                             <constraint firstItem="RX5-Tf-muR" firstAttribute="leading" secondItem="4sL-Uy-VcI" secondAttribute="leading" constant="83" id="T88-tn-M4h"/>
                             <constraint firstItem="wLd-5J-kuz" firstAttribute="top" secondItem="4sL-Uy-VcI" secondAttribute="top" constant="45" id="VVb-yw-8OJ"/>
-                            <constraint firstItem="d0N-kJ-cOX" firstAttribute="centerX" secondItem="4sL-Uy-VcI" secondAttribute="centerX" id="VyH-0v-EuO"/>
                             <constraint firstItem="4sL-Uy-VcI" firstAttribute="trailing" secondItem="2BB-F2-ZcJ" secondAttribute="trailing" constant="160" id="Wcn-gY-Vwg"/>
                             <constraint firstItem="xhu-RH-NZz" firstAttribute="width" secondItem="wLd-5J-kuz" secondAttribute="width" id="Y0K-Iv-pCt"/>
                             <constraint firstItem="4sL-Uy-VcI" firstAttribute="trailing" secondItem="QJm-TL-0KS" secondAttribute="trailing" constant="83" id="ZYZ-ki-t66"/>

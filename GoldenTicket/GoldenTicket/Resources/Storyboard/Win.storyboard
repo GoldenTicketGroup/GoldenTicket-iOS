@@ -32,8 +32,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="축하합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiW-no-rCf">
-                                <rect key="frame" x="141" y="461" width="93" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <rect key="frame" x="141.5" y="461" width="92" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.64313725489999995" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -46,14 +46,14 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제는 30분 안에 진행해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQP-A4-Tvl">
-                                <rect key="frame" x="92.5" y="496" width="190" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <rect key="frame" x="93.5" y="496" width="188.5" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30분이 지나면 자동 취소됩니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CM-xq-18E">
-                                <rect key="frame" x="113" y="519" width="149.5" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                <rect key="frame" x="95" y="524" width="185" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -82,11 +82,11 @@
                             <constraint firstItem="eQP-A4-Tvl" firstAttribute="centerX" secondItem="O2j-1I-6Gv" secondAttribute="centerX" id="EXY-Fp-GH3"/>
                             <constraint firstItem="fJz-Yj-ZEn" firstAttribute="bottom" secondItem="ogk-yd-nlM" secondAttribute="bottom" constant="21" id="Lat-Co-vyf"/>
                             <constraint firstItem="DHA-od-14o" firstAttribute="top" secondItem="Crr-O6-6vF" secondAttribute="bottom" constant="30" id="Qg2-XX-eUq"/>
-                            <constraint firstItem="3CM-xq-18E" firstAttribute="top" secondItem="eQP-A4-Tvl" secondAttribute="bottom" constant="5" id="W5U-U7-7QM"/>
                             <constraint firstItem="HiW-no-rCf" firstAttribute="centerX" secondItem="O2j-1I-6Gv" secondAttribute="centerX" id="bQC-JN-zaf"/>
                             <constraint firstItem="eQP-A4-Tvl" firstAttribute="bottom" secondItem="N8E-H6-4F3" secondAttribute="bottom" id="cQT-JC-qg2"/>
                             <constraint firstItem="ogk-yd-nlM" firstAttribute="centerX" secondItem="O2j-1I-6Gv" secondAttribute="centerX" id="cjI-Lo-6vH"/>
                             <constraint firstItem="3CM-xq-18E" firstAttribute="centerX" secondItem="O2j-1I-6Gv" secondAttribute="centerX" id="iUO-or-N7v"/>
+                            <constraint firstItem="3CM-xq-18E" firstAttribute="top" secondItem="eQP-A4-Tvl" secondAttribute="bottom" constant="10" id="mQH-2f-NdZ"/>
                             <constraint firstItem="Crr-O6-6vF" firstAttribute="centerX" secondItem="O2j-1I-6Gv" secondAttribute="centerX" id="sTD-Pc-3mv"/>
                             <constraint firstItem="N8E-H6-4F3" firstAttribute="centerX" secondItem="O2j-1I-6Gv" secondAttribute="centerX" id="xx2-pP-nD2"/>
                         </constraints>
