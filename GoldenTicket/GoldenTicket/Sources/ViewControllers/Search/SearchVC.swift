@@ -35,10 +35,16 @@ class SearchVC: UIViewController {
     
 
     @IBAction func backButton(_ sender: Any) {
-        let storyboardMain = UIStoryboard.init(name: "Main", bundle: nil)
-        let goBack = storyboardMain.instantiateViewController(withIdentifier: "MainVC")
-        
-        present(goBack, animated: true)
+        // 우선적으로 검색 기록이 남아있는경우 dismiss 해주기
+        if collectionView.isHidden == false {
+            searchField.text = ""
+            collectionView.isHidden = true
+        } else {
+            let storyboardMain = UIStoryboard.init(name: "Main", bundle: nil)
+            let goBack = storyboardMain.instantiateViewController(withIdentifier: "MainVC")
+            
+            present(goBack, animated: true)
+        }
     }
     
     
