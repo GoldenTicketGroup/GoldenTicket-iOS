@@ -53,7 +53,7 @@ class InterestedVC: UIViewController {
         guard let indexPath = likeCollection.indexPathForItem(at: location) else {return}
         
         // 해당하는 index 의 model 를 반환합니다.
-        let item = likeList[indexPath.row]
+        // let item = likeList[indexPath.row]
         
         /*
         // alert 를 발생하는 메소드입니다.
@@ -88,7 +88,7 @@ extension InterestedVC: UICollectionViewDataSource
     // 현재는 likeList 배열의 count 갯수 만큼 반환합니다.
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return likeList.count
+        return likeList.count   // 0
     }
     
     // 각 index 에 해당하는 셀에 데이터를 주입합니다.
@@ -98,8 +98,8 @@ extension InterestedVC: UICollectionViewDataSource
         
         let like = likeList[indexPath.row]
         
-        cell.likeImg.image = like.likeImage
-        // cell.likeTitle.text = like.likeTitle
+        cell.likeImg.imageFromUrl(like.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_main_benhur.jpg")
+        // cell.likeTitle.text = like.name
         return cell
     }
 }
@@ -140,9 +140,10 @@ extension InterestedVC
 {
     func setLikedata()
     {
+        
         guard let idx = self.showIdx else { return }
-        // 통신을 시도합니다.
-        LikeService.shared.pickLike(showIdx: idx) {
+        
+        ShowService.shared.showInterest(showIdx: idx) {
             data in
             
             switch data {

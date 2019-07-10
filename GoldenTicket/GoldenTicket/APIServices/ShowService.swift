@@ -144,6 +144,68 @@ struct ShowService {
                     break
                 }
             }
+    }
+    
+    /**
+     홈 화면 공연 띄우는 통신 메소드
+     **/
+    func showInterest(showIdx: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
+        
+        let token = UserDefaults.standard
+        
+        let header: HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "header" : "\(token.string(forKey: "token")!)"
+        ]
+        
+        Alamofire.request(APIConstants.LikeURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
+            .responseData { response in
+                
+                //print(response.error?.localizedDescription)
+                switch response.result {
+                    
+                // 통신 성공
+                case .success:
+                    if let value = response.result.value {
+                        if let status = response.response?.statusCode {
+                            
+                            
+                            switch status {
+                            case 200:
+                                do {
+                                    let decoder = JSONDecoder()
+                                    
+                                    let result = try decoder.decode(ResponseArray<Like>.self, from: value)
+                                    // print("finish decode")
+                                    
+                                    switch result.success {
+                                    case true:
+                                        completion(.success(result))
+                                    case false:
+                                        completion(.requestErr(result))
+                                    }
+                                } catch {
+                                    completion(.pathErr)
+                                }
+                            case 400:
+                                completion(.pathErr)
+                            case 500:
+                                completion(.serverErr)
+                                
+                            default:
+                                break
+                            }
+                        }
+                    }
+                    break
+                    
+                // 통신 실패
+                case .failure(let err):
+                    print("error",err.localizedDescription)
+                    completion(.networkFail)
+                    break
+                }
+        }
         
     }
 }

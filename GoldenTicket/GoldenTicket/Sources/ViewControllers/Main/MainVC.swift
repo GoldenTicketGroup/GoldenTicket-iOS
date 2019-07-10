@@ -379,6 +379,8 @@ extension MainVC : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        // let showDetail = showDetailList[indexPath.row]
+        // self.showIdx = showDetail.show_idx
         // 임시로 인덱스 지정
         self.showIdx = 20
         // data setting
@@ -453,11 +455,14 @@ extension MainVC {
                 dvc.showTime = showDetail.duration
                 dvc.showBeforePrice = showDetail.original_price
                 dvc.showAfterPrice = showDetail.discount_price
-                dvc.backgroundImg = UIImageView()
-                dvc.backgroundImg!.imageFromUrl(showDetail.background_image, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/backimg_benhur_info.jpg")
                 
-                print("이미지 url", showDetail.background_image)
+                // image URL 얻어오기
+                let imageUrlString = showDetail.background_image
+                let imageUrl = URL(string: imageUrlString)!
+                let imageData = try! Data(contentsOf: imageUrl)
+                let image = UIImage(data: imageData)
                 
+                dvc.backgroundImg = image
                 
                 // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
                 dvc.timeList = showDetail.schedule!
@@ -491,6 +496,3 @@ extension MainVC {
         }
     }
 }
-
-//extnesion setTimeLabel(){
-//LotteryService.shared.함수명

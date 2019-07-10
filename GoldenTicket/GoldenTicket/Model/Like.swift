@@ -9,15 +9,8 @@
 import Foundation
 import UIKit
 
-// 서버 연결 후 codable로 재작성해야함
-// like colloection view 더미 데이터
-struct Like {
-    var likeImage: UIImage?
-    var likeTitle: String
-    
-    init(title: String, likeName: String) {
-        self.likeImage = UIImage(named: likeName)
-        self.likeTitle = title
-    }
-    
+struct Like: Codable {
+    var show_idx: Int
+    var image_url: String
+    var name: String
 }
