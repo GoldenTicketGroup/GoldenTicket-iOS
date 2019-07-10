@@ -10,15 +10,19 @@ import Foundation
 import Alamofire
 
 struct LikeService {
+    
     static let shared = LikeService()
     
-    func pickLike(showIdx: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
-        
-        let token = UserDefaults.standard
+    let token = UserDefaults.standard
+    
+    
+    /* 좋아요를 눌렀을 때 통신 */
+    
+    func searchShow (_ showIdx: Int, completion: @escaping (NetworkResult<Any>)->Void) {
         
         let header: HTTPHeaders = [
             "Content-Type" : "application/json",
-            "header" : "\(token.string(forKey: "token")!)"
+            "header" : "\(token)"
         ]
         
         let body : Parameters = [
@@ -28,8 +32,6 @@ struct LikeService {
         Alamofire.request(APIConstants.LikeURL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
                 
-                //print(response.error?.localizedDescription)
-                print("응답 \(response)")
                 switch response.result {
                     
                 // 통신 성공
@@ -37,27 +39,22 @@ struct LikeService {
                     if let value = response.result.value {
                         if let status = response.response?.statusCode {
                             
-                            
                             switch status {
                             case 200:
                                 do {
                                     let decoder = JSONDecoder()
                                     
-                                    // 데이터 encoding 하는 방법
-                                    // print("데이터",String(data:value, encoding: .utf8))
+                                    // ResponseDefault.swift codable
                                     let result = try decoder.decode(ResponseDefault.self, from: value)
-                                    // print("finish decode")
                                     
                                     switch result.success {
                                     case true:
-                                        completion(.success(result))
+                                        completion(.success(result.message))
                                     case false:
-                                        completion(.requestErr(result))
+                                        completion(.requestErr(result.message))
                                     }
                                 } catch {
                                     completion(.pathErr)
-                                    // print(error.localizedDescription)   // 에러 출력
-                                    // debugPrint(error) // check which key is missing
                                 }
                             case 400:
                                 completion(.pathErr)
@@ -73,11 +70,10 @@ struct LikeService {
                     
                 // 통신 실패
                 case .failure(let err):
-                    print("error",err.localizedDescription)
+                    print(err.localizedDescription)
                     completion(.networkFail)
                     break
                 }
         }
-        
     }
 }

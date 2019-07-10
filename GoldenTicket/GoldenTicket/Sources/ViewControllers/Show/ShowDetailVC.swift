@@ -34,14 +34,12 @@ class ShowDetailVC: UIViewController {
     @IBOutlet weak var showTimeLabel: UILabel!
     
     @IBOutlet weak var showLocationLabel: UILabel!
-
-    @IBOutlet weak var showDetailImage: UIImageView!
     
     @IBOutlet weak var showDetailCollectionView: UICollectionView!
     
     
     // MainVC 에서 storyboard로 전달 받는 dvc outlet
-    var backgroundImg : UIImageView?
+    var backgroundImg : UIImage?
     var posterImg : UIImageView?
     var showName : String?
     var showBeforePrice : String?
@@ -139,14 +137,14 @@ class ShowDetailVC: UIViewController {
     // 나타낼 데이터들 지정해주기
     func setContent() {
         
-        backgroundImage.image = backgroundImg?.image
+        backgroundImage.image = backgroundImg
         posterImage.image = posterImg?.image
         showTitle.text = showName
         showBeforePriceLabel.text = showBeforePrice
         showAfterPriceLabel.text = showAfterPrice
         showTimeLabel.text = showTime
         showLocationLabel.text = showLocation
-//        showDetailImage.image = detailPoster?.image
+//      showDetailImage.image = detailPoster?.image
         
         /*
          현재는 showDetailImage라는 UIImageView()에 받아오지만
@@ -170,6 +168,7 @@ class ShowDetailVC: UIViewController {
         sender.isSelected = !sender.isSelected
         if sender.isSelected {
             // 관심있는 공연에 추가되어있음
+            
         }
         else {
             // 관심있는 공연에서 삭제함
