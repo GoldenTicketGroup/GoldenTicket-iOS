@@ -68,9 +68,8 @@ class SettingVC: UITableViewController {
             alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
             
             
-            //UserDefaults.standard.removePersistentDomain(forName: "token")
-            // UserDefaults.standard.set(forKey: "token", value: nil)
-            // UserDefaults.standard.synchronize()
+            // UserDefaults.standard.removePersistentDomain(forName: "token")
+            UserDefaults.standard.set(nil, forKey: "token")
             let token = UserDefaults.standard
 //            let dictionary = defaults.dictionaryRepresentation()
 //            dictionary.keys.forEach {key in
@@ -78,7 +77,7 @@ class SettingVC: UITableViewController {
 //            }
             
             self.present(alert, animated: true)
-            // print(token.string(forKey: "token"))
+            print(token.string(forKey: "token"))
             // token 삭제해도 nil이 아닌 쓰레기 값이 들어감
         }
     }
