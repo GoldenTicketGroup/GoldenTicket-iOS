@@ -15,6 +15,8 @@
 
 스크린 샷
 ------------
+<img width="233" alt="스크린샷 2019-07-11 오후 6 53 19" src="https://user-images.githubusercontent.com/49272528/61041415-3b6c6380-a40d-11e9-90f7-7bf1aa3dab95.png">   <img width="233" alt="스크린샷 2019-07-11 오후 6 52 36" src="https://user-images.githubusercontent.com/49272528/61041550-7a9ab480-a40d-11e9-8d39-f0e78138eb11.png">   <img width="233" alt="스크린샷 2019-07-11 오후 6 51 24" src="https://user-images.githubusercontent.com/49272528/61041637-a3bb4500-a40d-11e9-83e0-a4b39fbb27f1.png">
+
 
 
 
@@ -34,11 +36,13 @@
 ------------
 |  <center>기능</center> |  <center>개발 여부</center> |  <center> 기타 사항 </center> |
 |:--------:|:--------:|:--------:|
-|<center> 공연정보 보여주기 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
+|<center> 로그인/회원가입 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
+|<center> 홈 공연정보 보여주기 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
+|<center> 공연 상세 정보 보여주기 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
 |<center> 응모하기 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
 |<center> 응모한 공연 시간 정보 보여주기 </center> | <center> ○ </center> |<center>  </center> |
 |<center> 당첨 확인 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
-|<center> 관심있는 공연 설정 </center> | <center>cell 3x2 </center> |<center>cell 1x2 </center> |
+|<center> 관심있는 공연 설정 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
 |<center> 알림 (관심있는 공연 / 당첨확인) </center> | <center> X : 개발자 계정이 없어 apns 이용 불가 </center> |<center> </center> |
 |<center> 검색 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
 
