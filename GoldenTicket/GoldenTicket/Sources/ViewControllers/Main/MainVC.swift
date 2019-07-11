@@ -410,6 +410,8 @@ extension MainVC : UICollectionViewDelegate {
 
 // 통신 데이터 세팅.
 extension MainVC {
+    
+    // 메인화면 공연 정보 통신 setting 해주기.
     func setShowData() {
         
         ShowService.shared.showHome() {
@@ -440,6 +442,8 @@ extension MainVC {
             }
         }
     }
+    
+    // 공연 상세뷰 통신 data setting 해주기.
     
     func setDetailData() {
         
@@ -524,6 +528,8 @@ extension MainVC {
             }
         }
     }
+    
+    // 응모한 공연시간 정보 setting 해주기.
     
     func setTimeLabel() {
         

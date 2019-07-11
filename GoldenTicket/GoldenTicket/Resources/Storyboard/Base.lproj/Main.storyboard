@@ -245,14 +245,14 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou3-Xp-7h6">
-                                                <rect key="frame" x="16" y="30" width="29" height="27"/>
+                                                <rect key="frame" x="16" y="30" width="16" height="22"/>
                                                 <state key="normal" image="btHambergerMain"/>
                                                 <connections>
                                                     <segue destination="G85-yn-wn5" kind="presentation" id="lTV-DF-B40"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-FN-U4B">
-                                                <rect key="frame" x="326" y="29" width="33" height="31"/>
+                                                <rect key="frame" x="343" y="29" width="16" height="22"/>
                                                 <state key="normal" image="btTicketMain"/>
                                                 <connections>
                                                     <action selector="showTicket:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="HtV-qi-0l1"/>
@@ -901,21 +901,6 @@
                                                     <constraint firstItem="HUu-XJ-QB2" firstAttribute="top" secondItem="8RS-70-l1f" secondAttribute="top" constant="35" id="waP-hy-Axf"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-rU-vfr">
-                                                <rect key="frame" x="12" y="30" width="16" height="22"/>
-                                                <state key="normal" image="btBack"/>
-                                                <connections>
-                                                    <action selector="backButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="355-g7-rou"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jJ-wz-Z0A">
-                                                <rect key="frame" x="343" y="29" width="16" height="22"/>
-                                                <state key="normal" image="iconLikeNoFill"/>
-                                                <state key="selected" image="iconLikeFill"/>
-                                                <connections>
-                                                    <action selector="onClickedLikeButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="VAR-1z-Gdx"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공연정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yl3-F2-vLP">
                                                 <rect key="frame" x="31" y="556" width="59" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -965,6 +950,21 @@
                                                     <outlet property="delegate" destination="txR-zd-iJi" id="1vt-0R-NrG"/>
                                                 </connections>
                                             </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jJ-wz-Z0A">
+                                                <rect key="frame" x="334" y="29" width="25" height="24"/>
+                                                <state key="normal" image="iconLikeNoFill"/>
+                                                <state key="selected" image="iconLikeFill"/>
+                                                <connections>
+                                                    <action selector="onClickedLikeButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="VAR-1z-Gdx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-rU-vfr">
+                                                <rect key="frame" x="12" y="30" width="19" height="26"/>
+                                                <state key="normal" image="btBack"/>
+                                                <connections>
+                                                    <action selector="backButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="355-g7-rou"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>

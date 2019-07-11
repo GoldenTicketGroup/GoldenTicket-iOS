@@ -300,7 +300,7 @@ Cgo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ErN-jV-mj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="60"/>
+            <point key="canvasLocation" x="390" y="58"/>
         </scene>
         <!--Contents MusicalVC-->
         <scene sceneID="4lQ-xa-f2n">
@@ -569,7 +569,7 @@ Cgo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVY-yx-76g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2209" y="59"/>
+            <point key="canvasLocation" x="2870" y="58"/>
         </scene>
     </scenes>
     <resources>
