@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
+  - AnimatedCollectionViewLayout (0.6.0)
   - Hero (1.4.0)
   - Kingfisher (4.10.1)
   - SideMenu (5.0.3)
@@ -9,6 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
+  - AnimatedCollectionViewLayout
   - Hero
   - Kingfisher (~> 4.10.1)
   - SideMenu
@@ -19,6 +21,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AnimatedCollectionViewLayout
     - Hero
     - Kingfisher
     - SideMenu
@@ -28,6 +31,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AnimatedCollectionViewLayout: f2c4e8dda4e3f1678ad6c0b39273a31b19bc935d
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
@@ -35,6 +39,6 @@ SPEC CHECKSUMS:
   SwiftyGif: f7702483db93586a41f04f4927cd682852a2fa10
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 7a7959a4d67aea7b980cbfaa1221cd3a8459960f
+PODFILE CHECKSUM: 6ce38b86e95797bb670b8548dc5b8d4ce0a9eae3
 
 COCOAPODS: 1.7.3

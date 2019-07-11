@@ -21,7 +21,7 @@ class MainShowCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        showImage.layer.cornerRadius = 10
+        showImage.layer.cornerRadius = 20
         showImage.layer.masksToBounds = true
     }
 

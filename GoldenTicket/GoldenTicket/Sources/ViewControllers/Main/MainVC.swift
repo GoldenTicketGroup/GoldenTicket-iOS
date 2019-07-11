@@ -10,6 +10,7 @@ import UIKit
 import Hero
 import SideMenu
 import Kingfisher
+import AnimatedCollectionViewLayout
 
 class MainVC: UIViewController {
     
@@ -67,8 +68,17 @@ class MainVC: UIViewController {
     var showList : [Show] = []
     var showDetailList : [ShowDetail] = []
     
+    //메인화면 공연 collectin view animator 설정
+    let animator : (LayoutAttributesAnimator, Bool, Int, Int) = (LinearCardAttributesAnimator(), false, 1, 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //메인 공연 collection view animation 지정해주기.
+        if let layout = showCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
+            //layout.scrollDirection = direction
+            layout.animator = animator.0
+        }
         
         // 세팅하기.
         setShowData()
@@ -342,7 +352,7 @@ extension MainVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == self.showCollectionView {
-        return showList.count
+            return showList.count
         }
         return lotteryList.count
         
@@ -389,6 +399,23 @@ extension MainVC : UICollectionViewDelegate {
     }
 }
 
+extension MainVC : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.bounds.width - 40, height: view.bounds.height)
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 23, bottom: 0, right: 23)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 19
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 19
+    }
+}
 
 // 통신 데이터 세팅.
 extension MainVC {
