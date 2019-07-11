@@ -23,6 +23,8 @@ class TicketVC: UIViewController {
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var seatLabel: UILabel!
+    @IBOutlet var imgQrCode: UIImageView!
+    
     var isPaid : Int?
     var ticketIdx : Int?
     var todayTicket : WinTicket!
@@ -65,12 +67,14 @@ class TicketVC: UIViewController {
                 print("오늘 티켓 조회 성공")
                 
                 self.todayTicket = res as! WinTicket
+                self.ticketView.imageFromUrl(self.todayTicket.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_ticket_cats%403x.jpg")
                 self.dateLabel.text = self.todayTicket.date
                 self.titleLabel.text = self.todayTicket.name
-                self.priceLabel.text = self.todayTicket.price
+                self.priceLabel.text = self.todayTicket.seat_name + " " + self.todayTicket.price
                 self.locationLabel.text = self.todayTicket.location
                 self.timeLabel.text = self.todayTicket.running_time
                 self.seatLabel.text = self.todayTicket.seat_type
+                self.imgQrCode.imageFromUrl(self.todayTicket.qr_code, defaultImgPath: "https://raw.githubusercontent.com/zpao/qrcode.react/HEAD/qrcode.png")
                 
             case .requestErr(let message):
                 self.simpleAlert(title: "오늘 티켓 조회 실패", message: "\(message)")

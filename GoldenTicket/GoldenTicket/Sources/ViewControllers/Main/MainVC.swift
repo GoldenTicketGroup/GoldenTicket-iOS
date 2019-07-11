@@ -20,13 +20,8 @@ class MainVC: UIViewController {
     // time label 시간 통신
     var lotteryTime1 : String!
     var lotteryTime2 : String!
-
-    // time label 시간 통신 테스트
-    //var lotteryTest : String = "09/09/2019 09:09:09 p"
-
     
     // 응모한 공연 없는지 여부
-
     var noLottery = false
     
     //홈 공연 상세 정보에 필요한 outlet
@@ -82,12 +77,6 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //메인 공연 collection view animation 지정해주기.
-//        if let layout = showCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
-//            //layout.scrollDirection = direction
-//            layout.animator = animator.0
-//        }
-        
         
         // 세팅하기.
         setShowData()
@@ -114,17 +103,10 @@ class MainVC: UIViewController {
         monthMusicalButton.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 6)
         searchButton.makeRounded(cornerRadius: 20)
         searchButton.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 3)
-//
-//        if timeList.count == 0 {
-//            setLotteryView.isHidden = true
-//        } else {
-//            noLotteryHere.isHidden = true
-//            noLotteryHere.isHidden = true
-//        }
+
         noLotteryHere.isHidden = true
         noLotteryView.isHidden = true
 
-        
     } // viewDidLoad
     
     
@@ -240,7 +222,7 @@ class MainVC: UIViewController {
         firstLotteryView.isHidden = false
     }
     
-    // 오른쪽 버튼 누를 시 뷰 이동
+    // 오른쪽 버튼 누를 시 오늘 뷰 이동
     @IBAction func rightButton(_ sender: Any) {
         let visibleItems: NSArray = self.lotteryCollectionView.indexPathsForVisibleItems as NSArray
         
@@ -264,7 +246,8 @@ class MainVC: UIViewController {
     }
     
     
-    // 티켓 버튼 누를 시 당첨된 티켓 / 당첨 되지 않았다는 뷰를 보여주는 함수.
+    // 티켓 버튼 누를 시 당첨된 티켓
+    // 여부에 따라 분기 처리
     @IBAction func showTicket(_ sender: Any) {
         
         let storyboardNone = UIStoryboard.init(name: "NoTicket", bundle: nil)
@@ -298,8 +281,7 @@ class MainVC: UIViewController {
         present(win, animated: true)
     }
     
-    
-    
+
     
     // side Menu bar 의 제스쳐를 지정해주는 함수.
     func setupSideMenu() {
@@ -482,8 +464,6 @@ extension MainVC {
                 dvc.showBeforePrice = self.showDetail.original_price
                 dvc.showAfterPrice = self.showDetail.discount_price
                 dvc.checkisLiked = self.showDetail.is_liked     // 다음 스토리보드로 좋아요 여부 보내기
-
-                print("showDetail is liked \(self.showDetail.is_liked) in MainVC")
                 
                 // image URL 얻어오기
                 let imageUrlString2 = self.showDetail.background_image
@@ -559,8 +539,8 @@ extension MainVC {
                     // 응모한 공연이 2개
                     self.lotteryTime1 = self.timeList[0].start_time     // 응모한 공연 1
                     self.lotteryTime2 = self.timeList[1].start_time     // 응모한 공연 2
-                    print("lotteryTime1 \(self.lotteryTime1!)")
-                    print("lotteryTime2 \(self.lotteryTime2!)")
+                    // print("lotteryTime1 \(self.lotteryTime1!)")
+                    // print("lotteryTime2 \(self.lotteryTime2!)")
                     
                     timer1.fire()
                     timer2.fire()

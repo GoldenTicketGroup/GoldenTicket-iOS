@@ -118,9 +118,26 @@ struct TicketService {
                                 } catch {
                                     completion(.pathErr)
                                 }
+                            case 204:
+                                // 당첨내역이 존재하지 않습니다.
+                                do {
+                                    let decoder = JSONDecoder()
+                                    
+                                    let result = try decoder.decode(ResponseDefault.self, from: value)
+                                    print("TicketService totayticket finish decode")
+                                    
+                                    switch result.success {
+                                    case true:
+                                        completion(.success(result))
+                                    case false:
+                                        completion(.requestErr(result))
+                                    }
+                                } catch {
+                                    completion(.pathErr)
+                                }
                             case 400:
                                 completion(.pathErr)
-                            case 500:
+                            case 600:
                                 completion(.serverErr)
                                 
                             default:

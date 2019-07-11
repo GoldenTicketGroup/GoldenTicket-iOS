@@ -157,6 +157,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="dateLabel" destination="wu2-DH-yLk" id="suc-gA-ADM"/>
+                        <outlet property="imgQrCode" destination="J2X-qi-QIb" id="tbI-rp-qNY"/>
                         <outlet property="locationLabel" destination="VcF-AK-Vs5" id="WiI-Ma-s8E"/>
                         <outlet property="navigationBar" destination="RH1-cA-A5K" id="Saa-CD-l6q"/>
                         <outlet property="okButton" destination="Z6l-aj-MsK" id="J79-pp-NP7"/>
