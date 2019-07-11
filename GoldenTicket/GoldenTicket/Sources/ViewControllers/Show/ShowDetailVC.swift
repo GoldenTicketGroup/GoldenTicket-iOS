@@ -101,6 +101,7 @@ class ShowDetailVC: UIViewController {
         //scroll view delegate
         scrollView.delegate = self
         
+
         if checkisLiked == 1 {
             // 좋아요 되어있어야 함
             let btnImage = UIImage(named: "iconLikeFill")
@@ -110,6 +111,14 @@ class ShowDetailVC: UIViewController {
             let btnNoImage = UIImage(named: "iconLikeNoFill")
             self.likeButton.setImage(btnNoImage, for: .normal)
         }
+
+//        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
+//
+//        let dvc2 = storyboardMain.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+//
+//        dvc2.lotteryList.append(MainVC.Lottery(title: "캣츠"))
+//        print(dvc2.lotteryList)
+
     }
     
     
@@ -308,6 +317,16 @@ class ShowDetailVC: UIViewController {
     @IBAction func selectShow(_ sender: Any) {
         let storyboardLottery = UIStoryboard(name: "Lottory", bundle: nil)
         let dvc = storyboardLottery.instantiateViewController(withIdentifier: "waitLottery")
+//
+//        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
+//
+//        let dvc2 = storyboardMain.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+//
+//        dvc2.lotteryList.append(MainVC.Lottery(title: "캣츠"))
+//        print(dvc2.lotteryList)
+//        dvc2.lotteryRightButton.isHidden = false
+//        
+//        print(dvc2.lotteryList.count)
         present(dvc, animated: true)
     }
     
