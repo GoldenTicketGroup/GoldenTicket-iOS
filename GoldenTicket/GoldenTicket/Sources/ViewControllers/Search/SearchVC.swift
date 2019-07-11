@@ -17,7 +17,14 @@ class SearchVC: UIViewController {
     
     @IBOutlet weak var searchView: UIView!
     
+    // 좋아요 버튼
+    //@IBOutlet weak var likeButton: UIButton!
+    
+    
     var searchShowList : [SearchShow] = []
+    
+    var checkisLiked : Int?  // 좋아요가 체크 되어있나요? 0: 아니요. 1: 예
+    var showIdx : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +38,92 @@ class SearchVC: UIViewController {
         searchView.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 2)
         searchView.makeRounded(cornerRadius: 22.5)
         searchView.layer.masksToBounds = false
+        
+        //좋아요 버튼
+        if checkisLiked == 1 {
+            // 좋아요 되어있어야 함
+            //likeButton.isSelected = true
+            //            let btnImage = UIImage(named: "iconLikeFill")
+            //            self.likeButton.setImage(btnImage , for: .normal)
+        }
+        else {
+            //likeButton.isSelected = false
+            //            let btnNoImage = UIImage(named: "iconLikeNoFill")
+            //            self.likeButton.setImage(btnNoImage, for: .normal)
+        }
+
     }
+    
+    @IBAction func onClickedLikeButton(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        guard let idx = self.showIdx else { return }
+        
+        // 선택되어 있으면
+        if sender.isSelected {
+            print("좋아요")
+            
+            // 좋아요 통신
+            LikeService.shared.pickLike(idx) {
+                [weak self]
+                data in
+                
+                guard let `self` = self else { return }
+                print("data : \(data)")
+                switch data {
+                    
+                // 매개변수에 어떤 값을 가져올 것인지
+                case .success(let res):
+                    print("좋아요 성공")
+                    sender.isSelected = true   // 버튼 선택 안된걸로 바꿈
+                    
+                case .requestErr(let message):
+                    self.simpleAlert(title: "좋아요 추가 실패", message: "\(message)")
+                    
+                case .pathErr:
+                    print(".pathErr")
+                    
+                case .serverErr:
+                    print(".serverErr")
+                    
+                case .networkFail:
+                    self.simpleAlert(title: "좋아요 추가 실패", message: "네트워크 상태를 확인해주세요.")
+                }
+            }
+        }
+            
+        else {
+            print("좋아요 취소")
+            
+            // 좋아요 통신
+            LikeService.shared.pickNoLike(idx) {
+                [weak self]
+                data in
+                
+                guard let `self` = self else { return }
+                //print("data : \(data)")
+                switch data {
+                    
+                // 매개변수에 어떤 값을 가져올 것인지
+                case .success(let res):
+                    sender.isSelected = false
+                    print("좋아요 취소 성공")
+                    
+                case .requestErr(let message):
+                    self.simpleAlert(title: "좋아요 추가 실패", message: "\(message)")
+                    
+                case .pathErr:
+                    print(".pathErr")
+                    
+                case .serverErr:
+                    print(".serverErr")
+                    
+                case .networkFail:
+                    self.simpleAlert(title: "좋아요 추가 실패", message: "네트워크 상태를 확인해주세요.")
+                }
+            }
+        }
+    }
+    
     
 
     @IBAction func backButton(_ sender: Any) {

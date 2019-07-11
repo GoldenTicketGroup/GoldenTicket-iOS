@@ -19,14 +19,4 @@ class SearchCVCell: UICollectionViewCell {
         self.layer.masksToBounds = true
         
     }
-
-    @IBAction func likeButton(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-        if sender.isSelected {
-            // 관심있는 공연에 추가되어있음
-        }
-        else {
-            // 관심있는 공연에서 삭제함
-        }
-    }
 }
