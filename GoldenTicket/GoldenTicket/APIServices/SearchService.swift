@@ -12,6 +12,9 @@ import Alamofire
 struct SearchService {
     static let shared = SearchService()
     
+    /**
+     검색하는 통신
+     **/
     func searchShow (_ text: String, completion: @escaping (NetworkResult<Any>)->Void) {
         
         let header: HTTPHeaders = [

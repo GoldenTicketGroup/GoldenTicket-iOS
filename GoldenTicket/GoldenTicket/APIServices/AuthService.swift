@@ -32,9 +32,6 @@ struct AuthService {
             "password": password
         ]
         
-        // method는 서버가 명시한대로 적어주면 되고
-        // parametersms body이고 그 안에 id, password
-        // encoding : json 타입을 읽어올 방법
         
         Alamofire.request(APIConstants.LoginURL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
@@ -109,10 +106,6 @@ struct AuthService {
             "password": password
         ]
         
-        // method는 서버가 명시한대로 적어주면 되고
-        // parametersms body이고 그 안에 id, password
-        // encoding : json 타입을 읽어올 방법
-        
         Alamofire.request(APIConstants.SignupURL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
                 // parameter 위치
@@ -186,10 +179,6 @@ struct AuthService {
             "email": email,
             "phone": phone
         ]
-        
-        // method는 서버가 명시한대로 적어주면 되고
-        // parametersms body이고 그 안에 id, password
-        // encoding : json 타입을 읽어올 방법
         
         Alamofire.request(APIConstants.EditUserURL, method: .put, parameters: body, encoding: JSONEncoding.default, headers: header)
             .responseData { response in

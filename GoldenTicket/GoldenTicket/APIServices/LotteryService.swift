@@ -190,7 +190,7 @@ struct LotteryService {
                                     
                                     // 데이터 encoding 하는 방법
                                     // print("데이터",String(data:value, encoding: .utf8))
-                                    let result = try decoder.decode(ResponseArray<Ticket>.self, from: value)
+                                    let result = try decoder.decode(ResponseArray<WinList>.self, from: value)
                                     // print("result \(result)")
                                     // print(type(of: result))
                                     // print("finish decode")

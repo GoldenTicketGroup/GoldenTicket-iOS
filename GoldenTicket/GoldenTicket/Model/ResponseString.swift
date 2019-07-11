@@ -10,7 +10,6 @@ import Foundation
 
 // MARK: - ResponseString
 // 성공했을 때 response body
-// MARK: - ResponseString
 struct ResponseString: Codable {
     let status: Int
     let success: Bool

@@ -24,12 +24,17 @@ struct APIConstants {
     /* 검색 (Search) */
     static let SearchURL = BaseURL + "/search/text"
     static let SearchKeywordURL = BaseURL + "/search"
-    
-    /* -------- 완료 -------- */
-    
+
     /* 응모 (Lottery) */
     static let LotteryURL = BaseURL + "/lottery"
     
     /* 좋아요 (Like) */
     static let LikeURL = BaseURL + "/show/like"
+    
+    /* 당첨 (Tikcet) */
+    static let TicketURL = BaseURL + "/ticket"
+    static let TodayTicketURL = BaseURL + "/ticket/detail"
+    
+    /* 카드 (Card) */
+    static let CardURL = BaseURL + "/card"
 }

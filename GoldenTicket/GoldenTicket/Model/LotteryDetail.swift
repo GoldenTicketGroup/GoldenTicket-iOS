@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 // 응모 티켓
-struct Ticket : Codable {
+struct LotteryDetail : Codable {
     let ticketIdx : Int
     let state : Int
 }

@@ -9,6 +9,7 @@
 import Foundation
 
 // MARK: - ResponseArray
+// data가 배열인 경우
 struct ResponseArray<T: Codable>: Codable  {
     let status: Int
     let success: Bool

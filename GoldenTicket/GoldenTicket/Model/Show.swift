@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-// 서버와 연결한 뒤에는 codable 로 작성
-// 지금은 colloection view 가 제대로 나타나는지를 위한 테스트용 더미데이터
+// MARK: - Show
+// 공연 메인 뷰 통신 모델
 struct Show: Codable {
     let show_idx:Int
     let image_url:String
@@ -18,20 +18,3 @@ struct Show: Codable {
     let location:String
     let running_time:String
 }
-
-/*
-struct ShowData:Codable {
-    let show_idx:Int
-    let image_url:String
-    let name:String
-    let location:String
-    let running_time:String
-}
- 
- struct Show: Codable {
- let showImage: Int?
- let showTitle: String
- let showLocation: String
- let showTime: String
- }
-*/

@@ -77,7 +77,6 @@ class SettingVC: UITableViewController {
 //            }
             
             self.present(alert, animated: true)
-            print(token.string(forKey: "token"))
             // token 삭제해도 nil이 아닌 쓰레기 값이 들어감
         }
     }

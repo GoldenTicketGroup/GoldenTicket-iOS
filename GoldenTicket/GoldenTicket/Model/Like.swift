@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// MARK: - Like
+// 관심있는 공연
 struct Like: Codable {
     var show_idx: Int
     var image_url: String

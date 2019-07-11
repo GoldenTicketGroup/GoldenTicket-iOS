@@ -9,6 +9,8 @@
 import UIKit
 import Foundation
 
+// MARK: - SearchShow
+// 검색
 struct SearchShow : Codable {
     let show_idx : Int
     let image_url : String

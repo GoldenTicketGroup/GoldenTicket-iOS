@@ -23,10 +23,11 @@
 		080BF81D22CC57F400A06BBF /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080BF81C22CC57F400A06BBF /* Setting.storyboard */; };
 		080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */; };
 		080BF82122CC840400A06BBF /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82022CC840400A06BBF /* Like.swift */; };
-		080BF82422CC8D5000A06BBF /* Win.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82322CC8D5000A06BBF /* Win.swift */; };
+		080BF82422CC8D5000A06BBF /* WinList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82322CC8D5000A06BBF /* WinList.swift */; };
 		080BF82622CC8EC400A06BBF /* WinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080BF82522CC8EC400A06BBF /* WinCell.swift */; };
 		080EA9B622D08B14000D074C /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B522D08B14000D074C /* ResponseString.swift */; };
 		080EA9B822D08B74000D074C /* ResponseDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B722D08B74000D074C /* ResponseDefault.swift */; };
+		0813244022D7674700C32863 /* TicketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813243F22D7674700C32863 /* TicketService.swift */; };
 		0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836ED5822C5A72D006295D3 /* Notice.storyboard */; };
 		0836EDA622C750F7006295D3 /* Win.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDA522C750F7006295D3 /* Win.storyboard */; };
 		0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAB22C75A24006295D3 /* Lottory.storyboard */; };
@@ -45,7 +46,7 @@
 		F4012DA122D5B9D800F71861 /* ShowDetailCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA022D5B9D800F71861 /* ShowDetailCVCell.swift */; };
 		F4012DA322D5D11E00F71861 /* noTicket.gif in Resources */ = {isa = PBXBuildFile; fileRef = F4012DA222D5D11E00F71861 /* noTicket.gif */; };
 		F4012DA522D5DAB200F71861 /* LotteryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA422D5DAB200F71861 /* LotteryService.swift */; };
-		F4012DA722D5DDE500F71861 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA622D5DDE500F71861 /* Ticket.swift */; };
+		F4012DA722D5DDE500F71861 /* LotteryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA622D5DDE500F71861 /* LotteryDetail.swift */; };
 		F4012DA922D5E42400F71861 /* LotteryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA822D5E42400F71861 /* LotteryList.swift */; };
 		F4012DAD22D64B4300F71861 /* TutorialMidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DAC22D64B4300F71861 /* TutorialMidVC.swift */; };
 		F402F30A22CDBCF90047B976 /* Contents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F402F30922CDBCF90047B976 /* Contents.storyboard */; };
@@ -112,10 +113,11 @@
 		080BF81C22CC57F400A06BBF /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		080BF81E22CC828D00A06BBF /* LikeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCollectionViewCell.swift; sourceTree = "<group>"; };
 		080BF82022CC840400A06BBF /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
-		080BF82322CC8D5000A06BBF /* Win.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Win.swift; path = GoldenTicket/Model/Win.swift; sourceTree = SOURCE_ROOT; };
+		080BF82322CC8D5000A06BBF /* WinList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WinList.swift; path = GoldenTicket/Model/WinList.swift; sourceTree = SOURCE_ROOT; };
 		080BF82522CC8EC400A06BBF /* WinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinCell.swift; sourceTree = "<group>"; };
 		080EA9B522D08B14000D074C /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
 		080EA9B722D08B74000D074C /* ResponseDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDefault.swift; sourceTree = "<group>"; };
+		0813243F22D7674700C32863 /* TicketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketService.swift; sourceTree = "<group>"; };
 		0836ED5822C5A72D006295D3 /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
 		0836EDA522C750F7006295D3 /* Win.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Win.storyboard; sourceTree = "<group>"; };
 		0836EDAB22C75A24006295D3 /* Lottory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottory.storyboard; sourceTree = "<group>"; };
@@ -138,7 +140,7 @@
 		F4012DA022D5B9D800F71861 /* ShowDetailCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailCVCell.swift; sourceTree = "<group>"; };
 		F4012DA222D5D11E00F71861 /* noTicket.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = noTicket.gif; sourceTree = "<group>"; };
 		F4012DA422D5DAB200F71861 /* LotteryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryService.swift; sourceTree = "<group>"; };
-		F4012DA622D5DDE500F71861 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		F4012DA622D5DDE500F71861 /* LotteryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryDetail.swift; sourceTree = "<group>"; };
 		F4012DA822D5E42400F71861 /* LotteryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryList.swift; sourceTree = "<group>"; };
 		F4012DAC22D64B4300F71861 /* TutorialMidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMidVC.swift; sourceTree = "<group>"; };
 		F402F30922CDBCF90047B976 /* Contents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contents.storyboard; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				F4FE457122D393E300E6C6B0 /* SearchService.swift */,
 				F4012DA422D5DAB200F71861 /* LotteryService.swift */,
 				0808EDE022D5BB54002E05CF /* LikeService.swift */,
+				0813243F22D7674700C32863 /* TicketService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -314,17 +317,17 @@
 		08CBCB4022C25610009C1199 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F4955C0122C8635A00530906 /* Show.swift */,
-				F43F453722C9A83200C53898 /* ShowDetail.swift */,
-				F4FE456F22D38DAE00E6C6B0 /* SearchShow.swift */,
-				080BF82022CC840400A06BBF /* Like.swift */,
-				080BF82322CC8D5000A06BBF /* Win.swift */,
 				08004B9E22D31B5300BA8AC0 /* ResponseArray.swift */,
 				080EA9B522D08B14000D074C /* ResponseString.swift */,
 				080EA9B722D08B74000D074C /* ResponseDefault.swift */,
+				F4955C0122C8635A00530906 /* Show.swift */,
+				F43F453722C9A83200C53898 /* ShowDetail.swift */,
 				08099F0D22D42B1B00142C85 /* ResponseShow.swift */,
+				F4FE456F22D38DAE00E6C6B0 /* SearchShow.swift */,
+				080BF82022CC840400A06BBF /* Like.swift */,
+				080BF82322CC8D5000A06BBF /* WinList.swift */,
 				F4012DA822D5E42400F71861 /* LotteryList.swift */,
-				F4012DA622D5DDE500F71861 /* Ticket.swift */,
+				F4012DA622D5DDE500F71861 /* LotteryDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -663,7 +666,7 @@
 				F40313EF22CAF61A00BB2737 /* SideMenuVC.swift in Sources */,
 				F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */,
 				F40313FE22CB344900BB2737 /* QuestionVC.swift in Sources */,
-				F4012DA722D5DDE500F71861 /* Ticket.swift in Sources */,
+				F4012DA722D5DDE500F71861 /* LotteryDetail.swift in Sources */,
 				0808EDE122D5BB54002E05CF /* LikeService.swift in Sources */,
 				F43F454022C9EB5500C53898 /* ActorCVCell.swift in Sources */,
 				080EA9B622D08B14000D074C /* ResponseString.swift in Sources */,
@@ -693,10 +696,11 @@
 				080BF81F22CC828D00A06BBF /* LikeCollectionViewCell.swift in Sources */,
 				F40313F822CB2E8C00BB2737 /* InterestedVC.swift in Sources */,
 				F440B3AB22C6437400B8AFD6 /* UIColor+Extensions.swift in Sources */,
-				080BF82422CC8D5000A06BBF /* Win.swift in Sources */,
+				080BF82422CC8D5000A06BBF /* WinList.swift in Sources */,
 				F4FE455822D3105800E6C6B0 /* TutorialLastVC.swift in Sources */,
 				08004B9D22D1D47700BA8AC0 /* AuthService.swift in Sources */,
 				0887886022CDCEDE00FE0E91 /* SignUpVC.swift in Sources */,
+				0813244022D7674700C32863 /* TicketService.swift in Sources */,
 				F4FE457222D393E300E6C6B0 /* SearchService.swift in Sources */,
 				F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */,
 				F402F33F22CF31C80047B976 /* NoTicketVC.swift in Sources */,

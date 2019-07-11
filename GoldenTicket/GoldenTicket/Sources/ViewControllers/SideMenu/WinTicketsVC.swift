@@ -13,7 +13,7 @@ class WinTicketsVC: UIViewController {
     @IBOutlet var winCollection: UICollectionView!
     @IBOutlet var navigationBar: UINavigationBar!
     
-    var winList : [Win] = []
+    var winList : [WinList] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +24,11 @@ class WinTicketsVC: UIViewController {
         navigationBar.isTranslucent = false
         
         // collectionView에 들어갈 당첨된 공연의 리스트
+        setWindata()
         
         // delegate 와 dataSource 의 위임자를 self 로 지정합니다.
         winCollection.dataSource = self
         // winCollection.delegate = self
-        setWindata()
         
         print(winList.count)
         
@@ -60,46 +60,27 @@ extension WinTicketsVC: UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WinCell", for: indexPath) as! WinCell
         
         let like = winList[indexPath.row]
-        
-        // cell의 정보를 담는다.
-        
+
         // 당첨된 공연의 포스터. ex) 벤허
-        cell.winImage.image = like.winImage
-        
-        // poster 이미지의 corner radius
-//        cell.winImage.layer.masksToBounds = true;
-//        cell.winImage.layer.cornerRadius = 19;
-        
-        
-        // poster image에 그림자를 넣기 위한 세팅
-//        cell.winImage.layer.masksToBounds = false
-//        cell.winImage.layer.shadowOffset = CGSize(width: 0, height: 3)
-//        cell.winImage.layer.shadowRadius = 6
-//        cell.winImage.layer.shadowOpacity = 0.35
-//        cell.winImage.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 3), opacity: 0.35, radius: 6)
+        cell.winImage.imageFromUrl(like.image_url, defaultImgPath: "https://file.mk.co.kr/meet/neds/2019/04/image_readtop_2019_222216_15549409753706252.jpg")
+
         cell.winImage.makeRounded(cornerRadius: 20)
         
         // 당첨된 공연의 날짜. ex) 2019년 06월 15일
-        cell.winDay.text = like.winDay
+        cell.winDay.text = like.date
         
         // 당첨된 공연의 제목. ex) 뮤지컬 벤허
-        cell.winTitle.text = like.winTitle
+        cell.winTitle.text = like.name
         
         // 당첨된 공연의 가격. ex) 일반 R석 20,000원
-        cell.winPrice.text = like.winPrice
+        cell.winPrice.text = like.price
         
         // 당첨된 공연의 위치. ex) 블루스퀘어 인터파크 홀
-        cell.winLocation.text = like.winLocation
+        cell.winLocation.text = like.location
         
         // 당첨된 공연의 시간. ex) 17:00~19:00
-        cell.winTime.text = like.winTime
+        cell.winTime.text = like.running_time
         
-        // ticket image에 그림자를 넣기 위한 세팅
-//        cell.ticketInfo.layer.masksToBounds = false
-//        cell.ticketInfo.layer.shadowOpacity = 1
-//        cell.ticketInfo.layer.shadowRadius = 6
-//        cell.ticketInfo.layer.shadowColor = UIColor.black16.cgColor
-//        cell.ticketInfo.layer.shadowOffset = CGSize(width: 0, height: 0)
         cell.ticketInfo.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 6)
         return cell
     }
@@ -109,15 +90,38 @@ extension WinTicketsVC
 {
     func setWindata()
     {
-        let win1 = Win(day: "2019년 06월 15일", title: "뮤지컬 벤허", price: "일반 R석 20,000원", location: "블루스퀘어 인터파크 홀", time: "17:00~19:00", winName: "posteKillMeNowInfo")
-        
-        let win2 = Win(day: "2019년 07월 15일", title: "뮤지컬 킬미나우", price: "S석 2,000원", location: "예술의 전당", time: "17:00~19:00", winName: "posteKillMeNowInfo")
-
-        let win3 = Win(day: "2019년 12월 15일", title: "뮤지컬 인터스텔라", price: "일반 R석 10,000원", location: "올림픽공원 K-아트 홀", time: "11:00~13:00", winName: "posteKillMeNowInfo")
-        
-        let win4 = Win(day: "2019년 12월 31일", title: "헤어스프레이", price: "자유 입석 1,000원", location: "현대백화점 현대카드 홀", time: "17:00~19:00", winName: "posteKillMeNowInfo")
-        
-        winList = [win1, win2, win3, win4]
+        TicketService.shared.showTicket() {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                print("당첨 티켓 리스트 조회 성공")
+                let response = res as! ResponseArray<WinList>
+                
+                // self.winList = response.data as! [WinList]
+                self.winList = res as! [WinList]
+                print(self.winList.count)
+                self.winCollection.reloadData()
+                
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "당첨 티켓 리스트 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "당첨 티켓 리스트 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
     }
 }
 

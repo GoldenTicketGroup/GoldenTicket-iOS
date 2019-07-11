@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 
-// 지금은 colloection view 가 제대로 나타나는지를 위한 테스트용 더미데이터
-// 필요한 데이터들 모두 적어둠, 아래 주석 처리는 일단 테스트에서 제외
-
+// MARK: - ShowDetail
+// 공연 상세 뷰 통신 모델
 struct ShowDetail: Codable {
     let show_idx: Int
     let image_url: String
