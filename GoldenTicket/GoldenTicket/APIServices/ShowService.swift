@@ -113,9 +113,9 @@ struct ShowService {
                                     // 데이터 encoding 하는 방법
                                     // print("데이터",String(data:value, encoding: .utf8))
                                     let result = try decoder.decode(ResponseShow.self, from: value)
-                                    print("result \(result)")
-                                    print(type(of: result))
-                                     print("finish decode")
+                                    // print("result \(result)")
+                                    // print(type(of: result))
+                                    // print("finish decode")
                                     
                                     switch result.success {
                                     case true:
@@ -149,10 +149,11 @@ struct ShowService {
             }
     }
     
+    
     /**
-     홈 화면 공연 띄우는 통신 메소드
+     관심있는 공연 리스트 띄우는 통신 메소드
      **/
-    func showInterest(showIdx: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
+    func showInterest(completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let token = UserDefaults.standard
         
@@ -161,7 +162,7 @@ struct ShowService {
             "header" : "\(token.string(forKey: "token")!)"
         ]
         
-        Alamofire.request(APIConstants.LikeURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
+        Alamofire.request(APIConstants.InterestURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
                 
                 //print(response.error?.localizedDescription)
@@ -179,7 +180,7 @@ struct ShowService {
                                     let decoder = JSONDecoder()
                                     
                                     let result = try decoder.decode(ResponseArray<Like>.self, from: value)
-                                    // print("finish decode")
+                                    // print("interested finish decode")
                                     
                                     switch result.success {
                                     case true:

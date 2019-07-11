@@ -468,8 +468,9 @@ extension MainVC {
                 dvc.showTime = self.showDetail.duration
                 dvc.showBeforePrice = self.showDetail.original_price
                 dvc.showAfterPrice = self.showDetail.discount_price
-                
-                print("showDetail is liked \(self.showDetail.is_liked)")
+                dvc.checkisLiked = self.showDetail.is_liked     // 다음 스토리보드로 좋아요 여부 보내기
+
+                print("showDetail is liked \(self.showDetail.is_liked) in MainVC")
                 
                 // image URL 얻어오기
                 let imageUrlString2 = self.showDetail.background_image

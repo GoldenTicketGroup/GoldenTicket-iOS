@@ -28,6 +28,7 @@ class InterestedVC: UIViewController {
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = false
         
+        print("likelist \(likeList.count)")
         if likeList.count == 0 {
             // 관심있는 공연 있으면 이미지 보이기
             imgNoFavorite.isHidden = false
@@ -47,6 +48,19 @@ class InterestedVC: UIViewController {
         // likeCollection 에 handleLongPreeGesture 를 추가합니다.
     likeCollection.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(handleLongPressGesture(gesture:))))
         
+    }
+    
+    
+    @IBAction func likeBtn(_ sender: UIButton)
+    {
+        // 선택 되었을 때는 선택 안된 걸로, 선택 안되어있을 때는 선택 된걸로 바꾸기
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            // 관심있는 공연에 추가되어있음
+        }
+        else {
+            // 관심있는 공연에서 삭제함
+        }
     }
     
     /*
@@ -114,25 +128,6 @@ extension InterestedVC: UICollectionViewDataSource
     }
 }
 
-/*
-// UICollectionViewDelegate 를 채택합니다.
-extension InterestedVC: UICollectionViewDelegate
-{
-    
-    /*
-     didSelectItemAt 은 셀을 선택했을때 어떤 동작을 할 지 설정할 수 있습니다.
-     여기서는 셀을 선택하면 그에 해당하는 LikeDetailVC 로 화면전환을 합니다.
-     */
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-    {
-        
-        let dvc = storyboard?.instantiateViewController(withIdentifier: "LikeDetailVC") as! LikeDetailVC
-
-        self.present(dvc, animated: true)
-    }
-}
-*/
-
 /* UICollectionViewDelegateFlowLayout 을 채택 */
 extension InterestedVC: UICollectionViewDelegateFlowLayout
 {
@@ -150,10 +145,7 @@ extension InterestedVC
 {
     func setLikedata()
     {
-        
-        guard let idx = self.showIdx else { return }
-        
-        ShowService.shared.showInterest(showIdx: idx) {
+        ShowService.shared.showInterest() {
             data in
             
             switch data {
@@ -163,10 +155,10 @@ extension InterestedVC
                 
                 self.likeList = res as! [Like]
                 self.likeCollection.reloadData()
-                print("좋아요 성공")
+                print("관심있는 공연 조회 성공")
                 
             case .requestErr(let message):
-                self.simpleAlert(title: "좋아요 실패", message: "\(message)")
+                self.simpleAlert(title: "관심있는 공연 조회 실패", message: "\(message)")
                 
             case .pathErr:
                 print(".pathErr")
@@ -175,7 +167,7 @@ extension InterestedVC
                 print(".serverErr")
                 
             case .networkFail:
-                self.simpleAlert(title: "좋아요 실패", message: "네트워크 상태를 확인해주세요.")
+                self.simpleAlert(title: "관심있는 공연 조회 실패", message: "네트워크 상태를 확인해주세요.")
             }
         }
     }

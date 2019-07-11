@@ -48,7 +48,7 @@
                                                     <state key="normal" image="iconLikeFill"/>
                                                     <state key="selected" image="iconLikeNoFill"/>
                                                     <connections>
-                                                        <action selector="likeBtn:" destination="RN3-T2-kqj" eventType="touchUpInside" id="A15-Ho-Dhd"/>
+                                                        <action selector="likeBtn:" destination="uXo-5T-g3W" eventType="touchUpInside" id="CWb-DP-gnE"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

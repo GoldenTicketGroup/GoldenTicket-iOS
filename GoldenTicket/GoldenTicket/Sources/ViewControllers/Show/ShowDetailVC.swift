@@ -47,6 +47,8 @@ class ShowDetailVC: UIViewController {
     var showTime : String?
     var showLocation : String?
     var detailPoster : UIImageView?
+    var checkisLiked : Int?     // 좋아요가 체크 되어있나요? 0: 아니요. 1: 예
+    var available : Int?        // 응모가 가능한지 체크하고 싶다.
     
     //응모하기 뷰
     @IBOutlet weak var checkView: CustomView!
@@ -98,6 +100,16 @@ class ShowDetailVC: UIViewController {
         
         //scroll view delegate
         scrollView.delegate = self
+        
+        if checkisLiked == 1 {
+            // 좋아요 되어있어야 함
+            let btnImage = UIImage(named: "iconLikeFill")
+            self.likeButton.setImage(btnImage , for: .normal)
+        }
+        else {
+            let btnNoImage = UIImage(named: "iconLikeNoFill")
+            self.likeButton.setImage(btnNoImage, for: .normal)
+        }
     }
     
     
@@ -156,6 +168,7 @@ class ShowDetailVC: UIViewController {
         
         sender.isSelected = !sender.isSelected
         guard let idx = self.showIdx else { return }
+        
         // 선택되어 있으면
         if sender.isSelected {
             print("좋아요")
@@ -408,6 +421,12 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 선택된 인덱스의 값의 타이틀이 보여지는 코드
         self.selectedRow = timeList[indexPath.row].time
+        if timeList[indexPath.row].draw_available == 0 {
+            // 공연 일정은 있으나 현재 시간 상으로 응모가 불가능
+        }
+        else {
+            // 현재 시간 상으로 응모 가능
+        }
         btnDrop.setTitle("\(selectedRow!)", for: .normal)
         animate(toggle: false)
     }

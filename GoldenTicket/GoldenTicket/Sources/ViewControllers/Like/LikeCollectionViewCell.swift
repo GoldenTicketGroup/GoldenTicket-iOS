@@ -25,16 +25,4 @@ class LikeCollectionViewCell: UICollectionViewCell {
         self.layer.masksToBounds = true
         
     }
-    
-    @IBAction func likeBtn(_ sender: UIButton)
-    {
-        // 선택 되었을 때는 선택 안된 걸로, 선택 안되어있을 때는 선택 된걸로 바꾸기
-        sender.isSelected = !sender.isSelected
-        if sender.isSelected {
-            // 관심있는 공연에 추가되어있음
-        }
-        else {
-            // 관심있는 공연에서 삭제함
-        }
-    }
 }
