@@ -265,21 +265,20 @@ class MainVC: UIViewController {
     
     
     @IBAction func lotteryCheckOne(_ sender: Any) {
-        
-        // 당첨된 경우
-        let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
-        let win = storyboardWin.instantiateViewController(withIdentifier: "winVC")
-        
-        present(win, animated: true)
-    }
-    
-    
-    @IBAction func lotteryCheckTwo(_ sender: Any) {
         // 당첨 안된 경우
         let storyboardLose = UIStoryboard.init(name: "Lose", bundle: nil)
         let lose = storyboardLose.instantiateViewController(withIdentifier: "loseVC")
         
         present(lose, animated: true)
+    }
+    
+    
+    @IBAction func lotteryCheckTwo(_ sender: Any) {
+        // 당첨된 경우
+        let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
+        let win = storyboardWin.instantiateViewController(withIdentifier: "winVC")
+        
+        present(win, animated: true)
     }
     
     
