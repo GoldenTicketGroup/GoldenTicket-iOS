@@ -113,7 +113,9 @@ struct ShowService {
                                     // 데이터 encoding 하는 방법
                                     // print("데이터",String(data:value, encoding: .utf8))
                                     let result = try decoder.decode(ResponseShow.self, from: value)
-                                    // print("finish decode")
+                                    print("result \(result)")
+                                    print(type(of: result))
+                                     print("finish decode")
                                     
                                     switch result.success {
                                     case true:
