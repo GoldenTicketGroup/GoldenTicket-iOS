@@ -10,6 +10,8 @@ import UIKit
 
 class MainShowCell: UICollectionViewCell {
     
+    var showIndex: Int!
+    
     @IBOutlet weak var showImage: UIImageView!
     
     @IBOutlet weak var showTitle: UILabel!

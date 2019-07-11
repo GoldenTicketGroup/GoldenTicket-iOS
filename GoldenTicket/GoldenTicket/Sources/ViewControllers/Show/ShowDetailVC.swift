@@ -40,7 +40,7 @@ class ShowDetailVC: UIViewController {
     
     // MainVC 에서 storyboard로 전달 받는 dvc outlet
     var backgroundImg : UIImage?
-    var posterImg : UIImageView?
+    var posterImg : UIImage?
     var showName : String?
     var showBeforePrice : String?
     var showAfterPrice : String?
@@ -138,7 +138,7 @@ class ShowDetailVC: UIViewController {
     func setContent() {
         
         backgroundImage.image = backgroundImg
-        posterImage.image = posterImg?.image
+        posterImage.image = posterImg
         showTitle.text = showName
         showBeforePriceLabel.text = showBeforePrice
         showAfterPriceLabel.text = showAfterPrice

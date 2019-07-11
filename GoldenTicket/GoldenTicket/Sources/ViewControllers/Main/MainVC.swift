@@ -346,14 +346,16 @@ extension MainVC: UICollectionViewDataSource {
             
             // kingfisher로 url 통해서 이미지 불러오기
             // cell.MainShowCell의 아웃렛 이름 = show(모델).swift.서버 이름
+            cell.showIndex = show.show_idx
             cell.showImage.imageFromUrl(show.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/1562055837775.jpg")
             cell.showLocation.text = show.location
             cell.showTime.text = show.running_time
             cell.showTitle.text = show.name
             //cell.showImage.makeRounded(cornerRadius: 20)
             
-            return cell
+            self.showIdx = show.show_idx  // 1 ~ 17
             
+            return cell
         }
         else {
             let lotteryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "lotteryCell", for: indexPath) as! LotteryCheckCell
@@ -369,11 +371,13 @@ extension MainVC: UICollectionViewDataSource {
 extension MainVC : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+
         // let showDetail = showDetailList[indexPath.row]
         // self.showIdx = showDetail.show_idx
+        
         // 임시로 인덱스 지정
-        self.showIdx = 20
+        // self.showIdx = 20
+    
         // data setting
         self.setDetailData()
     }
@@ -455,9 +459,14 @@ extension MainVC {
                 let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
                 
                 // 2. ShowDetail Struct
-                dvc.posterImg = UIImageView()
-                // posterImg가 있을 때 imageFromUrl을 호출하는데, 초기화 안된 상태이고 nil이니까 초기화를 해줘야 한다.
-                dvc.posterImg!.imageFromUrl(showDetail.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_main_benhur.jpg")
+                let imageUrlString = showDetail.image_url
+                let imageUrl = URL(string: imageUrlString)!
+                let imageData = try! Data(contentsOf: imageUrl)
+                let image = UIImage(data: imageData)
+                
+                // 1. posterImg가 있을 때 imageFromUrl을 호출하는데, 초기화 안된 상태이고 nil이니까 초기화를 해줘야 한다.
+                // 2. UIimageView가 아닌 UIImage로 접근해야 한다.
+                dvc.posterImg = image
                 dvc.showName = showDetail.name
                 dvc.showLocation = showDetail.location
                 dvc.showTime = showDetail.duration
@@ -467,12 +476,12 @@ extension MainVC {
                 print("showDetail is liked \(showDetail.is_liked)")
                 
                 // image URL 얻어오기
-                let imageUrlString = showDetail.background_image
-                let imageUrl = URL(string: imageUrlString)!
-                let imageData = try! Data(contentsOf: imageUrl)
-                let image = UIImage(data: imageData)
+                let imageUrlString2 = showDetail.background_image
+                let imageUrl2 = URL(string: imageUrlString2)!
+                let imageData2 = try! Data(contentsOf: imageUrl2)
+                let backimage = UIImage(data: imageData2)
                 
-                dvc.backgroundImg = image
+                dvc.backgroundImg = backimage
                 
                 // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
                 dvc.timeList = showDetail.schedule!
