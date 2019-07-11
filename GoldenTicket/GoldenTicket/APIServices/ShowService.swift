@@ -159,7 +159,7 @@ struct ShowService {
         
         let header: HTTPHeaders = [
             "Content-Type" : "application/json",
-            "header" : "\(token.string(forKey: "token")!)"
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         
         Alamofire.request(APIConstants.InterestURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)

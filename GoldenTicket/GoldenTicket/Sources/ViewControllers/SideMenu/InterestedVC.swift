@@ -28,16 +28,6 @@ class InterestedVC: UIViewController {
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = false
         
-        print("likelist \(likeList.count)")
-        if likeList.count == 0 {
-            // 관심있는 공연 있으면 이미지 보이기
-            imgNoFavorite.isHidden = false
-        }
-        else {
-            // 관심있는 공연 없으면 이미지 숨기기
-            imgNoFavorite.isHidden = true
-        }
-        
         // collectionView에 들어갈 cell의 data setting
         setLikedata()
         
@@ -146,16 +136,34 @@ extension InterestedVC
     func setLikedata()
     {
         ShowService.shared.showInterest() {
+            [weak self]
             data in
+            
+            guard let `self` = self else { return }
             
             switch data {
                 
             // 매개변수에 어떤 값을 가져올 것인지
             case .success(let res):
                 
-                self.likeList = res as! [Like]
+                // response에서 data만 갖고 오기 위한 type casting 코드
+                let like_data = res as! ResponseArray<Like>
+                print(type(of:like_data))
+                
+                self.likeList = like_data.data as! [Like]
+                
+                if self.likeList.count == 0 {
+                    // 관심있는 공연 있으면 이미지 보이기
+                    self.imgNoFavorite.isHidden = false
+                }
+                else {
+                    // 관심있는 공연 없으면 이미지 숨기기
+                    self.imgNoFavorite.isHidden = true
+                }
+                
                 self.likeCollection.reloadData()
                 print("관심있는 공연 조회 성공")
+
                 
             case .requestErr(let message):
                 self.simpleAlert(title: "관심있는 공연 조회 실패", message: "\(message)")
