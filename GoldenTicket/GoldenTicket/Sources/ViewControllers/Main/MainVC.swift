@@ -20,9 +20,10 @@ class MainVC: UIViewController {
     // time label 시간 통신
     var lotteryTime1 : String!
     var lotteryTime2 : String!
-    // time label 시간 통신 테스트
-    // var lotteryTest : String = "09/09/2019 09:09:09 p"
+    
+    // 응모한 공연 없는지 여부
     var noLottery = false
+    
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
     
@@ -84,8 +85,6 @@ class MainVC: UIViewController {
         // 세팅하기.
         setShowData()
         setupSideMenu()
-        setTimeLabel()
-        print("timeList.count \(timeList.count)")
         
         //
         secondLotteryView.isHidden = true
@@ -308,9 +307,6 @@ class MainVC: UIViewController {
         let storyboardContent = UIStoryboard.init(name: "Contents", bundle: nil)
         let dvc = storyboardContent.instantiateViewController(withIdentifier: "contentsVC")
         present(dvc, animated: true)
-        
-        
-        
     }
     
     @IBAction func monthMusical(_ sender: Any) {
@@ -319,8 +315,6 @@ class MainVC: UIViewController {
         let dvc = storyboardContent.instantiateViewController(withIdentifier: "contents2")
         present(dvc, animated: true)
     }
-    
-    
 }
 
 extension MainVC: UICollectionViewDataSource {
@@ -330,8 +324,9 @@ extension MainVC: UICollectionViewDataSource {
         if collectionView == self.showCollectionView {
             return showList.count
         }
+        // nil 값이 들어오지 않도록 setTimeLabel 먼저 호출해주고 timeList 반환된 상태에서 접근할 수 있도록 한다.
+        setTimeLabel()
         return timeList.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -353,8 +348,9 @@ extension MainVC: UICollectionViewDataSource {
         else {
             let lotteryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "lotteryCell", for: indexPath) as! LotteryCheckCell
             
-            let lottery = timeList[indexPath.row]
+            let label = timeList[indexPath.row]
             
+            lotteryCell.lotteryShowTitle.text = label.name
             return lotteryCell
         }
     }
@@ -524,24 +520,22 @@ extension MainVC {
             // 매개변수에 어떤 값을 가져올 것인지
             case .success(let res):
                 print("타임 조회 성공")
-                let time_data = res as! ResponseArray<LotteryList>
+                let response = res as! ResponseArray<LotteryList>
                 
-                self.timeList = time_data.data as! [LotteryList]
-
+                self.timeList = response.data as! [LotteryList]
+                print(self.timeList.count)
+                // self.lotteryList = res as! [LotteryList]
+                self.lotteryCollectionView.reloadData()
+                
                 if self.timeList.count == 1 {
                     // 응모한 공연이 1개
                     self.lotteryTime1 = self.timeList[0].start_time     // 응모한 공연 1
-                    self.firstTimeLabel.text = self.timeList[0].name
-                    print("lotteryTime1 \(self.lotteryTime1!)")
-                    
                     timer2.fire()
                 }
                 else if self.timeList.count == 2 {
                     // 응모한 공연이 2개
                     self.lotteryTime1 = self.timeList[0].start_time     // 응모한 공연 1
                     self.lotteryTime2 = self.timeList[1].start_time     // 응모한 공연 2
-                    self.firstTimeLabel.text = self.timeList[0].name
-                    self.secondTimeLabel.text = self.timeList[1].name
                     print("lotteryTime1 \(self.lotteryTime1!)")
                     print("lotteryTime2 \(self.lotteryTime2!)")
                     
