@@ -53,15 +53,6 @@ class MainVC: UIViewController {
         Calendar.Component.second
     ]
     
-    //응모한 공연 나오는지 테스트를 위한 더미데이터.
-    struct Lottery {
-        var showTitle : String?
-        init (title : String) {
-            self.showTitle = title
-        }
-    }
-    var lotteryList : [Lottery] = [Lottery(title: "옥탑방 고양이"), Lottery(title: "뮤지컬 벤허")]
-    
     //콘텐츠 페이지로 넘어가는 버튼
     @IBOutlet weak var monthShowButton: UIButton!
     
@@ -94,14 +85,13 @@ class MainVC: UIViewController {
         setShowData()
         setupSideMenu()
         setTimeLabel()
+        print("timeList.count \(timeList.count)")
         
         //
         secondLotteryView.isHidden = true
         lotteryLeftButton.isHidden = true
         firstLotteryCheckButton.isHidden = true
         secondLotteryCheckButton.isHidden = true
-        
-        print(lotteryList.count)
         
         showCollectionView.dataSource = self
         showCollectionView.delegate = self
@@ -143,7 +133,7 @@ class MainVC: UIViewController {
     //첫번째 응모한 공연에 대한 시간 프린터
     @objc func timePrinter1() -> Void {
         // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : "07/07/2019 04:30:30 p")  //endTime 에 timeLabel 이런식으로 변수 넣어주기
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime1)  //endTime 에 timeLabel 이런식으로 변수 넣어주기
         // "07/07/2019 04:30:30"
         let sec = time.second!
         let min = time.minute!
@@ -177,7 +167,7 @@ class MainVC: UIViewController {
     @objc func timePrinter2() -> Void {
         
         // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime1)
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime2)
         
         let sec = time.second!
         let min = time.minute!
@@ -340,7 +330,7 @@ extension MainVC: UICollectionViewDataSource {
         if collectionView == self.showCollectionView {
             return showList.count
         }
-        return lotteryList.count
+        return timeList.count
         
     }
     
@@ -362,9 +352,8 @@ extension MainVC: UICollectionViewDataSource {
         }
         else {
             let lotteryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "lotteryCell", for: indexPath) as! LotteryCheckCell
-            let lottery = lotteryList[indexPath.row]
             
-            lotteryCell.lotteryShowTitle.text = lottery.showTitle
+            let lottery = timeList[indexPath.row]
             
             return lotteryCell
         }
@@ -542,6 +531,7 @@ extension MainVC {
                 if self.timeList.count == 1 {
                     // 응모한 공연이 1개
                     self.lotteryTime1 = self.timeList[0].start_time     // 응모한 공연 1
+                    self.firstTimeLabel.text = self.timeList[0].name
                     print("lotteryTime1 \(self.lotteryTime1!)")
                     
                     timer2.fire()
@@ -550,6 +540,8 @@ extension MainVC {
                     // 응모한 공연이 2개
                     self.lotteryTime1 = self.timeList[0].start_time     // 응모한 공연 1
                     self.lotteryTime2 = self.timeList[1].start_time     // 응모한 공연 2
+                    self.firstTimeLabel.text = self.timeList[0].name
+                    self.secondTimeLabel.text = self.timeList[1].name
                     print("lotteryTime1 \(self.lotteryTime1!)")
                     print("lotteryTime2 \(self.lotteryTime2!)")
                     
