@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 
+// MARK: - LotteryDetail
 // 응모 티켓
 struct LotteryDetail : Codable {
     let ticketIdx : Int

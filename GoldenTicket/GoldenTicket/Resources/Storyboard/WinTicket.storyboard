@@ -156,10 +156,17 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="dateLabel" destination="wu2-DH-yLk" id="suc-gA-ADM"/>
+                        <outlet property="imgQrCode" destination="J2X-qi-QIb" id="tbI-rp-qNY"/>
+                        <outlet property="locationLabel" destination="VcF-AK-Vs5" id="WiI-Ma-s8E"/>
                         <outlet property="navigationBar" destination="RH1-cA-A5K" id="Saa-CD-l6q"/>
                         <outlet property="okButton" destination="Z6l-aj-MsK" id="J79-pp-NP7"/>
+                        <outlet property="priceLabel" destination="Kgt-RM-cR5" id="Hm2-3c-sHS"/>
+                        <outlet property="seatLabel" destination="QjK-BL-US1" id="jjJ-xy-I8K"/>
                         <outlet property="ticketBottomView" destination="EWf-ZU-iCI" id="CFL-In-Ixl"/>
                         <outlet property="ticketView" destination="Nhs-Vx-qgg" id="QGD-km-6IG"/>
+                        <outlet property="timeLabel" destination="uHz-P9-py4" id="jFc-m4-AmY"/>
+                        <outlet property="titleLabel" destination="zCZ-IH-HDV" id="jv6-N9-WpI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAp-x6-YE1" userLabel="First Responder" sceneMemberID="firstResponder"/>

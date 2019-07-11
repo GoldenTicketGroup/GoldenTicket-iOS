@@ -73,7 +73,7 @@ extension WinTicketsVC: UICollectionViewDataSource
         cell.winTitle.text = like.name
         
         // 당첨된 공연의 가격. ex) 일반 R석 20,000원
-        cell.winPrice.text = like.price
+        cell.winPrice.text = like.seat_name! + " " + like.price
         
         // 당첨된 공연의 위치. ex) 블루스퀘어 인터파크 홀
         cell.winLocation.text = like.location
@@ -101,10 +101,9 @@ extension WinTicketsVC
             // 매개변수에 어떤 값을 가져올 것인지
             case .success(let res):
                 print("당첨 티켓 리스트 조회 성공")
-                let response = res as! ResponseArray<WinList>
                 
-                // self.winList = response.data as! [WinList]
-                self.winList = res as! [WinList]
+                let response = res as! ResponseArray<WinList>
+                self.winList = response.data as! [WinList]
                 print(self.winList.count)
                 self.winCollection.reloadData()
                 

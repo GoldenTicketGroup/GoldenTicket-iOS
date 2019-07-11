@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 
+// MARK: - LotteryList
 // 응모 리스트
 struct LotteryList : Codable {
     let show_idx: Int
