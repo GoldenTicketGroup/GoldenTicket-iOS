@@ -9,6 +9,10 @@
 </div>
 <br />
 
+앱 아이콘
+------------
+![GoldenTicketIcon](https://user-images.githubusercontent.com/49272528/61025745-8f1a8500-a3ec-11e9-8e5a-ae246f2a9bbc.png)
+
 스크린 샷
 ------------
 
@@ -28,15 +32,15 @@
 
 기능 소개
 ------------
-|  <center>기능</center> |  <center>개발 여부</center> |  <center>담당자</center> |
+|  <center>기능</center> |  <center>개발 여부</center> |  <center> 기타 사항 </center> |
 |:--------:|:--------:|:--------:|
-|<center> 공연정보 보여주기 </center> | <center>cell 1x2 </center> |<center>cell 1x2 </center> |
-|<center> 응모하기 </center> | <center>cell 1x2 </center> |<center>cell 1x2 </center> |
-|<center> 응모한 공연 시간 정보 보여주기 </center> | <center>cell 1x2 </center> |<center>cell 1x2 </center> |
-|<center> 당첨 확인 </center> | <center>cell 2x2 </center> |<center>cell 1x2 </center> |
+|<center> 공연정보 보여주기 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
+|<center> 응모하기 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
+|<center> 응모한 공연 시간 정보 보여주기 </center> | <center> ○ </center> |<center>  </center> |
+|<center> 당첨 확인 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
 |<center> 관심있는 공연 설정 </center> | <center>cell 3x2 </center> |<center>cell 1x2 </center> |
 |<center> 알림 (관심있는 공연 / 당첨확인) </center> | <center> X : 개발자 계정이 없어 apns 이용 불가 </center> |<center> </center> |
-|<center> 검색 </center> | <center>cell 1x2 </center> |<center>cell 1x2 </center> |
+|<center> 검색 </center> | <center> ○ </center> |<center>cell 1x2 </center> |
 
 팀원 소개
 ------------

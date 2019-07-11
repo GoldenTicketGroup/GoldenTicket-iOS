@@ -66,7 +66,9 @@ class MainVC: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     
     var showList : [Show] = []
-    var showDetailList : [ShowDetail] = []
+    
+    // 배열이 아님!!!! 배열 아냐!!!!!
+    var showDetail : ShowDetail!
     
     //메인화면 공연 collectin view animator 설정
     let animator : (LayoutAttributesAnimator, Bool, Int, Int) = (LinearCardAttributesAnimator(), false, 1, 1)
@@ -360,9 +362,6 @@ extension MainVC: UICollectionViewDataSource {
             cell.showLocation.text = show.location
             cell.showTime.text = show.running_time
             cell.showTitle.text = show.name
-            //cell.showImage.makeRounded(cornerRadius: 20)
-            
-            self.showIdx = show.show_idx  // 1 ~ 17
             
             return cell
         }
@@ -381,11 +380,8 @@ extension MainVC : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        // let showDetail = showDetailList[indexPath.row]
-        // self.showIdx = showDetail.show_idx
-        
-        // 임시로 인덱스 지정
-        // self.showIdx = 20
+        let show = showList[indexPath.row]
+        self.showIdx = show.show_idx  // 1 ~ 17
     
         // data setting
         self.setDetailData()
@@ -459,16 +455,16 @@ extension MainVC {
             // 매개변수에 어떤 값을 가져올 것인지
             case .success(let res):
                 
-                // 배열이 아니라서 배열로 받을 필요가 없었음
+                // 배열이 아니라서 배열로 받을 필요가 없었음 !!!!!!!!!
                 // self.showDetailList = res as! [ShowDetail]
                 // print("any data",self.showDetailList)
                 
                 // 1. 공연 하나에 대한 정보만 받아오면 된다.
-                let showDetail = res as! ShowDetail
+                self.showDetail = res as! ShowDetail
                 let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
                 
                 // 2. ShowDetail Struct
-                let imageUrlString = showDetail.image_url
+                let imageUrlString = self.showDetail.image_url
                 let imageUrl = URL(string: imageUrlString)!
                 let imageData = try! Data(contentsOf: imageUrl)
                 let image = UIImage(data: imageData)
@@ -476,16 +472,16 @@ extension MainVC {
                 // 1. posterImg가 있을 때 imageFromUrl을 호출하는데, 초기화 안된 상태이고 nil이니까 초기화를 해줘야 한다.
                 // 2. UIimageView가 아닌 UIImage로 접근해야 한다.
                 dvc.posterImg = image
-                dvc.showName = showDetail.name
-                dvc.showLocation = showDetail.location
-                dvc.showTime = showDetail.duration
-                dvc.showBeforePrice = showDetail.original_price
-                dvc.showAfterPrice = showDetail.discount_price
+                dvc.showName = self.showDetail.name
+                dvc.showLocation = self.showDetail.location
+                dvc.showTime = self.showDetail.duration
+                dvc.showBeforePrice = self.showDetail.original_price
+                dvc.showAfterPrice = self.showDetail.discount_price
                 
-                print("showDetail is liked \(showDetail.is_liked)")
+                print("showDetail is liked \(self.showDetail.is_liked)")
                 
                 // image URL 얻어오기
-                let imageUrlString2 = showDetail.background_image
+                let imageUrlString2 = self.showDetail.background_image
                 let imageUrl2 = URL(string: imageUrlString2)!
                 let imageData2 = try! Data(contentsOf: imageUrl2)
                 let backimage = UIImage(data: imageData2)
@@ -493,17 +489,17 @@ extension MainVC {
                 dvc.backgroundImg = backimage
                 
                 // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
-                dvc.timeList = showDetail.schedule!
+                dvc.timeList = self.showDetail.schedule!
                 self.present(dvc, animated: true)
                 self.navigationController?.pushViewController(dvc, animated: true)
                 
                 
                 // 2. Poster Struct
-                let poster = showDetail.poster
+                let poster = self.showDetail.poster
                 dvc.posterList = poster!
 
                 // 2. Actor Struct
-                let artistDetail = showDetail.artist
+                let artistDetail = self.showDetail.artist
                 // let artistDetail = res as! [Artist]
                 
                 // dvc에 있는 배우들 리스트에 서버 통신해서 꽂아주기
