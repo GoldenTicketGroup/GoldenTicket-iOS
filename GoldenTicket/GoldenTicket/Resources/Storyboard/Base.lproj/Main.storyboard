@@ -77,6 +77,9 @@
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="49F-WZ-zHV">
                                                                     <rect key="frame" x="0.0" y="0.0" width="231" height="308"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="showImage"/>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frq-0G-eGv">
                                                                     <rect key="frame" x="18" y="232" width="47" height="25"/>
@@ -88,13 +91,13 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLocationMain" translatesAutoresizingMaskIntoConstraints="NO" id="Nmf-Wz-LHU">
-                                                                    <rect key="frame" x="25" y="260" width="13" height="13.5"/>
+                                                                    <rect key="frame" x="25" y="260" width="13" height="16"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="13" id="c7D-1s-DAE"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYK-Zv-8wV">
-                                                                    <rect key="frame" x="46" y="260" width="155" height="13.5"/>
+                                                                    <rect key="frame" x="46" y="260" width="155" height="16"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -103,10 +106,10 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconTimeMain" translatesAutoresizingMaskIntoConstraints="NO" id="IhB-Zn-vk7">
-                                                                    <rect key="frame" x="25" y="277.5" width="13" height="10.5"/>
+                                                                    <rect key="frame" x="25" y="280" width="13" height="16"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4l-bq-p92">
-                                                                    <rect key="frame" x="46" y="277.5" width="155" height="13"/>
+                                                                    <rect key="frame" x="46" y="280" width="155" height="13"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -136,6 +139,9 @@
                                                             <constraint firstItem="IhB-Zn-vk7" firstAttribute="leading" secondItem="igK-Fm-naD" secondAttribute="leading" constant="25" id="wYR-TS-uOe"/>
                                                             <constraint firstAttribute="trailing" secondItem="49F-WZ-zHV" secondAttribute="trailing" id="wsX-e6-wo9"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="showImage"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <outlet property="showImage" destination="49F-WZ-zHV" id="1qc-Bo-DGd"/>
                                                             <outlet property="showLocation" destination="sYK-Zv-8wV" id="gqo-jf-adV"/>
@@ -731,6 +737,9 @@
                                                     <constraint firstAttribute="width" constant="252" id="Lbs-3u-ebl"/>
                                                     <constraint firstAttribute="height" constant="337" id="NDc-2Z-OEL"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="showImage"/>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmj-5G-knG">
                                                 <rect key="frame" x="161" y="421" width="53" height="28"/>
@@ -980,7 +989,7 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-ef-Wbu">
-                                <rect key="frame" x="0.0" y="6120" width="375" height="220"/>
+                                <rect key="frame" x="0.0" y="6144" width="375" height="220"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-6Y-ir8">
                                         <rect key="frame" x="165" y="1" width="44" height="44"/>
@@ -1046,6 +1055,20 @@
                                             <action selector="applyButtonAction:" destination="txR-zd-iJi" eventType="touchUpInside" id="yIk-Th-cfD"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ymL-Qf-B90">
+                                        <rect key="frame" x="40" y="138" width="293" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="응모는 하루에 두 번까지 가능합니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhA-mA-f9a">
+                                                <rect key="frame" x="41" y="13" width="211" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94118285180000005" green="0.94116520879999999" blue="0.9411771297" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bef-xL-40M">
                                         <rect key="frame" x="107" y="93" width="184" height="94"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1114,6 +1137,7 @@
                         <outlet property="checkView" destination="nBg-ef-Wbu" id="Ajx-hA-8I6"/>
                         <outlet property="fillView" destination="eaa-6Y-ir8" id="OmY-uz-r6C"/>
                         <outlet property="likeButton" destination="9jJ-wz-Z0A" id="ZuR-eo-qmI"/>
+                        <outlet property="messageView" destination="ymL-Qf-B90" id="jg7-A5-Vns"/>
                         <outlet property="posterImage" destination="Pvk-QU-lCP" id="gev-Ku-Afe"/>
                         <outlet property="scrollView" destination="mXR-yO-Gad" id="YPU-Xf-wWq"/>
                         <outlet property="showAfterPriceLabel" destination="abw-Wf-CIc" id="eXM-GZ-6Sj"/>

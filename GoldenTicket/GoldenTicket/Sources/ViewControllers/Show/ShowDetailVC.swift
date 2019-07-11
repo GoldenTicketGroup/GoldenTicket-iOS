@@ -55,6 +55,9 @@ class ShowDetailVC: UIViewController {
     @IBOutlet weak var fillView: UIView!
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var applyButton: CustomButton!
+    // 응모가 불가할때 띄우는 뷰
+    @IBOutlet weak var nonValiableView: UIView!
+    @IBOutlet weak var messageView: UIView!
     
     //좋아요 버튼
     @IBOutlet weak var likeButton: UIButton!
@@ -68,7 +71,12 @@ class ShowDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //응모 불가할 때 띄우는 메세지 뷰 customize
+        messageView.makeRounded(cornerRadius: 20)
+        messageView.isHidden = true
+        
+        
         // 테스트용 더미 데이터 세팅해두기.
         setContent()
         // setActorData()
@@ -442,6 +450,7 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
         self.selectedRow = timeList[indexPath.row].time
         if timeList[indexPath.row].draw_available == 0 {
             // 공연 일정은 있으나 현재 시간 상으로 응모가 불가능
+            messageView.isHidden = false
         }
         else {
             // 현재 시간 상으로 응모 가능
