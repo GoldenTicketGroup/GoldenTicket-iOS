@@ -382,7 +382,7 @@ extension MainVC : UICollectionViewDelegate {
 
         let show = showList[indexPath.row]
         self.showIdx = show.show_idx  // 1 ~ 17
-    
+        
         // data setting
         self.setDetailData()
     }
@@ -462,7 +462,7 @@ extension MainVC {
                 // 1. 공연 하나에 대한 정보만 받아오면 된다.
                 self.showDetail = res as! ShowDetail
                 let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
-                
+                dvc.showIdx = idx
                 // 2. ShowDetail Struct
                 let imageUrlString = self.showDetail.image_url
                 let imageUrl = URL(string: imageUrlString)!

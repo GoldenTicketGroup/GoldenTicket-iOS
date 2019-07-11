@@ -112,12 +112,14 @@ class ShowDetailVC: UIViewController {
 
         if checkisLiked == 1 {
             // 좋아요 되어있어야 함
-            let btnImage = UIImage(named: "iconLikeFill")
-            self.likeButton.setImage(btnImage , for: .normal)
+            likeButton.isSelected = true
+//            let btnImage = UIImage(named: "iconLikeFill")
+//            self.likeButton.setImage(btnImage , for: .normal)
         }
         else {
-            let btnNoImage = UIImage(named: "iconLikeNoFill")
-            self.likeButton.setImage(btnNoImage, for: .normal)
+            likeButton.isSelected = false
+//            let btnNoImage = UIImage(named: "iconLikeNoFill")
+//            self.likeButton.setImage(btnNoImage, for: .normal)
         }
 
 //        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
@@ -189,7 +191,40 @@ class ShowDetailVC: UIViewController {
         // 선택되어 있으면
         if sender.isSelected {
             print("좋아요")
-            // 좋아요 취소 통신
+            
+            // 좋아요 통신
+            LikeService.shared.pickLike(idx) {
+                [weak self]
+                data in
+                
+                guard let `self` = self else { return }
+                print("data : \(data)")
+                switch data {
+                    
+                // 매개변수에 어떤 값을 가져올 것인지
+                case .success(let res):
+                    print("좋아요 성공")
+                    sender.isSelected = true   // 버튼 선택 안된걸로 바꿈
+                    
+                case .requestErr(let message):
+                    self.simpleAlert(title: "좋아요 추가 실패", message: "\(message)")
+                    
+                case .pathErr:
+                    print(".pathErr")
+                    
+                case .serverErr:
+                    print(".serverErr")
+                    
+                case .networkFail:
+                    self.simpleAlert(title: "좋아요 추가 실패", message: "네트워크 상태를 확인해주세요.")
+                }
+            }
+        }
+            
+        else {
+            print("좋아요 취소")
+            
+            // 좋아요 통신
             LikeService.shared.pickNoLike(idx) {
                 [weak self]
                 data in
@@ -214,37 +249,6 @@ class ShowDetailVC: UIViewController {
                     
                 case .networkFail:
                     self.simpleAlert(title: "좋아요 추가 실패", message: "네트워크 상태를 확인해주세요.")
-                }
-            }
-        }
-            
-        else {
-            print("좋아요 취소")
-                // 좋아요 통신
-                LikeService.shared.pickLike(idx) {
-                    [weak self]
-                    data in
-                    
-                    guard let `self` = self else { return }
-                    //print("data : \(data)")
-                    switch data {
-                        
-                    // 매개변수에 어떤 값을 가져올 것인지
-                    case .success(let res):
-                        print("좋아요 성공")
-                        sender.isSelected = true   // 버튼 선택 안된걸로 바꿈
-                        
-                    case .requestErr(let message):
-                        self.simpleAlert(title: "좋아요 추가 실패", message: "\(message)")
-                        
-                    case .pathErr:
-                        print(".pathErr")
-                        
-                    case .serverErr:
-                        print(".serverErr")
-                        
-                    case .networkFail:
-                        self.simpleAlert(title: "좋아요 추가 실패", message: "네트워크 상태를 확인해주세요.")
             }
         }
     }
