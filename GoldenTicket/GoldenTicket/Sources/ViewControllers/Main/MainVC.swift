@@ -18,7 +18,8 @@ class MainVC: UIViewController {
     var showIdx: Int?
     
     // time label 시간 통신
-    var lotteryTime : String?
+    var lotteryTime1 : String?
+    var lotteryTime2 : String?
     
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
@@ -70,6 +71,8 @@ class MainVC: UIViewController {
     // 배열이 아님!!!! 배열 아냐!!!!!
     var showDetail : ShowDetail!
     
+    var timeList : [LotteryList] = []
+    
     //메인화면 공연 collectin view animator 설정
     let animator : (LayoutAttributesAnimator, Bool, Int, Int) = (LinearCardAttributesAnimator(), false, 1, 1)
     
@@ -93,11 +96,6 @@ class MainVC: UIViewController {
         firstLotteryCheckButton.isHidden = true
         secondLotteryCheckButton.isHidden = true
         
-//        if lotteryList.count == 1 {
-//            lotteryRightButton.isHidden = true
-//        }
-        //lotteryRightButton.isHidden = true
-        //lotteryCollectionView.reloadData()
         print(lotteryList.count)
         
         showCollectionView.dataSource = self
@@ -147,9 +145,9 @@ class MainVC: UIViewController {
     //첫번째 응모한 공연에 대한 시간 프린터
     @objc func timePrinter1() -> Void {
         // 시간 보여주기
-        //setTimeLabel()
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss", endTime: "07/07/2019 04:30:30") //endTime 에 timeLabel 이런식으로 변수 넣어주기
-        
+        // setTimeLabel()
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : "07/07/2019 04:30:30")  //endTime 에 timeLabel 이런식으로 변수 넣어주기
+        // "07/07/2019 04:30:30"
         let sec = time.second!
         let min = time.minute!
         let h = time.hour!
@@ -182,7 +180,7 @@ class MainVC: UIViewController {
     @objc func timePrinter2() -> Void {
         
         // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss " + "a", endTime: "07/11/2019 03:44:30 " + "p")
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime2!)
         
         let sec = time.second!
         let min = time.minute!
@@ -462,7 +460,9 @@ extension MainVC {
                 // 1. 공연 하나에 대한 정보만 받아오면 된다.
                 self.showDetail = res as! ShowDetail
                 let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
-                dvc.showIdx = idx
+                
+                dvc.showIdx = idx   // 다음 스토리 보드로 index 넘기기
+                
                 // 2. ShowDetail Struct
                 let imageUrlString = self.showDetail.image_url
                 let imageUrl = URL(string: imageUrlString)!
@@ -517,6 +517,37 @@ extension MainVC {
                 
             case .networkFail:
                 self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
+    }
+    
+    func setTimeLabel() {
+        LotteryService.shared.lotteryList() {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                
+                self.timeList = res as! [LotteryList]
+                self.lotteryTime1 = self.timeList[0].start_time     // 응모한 공연 1
+                self.lotteryTime2 = self.timeList[1].start_time     // 응모한 공연 2
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "메인 공연 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "메인 공연 조회 실패", message: "네트워크 상태를 확인해주세요.")
             }
         }
     }

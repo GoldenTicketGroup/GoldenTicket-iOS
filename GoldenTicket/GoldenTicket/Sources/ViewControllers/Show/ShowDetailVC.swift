@@ -16,7 +16,8 @@ class ShowDetailVC: UIViewController {
     var posterList : [Poster] = []
     var timeList : [Schedule] = []
     var showIdx : Int?
-    var selectedRow : String?
+    var selectedRowText : String?
+    var selectedRow : Int?
     
     // 배우들을 보여주는 collection view.
     @IBOutlet weak var actorCollectionView: UICollectionView!
@@ -138,10 +139,6 @@ class ShowDetailVC: UIViewController {
         
         if let index = tblView.indexPathForSelectedRow {
             tblView.deselectRow(at: index, animated: true)
-            
-            
-            // 선택된 테이블의 cell의 index 값으로 cell title 얻어오기
-            self.selectedRow = tblView.cellForRow(at: index)?.textLabel!.text
         }
     }
     
@@ -326,19 +323,13 @@ class ShowDetailVC: UIViewController {
     }
     
     
+    // timeTable 선택 완료 이후 응모하기 <잠깐!> 창으로 넘어가는 스토리 보드 연결
     @IBAction func selectShow(_ sender: Any) {
         let storyboardLottery = UIStoryboard(name: "Lottory", bundle: nil)
-        let dvc = storyboardLottery.instantiateViewController(withIdentifier: "waitLottery")
-//
-//        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
-//
-//        let dvc2 = storyboardMain.instantiateViewController(withIdentifier: "MainVC") as! MainVC
-//
-//        dvc2.lotteryList.append(MainVC.Lottery(title: "캣츠"))
-//        print(dvc2.lotteryList)
-//        dvc2.lotteryRightButton.isHidden = false
-//        
-//        print(dvc2.lotteryList.count)
+        let dvc = storyboardLottery.instantiateViewController(withIdentifier: "waitLottery") as! LotteryInVC
+
+        // 잠깐! 스토리 보드로 선택된 테이블 인덱스 넘기기
+        dvc.scheduleIdx = selectedRow
         present(dvc, animated: true)
     }
     
@@ -451,15 +442,18 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 선택된 인덱스의 값의 타이틀이 보여지는 코드
-        self.selectedRow = timeList[indexPath.row].time
+        self.selectedRowText = timeList[indexPath.row].time
+        self.selectedRow = timeList[indexPath.row].schedule_idx
+        
         if timeList[indexPath.row].draw_available == 0 {
             // 공연 일정은 있으나 현재 시간 상으로 응모가 불가능
-            messageView.isHidden = false
+            messageView.isHidden = true
         }
         else {
             // 현재 시간 상으로 응모 가능
+            messageView.isHidden = false
         }
-        btnDrop.setTitle("\(selectedRow!)", for: .normal)
+        btnDrop.setTitle("\(selectedRowText!)", for: .normal)
         animate(toggle: false)
     }
 }

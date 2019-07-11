@@ -21,6 +21,7 @@ class LotteryInVC: UIViewController {
     @IBAction func lotteryBtn(_ sender: UIButton) {
         
         guard let idx = self.scheduleIdx else { return }
+        print("scheduleIdx \(scheduleIdx!)")
         
         LotteryService.shared.lotteryIn(scheduleIdx: idx) {
             [weak self]

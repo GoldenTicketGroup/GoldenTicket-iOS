@@ -41,7 +41,7 @@
 		08CBCB7522C4EFE7009C1199 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */; };
 		08CBCB7722C507C8009C1199 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7622C507C8009C1199 /* Login.storyboard */; };
 		08CBCB7922C523C9009C1199 /* Lose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CBCB7822C523C9009C1199 /* Lose.storyboard */; };
-		2481DFDD82AF4E446B620950 /* Pods_GoldenTicket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE8133DB7A4161E106BEBDE /* Pods_GoldenTicket.framework */; };
+		A2306DF3FB459300FA8520D6 /* Pods_GoldenTicket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4386A4888E624852E8F673F8 /* Pods_GoldenTicket.framework */; };
 		F4012DA122D5B9D800F71861 /* ShowDetailCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA022D5B9D800F71861 /* ShowDetailCVCell.swift */; };
 		F4012DA322D5D11E00F71861 /* noTicket.gif in Resources */ = {isa = PBXBuildFile; fileRef = F4012DA222D5D11E00F71861 /* noTicket.gif */; };
 		F4012DA522D5DAB200F71861 /* LotteryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4012DA422D5DAB200F71861 /* LotteryService.swift */; };
@@ -132,8 +132,9 @@
 		08CBCB7422C4EFE7009C1199 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		08CBCB7622C507C8009C1199 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		08CBCB7822C523C9009C1199 /* Lose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lose.storyboard; sourceTree = "<group>"; };
-		5965800A7BE381549539F856 /* Pods-GoldenTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenTicket.release.xcconfig"; path = "Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket.release.xcconfig"; sourceTree = "<group>"; };
-		6DE8133DB7A4161E106BEBDE /* Pods_GoldenTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4386A4888E624852E8F673F8 /* Pods_GoldenTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CF8DDDA342E2991B8555A8B /* Pods-GoldenTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenTicket.debug.xcconfig"; path = "Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket.debug.xcconfig"; sourceTree = "<group>"; };
+		DAFAE9CA1D00868CD0517BCC /* Pods-GoldenTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenTicket.release.xcconfig"; path = "Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket.release.xcconfig"; sourceTree = "<group>"; };
 		F4012DA022D5B9D800F71861 /* ShowDetailCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailCVCell.swift; sourceTree = "<group>"; };
 		F4012DA222D5D11E00F71861 /* noTicket.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = noTicket.gif; sourceTree = "<group>"; };
 		F4012DA422D5DAB200F71861 /* LotteryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryService.swift; sourceTree = "<group>"; };
@@ -185,7 +186,6 @@
 		F4FE456D22D3780D00E6C6B0 /* SearchCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCVCell.swift; sourceTree = "<group>"; };
 		F4FE456F22D38DAE00E6C6B0 /* SearchShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchShow.swift; sourceTree = "<group>"; };
 		F4FE457122D393E300E6C6B0 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
-		F92DF9CEA0A33B3C51D5E98C /* Pods-GoldenTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenTicket.debug.xcconfig"; path = "Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2481DFDD82AF4E446B620950 /* Pods_GoldenTicket.framework in Frameworks */,
+				A2306DF3FB459300FA8520D6 /* Pods_GoldenTicket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +233,7 @@
 				08CBCB2322C2552D009C1199 /* GoldenTicket */,
 				08CBCB2222C2552D009C1199 /* Products */,
 				F4062F9AF046E6BFDB7748A4 /* Pods */,
-				692012C43B3E113F9E861ED9 /* Frameworks */,
+				0B184873718AEBE7F367A4C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,16 +323,16 @@
 				080EA9B522D08B14000D074C /* ResponseString.swift */,
 				080EA9B722D08B74000D074C /* ResponseDefault.swift */,
 				08099F0D22D42B1B00142C85 /* ResponseShow.swift */,
-				F4012DA622D5DDE500F71861 /* Ticket.swift */,
 				F4012DA822D5E42400F71861 /* LotteryList.swift */,
+				F4012DA622D5DDE500F71861 /* Ticket.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		692012C43B3E113F9E861ED9 /* Frameworks */ = {
+		0B184873718AEBE7F367A4C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6DE8133DB7A4161E106BEBDE /* Pods_GoldenTicket.framework */,
+				4386A4888E624852E8F673F8 /* Pods_GoldenTicket.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -360,8 +360,8 @@
 		F4062F9AF046E6BFDB7748A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F92DF9CEA0A33B3C51D5E98C /* Pods-GoldenTicket.debug.xcconfig */,
-				5965800A7BE381549539F856 /* Pods-GoldenTicket.release.xcconfig */,
+				7CF8DDDA342E2991B8555A8B /* Pods-GoldenTicket.debug.xcconfig */,
+				DAFAE9CA1D00868CD0517BCC /* Pods-GoldenTicket.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -511,11 +511,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08CBCB3622C2552F009C1199 /* Build configuration list for PBXNativeTarget "GoldenTicket" */;
 			buildPhases = (
-				B0DD953BDAB1C1AB268068EE /* [CP] Check Pods Manifest.lock */,
+				C8FB4BF3C87CC57E7187BB7F /* [CP] Check Pods Manifest.lock */,
 				08CBCB1D22C2552D009C1199 /* Sources */,
 				08CBCB1E22C2552D009C1199 /* Frameworks */,
 				08CBCB1F22C2552D009C1199 /* Resources */,
-				8F4E184B8C8B4BF70E0F2105 /* [CP] Embed Pods Frameworks */,
+				F3BC78EC6587700A2C2FF2AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -595,24 +595,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8F4E184B8C8B4BF70E0F2105 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B0DD953BDAB1C1AB268068EE /* [CP] Check Pods Manifest.lock */ = {
+		C8FB4BF3C87CC57E7187BB7F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -632,6 +615,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3BC78EC6587700A2C2FF2AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoldenTicket/Pods-GoldenTicket-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -836,7 +836,7 @@
 		};
 		08CBCB3722C2552F009C1199 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F92DF9CEA0A33B3C51D5E98C /* Pods-GoldenTicket.debug.xcconfig */;
+			baseConfigurationReference = 7CF8DDDA342E2991B8555A8B /* Pods-GoldenTicket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -855,7 +855,7 @@
 		};
 		08CBCB3822C2552F009C1199 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5965800A7BE381549539F856 /* Pods-GoldenTicket.release.xcconfig */;
+			baseConfigurationReference = DAFAE9CA1D00868CD0517BCC /* Pods-GoldenTicket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
