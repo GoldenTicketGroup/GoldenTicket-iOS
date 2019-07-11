@@ -234,7 +234,8 @@
                                                         <constraint firstAttribute="height" constant="24" id="pB7-PK-Oeq"/>
                                                         <constraint firstAttribute="width" constant="25" id="yeM-Ha-bJe"/>
                                                     </constraints>
-                                                    <state key="normal" image="iconLikeFill"/>
+                                                    <state key="normal" image="iconLikeNoFill"/>
+                                                    <state key="selected" image="iconLikeFill"/>
                                                     <connections>
                                                         <action selector="likeButton:" destination="FQD-fa-LlK" eventType="touchUpInside" id="d99-IW-Pqn"/>
                                                     </connections>
@@ -321,6 +322,7 @@
     <resources>
         <image name="btBack" width="19" height="26"/>
         <image name="iconLikeFill" width="25" height="24"/>
+        <image name="iconLikeNoFill" width="25" height="24"/>
         <image name="iconSearchMain" width="17.5" height="16.5"/>
     </resources>
 </document>

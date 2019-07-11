@@ -20,6 +20,8 @@ class MainVC: UIViewController {
     // time label 시간 통신
     var lotteryTime1 : String?
     var lotteryTime2 : String?
+    // time label 시간 통신 테스트
+    var lotteryTest : String = "09/09/2019 09:09:09 p"
     
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
@@ -146,7 +148,7 @@ class MainVC: UIViewController {
     @objc func timePrinter1() -> Void {
         // 시간 보여주기
         // setTimeLabel()
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : "07/07/2019 04:30:30")  //endTime 에 timeLabel 이런식으로 변수 넣어주기
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : "07/07/2019 04:30:30 p")  //endTime 에 timeLabel 이런식으로 변수 넣어주기
         // "07/07/2019 04:30:30"
         let sec = time.second!
         let min = time.minute!
@@ -180,7 +182,7 @@ class MainVC: UIViewController {
     @objc func timePrinter2() -> Void {
         
         // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime2!)
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTest)
         
         let sec = time.second!
         let min = time.minute!
