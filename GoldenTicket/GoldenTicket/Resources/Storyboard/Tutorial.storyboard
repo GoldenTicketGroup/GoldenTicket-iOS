@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterBenhurTutorial" translatesAutoresizingMaskIntoConstraints="NO" id="zbU-WZ-n5x">
-                                <rect key="frame" x="179.5" y="201.5" width="16" height="20.5"/>
+                                <rect key="frame" x="78" y="201.5" width="219" height="282"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zbU-WZ-n5x" secondAttribute="height" multiplier="73:94" id="XY9-FI-4Ir"/>
                                 </constraints>
@@ -177,20 +177,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두근두근 결과확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypa-3Z-mLG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="두근두근 결과확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypa-3Z-mLG">
                                 <rect key="frame" x="109" y="108.5" width="157" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.64313725489999995" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알람을 설정해 바로 확인하세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1w-Gb-eiP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="알람을 설정해 바로 확인하세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1w-Gb-eiP">
                                 <rect key="frame" x="109" y="145" width="157" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characterWin" translatesAutoresizingMaskIntoConstraints="NO" id="oJ4-WP-x2T">
-                                <rect key="frame" x="55.5" y="193" width="264" height="281"/>
+                                <rect key="frame" x="179.5" y="457" width="16" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oJ4-WP-x2T" secondAttribute="height" multiplier="262:279" id="bGS-u6-beE"/>
                                 </constraints>
@@ -397,7 +397,7 @@
                 <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="loginVC" id="2Qv-fc-UTs" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4l-gH-BHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2036" y="139"/>
+            <point key="canvasLocation" x="2369" y="139"/>
         </scene>
     </scenes>
     <resources>
@@ -410,6 +410,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rT9-Lg-X2h"/>
-        <segue reference="WJa-ps-5Pj"/>
+        <segue reference="v81-t3-p90"/>
     </inferredMetricsTieBreakers>
 </document>

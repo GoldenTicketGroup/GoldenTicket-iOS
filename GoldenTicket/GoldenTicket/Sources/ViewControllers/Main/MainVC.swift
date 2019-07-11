@@ -20,8 +20,13 @@ class MainVC: UIViewController {
     // time label 시간 통신
     var lotteryTime1 : String!
     var lotteryTime2 : String!
+
+    // time label 시간 통신 테스트
+    //var lotteryTest : String = "09/09/2019 09:09:09 p"
+
     
     // 응모한 공연 없는지 여부
+
     var noLottery = false
     
     //홈 공연 상세 정보에 필요한 outlet
@@ -546,7 +551,7 @@ extension MainVC {
                     // 응모한 공연이 없음
                     self.noLottery = true
                     
-                    // self.noLotteryHere.isHidden = false
+                    self.noLotteryHere.isHidden = false
                 }
                 
                 
