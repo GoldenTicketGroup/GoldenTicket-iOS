@@ -28,6 +28,7 @@
 		080EA9B622D08B14000D074C /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B522D08B14000D074C /* ResponseString.swift */; };
 		080EA9B822D08B74000D074C /* ResponseDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EA9B722D08B74000D074C /* ResponseDefault.swift */; };
 		0813244022D7674700C32863 /* TicketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813243F22D7674700C32863 /* TicketService.swift */; };
+		0813244422D782ED00C32863 /* ResponseString2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813244322D782ED00C32863 /* ResponseString2.swift */; };
 		0836ED5922C5A72D006295D3 /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836ED5822C5A72D006295D3 /* Notice.storyboard */; };
 		0836EDA622C750F7006295D3 /* Win.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDA522C750F7006295D3 /* Win.storyboard */; };
 		0836EDAC22C75A24006295D3 /* Lottory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836EDAB22C75A24006295D3 /* Lottory.storyboard */; };
@@ -119,6 +120,7 @@
 		080EA9B522D08B14000D074C /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
 		080EA9B722D08B74000D074C /* ResponseDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDefault.swift; sourceTree = "<group>"; };
 		0813243F22D7674700C32863 /* TicketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketService.swift; sourceTree = "<group>"; };
+		0813244322D782ED00C32863 /* ResponseString2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString2.swift; sourceTree = "<group>"; };
 		0836ED5822C5A72D006295D3 /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
 		0836EDA522C750F7006295D3 /* Win.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Win.storyboard; sourceTree = "<group>"; };
 		0836EDAB22C75A24006295D3 /* Lottory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lottory.storyboard; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 			children = (
 				08004B9E22D31B5300BA8AC0 /* ResponseArray.swift */,
 				080EA9B522D08B14000D074C /* ResponseString.swift */,
+				0813244322D782ED00C32863 /* ResponseString2.swift */,
 				080EA9B722D08B74000D074C /* ResponseDefault.swift */,
 				F4955C0122C8635A00530906 /* Show.swift */,
 				F43F453722C9A83200C53898 /* ShowDetail.swift */,
@@ -694,6 +697,7 @@
 				089C13BF22D06BB600F91DD9 /* EditInfoViewController.swift in Sources */,
 				F4955C0922C89C0F00530906 /* CustomSearchButton.swift in Sources */,
 				F4012DAD22D64B4300F71861 /* TutorialMidVC.swift in Sources */,
+				0813244422D782ED00C32863 /* ResponseString2.swift in Sources */,
 				F4FE455622D30D4800E6C6B0 /* TutorialVC.swift in Sources */,
 				F43F453822C9A83200C53898 /* ShowDetail.swift in Sources */,
 				F43F453622C9A81000C53898 /* ShowDetailVC.swift in Sources */,

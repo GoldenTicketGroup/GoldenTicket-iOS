@@ -101,9 +101,7 @@ extension WinTicketsVC
             // 매개변수에 어떤 값을 가져올 것인지
             case .success(let res):
                 print("당첨 티켓 리스트 조회 성공")
-                let response = res as! ResponseArray<WinList>
                 
-                // self.winList = response.data as! [WinList]
                 self.winList = res as! [WinList]
                 print(self.winList.count)
                 self.winCollection.reloadData()
