@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="2200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShK-y8-slO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShK-y8-slO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="2200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r55-YN-3LG">
@@ -310,7 +310,7 @@ Cgo
                         <rect key="frame" x="0.0" y="0.0" width="375" height="2200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdq-Qa-Mju">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdq-Qa-Mju">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="2200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAp-MT-lFd">
@@ -400,11 +400,11 @@ Cgo
                                                 </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment>
-                                                        <mutableString key="content">작곡가이자 프로듀서인 세계적 거장 앤드루 로이드 웨버의 &lt;스쿨 오브 락&gt;은 영국 뮤지컬 최초로 브로드웨에서 월드 프리미어 공연을 선보인 작품인데요, 올해 6월부터 한국에서도 만나보실 수 있게 되었습니다.
+                                                        <string key="content">작곡가이자 프로듀서인 세계적 거장 앤드루 로이드 웨버의 &lt;스쿨 오브 락&gt;은 영국 뮤지컬 최초로 브로드웨에서 월드 프리미어 공연을 선보인 작품인데요, 올해 6월부터 한국에서도 만나보실 수 있게 되었습니다.
 
 뮤지컬 &lt;스쿨 오브 락&gt;은 전미 박스 오피스 1위를 기록한 세계적인 음악 영화 &lt;스쿨 오브 락&gt;을 앤드루 로이디 웨버가 뮤지컬로 재탄생 시킨 작품입니다.
 
-어디에서도 들을 수 없던 라이브 연주, 작은 체구에서 나온다고 하기엔 믿기지 않을 정도로 엄청난 에너지를 갖고 있는 배우들이 무대를 장악합니다. 그리고 배우들이 직접 악기를 연주함으로써 모두 함께 하나의 음악이 만들어지는 과정들을 지켜본다는 것은 뮤지컬 &lt;스쿨 오브락&gt;에서만 볼 수 있는 묘미입니다.</mutableString>
+어디에서도 들을 수 없던 라이브 연주, 작은 체구에서 나온다고 하기엔 믿기지 않을 정도로 엄청난 에너지를 갖고 있는 배우들이 무대를 장악합니다. 그리고 배우들이 직접 악기를 연주함으로써 모두 함께 하나의 음악이 만들어지는 과정들을 지켜본다는 것은 뮤지컬 &lt;스쿨 오브락&gt;에서만 볼 수 있는 묘미입니다.</string>
                                                         <attributes>
                                                             <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" tighteningFactorForTruncation="0.0"/>
@@ -422,11 +422,11 @@ Cgo
                                                 </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment>
-                                                        <mutableString key="content">다양한 장르가 혼합된 ‘록키호러쇼’는 기존 뮤지컬 서사 구조에 반하는 도발적인 매력을 자랑합니다. 작품은 막 약혼한 자넷과 브래드가 우연히 프랑큰 퍼터의 성을 방문하며 겪게 되는 하룻밤의 이야기를 그립니다.
+                                                        <string key="content">다양한 장르가 혼합된 ‘록키호러쇼’는 기존 뮤지컬 서사 구조에 반하는 도발적인 매력을 자랑합니다. 작품은 막 약혼한 자넷과 브래드가 우연히 프랑큰 퍼터의 성을 방문하며 겪게 되는 하룻밤의 이야기를 그립니다.
 
 종잡을 수 없는 방향으로 이끄는 독특한 설정의 캐릭터들과 과장된 대사는 극의 매력을 더합니다. 여름과 가장 잘어울리는 장르로 손꼽히는 공포와 스릴러가 관객들의 관심을 자극하죠.   
 
-저마다의 개성을 살린 화려하고 독특한 메이크업, 코르셋과 망사 스타킹 등 파격적인 비주얼의 의상 또한 &lt;록키호러쇼&gt;의 볼거리 중 하나입니다. ‘콜백’(call-back) 이라 불리는 특별한 관람 문화도 인기인데요, &lt;록키 호러쇼&gt;에서는 관객들이 배우들의 대사에 반응하거나 극 중 캐릭터와 같은 행동을 하며 극을 이끄는 주체가 되기도 하니 가만히 앉아서 보는 공연이 지루해지신 분들께 추천합니다.</mutableString>
+저마다의 개성을 살린 화려하고 독특한 메이크업, 코르셋과 망사 스타킹 등 파격적인 비주얼의 의상 또한 &lt;록키호러쇼&gt;의 볼거리 중 하나입니다. ‘콜백’(call-back) 이라 불리는 특별한 관람 문화도 인기인데요, &lt;록키 호러쇼&gt;에서는 관객들이 배우들의 대사에 반응하거나 극 중 캐릭터와 같은 행동을 하며 극을 이끄는 주체가 되기도 하니 가만히 앉아서 보는 공연이 지루해지신 분들께 추천합니다.</string>
                                                         <attributes>
                                                             <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" tighteningFactorForTruncation="0.0"/>
