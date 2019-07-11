@@ -9,6 +9,8 @@
 import UIKit
 import Foundation
 
-struct Lottery : Codable {
-    let schedule_idx : Int
+// 응모 티켓
+struct Ticket : Codable {
+    let ticketIdx : Int
+    let state : Int
 }

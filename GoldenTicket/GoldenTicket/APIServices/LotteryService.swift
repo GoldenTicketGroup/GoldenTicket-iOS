@@ -13,7 +13,11 @@ struct LotteryService {
     
     static let shared = LotteryService()
     
-    func lottery(scheduleIdx: Int, completion: @escaping(NetworkResult<Any>)->Void){
+    /**
+     응모 등록하는 메서드
+     **/
+    
+    func lotteryIn(scheduleIdx: Int, completion: @escaping(NetworkResult<Any>)->Void){
         let token = UserDefaults.standard
         
         let header: HTTPHeaders = [
@@ -44,7 +48,7 @@ struct LotteryService {
                                     let decoder = JSONDecoder()
                                     
                                     // 데이터 encoding 하는 방법
-                                    let result = try decoder.decode(ResponseArray<Lottery>.self, from: value)
+                                    let result = try decoder.decode(ResponseDefault.self, from: value)
                                     // print("finish decode")
                                     
                                     switch result.success {
@@ -77,10 +81,15 @@ struct LotteryService {
                     break
                 }
         }
-        
     }
     
-    func lotteryTime(name: String, startTime: String, lotteryInx: Int, completion: @escaping(NetworkResult<Any>)->Void) {
+    
+    /**
+     응모 리스트 조회 메서드
+     **/
+    
+    func lotteryList(completion: @escaping(NetworkResult<Any>)->Void) {
+        
         let token = UserDefaults.standard
         
         let header: HTTPHeaders = [
@@ -88,13 +97,7 @@ struct LotteryService {
             "token" : "\(token.string(forKey: "token")!)"
         ]
         
-        let body : Parameters = [
-            "name" : name,
-            "start_time" : startTime,
-            "lottery_idx" : lotteryInx
-        ]
-        
-        Alamofire.request(APIConstants.LotteryURL, method: .get, parameters: body, encoding: JSONEncoding.default, headers: header)
+        Alamofire.request(APIConstants.LotteryURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
             .responseData { response in
                 
                 //print(response.error?.localizedDescription)
@@ -113,7 +116,7 @@ struct LotteryService {
                                     let decoder = JSONDecoder()
                                     
                                     // 데이터 encoding 하는 방법
-                                    let result = try decoder.decode(ResponseLottery.self, from: value)
+                                    let result = try decoder.decode(ResponseArray<LotteryList>.self, from: value)
                                     // print("finish decode")
                                     
                                     switch result.success {
@@ -121,6 +124,82 @@ struct LotteryService {
                                         completion(.success(result))
                                     case false:
                                         completion(.requestErr(result))
+                                    }
+                                } catch {
+                                    completion(.pathErr)
+                                    // print(error.localizedDescription)   // 에러 출력
+                                    // debugPrint(error) // check which key is missing
+                                }
+                            case 400:
+                                completion(.pathErr)
+                            case 500:
+                                completion(.serverErr)
+                                
+                            default:
+                                break
+                            }
+                        }
+                    }
+                    break
+                    
+                // 통신 실패
+                case .failure(let err):
+                    print("error",err.localizedDescription)
+                    completion(.networkFail)
+                    break
+                }
+        }
+    }
+    
+    
+    /**
+     응모 상세 조회 통신 메소드
+     **/
+    
+    func lotteryDetail(ticketIdx: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
+        
+        let token = UserDefaults.standard
+        let URL = APIConstants.ShowDetailURL + "/\(ticketIdx)"
+        
+        let header: HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "token" : "\(token.string(forKey: "token")!)"  // token 보내야 함 ( 좋아요 통신 때문에 )
+        ]
+        
+        
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
+            .responseData { response in
+                
+                //print(response.error?.localizedDescription)
+                // print("응답 \(response)")
+                switch response.result {
+                    
+                // 통신 성공
+                case .success:
+                    if let value = response.result.value {
+                        if let status = response.response?.statusCode {
+                            
+                            
+                            switch status {
+                            case 200:
+                                do {
+                                    let decoder = JSONDecoder()
+                                    
+                                    // ShowDetail.swift model
+                                    // ResponseShow.swift codable
+                                    
+                                    // 데이터 encoding 하는 방법
+                                    // print("데이터",String(data:value, encoding: .utf8))
+                                    let result = try decoder.decode(ResponseArray<Ticket>.self, from: value)
+                                    // print("result \(result)")
+                                    // print(type(of: result))
+                                    // print("finish decode")
+                                    
+                                    switch result.success {
+                                    case true:
+                                        completion(.success(result.data!))
+                                    case false:
+                                        completion(.requestErr(result.message))
                                     }
                                 } catch {
                                     completion(.pathErr)

@@ -9,8 +9,10 @@
 import UIKit
 import Foundation
 
+// 응모 리스트
 struct LotteryList : Codable {
-    let name : String
-    let start_time : String
-    let lottery_idx :Int
+    let show_idx: Int
+    let lottery_idx: Int
+    let name: String
+    let start_time: String
 }
