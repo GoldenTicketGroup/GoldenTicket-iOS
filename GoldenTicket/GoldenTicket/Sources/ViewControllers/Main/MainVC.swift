@@ -48,6 +48,8 @@ class MainVC: UIViewController {
     
     // 응모한 공연이 없습니다.
     @IBOutlet var noLotteryHere: UILabel!
+    @IBOutlet weak var noLotteryView: UIView!
+    @IBOutlet weak var setLotteryView: UIView!
     
     let formatter = DateFormatter()
     let userCalender = Calendar.current;
@@ -112,6 +114,17 @@ class MainVC: UIViewController {
         monthMusicalButton.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 6)
         searchButton.makeRounded(cornerRadius: 20)
         searchButton.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 3)
+//
+//        if timeList.count == 0 {
+//            setLotteryView.isHidden = true
+//        } else {
+//            noLotteryHere.isHidden = true
+//            noLotteryHere.isHidden = true
+//        }
+        noLotteryHere.isHidden = true
+        noLotteryView.isHidden = true
+
+        
     } // viewDidLoad
     
     
@@ -123,20 +136,22 @@ class MainVC: UIViewController {
         self.userName.text = user.string(forKey: "name")
     }
     
-    
     // 응모한 공연이 있을 시 남은 시간을 보여주는 뷰에 팔요한 시간 계산기, timer
     func timeCalculator(dateFormat: String, endTime: String, startTime: Date = Date()) -> DateComponents {
+        
         formatter.dateFormat = dateFormat
         let _startTime = startTime
         let _endTime = formatter.date(from: endTime)
         
         let timeDifference = userCalender.dateComponents(requestedComponent, from: _startTime, to: _endTime!)
         return timeDifference
+        
     }
     
     //첫번째 응모한 공연에 대한 시간 프린터
     @objc func timePrinter1() -> Void {
         // 시간 보여주기
+        if timeList.count != 0 {
         let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime1)  //endTime 에 timeLabel 이런식으로 변수 넣어주기
         // "07/07/2019 04:30:30"
         let sec = time.second!
@@ -165,14 +180,15 @@ class MainVC: UIViewController {
             firstLotteryCheckButton.isHidden = false    // 당첨확인!
             firstTimeLabel.isHidden = true              // 타이머 숨기기
         }
+        }
     }
     
     //두번째 응모한 공연에 대한 시간 프린터
     @objc func timePrinter2() -> Void {
-        
+        if timeList.count == 2 {
         // 시간 보여주기
         let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime2)
-        
+       
         let sec = time.second!
         let min = time.minute!
         let h = time.hour!
@@ -198,6 +214,7 @@ class MainVC: UIViewController {
         if sec <= 0 && min <= 0 && sec <= 0 {
             secondLotteryCheckButton.isHidden = false
             secondTimeLabel.isHidden = true
+        }
         }
     }
     
@@ -534,6 +551,7 @@ extension MainVC {
                 
                 if self.timeList.count == 1 {
                     // 응모한 공연이 1개
+                    self.lotteryRightButton.isHidden = true
                     self.lotteryTime1 = self.timeList[0].start_time     // 응모한 공연 1
                     timer2.fire()
                 }
@@ -550,7 +568,7 @@ extension MainVC {
                 else {
                     // 응모한 공연이 없음
                     self.noLottery = true
-                    
+                    self.setLotteryView.isHidden = true
                     self.noLotteryHere.isHidden = false
                 }
                 
