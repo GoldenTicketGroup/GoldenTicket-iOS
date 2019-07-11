@@ -75,10 +75,10 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         
         //메인 공연 collection view animation 지정해주기.
-        if let layout = showCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
-            //layout.scrollDirection = direction
-            layout.animator = animator.0
-        }
+//        if let layout = showCollectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
+//            //layout.scrollDirection = direction
+//            layout.animator = animator.0
+//        }
         
         // 세팅하기.
         setShowData()
@@ -172,7 +172,7 @@ class MainVC: UIViewController {
     @objc func timePrinter2() -> Void {
         
         // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss " + "a", endTime: "07/11/2019 04:18:30 " + "p")
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss " + "a", endTime: "07/11/2019 10:30:00 " + "a")
         
         let sec = time.second!
         let min = time.minute!
@@ -266,39 +266,20 @@ class MainVC: UIViewController {
     
     @IBAction func lotteryCheckOne(_ sender: Any) {
         
-        //일단 랜덤으로 당첨/ 당첨 안됨 확인하도록
-        let num = arc4random_uniform(1)
-        print(num)
-        if num == 0 {
-            let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
-            let win = storyboardWin.instantiateViewController(withIdentifier: "winVC")
-            
-            present(win, animated: true)
-        } else {
-            let storyboardLose = UIStoryboard.init(name: "Lose", bundle: nil)
-            let lose = storyboardLose.instantiateViewController(withIdentifier: "loseVC")
-            
-            present(lose, animated: true)
-        }
+        // 당첨된 경우
+        let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
+        let win = storyboardWin.instantiateViewController(withIdentifier: "winVC")
+        
+        present(win, animated: true)
     }
     
     
     @IBAction func lotteryCheckTwo(_ sender: Any) {
-        let num = arc4random_uniform(1)
-        print(num)
-        if num == 0 {
-            let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
-            let win = storyboardWin.instantiateViewController(withIdentifier: "winVC")
-            
-            present(win, animated: true)
-        } else if num == 1 {
-            let storyboardLose = UIStoryboard.init(name: "Lose", bundle: nil)
-            let lose = storyboardLose.instantiateViewController(withIdentifier: "loseVC")
-            
-            present(lose, animated: true)
-        } else {
-            
-        }
+        // 당첨 안된 경우
+        let storyboardLose = UIStoryboard.init(name: "Lose", bundle: nil)
+        let lose = storyboardLose.instantiateViewController(withIdentifier: "loseVC")
+        
+        present(lose, animated: true)
     }
     
     
@@ -370,7 +351,7 @@ extension MainVC: UICollectionViewDataSource {
             cell.showLocation.text = show.location
             cell.showTime.text = show.running_time
             cell.showTitle.text = show.name
-            
+            //cell.showImage.makeRounded(cornerRadius: 20)
             
             return cell
             
@@ -399,23 +380,23 @@ extension MainVC : UICollectionViewDelegate {
     }
 }
 
-extension MainVC : UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.bounds.width - 40, height: view.bounds.height)
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 23, bottom: 0, right: 23)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 19
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 19
-    }
-}
+//extension MainVC : UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: view.bounds.width - 40, height: view.bounds.height)
+//
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: 0, left: 23, bottom: 0, right: 23)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 19
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 19
+//    }
+//}
 
 // 통신 데이터 세팅.
 extension MainVC {

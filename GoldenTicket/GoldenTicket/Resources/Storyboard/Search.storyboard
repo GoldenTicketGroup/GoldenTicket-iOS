@@ -28,6 +28,9 @@
                                         <state key="normal" title="판타지">
                                             <color key="titleColor" red="0.611768961" green="0.61175715919999996" blue="0.61176514630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="hashView"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="recSearchButton:" destination="C5K-Px-xHI" eventType="touchUpInside" id="juD-hF-d8S"/>
                                         </connections>
@@ -55,6 +58,9 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="hashView"/>
+                                </userDefinedRuntimeAttributes>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="i2J-h8-u5y">
                                 <rect key="frame" x="14" y="199" width="348" height="30"/>
@@ -248,6 +254,11 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="hashView"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="C5K-Px-xHI" id="Z5F-Sc-9Be"/>
                                     <outlet property="delegate" destination="C5K-Px-xHI" id="k8S-dj-Xql"/>
