@@ -55,7 +55,7 @@ class MainVC: UIViewController {
             self.showTitle = title
         }
     }
-    var lotteryList : [Lottery] = [Lottery(title: "옥탑방 고양이"), Lottery(title: "뮤지컬 캣츠")]
+    var lotteryList : [Lottery] = [Lottery(title: "옥탑방 고양이"), Lottery(title: "뮤지컬 벤허")]
     
     //콘텐츠 페이지로 넘어가는 버튼
     @IBOutlet weak var monthShowButton: UIButton!
@@ -80,6 +80,7 @@ class MainVC: UIViewController {
 //            layout.animator = animator.0
 //        }
         
+        
         // 세팅하기.
         setShowData()
         setupSideMenu()
@@ -89,6 +90,13 @@ class MainVC: UIViewController {
         lotteryLeftButton.isHidden = true
         firstLotteryCheckButton.isHidden = true
         secondLotteryCheckButton.isHidden = true
+        
+//        if lotteryList.count == 1 {
+//            lotteryRightButton.isHidden = true
+//        }
+        //lotteryRightButton.isHidden = true
+        //lotteryCollectionView.reloadData()
+        print(lotteryList.count)
         
         showCollectionView.dataSource = self
         showCollectionView.delegate = self
@@ -172,7 +180,7 @@ class MainVC: UIViewController {
     @objc func timePrinter2() -> Void {
         
         // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss " + "a", endTime: "07/11/2019 10:30:00 " + "a")
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss " + "a", endTime: "07/11/2019 03:44:30 " + "p")
         
         let sec = time.second!
         let min = time.minute!
@@ -244,6 +252,7 @@ class MainVC: UIViewController {
         
         firstLotteryView.isHidden = true
         secondLotteryView.isHidden = false
+        
     }
     
     
