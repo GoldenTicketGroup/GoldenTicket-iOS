@@ -18,11 +18,11 @@ class MainVC: UIViewController {
     var showIdx: Int?
     
     // time label 시간 통신
-    var lotteryTime1 : String?
-    var lotteryTime2 : String?
+    var lotteryTime1 : String!
+    var lotteryTime2 : String!
     // time label 시간 통신 테스트
-    var lotteryTest : String = "09/09/2019 09:09:09 p"
-    
+    // var lotteryTest : String = "09/09/2019 09:09:09 p"
+    var noLottery = false
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
     
@@ -40,6 +40,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var lotteryLeftButton: UIButton!
     @IBOutlet weak var lotteryRightButton: UIButton!
     
+    // 응모한 공연이 없습니다.
+    @IBOutlet var noLotteryHere: UILabel!
     
     let formatter = DateFormatter()
     let userCalender = Calendar.current;
@@ -91,7 +93,8 @@ class MainVC: UIViewController {
         // 세팅하기.
         setShowData()
         setupSideMenu()
-
+        setTimeLabel()
+        
         //
         secondLotteryView.isHidden = true
         lotteryLeftButton.isHidden = true
@@ -115,13 +118,6 @@ class MainVC: UIViewController {
         monthMusicalButton.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 6)
         searchButton.makeRounded(cornerRadius: 20)
         searchButton.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 3)
-        
-        // count down timer에 필요한 함수들
-        let timer1 = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.timePrinter1), userInfo: nil, repeats: true)
-        let timer2 = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.timePrinter2), userInfo: nil, repeats: true)
-        
-        timer1.fire()
-        timer2.fire()
     } // viewDidLoad
     
     
@@ -147,7 +143,6 @@ class MainVC: UIViewController {
     //첫번째 응모한 공연에 대한 시간 프린터
     @objc func timePrinter1() -> Void {
         // 시간 보여주기
-        // setTimeLabel()
         let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : "07/07/2019 04:30:30 p")  //endTime 에 timeLabel 이런식으로 변수 넣어주기
         // "07/07/2019 04:30:30"
         let sec = time.second!
@@ -173,8 +168,8 @@ class MainVC: UIViewController {
         firstTimeLabel.text = hour + " : " + minute + " : " + second
         
         if sec <= 0 && min <= 0 && sec <= 0 {
-            firstLotteryCheckButton.isHidden = false
-            firstTimeLabel.isHidden = true
+            firstLotteryCheckButton.isHidden = false    // 당첨확인!
+            firstTimeLabel.isHidden = true              // 타이머 숨기기
         }
     }
     
@@ -182,7 +177,7 @@ class MainVC: UIViewController {
     @objc func timePrinter2() -> Void {
         
         // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTest)
+        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime1)
         
         let sec = time.second!
         let min = time.minute!
@@ -524,6 +519,11 @@ extension MainVC {
     }
     
     func setTimeLabel() {
+        
+        // count down timer에 필요한 함수들
+        let timer1 = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.timePrinter1), userInfo: nil, repeats: true)
+        let timer2 = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.timePrinter2), userInfo: nil, repeats: true)
+        
         LotteryService.shared.lotteryList() {
             [weak self]
             data in
@@ -534,10 +534,35 @@ extension MainVC {
                 
             // 매개변수에 어떤 값을 가져올 것인지
             case .success(let res):
+                print("타임 조회 성공")
+                let time_data = res as! ResponseArray<LotteryList>
                 
-                self.timeList = res as! [LotteryList]
-                self.lotteryTime1 = self.timeList[0].start_time     // 응모한 공연 1
-                self.lotteryTime2 = self.timeList[1].start_time     // 응모한 공연 2
+                self.timeList = time_data.data as! [LotteryList]
+
+                if self.timeList.count == 1 {
+                    // 응모한 공연이 1개
+                    self.lotteryTime1 = self.timeList[0].start_time     // 응모한 공연 1
+                    print("lotteryTime1 \(self.lotteryTime1!)")
+                    
+                    timer2.fire()
+                }
+                else if self.timeList.count == 2 {
+                    // 응모한 공연이 2개
+                    self.lotteryTime1 = self.timeList[0].start_time     // 응모한 공연 1
+                    self.lotteryTime2 = self.timeList[1].start_time     // 응모한 공연 2
+                    print("lotteryTime1 \(self.lotteryTime1!)")
+                    print("lotteryTime2 \(self.lotteryTime2!)")
+                    
+                    timer1.fire()
+                    timer2.fire()
+                }
+                else {
+                    // 응모한 공연이 없음
+                    self.noLottery = true
+                    
+                    // self.noLotteryHere.isHidden = false
+                }
+                
                 
             case .requestErr(let message):
                 self.simpleAlert(title: "메인 공연 조회 실패", message: "\(message)")
