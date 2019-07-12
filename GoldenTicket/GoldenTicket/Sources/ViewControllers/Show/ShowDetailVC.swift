@@ -187,7 +187,8 @@ class ShowDetailVC: UIViewController {
                 if self.showDetail.status == 200 {
                     // 응모할 수 있는 경우
                     // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
-                    
+                    self.timeList = self.showDetail.data.schedule!
+                    self.tblView.reloadData()
                     // 스케줄이 아예 빈 배열인 경우 ==> "응모 가능한 시간이 아닙니다"
                     if self.showDetail.data.schedule!.count == 0 {
                         //self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 없습니다.")
@@ -203,11 +204,12 @@ class ShowDetailVC: UIViewController {
                         }
                         if self.cnt == 0 {
                             // 응모불가능
-                            
+                            self.alarmMessage.text = "응모 가능한 시간이 아닙니다"
                         }
                         else {
                             // 응모가능
                             self.timeList = self.showDetail.data.schedule!
+                            self.tblView.reloadData()
                             return
                         }
                         // 모든 draw_available 이 다 0일 때
