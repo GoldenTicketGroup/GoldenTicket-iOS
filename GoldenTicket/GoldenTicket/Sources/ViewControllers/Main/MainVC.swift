@@ -126,14 +126,17 @@ class MainVC: UIViewController {
         searchButton.makeRounded(cornerRadius: 20)
         searchButton.dropShadow(color: UIColor.black16, offSet: CGSize(width: 0, height: 0), opacity: 1, radius: 3)
 
+        // 응모한 공연이 있는 경우 이 뷰 보이지 않도록
         noLotteryHere.isHidden = true
         noLotteryView.isHidden = true
         
-        if timeList.count == 0{
-            noLotteryHere.isHidden = false
-            noLotteryView.isHidden = false
+        
+        //우선 오늘 응모가능한 공연이 없는 경우
+        noShowImage.isHidden = true
+        noShowLabel.isHidden = true
+        noShowBubbleImage.isHidden = true
 
-        }
+        // print(showList.count)
 
     } // viewDidLoad
     
@@ -162,69 +165,69 @@ class MainVC: UIViewController {
     @objc func timePrinter1() -> Void {
         // 시간 보여주기
         if timeList.count != 0 {
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime1)  //endTime 에 timeLabel 이런식으로 변수 넣어주기
-        // "07/07/2019 04:30:30"
-        let sec = time.second!
-        let min = time.minute!
-        let h = time.hour!
-        
-        var second = "\(time.second!)"
-        var minute = "\(time.minute!)"
-        var hour = "\(time.hour!)"
-        
-        if sec < 10 {
-            second = "0" + second
-        } else {}
-        if min < 10 {
-            minute = "0" + minute
-        } else {
+            let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime1)  //endTime 에 timeLabel 이런식으로 변수 넣어주기
+            // "07/07/2019 04:30:30"
+            let sec = time.second!
+            let min = time.minute!
+            let h = time.hour!
             
-        }
-        if h < 10 {
-            hour = "0" + hour
-        }
-        
-        firstTimeLabel.text = hour + " : " + minute + " : " + second
-        
-        if sec <= 0 && min <= 0 && sec <= 0 {
-            firstLotteryCheckButton.isHidden = false    // 당첨확인!
-            firstTimeLabel.isHidden = true              // 타이머 숨기기
-        }
+            var second = "\(time.second!)"
+            var minute = "\(time.minute!)"
+            var hour = "\(time.hour!)"
+            
+            if sec < 10 {
+                second = "0" + second
+            } else {}
+            if min < 10 {
+                minute = "0" + minute
+            } else {
+                
+            }
+            if h < 10 {
+                hour = "0" + hour
+            }
+            
+            firstTimeLabel.text = hour + " : " + minute + " : " + second
+            
+            if sec <= 0 && min <= 0 && sec <= 0 {
+                firstLotteryCheckButton.isHidden = false    // 당첨확인!
+                firstTimeLabel.isHidden = true              // 타이머 숨기기
+            }
         }
     }
     
     //두번째 응모한 공연에 대한 시간 프린터
     @objc func timePrinter2() -> Void {
         if timeList.count == 2 {
-        // 시간 보여주기
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime2)
-       
-        let sec = time.second!
-        let min = time.minute!
-        let h = time.hour!
-        
-        var second = "\(time.second!)"
-        var minute = "\(time.minute!)"
-        var hour = "\(time.hour!)"
-        
-        if sec < 10 {
-            second = "0" + second
-        } else {}
-        if min < 10 {
-            minute = "0" + minute
-        } else {
+            // 시간 보여주기
+            let time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime : lotteryTime2)
+           
+            let sec = time.second!
+            let min = time.minute!
+            let h = time.hour!
             
-        }
-        if h < 10 {
-            hour = "0" + hour
-        }
-        
-        secondTimeLabel.text = hour + " : " + minute + " : " + second
-        
-        if sec <= 0 && min <= 0 && sec <= 0 {
-            secondLotteryCheckButton.isHidden = false
-            secondTimeLabel.isHidden = true
-        }
+            var second = "\(time.second!)"
+            var minute = "\(time.minute!)"
+            var hour = "\(time.hour!)"
+            
+            if sec < 10 {
+                second = "0" + second
+            } else {}
+            if min < 10 {
+                minute = "0" + minute
+            } else {
+                
+            }
+            if h < 10 {
+                hour = "0" + hour
+            }
+            
+            secondTimeLabel.text = hour + " : " + minute + " : " + second
+            
+            if sec <= 0 && min <= 0 && sec <= 0 {
+                secondLotteryCheckButton.isHidden = false
+                secondTimeLabel.isHidden = true
+            }
         }
     }
     
@@ -582,7 +585,7 @@ extension MainVC {
                 else {
                     // 응모한 공연이 없음
                     self.noLottery = true
-                    self.setLotteryView.isHidden = true
+                    //self.setLotteryView.isHidden = true
                     //self.noLotteryHere.isHidden = false
                     //self.noLotteryView.isHidden = false
                 }

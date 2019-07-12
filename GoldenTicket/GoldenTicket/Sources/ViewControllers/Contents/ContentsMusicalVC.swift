@@ -21,4 +21,14 @@ class ContentsMusicalVC: UIViewController {
     @IBAction func cancleButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func contents(_ sender: Any) {
+        //showIdx = 17
+    }
+    
+    @IBAction func contentsTwo(_ sender: Any) {
+        //showIdx =14
+    }
+    
+    
 }

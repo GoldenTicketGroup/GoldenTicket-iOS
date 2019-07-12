@@ -176,6 +176,9 @@ Cgo
                                                 <state key="normal" title="공연정보 보러가기">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="contentsOne:" destination="kom-FS-eJo" eventType="touchUpInside" id="jLQ-fd-Z5f"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgContentsFirst02" translatesAutoresizingMaskIntoConstraints="NO" id="KbY-B3-CW3">
                                                 <rect key="frame" x="30" y="1448" width="315" height="225"/>
@@ -212,6 +215,9 @@ Cgo
                                                 <state key="normal" title="공연정보 보러가기">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="contentsTwo:" destination="kom-FS-eJo" eventType="touchUpInside" id="NHS-DT-b5r"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39d-vS-XuA">
                                                 <rect key="frame" x="328" y="28" width="31" height="31"/>
@@ -445,6 +451,9 @@ Cgo
                                                 <state key="normal" title="공연정보 보러가기">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="contents:" destination="CUX-OV-byM" eventType="touchUpInside" id="yCd-HS-3pm"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgContentsSec02" translatesAutoresizingMaskIntoConstraints="NO" id="KG4-PF-Zme">
                                                 <rect key="frame" x="30" y="1448" width="315" height="225"/>
@@ -481,6 +490,9 @@ Cgo
                                                 <state key="normal" title="공연정보 보러가기">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="contentsTwo:" destination="CUX-OV-byM" eventType="touchUpInside" id="6Jm-KC-0aa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnW-P6-Lxk">
                                                 <rect key="frame" x="328" y="28" width="31" height="31"/>
