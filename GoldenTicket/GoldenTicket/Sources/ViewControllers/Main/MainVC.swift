@@ -11,6 +11,8 @@ import Hero
 import SideMenu
 import Kingfisher
 import AnimatedCollectionViewLayout
+import SwiftGifOrigin
+import SwiftOverlayShims
 
 class MainVC: UIViewController {
     
@@ -27,6 +29,13 @@ class MainVC: UIViewController {
     
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
+    
+    //오늘 올라온 공연이 없는 경우
+    
+    @IBOutlet weak var noShowImage: UIImageView!
+    @IBOutlet weak var noShowBubbleImage: UIImageView!
+    @IBOutlet weak var noShowLabel: UILabel!
+    
     
     //응모내역 보여주기에 대한 뷰
     @IBOutlet weak var lotteryCollectionView: UICollectionView!
@@ -46,6 +55,8 @@ class MainVC: UIViewController {
     @IBOutlet var noLotteryHere: UILabel!
     @IBOutlet weak var noLotteryView: UIView!
     @IBOutlet weak var setLotteryView: UIView!
+    
+    
     
     let formatter = DateFormatter()
     let userCalender = Calendar.current;
@@ -78,6 +89,17 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //응모가능한 공연이 없을시
+        
+        self.noShowImage.image = UIImage.gif(name: "noTicket")
+        
+        do {
+            let imageData = try Data(contentsOf: Bundle.main.url(forResource: "noTicket", withExtension: "gif")!)
+            self.noShowImage.image = UIImage.gif(data: imageData)
+            
+        } catch {
+            print(error)
+        }
         
         // 세팅하기.
         setShowData()
@@ -107,6 +129,12 @@ class MainVC: UIViewController {
 
         noLotteryHere.isHidden = true
         noLotteryView.isHidden = true
+        
+        if timeList.count == 0{
+            noLotteryHere.isHidden = false
+            noLotteryView.isHidden = false
+
+        }
 
     } // viewDidLoad
     
@@ -398,6 +426,8 @@ extension MainVC : UICollectionViewDelegate {
 
 // 통신 데이터 세팅.
 extension MainVC {
+    
+    // 메인화면 공연 정보 통신 setting 해주기.
     func setShowData() {
         
         ShowService.shared.showHome() {
@@ -428,6 +458,8 @@ extension MainVC {
             }
         }
     }
+    
+    // 공연 상세뷰 통신 data setting 해주기.
     
     func setDetailData() {
         
@@ -511,6 +543,8 @@ extension MainVC {
         }
     }
     
+    // 응모한 공연시간 정보 setting 해주기.
+    
     func setTimeLabel() {
         
         // count down timer에 필요한 함수들
@@ -555,7 +589,8 @@ extension MainVC {
                     // 응모한 공연이 없음
                     self.noLottery = true
                     self.setLotteryView.isHidden = true
-                    self.noLotteryHere.isHidden = false
+                    //self.noLotteryHere.isHidden = false
+                    //self.noLotteryView.isHidden = false
                 }
                 
                 

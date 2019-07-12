@@ -31,6 +31,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="pJ4-eF-aT3">
+                                <rect key="frame" x="53" y="294" width="238" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pJ4-eF-aT3" secondAttribute="height" multiplier="119:78" id="i0x-K4-9hJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sppechbubble" translatesAutoresizingMaskIntoConstraints="NO" id="IXH-dg-avh">
+                                <rect key="frame" x="84" y="181" width="250" height="117.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IXH-dg-avh" secondAttribute="height" multiplier="83:39" id="RWE-Tf-F5d"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 당첨된 공연이 없어요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcc-jh-4Uz">
+                                <rect key="frame" x="132" y="224" width="155" height="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Equ-9V-wAB">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,12 +165,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="IXH-dg-avh" firstAttribute="leading" secondItem="2L7-Sm-Unm" secondAttribute="leading" constant="84" id="3v2-zY-dud"/>
+                            <constraint firstItem="2L7-Sm-Unm" firstAttribute="bottom" secondItem="pJ4-eF-aT3" secondAttribute="bottom" constant="217" id="ITm-61-Viz"/>
                             <constraint firstItem="2L7-Sm-Unm" firstAttribute="trailing" secondItem="ixO-SB-OYn" secondAttribute="trailing" id="JgU-k3-NMT"/>
                             <constraint firstItem="Equ-9V-wAB" firstAttribute="bottom" secondItem="2L7-Sm-Unm" secondAttribute="bottom" id="KCc-fo-fV3"/>
                             <constraint firstItem="Equ-9V-wAB" firstAttribute="top" secondItem="ixO-SB-OYn" secondAttribute="bottom" id="OfT-L0-Kfi"/>
                             <constraint firstItem="ixO-SB-OYn" firstAttribute="leading" secondItem="2L7-Sm-Unm" secondAttribute="leading" id="OoU-eH-uWg"/>
                             <constraint firstItem="2L7-Sm-Unm" firstAttribute="trailing" secondItem="Equ-9V-wAB" secondAttribute="trailing" id="PRf-IN-mN8"/>
+                            <constraint firstItem="IXH-dg-avh" firstAttribute="top" secondItem="ixO-SB-OYn" secondAttribute="bottom" constant="117" id="PTE-Um-fu9"/>
+                            <constraint firstItem="dcc-jh-4Uz" firstAttribute="leading" secondItem="2L7-Sm-Unm" secondAttribute="leading" constant="132" id="TIH-Fg-h0J"/>
+                            <constraint firstItem="2L7-Sm-Unm" firstAttribute="trailing" secondItem="pJ4-eF-aT3" secondAttribute="trailing" constant="84" id="UOT-bh-Pc5"/>
+                            <constraint firstItem="2L7-Sm-Unm" firstAttribute="trailing" secondItem="IXH-dg-avh" secondAttribute="trailing" constant="41" id="WjI-89-uZz"/>
+                            <constraint firstItem="2L7-Sm-Unm" firstAttribute="trailing" secondItem="dcc-jh-4Uz" secondAttribute="trailing" constant="88" id="X1h-nc-9Ee"/>
                             <constraint firstItem="ixO-SB-OYn" firstAttribute="top" secondItem="2L7-Sm-Unm" secondAttribute="top" id="Zfg-Xk-AcD"/>
+                            <constraint firstItem="pJ4-eF-aT3" firstAttribute="top" secondItem="dcc-jh-4Uz" secondAttribute="bottom" constant="52" id="dey-iJ-fax"/>
+                            <constraint firstItem="pJ4-eF-aT3" firstAttribute="leading" secondItem="2L7-Sm-Unm" secondAttribute="leading" constant="53" id="f0O-Ia-1D3"/>
+                            <constraint firstItem="dcc-jh-4Uz" firstAttribute="top" secondItem="ixO-SB-OYn" secondAttribute="bottom" constant="160" id="pyH-9P-h1R"/>
                             <constraint firstItem="Equ-9V-wAB" firstAttribute="leading" secondItem="2L7-Sm-Unm" secondAttribute="leading" id="vPW-i7-Al3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2L7-Sm-Unm"/>
@@ -179,10 +207,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2" width="280" height="182"/>
         <image name="btBack" width="19" height="26"/>
         <image name="iconLocationLightCoral" width="9" height="12.5"/>
         <image name="iconTimelightCoral" width="10" height="10"/>
         <image name="imgTicketPrizelist" width="171.5" height="176"/>
         <image name="posteKillMeNowInfo" width="252" height="337"/>
+        <image name="sppechbubble" width="250.5" height="118.5"/>
     </resources>
 </document>

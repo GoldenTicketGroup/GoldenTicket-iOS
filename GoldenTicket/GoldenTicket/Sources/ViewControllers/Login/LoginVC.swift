@@ -84,7 +84,11 @@ class LoginVC: UIViewController {
                 print(".serverErr")
                 
             case .networkFail:
-                self.simpleAlert(title: "로그인 실패", message: "네트워크 상태를 확인해주세요.")
+                //self.simpleAlert(title: "로그인 실패", message: "네트워크 상태를 확인해주세요.")
+                //네트워크가 연결되어있지 않을 시 네트워크 상태 확인 뷰 띄워주기.
+                let storyboardNetwork = UIStoryboard.init(name: "NetworkCheck", bundle: nil)
+                let dvc = storyboardNetwork.instantiateViewController(withIdentifier: "networkCheck")
+                self.present(dvc, animated: true)
             }
         }
     }

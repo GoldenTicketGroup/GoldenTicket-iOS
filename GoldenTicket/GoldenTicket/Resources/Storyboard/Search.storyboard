@@ -237,7 +237,7 @@
                                                     <state key="normal" image="iconLikeNoFill"/>
                                                     <state key="selected" image="iconLikeFill"/>
                                                     <connections>
-                                                        <action selector="likeButton:" destination="FQD-fa-LlK" eventType="touchUpInside" id="d99-IW-Pqn"/>
+                                                        <action selector="onClickedLikeButton:" destination="C5K-Px-xHI" eventType="touchUpInside" id="Ap7-3x-CUu"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

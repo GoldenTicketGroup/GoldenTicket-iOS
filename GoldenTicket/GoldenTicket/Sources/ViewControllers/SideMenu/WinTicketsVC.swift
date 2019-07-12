@@ -23,6 +23,10 @@ class WinTicketsVC: UIViewController {
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = false
         
+        if winList.count == 0 {
+            winCollection.isHidden = true
+        }
+        
         // collectionView에 들어갈 당첨된 공연의 리스트
         setWindata()
         

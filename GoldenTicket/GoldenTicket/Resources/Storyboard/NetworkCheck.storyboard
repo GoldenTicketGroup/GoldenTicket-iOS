@@ -31,24 +31,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="3Z6-t1-Q1H">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <rect key="frame" x="67" y="285" width="240" height="182"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8DS-j5-p1W" firstAttribute="trailing" secondItem="Kk7-vS-fqq" secondAttribute="trailing" constant="99" id="30l-lT-Zen"/>
                             <constraint firstItem="3Z6-t1-Q1H" firstAttribute="leading" secondItem="8DS-j5-p1W" secondAttribute="leading" constant="67" id="4Ma-jR-Rz7"/>
+                            <constraint firstItem="8DS-j5-p1W" firstAttribute="bottom" secondItem="3Z6-t1-Q1H" secondAttribute="bottom" constant="200" id="JEH-Ru-adV"/>
                             <constraint firstItem="Kk7-vS-fqq" firstAttribute="leading" secondItem="8DS-j5-p1W" secondAttribute="leading" constant="99" id="JYi-6g-5eU"/>
+                            <constraint firstItem="3Z6-t1-Q1H" firstAttribute="top" secondItem="Kk7-vS-fqq" secondAttribute="bottom" constant="66" id="Odd-bO-tKQ"/>
                             <constraint firstItem="LPb-1n-1iN" firstAttribute="leading" secondItem="8DS-j5-p1W" secondAttribute="leading" constant="61" id="QBS-aG-qh2"/>
                             <constraint firstItem="8DS-j5-p1W" firstAttribute="trailing" secondItem="3Z6-t1-Q1H" secondAttribute="trailing" constant="68" id="WNB-ya-jLe"/>
-                            <constraint firstItem="8DS-j5-p1W" firstAttribute="bottom" secondItem="3Z6-t1-Q1H" secondAttribute="bottom" constant="270" id="k2u-Fa-G4a"/>
                             <constraint firstItem="8DS-j5-p1W" firstAttribute="trailing" secondItem="LPb-1n-1iN" secondAttribute="trailing" constant="61" id="kRj-49-yhX"/>
                             <constraint firstItem="Kk7-vS-fqq" firstAttribute="top" secondItem="LPb-1n-1iN" secondAttribute="bottom" constant="10" id="n5s-rW-Yjf"/>
-                            <constraint firstItem="3Z6-t1-Q1H" firstAttribute="top" secondItem="Kk7-vS-fqq" secondAttribute="bottom" constant="50" id="rKy-o4-K76"/>
                             <constraint firstItem="LPb-1n-1iN" firstAttribute="top" secondItem="8DS-j5-p1W" secondAttribute="top" constant="147" id="wQ3-8P-Bqn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8DS-j5-p1W"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5GX-dp-Dem" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -31,6 +31,21 @@
                                                     <constraint firstAttribute="width" secondItem="hgm-4k-ZaD" secondAttribute="height" multiplier="25:28" id="ki0-2i-4B2"/>
                                                 </constraints>
                                             </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="v3f-jD-0PH">
+                                                <rect key="frame" x="68" y="232" width="238" height="156"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sppechbubble" translatesAutoresizingMaskIntoConstraints="NO" id="Gvy-q7-EAu">
+                                                <rect key="frame" x="103" y="138" width="250" height="118"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="오늘 올라온 공연이 없어요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvs-Ro-7FJ">
+                                                <rect key="frame" x="151" y="181" width="155" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yCz-RD-G5U">
                                                 <rect key="frame" x="26" y="86" width="52" height="9"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -91,13 +106,13 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconLocationMain" translatesAutoresizingMaskIntoConstraints="NO" id="Nmf-Wz-LHU">
-                                                                    <rect key="frame" x="25" y="260" width="13" height="16"/>
+                                                                    <rect key="frame" x="25" y="260" width="13" height="13.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="13" id="c7D-1s-DAE"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYK-Zv-8wV">
-                                                                    <rect key="frame" x="46" y="260" width="155" height="16"/>
+                                                                    <rect key="frame" x="46" y="260" width="155" height="13.5"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -106,10 +121,10 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconTimeMain" translatesAutoresizingMaskIntoConstraints="NO" id="IhB-Zn-vk7">
-                                                                    <rect key="frame" x="25" y="280" width="13" height="16"/>
+                                                                    <rect key="frame" x="25" y="277.5" width="13" height="10.5"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4l-bq-p92">
-                                                                    <rect key="frame" x="46" y="280" width="155" height="13"/>
+                                                                    <rect key="frame" x="46" y="277.5" width="155" height="13"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -245,14 +260,14 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou3-Xp-7h6">
-                                                <rect key="frame" x="16" y="30" width="29" height="27"/>
+                                                <rect key="frame" x="16" y="30" width="16" height="22"/>
                                                 <state key="normal" image="btHambergerMain"/>
                                                 <connections>
                                                     <segue destination="G85-yn-wn5" kind="presentation" id="lTV-DF-B40"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-FN-U4B">
-                                                <rect key="frame" x="326" y="29" width="33" height="31"/>
+                                                <rect key="frame" x="343" y="29" width="16" height="22"/>
                                                 <state key="normal" image="btTicketMain"/>
                                                 <connections>
                                                     <action selector="showTicket:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="HtV-qi-0l1"/>
@@ -492,6 +507,9 @@
                         <outlet property="monthShowButton" destination="Wgv-bU-G3p" id="Jpy-gu-Mj4"/>
                         <outlet property="noLotteryHere" destination="aXk-CH-Ur5" id="OJc-Oa-fxq"/>
                         <outlet property="noLotteryView" destination="9ew-5a-kOY" id="EaG-Iu-ZuY"/>
+                        <outlet property="noShowBubbleImage" destination="Gvy-q7-EAu" id="v1g-Vh-YxB"/>
+                        <outlet property="noShowImage" destination="v3f-jD-0PH" id="js6-Po-06F"/>
+                        <outlet property="noShowLabel" destination="Fvs-Ro-7FJ" id="KvD-4G-oPU"/>
                         <outlet property="searchButton" destination="E2G-TD-Yt9" id="qbT-g5-Ic3"/>
                         <outlet property="secondLotteryCheckButton" destination="SKe-Zw-CtY" id="WY0-Wb-dHh"/>
                         <outlet property="secondLotteryView" destination="YV1-WU-1Nc" id="4l0-7m-N4F"/>
@@ -524,23 +542,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgProfile" translatesAutoresizingMaskIntoConstraints="NO" id="YyG-R2-Wpb">
-                                                    <rect key="frame" x="67" y="45" width="240" height="16"/>
+                                                    <rect key="frame" x="67" y="45" width="240" height="87"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lai-Do-Tiy">
-                                                    <rect key="frame" x="161" y="84" width="53" height="6"/>
+                                                    <rect key="frame" x="161" y="155" width="53" height="6"/>
                                                     <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="53" id="qxV-mt-AGz"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="갈민정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgd-WG-XHr">
-                                                    <rect key="frame" x="164" y="71" width="47" height="22"/>
+                                                    <rect key="frame" x="164" y="142" width="47" height="22"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7u-Gp-sDd">
-                                                    <rect key="frame" x="159.5" y="98" width="56" height="28"/>
+                                                    <rect key="frame" x="159.5" y="169" width="56" height="28"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
                                                     <state key="normal" title="정보수정 &gt;">
                                                         <color key="titleColor" red="0.80395036939999998" green="0.80783128739999999" blue="0.80784374479999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -550,7 +568,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrR-sM-vL7">
-                                                    <rect key="frame" x="336" y="19" width="16" height="22"/>
+                                                    <rect key="frame" x="333" y="19" width="19" height="22"/>
                                                     <state key="normal" image="btClose"/>
                                                     <connections>
                                                         <action selector="buttonClose:" destination="eZl-1h-gaV" eventType="touchUpInside" id="V4x-uk-TRu"/>
@@ -901,21 +919,6 @@
                                                     <constraint firstItem="HUu-XJ-QB2" firstAttribute="top" secondItem="8RS-70-l1f" secondAttribute="top" constant="35" id="waP-hy-Axf"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-rU-vfr">
-                                                <rect key="frame" x="12" y="30" width="16" height="22"/>
-                                                <state key="normal" image="btBack"/>
-                                                <connections>
-                                                    <action selector="backButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="355-g7-rou"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jJ-wz-Z0A">
-                                                <rect key="frame" x="343" y="29" width="16" height="22"/>
-                                                <state key="normal" image="iconLikeNoFill"/>
-                                                <state key="selected" image="iconLikeFill"/>
-                                                <connections>
-                                                    <action selector="onClickedLikeButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="VAR-1z-Gdx"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공연정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yl3-F2-vLP">
                                                 <rect key="frame" x="31" y="556" width="59" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -965,6 +968,21 @@
                                                     <outlet property="delegate" destination="txR-zd-iJi" id="1vt-0R-NrG"/>
                                                 </connections>
                                             </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jJ-wz-Z0A">
+                                                <rect key="frame" x="334" y="29" width="25" height="24"/>
+                                                <state key="normal" image="iconLikeNoFill"/>
+                                                <state key="selected" image="iconLikeFill"/>
+                                                <connections>
+                                                    <action selector="onClickedLikeButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="VAR-1z-Gdx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-rU-vfr">
+                                                <rect key="frame" x="12" y="30" width="19" height="26"/>
+                                                <state key="normal" image="btBack"/>
+                                                <connections>
+                                                    <action selector="backButton:" destination="txR-zd-iJi" eventType="touchUpInside" id="355-g7-rou"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1183,6 +1201,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2" width="280" height="182"/>
         <image name="backImgInfo" width="375" height="393"/>
         <image name="btBack" width="19" height="26"/>
         <image name="btClose" width="19" height="19"/>
@@ -1205,5 +1224,6 @@
         <image name="imgProfile" width="69" height="87"/>
         <image name="imgnextMain" width="13" height="22.5"/>
         <image name="posteKillMeNowInfo" width="252" height="337"/>
+        <image name="sppechbubble" width="250.5" height="118.5"/>
     </resources>
 </document>
