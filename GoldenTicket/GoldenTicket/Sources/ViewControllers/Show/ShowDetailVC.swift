@@ -210,9 +210,13 @@ class ShowDetailVC: UIViewController {
                 }
                 else if self.showDetail.status == 204 {
                     // 이미 응모한 공연을 또 응모
+
                     //self.simpleAlert(title: "죄송합니다.", message: "이미 응모한 공연입니다.")
                     self.alarmMessage.text = "이미 응모한 공연입니다."
                     self.onlyTwo.isHidden = false
+
+                    // self.simpleAlert(title: "죄송합니다.", message: "이미 응모한 공연입니다.")
+
                 }
                 else if self.showDetail.status == 205 {
                     // 이미 사용자가 두번 응모한 경우
