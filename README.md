@@ -17,7 +17,7 @@
 
 스크린 샷
 ------------
-   <img width="233" alt="스크린샷 2019-07-11 오후 6 53 19" src="https://user-images.githubusercontent.com/49272528/61041415-3b6c6380-a40d-11e9-90f7-7bf1aa3dab95.png">   <img width="233" alt="스크린샷 2019-07-11 오후 6 52 36" src="https://user-images.githubusercontent.com/49272528/61041550-7a9ab480-a40d-11e9-8d39-f0e78138eb11.png">   <img width="233" alt="스크린샷 2019-07-11 오후 6 51 24" src="https://user-images.githubusercontent.com/49272528/61041637-a3bb4500-a40d-11e9-83e0-a4b39fbb27f1.png">
+   <img width="233" alt="스크린샷 2019-07-11 오후 6 53 19" src="https://user-images.githubusercontent.com/49272528/61041415-3b6c6380-a40d-11e9-90f7-7bf1aa3dab95.png">   <img width="233" alt="스크린샷 2019-07-11 오후 6 52 36" src="https://user-images.githubusercontent.com/49272528/61041550-7a9ab480-a40d-11e9-8d39-f0e78138eb11.png">   <img width="233" alt="스크린샷 2019-07-11 오후 6 51 24" src="https://user-images.githubusercontent.com/49272528/61041637-a3bb4500-a40d-11e9-83e0-a4b39fbb27f1.png">
 
 
 
@@ -56,4 +56,6 @@
 
 * 팀원2 : 황수빈<br>
 > 졸리다.. (19.07.10.)
+> 생각 이상으로 사용자 입장에서 플로우를 디테일하게 고민해보는 시간이었고 <br />
+> SOPT 24기 YB로 앱잼에 참여하면서 들어왔던 8번의 세미나를 종합하고 발전하는 기회였습니다.<br />
 <br />
