@@ -14,8 +14,10 @@ class ContentsMusicalVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         goInfoButton1.makeRounded(cornerRadius: 20)
         goInfoButton2.makeRounded(cornerRadius: 20)
+        
     }
 
     @IBAction func cancleButton(_ sender: Any) {
@@ -24,10 +26,16 @@ class ContentsMusicalVC: UIViewController {
     
     @IBAction func contents(_ sender: Any) {
         //showIdx = 17
+        let storyboard = UIStoryboard.init(name: "ContentsDetail", bundle: nil)
+        let dvc = storyboard.instantiateViewController(withIdentifier: "contentsDetail3")
+        present(dvc, animated: true)
     }
     
     @IBAction func contentsTwo(_ sender: Any) {
         //showIdx =14
+        let storyboard = UIStoryboard.init(name: "ContentsDetail", bundle: nil)
+        let dvc = storyboard.instantiateViewController(withIdentifier: "contentsDetail4")
+        present(dvc, animated: true)
     }
     
     
