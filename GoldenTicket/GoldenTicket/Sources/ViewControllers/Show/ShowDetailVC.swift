@@ -23,6 +23,11 @@ class ShowDetailVC: UIViewController {
     var selectedRowText : String?
     var selectedRow : Int?
     
+    
+    @IBOutlet weak var onlyTwo: UIView!
+    
+    @IBOutlet weak var alarmMessage: UILabel!
+    
     // 배우들을 보여주는 collection view.
     @IBOutlet weak var actorCollectionView: UICollectionView!
 
@@ -96,7 +101,8 @@ class ShowDetailVC: UIViewController {
         messageView.makeRounded(cornerRadius: 20)
         messageView.isHidden = true
 
-        
+        //
+        alarmMessage.makeRounded(cornerRadius: 20)
         
         // 테스트용 더미 데이터 세팅해두기.
         //setContent()
@@ -147,6 +153,9 @@ class ShowDetailVC: UIViewController {
 //            let btnNoImage = UIImage(named: "iconLikeNoFill")
 //            self.likeButton.setImage(btnNoImage, for: .normal)
         }
+        
+        onlyTwo.isHidden = true
+        
     }
     
     
@@ -554,7 +563,8 @@ extension ShowDetailVC {
                 }
                 else if self.showDetail.status == 205 {
                     // 이미 사용자가 두번 응모한 경우
-                    self.simpleAlert(title: "죄송합니다.", message: "응모는 하루에 두 번까지 가능합니다.")
+                    //self.simpleAlert(title: "죄송합니다.", message: "응모는 하루에 두 번까지 가능합니다.")
+                    self.onlyTwo.isHidden = false
                 }
                 
             case .requestErr(let message):

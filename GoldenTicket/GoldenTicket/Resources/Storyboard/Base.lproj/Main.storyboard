@@ -264,14 +264,14 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou3-Xp-7h6">
-                                                <rect key="frame" x="16" y="30" width="16" height="22"/>
+                                                <rect key="frame" x="16" y="30" width="29" height="27"/>
                                                 <state key="normal" image="btHambergerMain"/>
                                                 <connections>
                                                     <segue destination="G85-yn-wn5" kind="presentation" id="lTV-DF-B40"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-FN-U4B">
-                                                <rect key="frame" x="343" y="29" width="16" height="22"/>
+                                                <rect key="frame" x="326" y="29" width="33" height="31"/>
                                                 <state key="normal" image="btTicketMain"/>
                                                 <connections>
                                                     <action selector="showTicket:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="HtV-qi-0l1"/>
@@ -1129,6 +1129,21 @@
                                             <outlet property="delegate" destination="txR-zd-iJi" id="BCG-Yd-TDv"/>
                                         </connections>
                                     </tableView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4w8-Gr-ZZU">
+                                        <rect key="frame" x="22" y="9" width="329" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="응모는 하루에 두 번까지 가능합니다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuZ-ug-CKu">
+                                                <rect key="frame" x="25" y="22" width="278" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.94118285180000005" green="0.94116520879999999" blue="0.9411771297" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1159,6 +1174,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="actorCollectionView" destination="HUu-XJ-QB2" id="ftM-Fo-sDy"/>
+                        <outlet property="alarmMessage" destination="CuZ-ug-CKu" id="tIX-jp-oTB"/>
                         <outlet property="applyButton" destination="eCh-jf-mul" id="fzz-ES-GN8"/>
                         <outlet property="backgroundImage" destination="gnW-aB-JL2" id="bcP-rY-Xz9"/>
                         <outlet property="btnDrop" destination="R2d-2f-AaJ" id="b0J-38-qnO"/>
@@ -1167,6 +1183,7 @@
                         <outlet property="fillView" destination="eaa-6Y-ir8" id="OmY-uz-r6C"/>
                         <outlet property="likeButton" destination="9jJ-wz-Z0A" id="ZuR-eo-qmI"/>
                         <outlet property="messageView" destination="ymL-Qf-B90" id="jg7-A5-Vns"/>
+                        <outlet property="onlyTwo" destination="4w8-Gr-ZZU" id="ecT-t6-4BB"/>
                         <outlet property="posterImage" destination="Pvk-QU-lCP" id="gev-Ku-Afe"/>
                         <outlet property="scrollView" destination="mXR-yO-Gad" id="YPU-Xf-wWq"/>
                         <outlet property="showAfterPriceLabel" destination="abw-Wf-CIc" id="eXM-GZ-6Sj"/>
@@ -1180,7 +1197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Oa-NE-dME" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4774" y="688"/>
+            <point key="canvasLocation" x="4773.6000000000004" y="687.7061469265368"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="ZZX-2w-Pyx">
