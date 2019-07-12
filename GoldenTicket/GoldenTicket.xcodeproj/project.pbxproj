@@ -82,6 +82,11 @@
 		F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3A822C640A100B8AFD6 /* CustomButton.swift */; };
 		F440B3AB22C6437400B8AFD6 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3AA22C6437400B8AFD6 /* UIColor+Extensions.swift */; };
 		F440B3AD22C6444000B8AFD6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440B3AC22C6444000B8AFD6 /* UIViewController+Extensions.swift */; };
+		F46F7C3022D921EC0034803B /* TicketDataOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F7C2F22D921EC0034803B /* TicketDataOneVC.swift */; };
+		F46F7C3222D921FB0034803B /* TicketDataTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F7C3122D921FB0034803B /* TicketDataTwoVC.swift */; };
+		F46F7C3422D922180034803B /* TicketDataThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F7C3322D922180034803B /* TicketDataThreeVC.swift */; };
+		F46F7C3622D922280034803B /* TicketDataFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F7C3522D922280034803B /* TicketDataFourVC.swift */; };
+		F46F7C3822D922380034803B /* TicketDataFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F7C3722D922380034803B /* TicketDataFiveVC.swift */; };
 		F4955BFA22C857F000530906 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4955BF922C857F000530906 /* MainVC.swift */; };
 		F4955BFE22C8587300530906 /* MainShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4955BFD22C8587300530906 /* MainShowCell.swift */; };
 		F4955C0222C8635A00530906 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4955C0122C8635A00530906 /* Show.swift */; };
@@ -185,6 +190,11 @@
 		F440B3A822C640A100B8AFD6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F440B3AA22C6437400B8AFD6 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		F440B3AC22C6444000B8AFD6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		F46F7C2F22D921EC0034803B /* TicketDataOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDataOneVC.swift; sourceTree = "<group>"; };
+		F46F7C3122D921FB0034803B /* TicketDataTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDataTwoVC.swift; sourceTree = "<group>"; };
+		F46F7C3322D922180034803B /* TicketDataThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDataThreeVC.swift; sourceTree = "<group>"; };
+		F46F7C3522D922280034803B /* TicketDataFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDataFourVC.swift; sourceTree = "<group>"; };
+		F46F7C3722D922380034803B /* TicketDataFiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDataFiveVC.swift; sourceTree = "<group>"; };
 		F4955BF922C857F000530906 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		F4955BFD22C8587300530906 /* MainShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShowCell.swift; sourceTree = "<group>"; };
 		F4955C0122C8635A00530906 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
@@ -413,6 +423,11 @@
 				F43F454622CA639C00C53898 /* TicketVC.swift */,
 				080BF82522CC8EC400A06BBF /* WinCell.swift */,
 				F402F33E22CF31C80047B976 /* NoTicketVC.swift */,
+				F46F7C2F22D921EC0034803B /* TicketDataOneVC.swift */,
+				F46F7C3122D921FB0034803B /* TicketDataTwoVC.swift */,
+				F46F7C3322D922180034803B /* TicketDataThreeVC.swift */,
+				F46F7C3522D922280034803B /* TicketDataFourVC.swift */,
+				F46F7C3722D922380034803B /* TicketDataFiveVC.swift */,
 			);
 			path = Ticket;
 			sourceTree = "<group>";
@@ -675,13 +690,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				080EA9B822D08B74000D074C /* ResponseDefault.swift in Sources */,
+				F46F7C3422D922180034803B /* TicketDataThreeVC.swift in Sources */,
 				08004B9B22D1D47700BA8AC0 /* APIConstants.swift in Sources */,
 				F4955BFE22C8587300530906 /* MainShowCell.swift in Sources */,
 				F402F33B22CF0F610047B976 /* LotteryCheckCell.swift in Sources */,
 				F4FE456322D36F3700E6C6B0 /* LoseVC.swift in Sources */,
 				F4955C0222C8635A00530906 /* Show.swift in Sources */,
 				F4FE456E22D3780D00E6C6B0 /* SearchCVCell.swift in Sources */,
+				F46F7C3222D921FB0034803B /* TicketDataTwoVC.swift in Sources */,
 				F43F454722CA639C00C53898 /* TicketVC.swift in Sources */,
+				F46F7C3622D922280034803B /* TicketDataFourVC.swift in Sources */,
 				08004B9522D0F42300BA8AC0 /* UIView+shake+Extensions.swift in Sources */,
 				F4955BFA22C857F000530906 /* MainVC.swift in Sources */,
 				F4FE454C22D18CB200E6C6B0 /* ContentsMusicalVC.swift in Sources */,
@@ -697,6 +715,7 @@
 				F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */,
 				F40313FE22CB344900BB2737 /* QuestionVC.swift in Sources */,
 				F402660822D8629F0054419D /* ContentsDetailVC2.swift in Sources */,
+				F46F7C3822D922380034803B /* TicketDataFiveVC.swift in Sources */,
 				F4012DA722D5DDE500F71861 /* LotteryDetail.swift in Sources */,
 				F402660C22D862C10054419D /* ContentsDetailVC4.swift in Sources */,
 				0808EDE122D5BB54002E05CF /* LikeService.swift in Sources */,
@@ -739,6 +758,7 @@
 				F4FE457222D393E300E6C6B0 /* SearchService.swift in Sources */,
 				F440B39D22C61BA500B8AFD6 /* NoticeViewController.swift in Sources */,
 				F4012DB722D84F1A00F71861 /* ContentsDetailVC.swift in Sources */,
+				F46F7C3022D921EC0034803B /* TicketDataOneVC.swift in Sources */,
 				F402F33F22CF31C80047B976 /* NoTicketVC.swift in Sources */,
 				08004B9A22D1D47700BA8AC0 /* NetworkResult.swift in Sources */,
 			);
