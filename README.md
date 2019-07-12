@@ -78,14 +78,13 @@ setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
 [문제2] response의 result가 Json으로 decode할 수 없을 때 해결을 위해 시도했던 방법들<br />
 [해결1] 코더블이 적절히 value를 casting해오지 못하는 경우가 있기 때문에 서버 네이밍과 동일하게 수정한다.<br />
 <해결 1의 이미지><br />
-
 [해결2] 1. print(type(of: result))로 디코드를 시도하는 value의 타입을 찍어보고 2. print(error.localizedDescription로 에러를 출력해보고 3. debugPrint(error)로 어떤 키가 missing된 건 아닌지 확인한다. 이 과정에서 response data handler, chained response handlers 사용 방법을 참고했다.
 참고URL : https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md <br />
 
 Response Data Handler<br />
 1.	Alamofire.request("https://httpbin.org/get").responseData { response in<br />
     debugPrint("All Response Info: \(response)")<br />
-<br /><br />
+<br />
     if let data = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {<br />
     	print("Data: \(utf8Text)")<br />
     }<br />
