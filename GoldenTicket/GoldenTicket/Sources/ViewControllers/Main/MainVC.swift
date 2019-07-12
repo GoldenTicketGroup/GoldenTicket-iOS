@@ -19,9 +19,11 @@ class MainVC: UIViewController {
     @IBOutlet var userName: UILabel!
     var showIdx: Int?
     var ticketIdx: Int?
-    
+    var ticketIdx1: Int?
+    var ticketIdx2: Int?
     var showList : [Show] = []
     var timeList : [LotteryList] = []
+    var ticketDetail : [LotteryDetail] = []
     
     // time label 시간 통신
     var lotteryTime1 : String!
@@ -289,23 +291,90 @@ class MainVC: UIViewController {
     
     @IBAction func lotteryCheckOne(_ sender: Any) {
         // 당첨 안된 경우
-        
-        // **** 응모티켓 인덱스 알아내기
-        checkLottery()
-        let storyboardLose = UIStoryboard.init(name: "Lose", bundle: nil)
-        let lose = storyboardLose.instantiateViewController(withIdentifier: "loseVC")
-        
-        present(lose, animated: true)
-    }
-    
+            guard let idx = self.ticketIdx1 else { return }
+            print("ticktet \(idx)")
+            LotteryService.shared.lotteryDetail(ticketIdx: idx) {
+                [weak self]
+                data in
+                
+                guard let `self` = self else { return }
+                switch data {
+                    
+                case .success(let res):
+                    
+                    self.ticketDetail = res as! [LotteryDetail]
+                    
+                    if self.ticketDetail.count != 0 {
+                        // 당첨 됐을 때
+                        let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
+                        let win = storyboardWin.instantiateViewController(withIdentifier: "winVC")
+                        
+                        self.present(win, animated: true)
+                    }
+                    else {
+                        // 당첨 안됐을 때
+                        let storyboardLose = UIStoryboard.init(name: "Lose", bundle: nil)
+                        let lose = storyboardLose.instantiateViewController(withIdentifier: "loseVC")
+                        
+                        self.present(lose, animated: true)
+                    }
+                case .requestErr(let message):
+                    self.simpleAlert(title: "응모 상세 조회 실패", message: "\(message)")
+                    
+                case .pathErr:
+                    print(".pathErr")
+                    
+                case .serverErr:
+                    print(".serverErr")
+                    
+                case .networkFail:
+                    self.simpleAlert(title: "응모 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
+                }
+            }
+        }
     
     @IBAction func lotteryCheckTwo(_ sender: Any) {
-        // 당첨된 경우
-        checkLottery()
-        let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
-        let win = storyboardWin.instantiateViewController(withIdentifier: "winVC")
-        
-        present(win, animated: true)
+        // 당첨 안된 경우
+        guard let idx = self.ticketIdx2 else { return }
+        print("ticktet \(idx)")
+        LotteryService.shared.lotteryDetail(ticketIdx: idx) {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            switch data {
+                
+            case .success(let res):
+                
+                self.ticketDetail = res as! [LotteryDetail]
+                
+                if self.ticketDetail.count != 0 {
+                    // 당첨 됐을 때
+                    let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
+                    let win = storyboardWin.instantiateViewController(withIdentifier: "winVC")
+                    
+                    self.present(win, animated: true)
+                }
+                else {
+                    // 당첨 안됐을 때
+                    let storyboardLose = UIStoryboard.init(name: "Lose", bundle: nil)
+                    let lose = storyboardLose.instantiateViewController(withIdentifier: "loseVC")
+                    
+                    self.present(lose, animated: true)
+                }
+            case .requestErr(let message):
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
     }
     
 
@@ -383,6 +452,14 @@ extension MainVC: UICollectionViewDataSource {
             
             lotteryCell.lotteryShowTitle.text = label.name
             lotteryCell.lotteryShowIdx = label.lottery_idx  // 셀에 응모한 공연 인덱스 넣기
+            
+            if timeList.count == 1 {
+                self.ticketIdx1 = timeList[0].lottery_idx
+            }
+            else if timeList.count == 2 {
+                self.ticketIdx2 = timeList[0].lottery_idx
+                self.ticketIdx2 = timeList[1].lottery_idx
+            }
             return lotteryCell
         }
     }
@@ -391,14 +468,16 @@ extension MainVC: UICollectionViewDataSource {
 extension MainVC : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
         
         let storyboardM = UIStoryboard.init(name: "Main", bundle: nil)
         let dvc = storyboardM.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
+
         
         let show = showList[indexPath.row]
-        dvc.showIdx = show.show_idx
+        self.showIdx = show.show_idx
         
-        present(dvc, animated: true)
+         self.setDetailData()
     }
 }
 
@@ -421,12 +500,14 @@ extension MainVC {
                 
                 self.showList = res as! [Show]
                 self.showCollectionView.reloadData()
+                
                 if self.showList.count == 0 {
                     //우선 오늘 응모가능한 공연이 없는 경우
                     self.noShowImage.isHidden = false
                     self.noShowLabel.isHidden = false
                     self.noShowBubbleImage.isHidden = false
                 }
+                
             case .requestErr(let message):
                 self.simpleAlert(title: "메인 공연 조회 실패", message: "\(message)")
                 
@@ -437,6 +518,43 @@ extension MainVC {
                 
             case .networkFail:
                 self.simpleAlert(title: "메인 공연 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
+    }
+    
+    func setDetailData() {
+        
+        guard let idx = self.showIdx else { return }
+        
+        // print("idx : \(idx)")
+        ShowService.shared.showDetail(showIdx: idx) {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            //print("data : \(data)")
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                
+                let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
+                
+                dvc.showIdx = idx   // 다음 스토리 보드로 index 넘기기
+                
+                self.present(dvc, animated: true)
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
             }
         }
     }
