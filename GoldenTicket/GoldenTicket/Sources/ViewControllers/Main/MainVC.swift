@@ -97,8 +97,6 @@ class MainVC: UIViewController {
             print(error)
         }
         
-        // 세팅하기.
-        setShowData()
         setupSideMenu()
         
         //
@@ -141,6 +139,7 @@ class MainVC: UIViewController {
         // 수정한 회원 정보의 이름일 수도 있다.
         let user = UserDefaults.standard
         self.userName.text = user.string(forKey: "name")
+        self.setShowData()
     }
     
     // 응모한 공연이 있을 시 남은 시간을 보여주는 뷰에 팔요한 시간 계산기, timer
@@ -468,18 +467,17 @@ extension MainVC: UICollectionViewDataSource {
 extension MainVC : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
         let show = showList[indexPath.row]
-        self.showIdx = show.show_idx
+        dvc.showIdx = show.show_idx
         
-         self.setDetailData()
+        self.present(dvc, animated: true)
     }
 }
 
 // 통신 데이터 세팅.
 extension MainVC {
     
-    // 메인화면 공연 정보 통신 setting 해주기.
     func setShowData() {
         
         ShowService.shared.showHome() {
@@ -517,43 +515,6 @@ extension MainVC {
         }
     }
     
-    func setDetailData() {
-        
-        guard let idx = self.showIdx else { return }
-        
-        // print("idx : \(idx)")
-        ShowService.shared.showDetail(showIdx: idx) {
-            [weak self]
-            data in
-            
-            guard let `self` = self else { return }
-            //print("data : \(data)")
-            switch data {
-                
-            // 매개변수에 어떤 값을 가져올 것인지
-            case .success(let res):
-                
-                let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
-                
-                dvc.showIdx = idx   // 다음 스토리 보드로 index 넘기기
-                
-                self.present(dvc, animated: true)
-                
-            case .requestErr(let message):
-                self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")
-                
-            case .pathErr:
-                print(".pathErr")
-                
-            case .serverErr:
-                print(".serverErr")
-                
-            case .networkFail:
-                self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
-            }
-        }
-    }
-    
     // 응모한 공연시간 정보 setting 해주기.
     
     func setTimeLabel() {
@@ -576,7 +537,7 @@ extension MainVC {
                 let response = res as! ResponseArray<LotteryList>
                 
                 self.timeList = response.data as! [LotteryList]
-                // self.lotteryList = res as! [LotteryList]
+                // self.lotteryList = res as! [LoftteryList]
                 self.lotteryCollectionView.reloadData()
                 
                 if self.timeList.count == 1 {

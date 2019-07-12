@@ -101,17 +101,9 @@ class ShowDetailVC: UIViewController {
         messageView.makeRounded(cornerRadius: 20)
         messageView.isHidden = true
 
-        //
         alarmMessage.makeRounded(cornerRadius: 20)
         
-        // 테스트용 더미 데이터 세팅해두기.
-        //setContent()
         setInterested()
-
-        setDetailData()
-        // setContent()
-
-        // setActorData()
         setSearchContent()
         
         //poster image customize
@@ -158,6 +150,84 @@ class ShowDetailVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        guard let idx = self.showIdx else { return }
+        print("showIdx \(idx)")
+        ShowService.shared.showDetail(showIdx: idx) {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            switch data {
+                
+            case .success(let res):
+                
+                self.showDetail = res as! ResponseShow
+                
+                self.backgroundImage.imageFromUrl(self.showDetail.data.background_image, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/backimg_benhur_info.jpg")
+                self.posterImage.imageFromUrl(self.showDetail.data.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_main_benhur.jpg")
+                self.showTitle.text = self.showDetail.data.name
+                self.showBeforePriceLabel.text = self.showDetail.data.original_price
+                self.showAfterPriceLabel.text = self.showDetail.data.discount_price
+                self.showTimeLabel.text = self.showDetail.data.duration
+                self.showLocationLabel.text = self.showDetail.data.location
+                
+                self.checkisLiked = self.showDetail.data.is_liked
+                
+                // 2. Poster Struct
+                self.posterList = self.showDetail.data.poster!
+                // 2. Actor Struct
+                self.artistList = self.showDetail.data.artist!
+                
+                self.showDetailCollectionView.reloadData()
+                self.actorCollectionView.reloadData()
+                self.tblView.reloadData()
+                
+                // status 200일 때
+                if self.showDetail.status == 200 {
+                    // 응모할 수 있는 경우
+                    // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
+                    
+                    // 스케줄이 아예 빈 배열인 경우 ==> "응모 가능한 시간이 아닙니다"
+                    if self.showDetail.data.schedule!.count == 0 {
+                        self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 없습니다.")
+                    }
+                    else {
+                        // 스케줄이 아예 빈 배열은 아님
+                        for idx in 0 ..< self.showDetail.data.schedule!.count {
+                            if self.showDetail.data.schedule![idx].draw_available == 1 {
+                                // 응모가능
+                                self.timeList = self.showDetail.data.schedule!
+                            }
+                        }
+                        // 모든 draw_available 이 다 0일 때
+                        self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 아닙니다.")
+                    }
+                }
+                else if self.showDetail.status == 204 {
+                    // 이미 응모한 공연을 또 응모
+                    self.simpleAlert(title: "죄송합니다.", message: "이미 응모한 공연입니다.")
+                }
+                else if self.showDetail.status == 205 {
+                    // 이미 사용자가 두번 응모한 경우
+                    //self.simpleAlert(title: "죄송합니다.", message: "응모는 하루에 두 번까지 가능합니다.")
+                    self.onlyTwo.isHidden = false
+                }
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
+    }
     
     /* 어떻게 하면 선택된 cell 값의 title을 얻어올 수 있을까? */
     override func viewDidDisappear(_ animated: Bool) {
@@ -487,89 +557,5 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
         
         btnDrop.setTitle("\(selectedRowText!)", for: .normal)
         animate(toggle: false)
-    }
-}
-
-extension ShowDetailVC {
-    func setDetailData() {
-        // 너 여기서 통신해
-        guard let idx = self.showIdx else { return }
-        print("showIdx \(idx)")
-        ShowService.shared.showDetail(showIdx: idx) {
-            [weak self]
-            data in
-            
-            guard let `self` = self else { return }
-            switch data {
-                
-            case .success(let res):
-                
-                self.showDetail = res as! ResponseShow
-                
-                // 1. posterImg가 있을 때 imageFromUrl을 호출하는데, 초기화 안된 상태이고 nil이니까 초기화를 해줘야 한다.
-                // 2. UIimageView가 아닌 UIImage로 접근해야 한다.
-                self.backgroundImage.imageFromUrl(self.showDetail.data.background_image, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/backimg_benhur_info.jpg")
-                self.posterImage.imageFromUrl(self.showDetail.data.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_main_benhur.jpg")
-                self.showTitle.text = self.showDetail.data.name
-                self.showBeforePriceLabel.text = self.showDetail.data.original_price
-                self.showAfterPriceLabel.text = self.showDetail.data.discount_price
-                self.showTimeLabel.text = self.showDetail.data.duration
-                self.showLocationLabel.text = self.showDetail.data.location
-                
-                self.checkisLiked = self.showDetail.data.is_liked
-                
-                // 2. Poster Struct
-                self.posterList = self.showDetail.data.poster!
-                // 2. Actor Struct
-                self.artistList = self.showDetail.data.artist!
-                
-                self.showDetailCollectionView.reloadData()
-                self.actorCollectionView.reloadData()
-                self.tblView.reloadData()
-                
-                // status 200일 때
-                if self.showDetail.status == 200 {
-                    // 응모할 수 있는 경우
-                    // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
-                    
-                    // 스케줄이 아예 빈 배열인 경우 ==> "응모 가능한 시간이 아닙니다"
-                    if self.showDetail.data.schedule!.count == 0 {
-                        self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 없습니다.")
-                    }
-                    else {
-                        // 스케줄이 아예 빈 배열은 아님
-                        for idx in 0 ..< self.showDetail.data.schedule!.count {
-                            if self.showDetail.data.schedule![idx].draw_available == 1 {
-                                // 응모가능
-                                self.timeList = self.showDetail.data.schedule!
-                            }
-                        }
-                        // 모든 draw_available 이 다 0일 때
-                        self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 아닙니다.")
-                    }
-                }
-                else if self.showDetail.status == 204 {
-                    // 이미 응모한 공연을 또 응모
-                    self.simpleAlert(title: "죄송합니다.", message: "이미 응모한 공연입니다.")
-                }
-                else if self.showDetail.status == 205 {
-                    // 이미 사용자가 두번 응모한 경우
-                    //self.simpleAlert(title: "죄송합니다.", message: "응모는 하루에 두 번까지 가능합니다.")
-                    self.onlyTwo.isHidden = false
-                }
-                
-            case .requestErr(let message):
-                self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")
-                
-            case .pathErr:
-                print(".pathErr")
-                
-            case .serverErr:
-                print(".serverErr")
-                
-            case .networkFail:
-                self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
-            }
-        }
     }
 }

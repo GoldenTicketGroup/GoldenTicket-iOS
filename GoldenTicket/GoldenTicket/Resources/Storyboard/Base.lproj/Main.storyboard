@@ -264,14 +264,14 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou3-Xp-7h6">
-                                                <rect key="frame" x="16" y="30" width="29" height="27"/>
+                                                <rect key="frame" x="16" y="30" width="16" height="22"/>
                                                 <state key="normal" image="btHambergerMain"/>
                                                 <connections>
                                                     <segue destination="G85-yn-wn5" kind="presentation" id="lTV-DF-B40"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-FN-U4B">
-                                                <rect key="frame" x="326" y="29" width="33" height="31"/>
+                                                <rect key="frame" x="343" y="29" width="16" height="22"/>
                                                 <state key="normal" image="btTicketMain"/>
                                                 <connections>
                                                     <action selector="showTicket:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="HtV-qi-0l1"/>
@@ -525,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMz-Je-kpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3858" y="-277"/>
+            <point key="canvasLocation" x="3858" y="-348"/>
         </scene>
         <!--Side MenuVC-->
         <scene sceneID="bBM-g1-drP">
