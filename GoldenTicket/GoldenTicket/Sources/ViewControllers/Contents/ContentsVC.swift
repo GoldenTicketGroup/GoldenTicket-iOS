@@ -22,7 +22,7 @@ class ContentsVC: UIViewController, UICollectionViewDelegate {
         goInfoButton.makeRounded(cornerRadius: 20)
         goInfoButton2.makeRounded(cornerRadius: 20)
         //self.showIdx = 3
-        self.setDetailData()
+        // self.setDetailData()
     }
     
     @IBAction func cancleButton(_ sender: Any) {
@@ -44,6 +44,7 @@ class ContentsVC: UIViewController, UICollectionViewDelegate {
     }
 }
 
+/*
 extension ContentsVC {
     func setDetailData() {
 
@@ -127,3 +128,4 @@ extension ContentsVC {
         }
     }
 }
+*/
