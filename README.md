@@ -102,7 +102,6 @@ Chained Response Handlers<br />
 [문제3] 서버에서 이미지 통신 후 오토레이아웃이 무너지는 문제점<br />
 [예시 화면]<br />
 <예시 이미지><br />
-<br />
 [해결] 서버 이미지 속성의 width, height 값의 최소 공약수를 구하여 UIImage의 규격 셋팅을 한다.<br />
 <해결 화면이미지><br />
 <br /><br />
