@@ -190,7 +190,9 @@ class ShowDetailVC: UIViewController {
                     
                     // 스케줄이 아예 빈 배열인 경우 ==> "응모 가능한 시간이 아닙니다"
                     if self.showDetail.data.schedule!.count == 0 {
-                        self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 없습니다.")
+                        //self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 없습니다.")
+                        self.alarmMessage.text = "응모 가능한 시간이 없습니다"
+                        self.onlyTwo.isHidden = false
                     }
                     else {
                         // 스케줄이 아예 빈 배열은 아님
@@ -201,12 +203,16 @@ class ShowDetailVC: UIViewController {
                             }
                         }
                         // 모든 draw_available 이 다 0일 때
-                        self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 아닙니다.")
+                        //self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 아닙니다.")
+                        self.alarmMessage.text = "응모 가능한 시간이 아닙니다."
+                        self.onlyTwo.isHidden = false
                     }
                 }
                 else if self.showDetail.status == 204 {
                     // 이미 응모한 공연을 또 응모
-                    self.simpleAlert(title: "죄송합니다.", message: "이미 응모한 공연입니다.")
+                    //self.simpleAlert(title: "죄송합니다.", message: "이미 응모한 공연입니다.")
+                    self.alarmMessage.text = "이미 응모한 공연입니다."
+                    self.onlyTwo.isHidden = false
                 }
                 else if self.showDetail.status == 205 {
                     // 이미 사용자가 두번 응모한 경우
