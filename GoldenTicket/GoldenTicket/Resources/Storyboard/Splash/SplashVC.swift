@@ -10,6 +10,7 @@ import UIKit
 import SwiftGifOrigin
 import SwiftOverlayShims
 
+// 앱이 처음 실행될 때 launchScreen
 class SplashVC: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
@@ -30,6 +31,8 @@ class SplashVC: UIViewController {
         perform(#selector(SplashVC.showTutorial), with: nil, afterDelay: 2.1)
         
     }
+    
+    // 토큰이 있는 경우와 없는 경우에 따라 분기처리.
     @objc func showTutorial() {
         let token = UserDefaults.standard
         if token.string(forKey: "token") != nil {

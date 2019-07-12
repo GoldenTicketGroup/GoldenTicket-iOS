@@ -208,3 +208,8 @@ extension SignUpVC: UIGestureRecognizerDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
+
+/*
+ 수정해야할 부분 : textfield의 간격이 너무 좁아 사용자가 갑갑하게 느낄 여지가 충분하다.
+ 적절하게 인터랙션, 레이아웃을 조정하여 사용자가 편하게 데이타를 입력할 수 있는 환경을 조성해야 한다.
+ */

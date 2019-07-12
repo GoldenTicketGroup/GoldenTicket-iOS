@@ -54,9 +54,9 @@ struct TicketService {
                                 } catch {
                                     completion(.pathErr)
                                 }
-                            case 400:
+                            case 400, 401:
                                 completion(.pathErr)
-                            case 500:
+                            case 600:
                                 completion(.serverErr)
                                 
                             default:

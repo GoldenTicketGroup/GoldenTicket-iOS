@@ -30,12 +30,8 @@ class TutorialVC: UIViewController {
     
 
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // 추가해야할 부분
+     앱을 처음 사용하는 사용자가 아닐 때에는 tutorial을 유저 flag에 따라 보이고, 안 보이고 처리해야함
     }
     */
 

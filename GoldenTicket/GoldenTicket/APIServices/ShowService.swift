@@ -101,9 +101,8 @@ struct ShowService {
                     if let value = response.result.value {
                         if let status = response.response?.statusCode {
                             
-                            
                             switch status {
-                            case 200:
+                            case 200, 204, 205:
                                 do {
                                     let decoder = JSONDecoder()
                                     
@@ -113,13 +112,12 @@ struct ShowService {
                                     // 데이터 encoding 하는 방법
                                     // print("데이터",String(data:value, encoding: .utf8))
                                     let result = try decoder.decode(ResponseShow.self, from: value)
-                                    // print("result \(result)")
+                                    print("result \(result)")
                                     // print(type(of: result))
                                     // print("finish decode")
-                                    
                                     switch result.success {
                                     case true:
-                                        completion(.success(result.data!))
+                                        completion(.success(result))
                                     case false:
                                         completion(.requestErr(result.message))
                                     }
@@ -130,7 +128,11 @@ struct ShowService {
                                 }
                             case 400:
                                 completion(.pathErr)
-                            case 500:
+                            case 401:
+                                completion(.pathErr)
+                            case 404:
+                                completion(.pathErr)
+                            case 600:
                                 completion(.serverErr)
                                 
                             default:
@@ -146,7 +148,9 @@ struct ShowService {
                     completion(.networkFail)
                     break
                 }
-            }
+            }// .responseJSON { response in
+                // print("Response JSON: \(response.result.value!)")
+        //}
     }
     
     
@@ -191,9 +195,9 @@ struct ShowService {
                                 } catch {
                                     completion(.pathErr)
                                 }
-                            case 400:
+                            case 400, 401:
                                 completion(.pathErr)
-                            case 500:
+                            case 600:
                                 completion(.serverErr)
                                 
                             default:

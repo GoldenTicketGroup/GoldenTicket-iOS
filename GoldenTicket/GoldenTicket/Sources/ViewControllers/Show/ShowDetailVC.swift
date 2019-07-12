@@ -446,15 +446,21 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
         self.selectedRow = timeList[indexPath.row].schedule_idx
         
         if timeList[indexPath.row].draw_available == 0 {
-            // 공연 일정은 있으나 현재 시간 상으로 응모가 불가능
-            messageView.isHidden = true
-        }
-        else {
-            // 현재 시간 상으로 응모 가능
-            messageView.isHidden = false
+            // 현재 시간 상으로 응모가 불가능
+            self.simpleAlert(title: "죄송합니다.", message: "현재 응모가능한 시간이 아닙니다.")
         }
         btnDrop.setTitle("\(selectedRowText!)", for: .normal)
         animate(toggle: false)
     }
 }
 
+extension ShowDetailVC {
+    func checkLottery() {
+        
+    }
+}
+/*
+ 서버에서 사용자가 2번이상 응모했다는 status 받아오면
+ 2개 이상일 때 messgaeView.isHidden = false 하고
+ 2개 미만이라면 messageView.isHidden = true 한다.
+ */

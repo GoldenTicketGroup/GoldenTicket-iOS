@@ -55,9 +55,19 @@ struct LikeService {
                                 } catch {
                                     completion(.pathErr)
                                 }
-                            case 400:
+                            case 304: // 이미 좋아요 상태
+                                do {
+                                    let decoder = JSONDecoder()
+                                    
+                                    // ResponseDefault.swift codable
+                                    let result = try decoder.decode(ResponseDefault.self, from: value)
+                                    completion(.requestErr(result.message))
+                                } catch {
+                                    completion(.pathErr)
+                                }
+                            case 400, 404:
                                 completion(.pathErr)
-                            case 500:
+                            case 600:
                                 completion(.serverErr)
                                 
                             default:
@@ -119,9 +129,20 @@ struct LikeService {
                                 } catch {
                                     completion(.pathErr)
                                 }
-                            case 400:
+                            case 304:   // 이미 좋아요 상태
+                                do {
+                                    let decoder = JSONDecoder()
+                                    
+                                    // ResponseDefault.swift codable
+                                    let result = try decoder.decode(ResponseDefault.self, from: value)
+                                    
+                                    completion(.requestErr(result.message))
+                                } catch {
+                                    completion(.pathErr)
+                                }
+                            case 400, 404:
                                 completion(.pathErr)
-                            case 500:
+                            case 600:
                                 completion(.serverErr)
                                 
                             default:

@@ -79,7 +79,7 @@ class MainVC: UIViewController {
     var showList : [Show] = []
     
     // 배열이 아님!!!! 배열 아냐!!!!!
-    var showDetail : ShowDetail!
+    var showDetail : ResponseShow!
     
     var timeList : [LotteryList] = []
     
@@ -482,14 +482,33 @@ extension MainVC {
                 
             case .success(let res):
                 
+               
+                // print("res \(res)") res.status
+                // switch 
                 // 1. 공연 하나에 대한 정보만 받아오면 된다.
-                self.showDetail = res as! ShowDetail
+                self.showDetail = res as! ResponseShow
+                
+                // status 200일 때
+                if self.showDetail.status == 200 {
+                    // 응모할 수 있는 경우
+                    
+                    // 스케줄이 아예 빈 배열인 경우 ==> "응모 가능한 시간이 아닙니다"
+                    
+                    // 스케줄인 있는데 전체가 drawavilable이 모두 0일 때 ==? "응모 가능한 시간이 아닙니다."
+                }
+                else if self.showDetail.status == 204 {
+                    // 이미 응모한 공연을 또 응모
+                }
+                else if self.showDetail.status == 205 {
+                    // 이미 사용자가 두번 응모한 경우
+                }
+                
                 let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
                 
                 dvc.showIdx = idx   // 다음 스토리 보드로 index 넘기기
                 
                 // 2. ShowDetail Struct
-                let imageUrlString = self.showDetail.image_url
+                let imageUrlString = self.showDetail.data.image_url
                 let imageUrl = URL(string: imageUrlString)!
                 let imageData = try! Data(contentsOf: imageUrl)
                 let image = UIImage(data: imageData)
@@ -497,15 +516,15 @@ extension MainVC {
                 // 1. posterImg가 있을 때 imageFromUrl을 호출하는데, 초기화 안된 상태이고 nil이니까 초기화를 해줘야 한다.
                 // 2. UIimageView가 아닌 UIImage로 접근해야 한다.
                 dvc.posterImg = image
-                dvc.showName = self.showDetail.name
-                dvc.showLocation = self.showDetail.location
-                dvc.showTime = self.showDetail.duration
-                dvc.showBeforePrice = self.showDetail.original_price
-                dvc.showAfterPrice = self.showDetail.discount_price
-                dvc.checkisLiked = self.showDetail.is_liked     // 다음 스토리보드로 좋아요 여부 보내기
+                dvc.showName = self.showDetail.data.name
+                dvc.showLocation = self.showDetail.data.location
+                dvc.showTime = self.showDetail.data.duration
+                dvc.showBeforePrice = self.showDetail.data.original_price
+                dvc.showAfterPrice = self.showDetail.data.discount_price
+                dvc.checkisLiked = self.showDetail.data.is_liked     // 다음 스토리보드로 좋아요 여부 보내기
                 
                 // image URL 얻어오기
-                let imageUrlString2 = self.showDetail.background_image
+                let imageUrlString2 = self.showDetail.data.background_image
                 let imageUrl2 = URL(string: imageUrlString2)!
                 let imageData2 = try! Data(contentsOf: imageUrl2)
                 let backimage = UIImage(data: imageData2)
@@ -513,17 +532,17 @@ extension MainVC {
                 dvc.backgroundImg = backimage
                 
                 // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
-                dvc.timeList = self.showDetail.schedule!
+                dvc.timeList = self.showDetail.data.schedule!
                 self.present(dvc, animated: true)
                 self.navigationController?.pushViewController(dvc, animated: true)
                 
                 
                 // 2. Poster Struct
-                let poster = self.showDetail.poster
+                let poster = self.showDetail.data.poster
                 dvc.posterList = poster!
 
                 // 2. Actor Struct
-                let artistDetail = self.showDetail.artist
+                let artistDetail = self.showDetail.data.artist
                 // let artistDetail = res as! [Artist]
                 
                 // dvc에 있는 배우들 리스트에 서버 통신해서 꽂아주기

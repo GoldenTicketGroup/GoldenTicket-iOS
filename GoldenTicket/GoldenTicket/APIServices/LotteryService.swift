@@ -33,7 +33,6 @@ struct LotteryService {
             .responseData { response in
                 
                 //print(response.error?.localizedDescription)
-                print("응답 \(response)")
                 switch response.result {
                     
                 // 통신 성공
@@ -43,7 +42,7 @@ struct LotteryService {
                             
                             
                             switch status {
-                            case 200:
+                            case 200, 204, 205:
                                 do {
                                     let decoder = JSONDecoder()
                                     
@@ -62,9 +61,9 @@ struct LotteryService {
                                     // print(error.localizedDescription)   // 에러 출력
                                     // debugPrint(error) // check which key is missing
                                 }
-                            case 400:
+                            case 400, 401:
                                 completion(.pathErr)
-                            case 500:
+                            case 600:
                                 completion(.serverErr)
                                 
                             default:
@@ -101,7 +100,6 @@ struct LotteryService {
             .responseData { response in
                 
                 //print(response.error?.localizedDescription)
-                print("응답 \(response)")
                 switch response.result {
                     
                 // 통신 성공
@@ -130,9 +128,9 @@ struct LotteryService {
                                     // print(error.localizedDescription)   // 에러 출력
                                     // debugPrint(error) // check which key is missing
                                 }
-                            case 400:
+                            case 400, 401:
                                 completion(.pathErr)
-                            case 500:
+                            case 600:
                                 completion(.serverErr)
                                 
                             default:
@@ -197,9 +195,9 @@ struct LotteryService {
                                 } catch {
                                     completion(.pathErr)
                                 }
-                            case 400:
+                            case 400, 401:
                                 completion(.pathErr)
-                            case 500:
+                            case 600:
                                 completion(.serverErr)
                                 
                             default:
