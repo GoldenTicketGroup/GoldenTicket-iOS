@@ -364,6 +364,8 @@ class ShowDetailVC: UIViewController {
         let dvc = storyboardLottery.instantiateViewController(withIdentifier: "waitLottery") as! LotteryInVC
 
         // 잠깐! 스토리 보드로 선택된 테이블 인덱스 넘기기
+        
+        self.timeList = self.showDetail.data.schedule!
         dvc.scheduleIdx = selectedRow
         present(dvc, animated: true)
     }
@@ -474,10 +476,6 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
         self.selectedRowText = timeList[indexPath.row].time
         self.selectedRow = timeList[indexPath.row].schedule_idx
         
-//        if timeList[indexPath.row].draw_available == 0 {
-//            // 현재 시간 상으로 응모가 불가능
-//            self.simpleAlert(title: "죄송합니다.", message: "현재 응모가능한 시간이 아닙니다.")
-//        }
         btnDrop.setTitle("\(selectedRowText!)", for: .normal)
         animate(toggle: false)
     }
@@ -524,9 +522,6 @@ extension ShowDetailVC {
                 if self.showDetail.status == 200 {
                     // 응모할 수 있는 경우
                     // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
-                    self.timeList = self.showDetail.data.schedule!
-                    self.present(self, animated: true)
-                    self.navigationController?.pushViewController(self, animated: true)
                     
                     // 스케줄이 아예 빈 배열인 경우 ==> "응모 가능한 시간이 아닙니다"
                     if self.showDetail.data.schedule!.count == 0 {
@@ -534,14 +529,10 @@ extension ShowDetailVC {
                     }
                     else {
                         // 스케줄이 아예 빈 배열은 아님
-                        for idx in 0 ... self.showDetail.data.schedule!.count {
+                        for idx in 0 ..< self.showDetail.data.schedule!.count {
                             if self.showDetail.data.schedule![idx].draw_available == 1 {
                                 // 응모가능
                                 self.timeList = self.showDetail.data.schedule!
-                                
-                                self.present(self, animated: true)
-                                self.navigationController?.pushViewController(self, animated: true)
-                                return
                             }
                         }
                         // 모든 draw_available 이 다 0일 때
