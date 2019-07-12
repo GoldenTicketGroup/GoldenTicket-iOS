@@ -7,7 +7,7 @@
 서비스 work flow
 ---------------
 <div>
-<img width="1438" alt="goldenTicketFlow" src="https://user-images.githubusercontent.com/49272528/60763857-a63d3800-a0b7-11e9-95af-f381fe8e57c4.png">
+<img width="1438" src="https://user-images.githubusercontent.com/49272528/61115181-e09a4100-a4cc-11e9-9bc5-75d3461e4387.png">
 </div>
 <br />
 
@@ -69,24 +69,24 @@
   **해결2**. <br />
   1. print(type(of: result))로 디코드를 시도하는 value의 타입을 찍어보고 <br />
   2. print(error.localizedDescription로 에러를 출력해보고 <br />
-  3. debugPrint(error)로 어떤 키가 missing된 건 아닌지 확인한다. 이 과정에서 response data handler, chained response handlers 사용 방법을 참고했다.<br /><br />
-  > 참고URL : https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md <br /><br />
-  > *Response Data Handler<br />
-  >1. Alamofire.request("https://httpbin.org/get").responseData { response in<br />
-  >    debugPrint("All Response Info: \(response)")<br />
+  3. debugPrint(error)로 어떤 키가 missing된 건 아닌지 확인한다. 이 과정에서 response data handler, chained response handlers 사용 방법을 참고했다.<br />
+  > * 참고URL : https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md <br />
+  >  Response Data Handler<br />
+  >  1.	Alamofire.request("https://httpbin.org/get").responseData { response in<br />
+  >     debugPrint("All Response Info: \(response)")<br />
   >
-  >    if let data = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {<br />
-  >    	print("Data: \(utf8Text)")<br />
-  >    }<br />
-  >}<br /><br />
-  > *Chained Response Handlers<br />
-  >2. Alamofire.request("https://httpbin.org/get")<br />
-  >    .responseString { response in<br />
-  >        print("Response String: \(response.result.value)")<br />
-  >    }<br />
-  >    .responseJSON { response in<br />
-  >        print("Response JSON: \(response.result.value)")<br />
-  >    }<br />
+  >     if let data = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {<br />
+  >     	print("Data: \(utf8Text)")<br />
+  >     }<br />
+  >}<br />
+  >  Chained Response Handlers<br />
+  >  2.	Alamofire.request("https://httpbin.org/get")<br />
+  >     .responseString { response in<br />
+  >         print("Response String: \(response.result.value)")<br />
+  >     }<br />
+  >     .responseJSON { response in<br />
+  >         print("Response JSON: \(response.result.value)")<br />
+  >     }<br />
   
 * **문제3**. 서버에서 이미지 통신 후 오토레이아웃이 무너지는 문제점<br />
   [예시 화면]<br />
@@ -98,6 +98,7 @@
 <br /><br />
 
 * **문제4**. 공연 상세 뷰의 셀 이미지가 두번째 클릭부터 로드 되는 문제점<br />
+
   **해결**. dvc의 image 속성을 UIImageView?가 아닌 UIImage?로 선언하여 해결했다. 따라서 이미지 url 메소드 불러올 때도 kingfisher의 imageFromURL을 사용하지 않고 직접 image URL을 받아 UIImage에 대응해주었다.<br />
   <문제4 해결이미지><br />
   <img width="600" src="https://user-images.githubusercontent.com/49272528/61113684-bdba5d80-a4c9-11e9-9aec-01f2457c92ff.png">
