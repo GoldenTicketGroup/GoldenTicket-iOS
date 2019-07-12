@@ -471,15 +471,9 @@ extension MainVC {
             data in
             
             guard let `self` = self else { return }
-            //print("data : \(data)")
             switch data {
                 
-            // 매개변수에 어떤 값을 가져올 것인지
             case .success(let res):
-                
-                // 배열이 아니라서 배열로 받을 필요가 없었음 !!!!!!!!!
-                // self.showDetailList = res as! [ShowDetail]
-                // print("any data",self.showDetailList)
                 
                 // 1. 공연 하나에 대한 정보만 받아오면 된다.
                 self.showDetail = res as! ShowDetail
