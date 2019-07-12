@@ -49,7 +49,7 @@ class ShowDetailVC: UIViewController {
     
     var checkisLiked : Int?     // 좋아요가 체크 되어있나요? 0: 아니요. 1: 예
     var available : Int?        // 응모가 가능한지 체크하고 싶다.
-    
+    var cnt = 0                 // draw_available 계산
 
     // InterestedVC 에서 storyboard로 전달 받는 dvc outlet
     var backImg : UIImage?
@@ -196,9 +196,17 @@ class ShowDetailVC: UIViewController {
                         // 스케줄이 아예 빈 배열은 아님
                         for idx in 0 ..< self.showDetail.data.schedule!.count {
                             if self.showDetail.data.schedule![idx].draw_available == 1 {
-                                // 응모가능
-                                self.timeList = self.showDetail.data.schedule!
+                                self.cnt += 1
                             }
+                        }
+                        if self.cnt == 0 {
+                            // 응모불가능
+                            
+                        }
+                        else {
+                            // 응모가능
+                            self.timeList = self.showDetail.data.schedule!
+                            return
                         }
                         // 모든 draw_available 이 다 0일 때
                         self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 아닙니다.")
