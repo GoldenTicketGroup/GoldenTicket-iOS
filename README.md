@@ -123,6 +123,7 @@ Chained Response Handlers<br />
 * 문제4. 공연 상세 뷰의 셀 이미지가 두번째 클릭부터 로드 되는 문제점<br />
 * 해결. dvc의 image 속성을 UIImageView?가 아닌 UIImage?로 선언하여 해결했다. 따라서 이미지 url 메소드 불러올 때도 kingfisher의 imageFromURL을 사용하지 않고 직접 image URL을 받아 UIImage에 대응해주었다.<br />
 <문제4 해결이미지><br />
-![prob7](https://user-images.githubusercontent.com/49272528/61109664-6499fc00-a4c0-11e9-8286-11e1ee86b575.png) <br />
+<img width="600"src="https://user-images.githubusercontent.com/49272528/61109664-6499fc00-a4c0-11e9-8286-11e1ee86b575.png"> <br />
 <문제4-1 해결이미지><br />
-![prob8](https://user-images.githubusercontent.com/49272528/61109670-6794ec80-a4c0-11e9-9907-c2571a88e282.png)
+<img width="600" scr="https://user-images.githubusercontent.com/49272528/61109670-6794ec80-a4c0-11e9-9907-c2571a88e282.png">
+<br />
