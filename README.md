@@ -75,10 +75,12 @@ setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
 타이머 역시 viewDidload에 선언하고 통신 함수를 호출하는 방식으로 진행하였더니 시간 데이타에 nil이 들어오기 때문에 통신하는 코드 안에 선언하여 해결하였다.<br />
 <br />
 <br />
+
+
 * 문제2. response의 result가 Json으로 decode할 수 없을 때 해결을 위해 시도했던 방법들<br />
 * 해결1. 코더블이 적절히 value를 casting해오지 못하는 경우가 있기 때문에 서버 네이밍과 동일하게 수정한다.<br />
 <해결 1의 이미지><br />
-* 해결2.<br />
+* 해결2. <br />
 1. print(type(of: result))로 디코드를 시도하는 value의 타입을 찍어보고 2. print(error.localizedDescription로 에러를 출력해보고 3. debugPrint(error)로 어떤 키가 missing된 건 아닌지 확인한다. 이 과정에서 response data handler, chained response handlers 사용 방법을 참고했다.
 참고URL : https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md <br />
 
