@@ -51,17 +51,30 @@ class ShowDetailVC: UIViewController {
     var checkisLiked : Int?     // 좋아요가 체크 되어있나요? 0: 아니요. 1: 예
     var available : Int?        // 응모가 가능한지 체크하고 싶다.
     
-//    // SearchVC 에서 storyboard로 전달 받는 dvc outlet
-//    var backImg : UIImage?
-//    var posterI : UIImage?
-//    var showN: String?
-//    var beforeP : String?
-//    var afterP : String?
-//    var showT : String?
-//    var showL : String?
-//    var detailP : UIImageView?
-//    var checkisL : Int?
-//    var a : Int?
+    // InterestedVC 에서 storyboard로 전달 받는 dvc outlet
+    var backImg : UIImage?
+    var posterI : UIImage?
+    var showN: String?
+    var beforeP : String?
+    var afterP : String?
+    var showT : String?
+    var showL : String?
+    var detailP : UIImageView?
+    var checkisL : Int?
+    var a : Int?
+    
+    //SearchVC 에서 storyboard 로 전달 받는 dvc outlet
+    var backImageS : UIImage?
+    var posterIS : UIImage?
+    var showNS: String?
+    var beforePS : String?
+    var afterPS : String?
+    var showTS : String?
+    var showLS : String?
+    var detailPS : UIImageView?
+    var checkisLS : Int?
+    var aS : Int?
+    
     
     //응모하기 뷰
     @IBOutlet weak var checkView: CustomView!
@@ -92,8 +105,9 @@ class ShowDetailVC: UIViewController {
         
         // 테스트용 더미 데이터 세팅해두기.
         setContent()
+        setInterested()
         // setActorData()
-        //setSearchContent()
+        setSearchContent()
         
         //poster image customize
         posterImage.makeRounded(cornerRadius: 10)
@@ -187,15 +201,25 @@ class ShowDetailVC: UIViewController {
         showLocationLabel.text = showLocation
     }
     
-//    func setSearchContent() {
-//        backgroundImage.image = backImg
-//        posterImage.image = posterI
-//        showTitle.text = showT
-//        showBeforePriceLabel.text = beforeP
-//        showAfterPriceLabel.text = afterP
-//        showTimeLabel.text = showT
-//        showLocationLabel.text = showL
-//    }
+    func setInterested() {
+        backgroundImage.image = backImg
+        posterImage.image = posterI
+        showTitle.text = showN
+        showBeforePriceLabel.text = beforeP
+        showAfterPriceLabel.text = afterP
+        showTimeLabel.text = showT
+        showLocationLabel.text = showL
+    }
+    
+    func setSearchContent() {
+        backgroundImage.image = backImageS
+        posterImage.image = posterIS
+        showTitle.text = showNS
+        showBeforePriceLabel.text = beforePS
+        showAfterPriceLabel.text = afterPS
+        showTimeLabel.text = showTS
+        showLocationLabel.text = showLS
+    }
     
     // 메인 화면으로 돌아가는 backButton 함수
     @IBAction func backButton(_ sender: UIButton) {
