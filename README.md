@@ -7,7 +7,7 @@
 서비스 work flow
 ---------------
 <div>
-<img width="1438" alt="goldenTicketFlow" src="https://user-images.githubusercontent.com/49272528/60763857-a63d3800-a0b7-11e9-95af-f381fe8e57c4.png">
+<img width="1438" src="https://user-images.githubusercontent.com/49272528/61115181-e09a4100-a4cc-11e9-9bc5-75d3461e4387.png">
 </div>
 <br />
 
@@ -17,9 +17,7 @@
 
 스크린 샷
 ------------
-   <img width="233" alt="스크린샷 2019-07-11 오후 6 53 19" src="https://user-images.githubusercontent.com/49272528/61041415-3b6c6380-a40d-11e9-90f7-7bf1aa3dab95.png">   <img width="233" alt="스크린샷 2019-07-11 오후 6 52 36" src="https://user-images.githubusercontent.com/49272528/61041550-7a9ab480-a40d-11e9-8d39-f0e78138eb11.png">   <img width="233" alt="스크린샷 2019-07-11 오후 6 51 24" src="https://user-images.githubusercontent.com/49272528/61041637-a3bb4500-a40d-11e9-83e0-a4b39fbb27f1.png">
-
-
+<img width="200" src="https://user-images.githubusercontent.com/49272528/61114387-31a93580-a4cb-11e9-87c7-9c0d8f36a43c.jpg"> <img width="200" src="https://user-images.githubusercontent.com/49272528/61114394-34a42600-a4cb-11e9-8e99-cb94600c7725.jpg"> <img width="200" src="https://user-images.githubusercontent.com/49272528/61114404-366de980-a4cb-11e9-976c-ef5b14e2c39e.jpg"> <img width="200" src="https://user-images.githubusercontent.com/49272528/61114414-3b329d80-a4cb-11e9-9ff6-710f7a257625.jpg">
 
 
 개발 환경
@@ -48,6 +46,66 @@
 |<center> 알림 (관심있는 공연 / 당첨확인) </center> | <center> X : 개발자 계정이 없어 apns 이용 불가 </center> |<center> </center> |
 |<center> 검색 </center> | <center> ○ </center> |<center>일반 텍스트 검색, 해쉬태그 검색</center> |
 
+문제점과 해결 방법 report
+------------
+* **문제1**. alamofire 비동기화로 인해서 서버 통신이 진행 중일때 데이터를 nil 값을 받아오는 경우가 발생할 수 있다.<br />
+
+  **해결**. 서버 통신할 때 데이터 갱신은 반드시 통신 함수 안에서 진행해야 한다.<br />
+  * 예시 1.<br />
+  ![prob1](https://user-images.githubusercontent.com/49272528/61109580-33213080-a4c0-11e9-9aac-c301215780cf.png)
+  공연 상세 페이지의 데이타를 셋팅하는 collection view에서 서버를 통해 데이터 셋팅하는 함수 setDetailData를 호출만 하고<br />
+  ![prob2](https://user-images.githubusercontent.com/49272528/61109587-374d4e00-a4c0-11e9-8e2b-966e346c5cee.png)
+  setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
+  * 예시 2.<br />
+  ![prob3](https://user-images.githubusercontent.com/49272528/61109592-3a483e80-a4c0-11e9-8c16-4326803b4c60.png)
+  타이머 역시 viewDidload에 선언하고 통신 함수를 호출하는 방식으로 진행하였더니 시간 데이타에 nil이 들어오기 때문에 통신하는 코드 안에 선언하여 해결하였다.<br />
+<br />
+
+* **문제2**. response의 result가 Json으로 decode할 수 없을 때 해결을 위해 시도했던 방법들<br />
+
+  **해결1**. 코더블이 적절히 value를 casting해오지 못하는 경우가 있기 때문에 서버 네이밍과 동일하게 수정한다.<br />
+  ![prob4](https://user-images.githubusercontent.com/49272528/61109594-3c120200-a4c0-11e9-8355-9762cd89e183.png)
+  
+  **해결2**. <br />
+  1. print(type(of: result))로 디코드를 시도하는 value의 타입을 찍어보고 <br />
+  2. print(error.localizedDescription로 에러를 출력해보고 <br />
+  3. debugPrint(error)로 어떤 키가 missing된 건 아닌지 확인한다. 이 과정에서 response data handler, chained response handlers 사용 방법을 참고했다.<br />
+  > * 참고URL : https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md <br />
+  >  1. Response Data Handler<br />
+  >  Alamofire.request("https://httpbin.org/get").responseData { response in<br />
+  >     debugPrint("All Response Info: \(response)")<br />
+  >
+  >     if let data = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {<br />
+  >     	print("Data: \(utf8Text)")<br />
+  >    }<br />
+  >}<br />
+  >  2. Chained Response Handlers<br />
+  >  Alamofire.request("https://httpbin.org/get")<br />
+  >     .responseString { response in<br />
+  >         print("Response String: \(response.result.value)")<br />
+  >     }<br />
+  >     .responseJSON { response in<br />
+  >         print("Response JSON: \(response.result.value)")<br />
+  >     }<br />
+  
+* **문제3**. 서버에서 이미지 통신 후 오토레이아웃이 무너지는 문제점<br />
+  [예시 화면]<br />
+  <img width="300" src="https://user-images.githubusercontent.com/49272528/61109648-5f3cb180-a4c0-11e9-86e8-bc93f04e4e5f.png">
+  
+  **해결**. 서버 이미지 속성의 width, height 값의 최소 공약수를 구하여 UIImage의 규격 셋팅을 한다.<br />
+  
+  <img width="300" src="https://user-images.githubusercontent.com/49272528/61109657-6237a200-a4c0-11e9-9629-478debb7bdbc.png">
+<br /><br />
+
+* **문제4**. 공연 상세 뷰의 셀 이미지가 두번째 클릭부터 로드 되는 문제점<br />
+
+  **해결**. dvc의 image 속성을 UIImageView?가 아닌 UIImage?로 선언하여 해결했다. 따라서 이미지 url 메소드 불러올 때도 kingfisher의 imageFromURL을 사용하지 않고 직접 image URL을 받아 UIImage에 대응해주었다.<br />
+  <문제4 해결이미지><br />
+  <img width="600" src="https://user-images.githubusercontent.com/49272528/61113684-bdba5d80-a4c9-11e9-9aec-01f2457c92ff.png">
+  
+  <문제4-1 해결이미지><br />
+  <img width="600" src="https://user-images.githubusercontent.com/49272528/61110952-60231280-a4c3-11e9-89e5-548a3316f109.png">
+
 팀원 소개
 ------------
 * 팀원1 : 안재은<br>
@@ -59,70 +117,3 @@
 > 생각 이상으로 사용자 입장에서 플로우를 디테일하게 고민해보는 시간이었고 <br />
 > SOPT 24기 YB로 앱잼에 참여하면서 들어왔던 8번의 세미나를 종합하고 발전하는 기회였습니다.<br />
 <br />
-
-문제점과 해결 방법 report
-------------
-* 문제1.	alamofire 비동기화로 인해서 서버 통신이 진행 중일때 데이터를 nil 값을 받아오는 경우가 발생할 수 있다.<br />
-* 해결. 서버 통신할 때 데이터 갱신은 반드시 통신 함수 안에서 진행해야 한다.<br />
-* 예시 1.<br />
-<예시 1의 이미지><br />
-![prob1](https://user-images.githubusercontent.com/49272528/61109580-33213080-a4c0-11e9-9aac-c301215780cf.png)
-공연 상세 페이지의 데이타를 셋팅하는 collection view에서 서버를 통해 데이터 셋팅하는 함수 setDetailData를 호출만 하고<br />
-<예시 1-1의 이미지><br />
-![prob2](https://user-images.githubusercontent.com/49272528/61109587-374d4e00-a4c0-11e9-8e2b-966e346c5cee.png)
-setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
-
-* 예시 2.<br />
-<예시 2의 이미지><br />
-![prob3](https://user-images.githubusercontent.com/49272528/61109592-3a483e80-a4c0-11e9-8c16-4326803b4c60.png)
-타이머 역시 viewDidload에 선언하고 통신 함수를 호출하는 방식으로 진행하였더니 시간 데이타에 nil이 들어오기 때문에 통신하는 코드 안에 선언하여 해결하였다.<br />
-<br />
-<br />
-
-
-* 문제2. response의 result가 Json으로 decode할 수 없을 때 해결을 위해 시도했던 방법들<br />
-* 해결1. 코더블이 적절히 value를 casting해오지 못하는 경우가 있기 때문에 서버 네이밍과 동일하게 수정한다.<br />
-<해결 1의 이미지><br />
-![prob4](https://user-images.githubusercontent.com/49272528/61109594-3c120200-a4c0-11e9-8355-9762cd89e183.png)
-* 해결2. <br />
-1. print(type(of: result))로 디코드를 시도하는 value의 타입을 찍어보고 <br />
-2. print(error.localizedDescription로 에러를 출력해보고 <br />
-3. debugPrint(error)로 어떤 키가 missing된 건 아닌지 확인한다. 이 과정에서 response data handler, chained response handlers 사용 방법을 참고했다.<br />
-참고URL : https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md <br />
-
-Response Data Handler<br />
-1.	Alamofire.request("https://httpbin.org/get").responseData { response in<br />
-    debugPrint("All Response Info: \(response)")<br />
-
-    if let data = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {<br />
-    	print("Data: \(utf8Text)")<br />
-    }<br />
-}<br />
-
-<br /><br />
-
-Chained Response Handlers<br />
-2.	Alamofire.request("https://httpbin.org/get")<br />
-    .responseString { response in<br />
-        print("Response String: \(response.result.value)")<br />
-    }<br />
-    .responseJSON { response in<br />
-        print("Response JSON: \(response.result.value)")<br />
-    }<br />
-    <br /><br />
-    
-    
-* 문제3. 서버에서 이미지 통신 후 오토레이아웃이 무너지는 문제점<br />
-[예시 화면]<br />
-<예시 이미지><br />
-<img width="300" src="https://user-images.githubusercontent.com/49272528/61109648-5f3cb180-a4c0-11e9-86e8-bc93f04e4e5f.png">
-* 해결. 서버 이미지 속성의 width, height 값의 최소 공약수를 구하여 UIImage의 규격 셋팅을 한다.<br />
-<해결 화면이미지><br />
-<img width="300" src="https://user-images.githubusercontent.com/49272528/61109657-6237a200-a4c0-11e9-9629-478debb7bdbc.png">
-<br /><br />
-* 문제4. 공연 상세 뷰의 셀 이미지가 두번째 클릭부터 로드 되는 문제점<br />
-* 해결. dvc의 image 속성을 UIImageView?가 아닌 UIImage?로 선언하여 해결했다. 따라서 이미지 url 메소드 불러올 때도 kingfisher의 imageFromURL을 사용하지 않고 직접 image URL을 받아 UIImage에 대응해주었다.<br />
-<문제4 해결이미지><br />
-![prob7](https://user-images.githubusercontent.com/49272528/61109664-6499fc00-a4c0-11e9-8286-11e1ee86b575.png) <br />
-<문제4-1 해결이미지><br />
-![prob8](https://user-images.githubusercontent.com/49272528/61109670-6794ec80-a4c0-11e9-9907-c2571a88e282.png)

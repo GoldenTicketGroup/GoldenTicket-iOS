@@ -521,7 +521,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMz-Je-kpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3546" y="-289"/>
+            <point key="canvasLocation" x="3858" y="-277"/>
         </scene>
         <!--Side MenuVC-->
         <scene sceneID="bBM-g1-drP">
@@ -605,8 +605,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="당첨횟수" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oVm-iw-fhH">
-                                                    <rect key="frame" x="310.5" y="22" width="48.5" height="17"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oVm-iw-fhH">
+                                                    <rect key="frame" x="351" y="22" width="8" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                                     <color key="textColor" red="1" green="0.87617599940000002" blue="0.3210505434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -742,11 +742,11 @@
             <objects>
                 <viewController storyboardIdentifier="ShowDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="txR-zd-iJi" customClass="ShowDetailVC" customModule="GoldenTicket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a4a-oJ-NbP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="6354"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXR-yO-Gad">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="6354"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="800-zd-WoJ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="6399"/>
@@ -1014,8 +1014,8 @@
                                     <constraint firstItem="800-zd-WoJ" firstAttribute="leading" secondItem="mXR-yO-Gad" secondAttribute="leading" id="jgM-ZW-dX5"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-ef-Wbu">
-                                <rect key="frame" x="0.0" y="6144" width="375" height="220"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-ef-Wbu">
+                                <rect key="frame" x="0.0" y="556" width="375" height="220"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-6Y-ir8">
                                         <rect key="frame" x="165" y="1" width="44" height="44"/>
@@ -1150,7 +1150,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uIv-Ge-VB4"/>
                     </view>
-                    <size key="freeformSize" width="375" height="6354"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -1177,7 +1176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Oa-NE-dME" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2605.5999999999999" y="791.60419790104959"/>
+            <point key="canvasLocation" x="4774" y="688"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="ZZX-2w-Pyx">
@@ -1197,7 +1196,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeM-qN-P74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4727" y="-277"/>
+            <point key="canvasLocation" x="4775" y="-277"/>
         </scene>
     </scenes>
     <resources>

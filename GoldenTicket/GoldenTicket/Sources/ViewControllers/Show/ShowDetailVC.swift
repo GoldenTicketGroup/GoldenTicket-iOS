@@ -51,6 +51,18 @@ class ShowDetailVC: UIViewController {
     var checkisLiked : Int?     // 좋아요가 체크 되어있나요? 0: 아니요. 1: 예
     var available : Int?        // 응모가 가능한지 체크하고 싶다.
     
+//    // SearchVC 에서 storyboard로 전달 받는 dvc outlet
+//    var backImg : UIImage?
+//    var posterI : UIImage?
+//    var showN: String?
+//    var beforeP : String?
+//    var afterP : String?
+//    var showT : String?
+//    var showL : String?
+//    var detailP : UIImageView?
+//    var checkisL : Int?
+//    var a : Int?
+    
     //응모하기 뷰
     @IBOutlet weak var checkView: CustomView!
     @IBOutlet weak var fillView: UIView!
@@ -81,6 +93,7 @@ class ShowDetailVC: UIViewController {
         // 테스트용 더미 데이터 세팅해두기.
         setContent()
         // setActorData()
+        //setSearchContent()
         
         //poster image customize
         posterImage.makeRounded(cornerRadius: 10)
@@ -173,6 +186,16 @@ class ShowDetailVC: UIViewController {
         showTimeLabel.text = showTime
         showLocationLabel.text = showLocation
     }
+    
+//    func setSearchContent() {
+//        backgroundImage.image = backImg
+//        posterImage.image = posterI
+//        showTitle.text = showT
+//        showBeforePriceLabel.text = beforeP
+//        showAfterPriceLabel.text = afterP
+//        showTimeLabel.text = showT
+//        showLocationLabel.text = showL
+//    }
     
     // 메인 화면으로 돌아가는 backButton 함수
     @IBAction func backButton(_ sender: UIButton) {
