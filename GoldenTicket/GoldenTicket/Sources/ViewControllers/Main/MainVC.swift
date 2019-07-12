@@ -391,11 +391,13 @@ extension MainVC: UICollectionViewDataSource {
 extension MainVC : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
+        let storyboardM = UIStoryboard.init(name: "Main", bundle: nil)
+        let dvc = storyboardM.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
         
         let show = showList[indexPath.row]
-
         dvc.showIdx = show.show_idx
+        
+        present(dvc, animated: true)
     }
 }
 
