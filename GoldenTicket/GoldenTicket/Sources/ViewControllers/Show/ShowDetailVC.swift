@@ -15,6 +15,10 @@ class ShowDetailVC: UIViewController {
     var artistList : [Artist] = []
     var posterList : [Poster] = []
     var timeList : [Schedule] = []
+    
+    // 배열이 아님!!!! 배열 아냐!!!!!
+    var showDetail : ResponseShow!
+    
     var showIdx : Int?
     var selectedRowText : String?
     var selectedRow : Int?
@@ -38,30 +42,8 @@ class ShowDetailVC: UIViewController {
     
     @IBOutlet weak var showDetailCollectionView: UICollectionView!
     
-    
-    // MainVC 에서 storyboard로 전달 받는 dvc outlet
-    var backgroundImg : UIImage?
-    var posterImg : UIImage?
-    var showName : String?
-    var showBeforePrice : String?
-    var showAfterPrice : String?
-    var showTime : String?
-    var showLocation : String?
-    var detailPoster : UIImageView?
     var checkisLiked : Int?     // 좋아요가 체크 되어있나요? 0: 아니요. 1: 예
     var available : Int?        // 응모가 가능한지 체크하고 싶다.
-    
-//    // SearchVC 에서 storyboard로 전달 받는 dvc outlet
-//    var backImg : UIImage?
-//    var posterI : UIImage?
-//    var showN: String?
-//    var beforeP : String?
-//    var afterP : String?
-//    var showT : String?
-//    var showL : String?
-//    var detailP : UIImageView?
-//    var checkisL : Int?
-//    var a : Int?
     
     //응모하기 뷰
     @IBOutlet weak var checkView: CustomView!
@@ -88,10 +70,10 @@ class ShowDetailVC: UIViewController {
         //응모 불가할 때 띄우는 메세지 뷰 customize
         messageView.makeRounded(cornerRadius: 20)
         messageView.isHidden = true
+
         
-        
-        // 테스트용 더미 데이터 세팅해두기.
-        setContent()
+        setDetailData()
+        // setContent()
         // setActorData()
         //setSearchContent()
         
@@ -122,7 +104,6 @@ class ShowDetailVC: UIViewController {
         
         //scroll view delegate
         scrollView.delegate = self
-        
 
         if checkisLiked == 1 {
             // 좋아요 되어있어야 함
@@ -135,14 +116,6 @@ class ShowDetailVC: UIViewController {
 //            let btnNoImage = UIImage(named: "iconLikeNoFill")
 //            self.likeButton.setImage(btnNoImage, for: .normal)
         }
-
-//        let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
-//
-//        let dvc2 = storyboardMain.instantiateViewController(withIdentifier: "MainVC") as! MainVC
-//
-//        dvc2.lotteryList.append(MainVC.Lottery(title: "캣츠"))
-//        print(dvc2.lotteryList)
-
     }
     
     
@@ -175,28 +148,6 @@ class ShowDetailVC: UIViewController {
         }
     }
     
-    // 나타낼 데이터들 지정해주기
-    func setContent() {
-        
-        backgroundImage.image = backgroundImg
-        posterImage.image = posterImg
-        showTitle.text = showName
-        showBeforePriceLabel.text = showBeforePrice
-        showAfterPriceLabel.text = showAfterPrice
-        showTimeLabel.text = showTime
-        showLocationLabel.text = showLocation
-    }
-    
-//    func setSearchContent() {
-//        backgroundImage.image = backImg
-//        posterImage.image = posterI
-//        showTitle.text = showT
-//        showBeforePriceLabel.text = beforeP
-//        showAfterPriceLabel.text = afterP
-//        showTimeLabel.text = showT
-//        showLocationLabel.text = showL
-//    }
-    
     // 메인 화면으로 돌아가는 backButton 함수
     @IBAction func backButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -218,12 +169,10 @@ class ShowDetailVC: UIViewController {
                 data in
                 
                 guard let `self` = self else { return }
-                print("data : \(data)")
                 switch data {
                     
                 // 매개변수에 어떤 값을 가져올 것인지
                 case .success(let res):
-                    print("좋아요 성공")
                     sender.isSelected = true   // 버튼 선택 안된걸로 바꿈
                     
                 case .requestErr(let message):
@@ -256,7 +205,6 @@ class ShowDetailVC: UIViewController {
                 // 매개변수에 어떤 값을 가져올 것인지
                 case .success(let res):
                     sender.isSelected = false
-                    print("좋아요 취소 성공")
                     
                 case .requestErr(let message):
                     self.simpleAlert(title: "좋아요 추가 실패", message: "\(message)")
@@ -366,11 +314,9 @@ extension ShowDetailVC : UIScrollViewDelegate {
         let yVelocity = scrollView.panGestureRecognizer .velocity(in: scrollView).y
         
         if yVelocity > 0 {
-            print("up")
             hideMenuView()
             
         } else if yVelocity < 0 {
-            print("down")
             showMenuView()
         }
     }
@@ -379,13 +325,10 @@ extension ShowDetailVC : UIScrollViewDelegate {
 
 /* Artist, Schedule 은 통신 해야 함 */
 
-
-
 // 배우 정보 collection view datasource
 extension ShowDetailVC: UICollectionViewDataSource {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         if collectionView == self.showDetailCollectionView {
             return posterList.count
         }
@@ -398,7 +341,6 @@ extension ShowDetailVC: UICollectionViewDataSource {
             
             let poster = posterList[indexPath.row]
             
-            //cell.posterImage.imageFromUrl(poster.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
             cell.posterImage.imageFromUrl(poster.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/long_info_benhur_01.jpg")
             
             return cell
@@ -468,22 +410,101 @@ extension ShowDetailVC: UITableViewDelegate, UITableViewDataSource{
         self.selectedRowText = timeList[indexPath.row].time
         self.selectedRow = timeList[indexPath.row].schedule_idx
         
-        if timeList[indexPath.row].draw_available == 0 {
-            // 현재 시간 상으로 응모가 불가능
-            self.simpleAlert(title: "죄송합니다.", message: "현재 응모가능한 시간이 아닙니다.")
-        }
+//        if timeList[indexPath.row].draw_available == 0 {
+//            // 현재 시간 상으로 응모가 불가능
+//            self.simpleAlert(title: "죄송합니다.", message: "현재 응모가능한 시간이 아닙니다.")
+//        }
         btnDrop.setTitle("\(selectedRowText!)", for: .normal)
         animate(toggle: false)
     }
 }
 
 extension ShowDetailVC {
-    func checkLottery() {
-        
+    func setDetailData() {
+        // 너 여기서 통신해
+        guard let idx = self.showIdx else { return }
+        print("showIdx \(idx)")
+        ShowService.shared.showDetail(showIdx: idx) {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            switch data {
+                
+            case .success(let res):
+                
+                self.showDetail = res as! ResponseShow
+                
+                // 1. posterImg가 있을 때 imageFromUrl을 호출하는데, 초기화 안된 상태이고 nil이니까 초기화를 해줘야 한다.
+                // 2. UIimageView가 아닌 UIImage로 접근해야 한다.
+                self.backgroundImage.imageFromUrl(self.showDetail.data.background_image, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/backimg_benhur_info.jpg")
+                self.posterImage.imageFromUrl(self.showDetail.data.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/poster_main_benhur.jpg")
+                self.showTitle.text = self.showDetail.data.name
+                self.showBeforePriceLabel.text = self.showDetail.data.original_price
+                self.showAfterPriceLabel.text = self.showDetail.data.discount_price
+                self.showTimeLabel.text = self.showDetail.data.duration
+                self.showLocationLabel.text = self.showDetail.data.location
+                
+                self.checkisLiked = self.showDetail.data.is_liked
+                
+                // 2. Poster Struct
+                self.posterList = self.showDetail.data.poster!
+                // 2. Actor Struct
+                self.artistList = self.showDetail.data.artist!
+                
+                self.showDetailCollectionView.reloadData()
+                self.actorCollectionView.reloadData()
+                self.tblView.reloadData()
+                
+                // status 200일 때
+                if self.showDetail.status == 200 {
+                    // 응모할 수 있는 경우
+                    // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
+                    self.timeList = self.showDetail.data.schedule!
+                    self.present(self, animated: true)
+                    self.navigationController?.pushViewController(self, animated: true)
+                    
+                    // 스케줄이 아예 빈 배열인 경우 ==> "응모 가능한 시간이 아닙니다"
+                    if self.showDetail.data.schedule!.count == 0 {
+                        self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 없습니다.")
+                    }
+                    else {
+                        // 스케줄이 아예 빈 배열은 아님
+                        for idx in 0 ... self.showDetail.data.schedule!.count {
+                            if self.showDetail.data.schedule![idx].draw_available == 1 {
+                                // 응모가능
+                                self.timeList = self.showDetail.data.schedule!
+                                
+                                self.present(self, animated: true)
+                                self.navigationController?.pushViewController(self, animated: true)
+                                return
+                            }
+                        }
+                        // 모든 draw_available 이 다 0일 때
+                        self.simpleAlert(title: "죄송합니다.", message: "응모 가능한 시간이 아닙니다.")
+                    }
+                }
+                else if self.showDetail.status == 204 {
+                    // 이미 응모한 공연을 또 응모
+                    self.simpleAlert(title: "죄송합니다.", message: "이미 응모한 공연입니다.")
+                }
+                else if self.showDetail.status == 205 {
+                    // 이미 사용자가 두번 응모한 경우
+                    self.simpleAlert(title: "죄송합니다.", message: "응모는 하루에 두 번까지 가능합니다.")
+                }
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
     }
 }
-/*
- 서버에서 사용자가 2번이상 응모했다는 status 받아오면
- 2개 이상일 때 messgaeView.isHidden = false 하고
- 2개 미만이라면 messageView.isHidden = true 한다.
- */

@@ -54,7 +54,7 @@ struct ShowService {
                                 }
                             case 400:
                                 completion(.pathErr)
-                            case 500:
+                            case 600:
                                 completion(.serverErr)
                                 
                             default:
@@ -112,9 +112,7 @@ struct ShowService {
                                     // 데이터 encoding 하는 방법
                                     // print("데이터",String(data:value, encoding: .utf8))
                                     let result = try decoder.decode(ResponseShow.self, from: value)
-                                    print("result \(result)")
-                                    // print(type(of: result))
-                                    // print("finish decode")
+                                    
                                     switch result.success {
                                     case true:
                                         completion(.success(result))
