@@ -78,8 +78,8 @@
   >    if let data = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {<br />
   >    	print("Data: \(utf8Text)")<br />
   >    }<br />
-  >}<br />
-  > *Chained Response Handlers<br /><br />
+  >}<br /><br />
+  > *Chained Response Handlers<br />
   >2. Alamofire.request("https://httpbin.org/get")<br />
   >    .responseString { response in<br />
   >        print("Response String: \(response.result.value)")<br />
