@@ -54,9 +54,6 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="checkButton:" destination="9qM-Oj-0xv" eventType="touchUpInside" id="y9D-Oz-xzn"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019.07.13" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k43-zl-CkU">
                                 <rect key="frame" x="80" y="460" width="58.5" height="16"/>
@@ -156,17 +153,9 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="dateLabel" destination="k43-zl-CkU" id="Yxf-0P-3kB"/>
-                        <outlet property="imgQrCode" destination="kGH-C4-ziN" id="dAv-Ug-5Qb"/>
-                        <outlet property="locationLabel" destination="qeW-6t-iH0" id="0GL-Ke-YMb"/>
                         <outlet property="navigationBar" destination="1AP-Jw-xed" id="Zu0-7y-LQF"/>
-                        <outlet property="okButton" destination="Cmg-4w-uyA" id="ozm-V9-Wdw"/>
-                        <outlet property="priceLabel" destination="Gnm-e6-O8x" id="2M4-Vp-g24"/>
-                        <outlet property="seatLabel" destination="Jlm-0f-bFW" id="X8W-DZ-An0"/>
                         <outlet property="ticketBottomView" destination="xeN-Z2-EvJ" id="VeE-tn-XLw"/>
                         <outlet property="ticketView" destination="8ld-KA-Di4" id="FRO-Of-onC"/>
-                        <outlet property="timeLabel" destination="Rql-8K-reP" id="ruh-XL-bI7"/>
-                        <outlet property="titleLabel" destination="2AN-dP-c9c" id="EIZ-2V-aPJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5Y-gZ-b1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,9 +206,6 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="checkButton:" destination="SS5-jg-smQ" eventType="touchUpInside" id="gMm-y6-gap"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019.07.13" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyN-l3-4bq">
                                 <rect key="frame" x="80" y="460" width="58.5" height="16"/>
@@ -319,17 +305,9 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="dateLabel" destination="ZyN-l3-4bq" id="vCE-jy-mcr"/>
-                        <outlet property="imgQrCode" destination="cbD-0a-0xg" id="rQ8-WB-6mu"/>
-                        <outlet property="locationLabel" destination="vFZ-fR-eTe" id="OeG-Y7-f4X"/>
                         <outlet property="navigationBar" destination="qK0-Mv-Tni" id="nuE-MH-Ddz"/>
-                        <outlet property="okButton" destination="ORP-A6-61v" id="xVD-1q-1W2"/>
-                        <outlet property="priceLabel" destination="k3g-do-EZm" id="dQZ-G8-gRX"/>
-                        <outlet property="seatLabel" destination="KML-QN-5YT" id="wYK-fv-EZJ"/>
                         <outlet property="ticketBottomView" destination="7um-hr-G6l" id="8la-9Q-Pdk"/>
                         <outlet property="ticketView" destination="GsA-wi-jTu" id="qtg-9u-wi1"/>
-                        <outlet property="timeLabel" destination="dSi-5b-JFM" id="MxD-5V-6n5"/>
-                        <outlet property="titleLabel" destination="YvC-bW-83N" id="g5U-tH-5d9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqd-Mn-myH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -380,9 +358,6 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="checkButton:" destination="fPI-gY-Vp6" eventType="touchUpInside" id="RYb-LU-Dni"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.07.13" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hx3-2k-BXO">
                                 <rect key="frame" x="80" y="460" width="58" height="16"/>
@@ -482,17 +457,9 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="dateLabel" destination="Hx3-2k-BXO" id="JMo-db-YNS"/>
-                        <outlet property="imgQrCode" destination="dbS-CI-ezH" id="TDz-1W-VbF"/>
-                        <outlet property="locationLabel" destination="wOF-4a-ohE" id="YnN-cK-s1z"/>
                         <outlet property="navigationBar" destination="NvF-Yk-smA" id="8ax-Dq-I1f"/>
-                        <outlet property="okButton" destination="Ge1-te-7xf" id="WY2-Cb-68h"/>
-                        <outlet property="priceLabel" destination="M72-Os-M4B" id="zDD-kB-HXO"/>
-                        <outlet property="seatLabel" destination="ccT-e4-FJb" id="p91-xm-j5p"/>
                         <outlet property="ticketBottomView" destination="ZZP-bd-tfU" id="UB8-zy-MIP"/>
                         <outlet property="ticketView" destination="Cd5-fY-Eiw" id="HUW-CH-Dn1"/>
-                        <outlet property="timeLabel" destination="6PC-o8-k6h" id="MDp-uB-bdl"/>
-                        <outlet property="titleLabel" destination="0GJ-y4-B3v" id="72f-wl-7Nf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKK-is-wEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -543,9 +510,6 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="checkButton:" destination="83A-zt-YC1" eventType="touchUpInside" id="XFX-Mt-YZo"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.07.13" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujo-KR-y7Q">
                                 <rect key="frame" x="80" y="460" width="58" height="16"/>
@@ -645,17 +609,9 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="dateLabel" destination="Ujo-KR-y7Q" id="ciI-3L-6bf"/>
-                        <outlet property="imgQrCode" destination="h31-zD-PYA" id="htq-cN-g3Y"/>
-                        <outlet property="locationLabel" destination="Rf8-gx-Icu" id="jPV-dy-kec"/>
                         <outlet property="navigationBar" destination="Z6o-fj-TbS" id="O4O-lM-Q63"/>
-                        <outlet property="okButton" destination="MhT-NQ-AxB" id="daf-qo-cvo"/>
-                        <outlet property="priceLabel" destination="Leq-hC-tU5" id="c60-Yu-XZU"/>
-                        <outlet property="seatLabel" destination="4fU-Ar-9bf" id="vcE-6b-Jni"/>
                         <outlet property="ticketBottomView" destination="Qi8-8v-GGq" id="Xfw-H7-ruN"/>
                         <outlet property="ticketView" destination="Lcd-Js-Lkj" id="7Nf-WY-tKg"/>
-                        <outlet property="timeLabel" destination="B4e-eO-YE6" id="mXc-lt-z1x"/>
-                        <outlet property="titleLabel" destination="iK1-iB-s4l" id="Yb0-xv-7Dz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRK-nF-6kW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -706,9 +662,6 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="checkButton:" destination="faC-cQ-Qzi" eventType="touchUpInside" id="3Sh-JT-4NA"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.07.13" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bA-Z0-p3S">
                                 <rect key="frame" x="80" y="460" width="58" height="16"/>
@@ -808,17 +761,9 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="dateLabel" destination="7bA-Z0-p3S" id="7Xx-HG-iiZ"/>
-                        <outlet property="imgQrCode" destination="n5N-Kw-kGI" id="baW-2Q-bUa"/>
-                        <outlet property="locationLabel" destination="nbu-VD-1TK" id="wOT-g9-am5"/>
                         <outlet property="navigationBar" destination="vD9-KA-t6Y" id="gFm-i9-mBf"/>
-                        <outlet property="okButton" destination="B0d-TM-XAC" id="XAk-xJ-Sac"/>
-                        <outlet property="priceLabel" destination="ZJU-VG-aN2" id="peS-3h-Jh1"/>
-                        <outlet property="seatLabel" destination="BiL-s7-FPd" id="d6e-RK-b7J"/>
                         <outlet property="ticketBottomView" destination="xlf-tD-IMl" id="zXZ-1b-4RN"/>
                         <outlet property="ticketView" destination="EKI-r3-NLK" id="HVK-9s-Mgd"/>
-                        <outlet property="timeLabel" destination="0MF-bS-q69" id="jAS-qZ-wFw"/>
-                        <outlet property="titleLabel" destination="Stv-Ld-RoA" id="5AS-DY-xgJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IU8-il-q7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
