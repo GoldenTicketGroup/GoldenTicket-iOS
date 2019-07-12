@@ -16,9 +16,11 @@ struct SearchService {
      검색하는 통신
      **/
     func searchShow (_ text: String, completion: @escaping (NetworkResult<Any>)->Void) {
+        let token = UserDefaults.standard
         
         let header: HTTPHeaders = [
-            "Content-Type" : "application/json"
+            "Content-Type" : "application/json",
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         
         let body : Parameters = [
@@ -74,9 +76,11 @@ struct SearchService {
     }
     
     func keywordSearch (_ keyword: String, completion: @escaping (NetworkResult<Any>)->Void) {
+        let token = UserDefaults.standard
         
         let header: HTTPHeaders = [
-            "Content-Type" : "application/json"
+            "Content-Type" : "application/json",
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         
         let body : Parameters = [

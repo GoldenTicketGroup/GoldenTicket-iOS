@@ -562,11 +562,10 @@ extension MainVC {
                 
             // 매개변수에 어떤 값을 가져올 것인지
             case .success(let res):
-                print("타임 조회 성공")
+                // print("타임 조회 성공")
                 let response = res as! ResponseArray<LotteryList>
                 
                 self.timeList = response.data as! [LotteryList]
-                print(self.timeList.count)
                 // self.lotteryList = res as! [LotteryList]
                 self.lotteryCollectionView.reloadData()
                 
