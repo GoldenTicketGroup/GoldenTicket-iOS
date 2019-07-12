@@ -266,7 +266,6 @@ class MainVC: UIViewController {
         
         firstLotteryView.isHidden = true
         secondLotteryView.isHidden = false
-        
     }
     
     
