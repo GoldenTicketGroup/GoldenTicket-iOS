@@ -131,6 +131,10 @@ class MainVC: UIViewController {
         noLotteryHere.isHidden = true
         noLotteryView.isHidden = true
         
+//        if timeList.count == 0 {
+//            noLotteryHere.isHidden = false
+//            noLotteryView.isHidden = false
+//        }
         
         //우선 오늘 응모가능한 공연이 없는 경우
         noShowImage.isHidden = true
@@ -585,9 +589,8 @@ extension MainVC {
                 else {
                     // 응모한 공연이 없음
                     self.noLottery = true
-                    //self.setLotteryView.isHidden = true
-                    //self.noLotteryHere.isHidden = false
-                    //self.noLotteryView.isHidden = false
+                    self.noLotteryHere.isHidden = false
+                    self.noLotteryView.isHidden = false
                 }
                 
                 
