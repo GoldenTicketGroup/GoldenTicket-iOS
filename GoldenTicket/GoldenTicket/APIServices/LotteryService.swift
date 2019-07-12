@@ -154,6 +154,7 @@ struct LotteryService {
     
     /**
      응모 상세 조회 통신 메소드
+     당첨 티켓이 아닌 응모한 상태의 티켓 조회
      **/
     
     func lotteryDetail(ticketIdx: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
@@ -163,7 +164,7 @@ struct LotteryService {
         
         let header: HTTPHeaders = [
             "Content-Type" : "application/json",
-            "token" : "\(token.string(forKey: "token")!)"  // token 보내야 함 ( 좋아요 통신 때문에 )
+            "token" : "\(token.string(forKey: "token")!)"
         ]
         
         
@@ -179,21 +180,13 @@ struct LotteryService {
                     if let value = response.result.value {
                         if let status = response.response?.statusCode {
                             
-                            
                             switch status {
                             case 200:
                                 do {
                                     let decoder = JSONDecoder()
                                     
-                                    // ShowDetail.swift model
-                                    // ResponseShow.swift codable
+                                    let result = try decoder.decode(ResponseArray<LotteryDetail>.self, from: value)
                                     
-                                    // 데이터 encoding 하는 방법
-                                    // print("데이터",String(data:value, encoding: .utf8))
-                                    let result = try decoder.decode(ResponseArray<WinList>.self, from: value)
-                                    // print("result \(result)")
-                                    // print(type(of: result))
-                                    // print("finish decode")
                                     
                                     switch result.success {
                                     case true:
@@ -203,8 +196,6 @@ struct LotteryService {
                                     }
                                 } catch {
                                     completion(.pathErr)
-                                    // print(error.localizedDescription)   // 에러 출력
-                                    // debugPrint(error) // check which key is missing
                                 }
                             case 400:
                                 completion(.pathErr)
