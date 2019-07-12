@@ -81,8 +81,6 @@ setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
 >    }<br />
 >}<br />
 
-<br /><br />
-
 >Chained Response Handlers<br />
 >2.	Alamofire.request("https://httpbin.org/get")<br />
 >    .responseString { response in<br />
@@ -97,6 +95,7 @@ setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
 * 문제3. 서버에서 이미지 통신 후 오토레이아웃이 무너지는 문제점<br />
 >[예시 화면]<br />
 ><img width="300" src="https://user-images.githubusercontent.com/49272528/61109648-5f3cb180-a4c0-11e9-86e8-bc93f04e4e5f.png">
+<br />
 * 해결. 서버 이미지 속성의 width, height 값의 최소 공약수를 구하여 UIImage의 규격 셋팅을 한다.<br />
 ><img width="300" src="https://user-images.githubusercontent.com/49272528/61109657-6237a200-a4c0-11e9-9629-478debb7bdbc.png">
 <br /><br />
