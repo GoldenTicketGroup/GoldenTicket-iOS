@@ -89,12 +89,14 @@ setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
 Response Data Handler<br />
 1.	Alamofire.request("https://httpbin.org/get").responseData { response in<br />
     debugPrint("All Response Info: \(response)")<br />
-<br />
+
     if let data = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {<br />
     	print("Data: \(utf8Text)")<br />
     }<br />
 }<br />
+
 <br /><br />
+
 Chained Response Handlers<br />
 2.	Alamofire.request("https://httpbin.org/get")<br />
     .responseString { response in<br />
