@@ -62,23 +62,23 @@
 
 문제점과 해결 방법 report
 ------------
-[문제1]	alamofire 비동기화로 인해서 서버 통신이 진행 중일때 데이터를 nil 값을 받아오는 경우가 발생할 수 있다.<br />
-[해결] 서버 통신할 때 데이터 갱신은 반드시 통신 함수 안에서 진행해야 한다.<br />
-[예시 1]<br />
+*[문제1]	alamofire 비동기화로 인해서 서버 통신이 진행 중일때 데이터를 nil 값을 받아오는 경우가 발생할 수 있다.<br />
+*[해결] 서버 통신할 때 데이터 갱신은 반드시 통신 함수 안에서 진행해야 한다.<br />
+*[예시 1]<br />
 <예시 1의 이미지><br />
 공연 상세 페이지의 데이타를 셋팅하는 collection view에서 서버를 통해 데이터 셋팅하는 함수 setDetailData를 호출만 하고<br />
 <예시 1-1의 이미지><br />
 setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
 
-[예시 2]<br />
+*[예시 2]<br />
 <예시 2의 이미지><br />
 타이머 역시 viewDidload에 선언하고 통신 함수를 호출하는 방식으로 진행하였더니 시간 데이타에 nil이 들어오기 때문에 통신하는 코드 안에 선언하여 해결하였다.<br />
 <br />
 <br />
-[문제2] response의 result가 Json으로 decode할 수 없을 때 해결을 위해 시도했던 방법들<br />
-[해결1] 코더블이 적절히 value를 casting해오지 못하는 경우가 있기 때문에 서버 네이밍과 동일하게 수정한다.<br />
+*[문제2] response의 result가 Json으로 decode할 수 없을 때 해결을 위해 시도했던 방법들<br />
+*[해결1] 코더블이 적절히 value를 casting해오지 못하는 경우가 있기 때문에 서버 네이밍과 동일하게 수정한다.<br />
 <해결 1의 이미지><br />
-[해결2] 1. print(type(of: result))로 디코드를 시도하는 value의 타입을 찍어보고 2. print(error.localizedDescription로 에러를 출력해보고 3. debugPrint(error)로 어떤 키가 missing된 건 아닌지 확인한다. 이 과정에서 response data handler, chained response handlers 사용 방법을 참고했다.
+*[해결2] 1. print(type(of: result))로 디코드를 시도하는 value의 타입을 찍어보고 2. print(error.localizedDescription로 에러를 출력해보고 3. debugPrint(error)로 어떤 키가 missing된 건 아닌지 확인한다. 이 과정에서 response data handler, chained response handlers 사용 방법을 참고했다.
 참고URL : https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md <br />
 
 Response Data Handler<br />
@@ -99,13 +99,13 @@ Chained Response Handlers<br />
         print("Response JSON: \(response.result.value)")<br />
     }<br />
     <br /><br />
-[문제3] 서버에서 이미지 통신 후 오토레이아웃이 무너지는 문제점<br />
+*[문제3] 서버에서 이미지 통신 후 오토레이아웃이 무너지는 문제점<br />
 [예시 화면]<br />
 <예시 이미지><br />
-[해결] 서버 이미지 속성의 width, height 값의 최소 공약수를 구하여 UIImage의 규격 셋팅을 한다.<br />
+*[해결] 서버 이미지 속성의 width, height 값의 최소 공약수를 구하여 UIImage의 규격 셋팅을 한다.<br />
 <해결 화면이미지><br />
 <br /><br />
-[문제4] 공연 상세 뷰의 셀 이미지가 두번째 클릭부터 로드 되는 문제점<br />
-[해결] dvc의 image 속성을 UIImageView?가 아닌 UIImage?로 선언하여 해결했다. 따라서 이미지 url 메소드 불러올 때도 kingfisher의 imageFromURL을 사용하지 않고 직접 image URL을 받아 UIImage에 대응해주었다.<br />
+*[문제4] 공연 상세 뷰의 셀 이미지가 두번째 클릭부터 로드 되는 문제점<br />
+*[해결] dvc의 image 속성을 UIImageView?가 아닌 UIImage?로 선언하여 해결했다. 따라서 이미지 url 메소드 불러올 때도 kingfisher의 imageFromURL을 사용하지 않고 직접 image URL을 받아 UIImage에 대응해주었다.<br />
 <문제4 해결이미지><br />
 <문제4-1 해결이미지><br />
