@@ -85,7 +85,7 @@ setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
 >2.	Alamofire.request("https://httpbin.org/get")<br />
 >    .responseString { response in<br />
 >        print("Response String: \(response.result.value)")<br />
->    }<br />
+>    }
 >    .responseJSON { response in<br />
 >        print("Response JSON: \(response.result.value)")<br />
 >    }<br />
@@ -100,10 +100,10 @@ setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
 ><img width="300" src="https://user-images.githubusercontent.com/49272528/61109657-6237a200-a4c0-11e9-9629-478debb7bdbc.png">
 <br /><br />
 * 문제4. 공연 상세 뷰의 셀 이미지가 두번째 클릭부터 로드 되는 문제점<br />
->* 해결. dvc의 image 속성을 UIImageView?가 아닌 UIImage?로 선언하여 해결했다. 따라서 이미지 url 메소드 불러올 때도 kingfisher의 imageFromURL을 사용하지 않고 직접 image URL을 받아 UIImage에 대응해주었다.<br />
-><문제4 해결이미지><br />
+* 해결. dvc의 image 속성을 UIImageView?가 아닌 UIImage?로 선언하여 해결했다. 따라서 이미지 url 메소드 불러올 때도 kingfisher의 imageFromURL을 사용하지 않고 직접 image URL을 받아 UIImage에 대응해주었다.<br />
+>[예시 화면1]<br />
 ><img width="600"src="https://user-images.githubusercontent.com/49272528/61109664-6499fc00-a4c0-11e9-8286-11e1ee86b575.png">
-><문제4-1 해결이미지>
+>[예시 화면2]<br />
 ><img width="600" src="https://user-images.githubusercontent.com/49272528/61110952-60231280-a4c3-11e9-89e5-548a3316f109.png">
 
 팀원 소개
