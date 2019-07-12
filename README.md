@@ -71,16 +71,16 @@
   2. print(error.localizedDescription로 에러를 출력해보고 <br />
   3. debugPrint(error)로 어떤 키가 missing된 건 아닌지 확인한다. 이 과정에서 response data handler, chained response handlers 사용 방법을 참고했다.<br />
   > * 참고URL : https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md <br />
-  >  Response Data Handler<br />
-  >  1.	Alamofire.request("https://httpbin.org/get").responseData { response in<br />
+  >  1. Response Data Handler<br />
+  >  Alamofire.request("https://httpbin.org/get").responseData { response in<br />
   >     debugPrint("All Response Info: \(response)")<br />
   >
   >     if let data = response.result.value, let utf8Text = String(data: data, encoding: .utf8) {<br />
   >     	print("Data: \(utf8Text)")<br />
-  >     }<br />
+  >    }<br />
   >}<br />
-  >  Chained Response Handlers<br />
-  >  2.	Alamofire.request("https://httpbin.org/get")<br />
+  >  2. Chained Response Handlers<br />
+  >  Alamofire.request("https://httpbin.org/get")<br />
   >     .responseString { response in<br />
   >         print("Response String: \(response.result.value)")<br />
   >     }<br />
