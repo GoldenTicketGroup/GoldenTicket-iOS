@@ -66,12 +66,15 @@
 * 해결. 서버 통신할 때 데이터 갱신은 반드시 통신 함수 안에서 진행해야 한다.<br />
 * 예시 1.<br />
 <예시 1의 이미지><br />
+![prob1](https://user-images.githubusercontent.com/49272528/61109580-33213080-a4c0-11e9-9aac-c301215780cf.png)
 공연 상세 페이지의 데이타를 셋팅하는 collection view에서 서버를 통해 데이터 셋팅하는 함수 setDetailData를 호출만 하고<br />
 <예시 1-1의 이미지><br />
+![prob2](https://user-images.githubusercontent.com/49272528/61109587-374d4e00-a4c0-11e9-8e2b-966e346c5cee.png)
 setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
 
 * 예시 2.<br />
 <예시 2의 이미지><br />
+![prob3](https://user-images.githubusercontent.com/49272528/61109592-3a483e80-a4c0-11e9-8c16-4326803b4c60.png)
 타이머 역시 viewDidload에 선언하고 통신 함수를 호출하는 방식으로 진행하였더니 시간 데이타에 nil이 들어오기 때문에 통신하는 코드 안에 선언하여 해결하였다.<br />
 <br />
 <br />
@@ -80,6 +83,7 @@ setDetailData 함수 안에서 dvc의 셀의 데이타를 셋팅한다.<br />
 * 문제2. response의 result가 Json으로 decode할 수 없을 때 해결을 위해 시도했던 방법들<br />
 * 해결1. 코더블이 적절히 value를 casting해오지 못하는 경우가 있기 때문에 서버 네이밍과 동일하게 수정한다.<br />
 <해결 1의 이미지><br />
+![prob4](https://user-images.githubusercontent.com/49272528/61109594-3c120200-a4c0-11e9-8355-9762cd89e183.png)
 * 해결2. <br />
 1. print(type(of: result))로 디코드를 시도하는 value의 타입을 찍어보고 <br />
 2. print(error.localizedDescription로 에러를 출력해보고 <br />
@@ -111,10 +115,14 @@ Chained Response Handlers<br />
 * 문제3. 서버에서 이미지 통신 후 오토레이아웃이 무너지는 문제점<br />
 [예시 화면]<br />
 <예시 이미지><br />
+<img width="300" src="https://user-images.githubusercontent.com/49272528/61109648-5f3cb180-a4c0-11e9-86e8-bc93f04e4e5f.png">
 * 해결. 서버 이미지 속성의 width, height 값의 최소 공약수를 구하여 UIImage의 규격 셋팅을 한다.<br />
 <해결 화면이미지><br />
+<img width="300" src="https://user-images.githubusercontent.com/49272528/61109657-6237a200-a4c0-11e9-9629-478debb7bdbc.png">
 <br /><br />
 * 문제4. 공연 상세 뷰의 셀 이미지가 두번째 클릭부터 로드 되는 문제점<br />
 * 해결. dvc의 image 속성을 UIImageView?가 아닌 UIImage?로 선언하여 해결했다. 따라서 이미지 url 메소드 불러올 때도 kingfisher의 imageFromURL을 사용하지 않고 직접 image URL을 받아 UIImage에 대응해주었다.<br />
 <문제4 해결이미지><br />
+![prob7](https://user-images.githubusercontent.com/49272528/61109664-6499fc00-a4c0-11e9-8286-11e1ee86b575.png) <br />
 <문제4-1 해결이미지><br />
+![prob8](https://user-images.githubusercontent.com/49272528/61109670-6794ec80-a4c0-11e9-9907-c2571a88e282.png)
