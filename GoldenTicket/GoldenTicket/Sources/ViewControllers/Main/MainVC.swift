@@ -18,6 +18,7 @@ class MainVC: UIViewController {
     
     @IBOutlet var userName: UILabel!
     var showIdx: Int?
+    var ticketIdx: Int?
     
     // time label 시간 통신
     var lotteryTime1 : String!
@@ -297,6 +298,9 @@ class MainVC: UIViewController {
     
     @IBAction func lotteryCheckOne(_ sender: Any) {
         // 당첨 안된 경우
+        
+        // **** 응모티켓 인덱스 알아내기
+        checkLottery()
         let storyboardLose = UIStoryboard.init(name: "Lose", bundle: nil)
         let lose = storyboardLose.instantiateViewController(withIdentifier: "loseVC")
         
@@ -306,6 +310,7 @@ class MainVC: UIViewController {
     
     @IBAction func lotteryCheckTwo(_ sender: Any) {
         // 당첨된 경우
+        checkLottery()
         let storyboardWin = UIStoryboard.init(name: "Win", bundle: nil)
         let win = storyboardWin.instantiateViewController(withIdentifier: "winVC")
         
@@ -386,6 +391,7 @@ extension MainVC: UICollectionViewDataSource {
             let label = timeList[indexPath.row]
             
             lotteryCell.lotteryShowTitle.text = label.name
+            lotteryCell.lotteryShowIdx = label.lottery_idx  // 셀에 응모한 공연 인덱스 넣기
             return lotteryCell
         }
     }
@@ -590,6 +596,45 @@ extension MainVC {
                     //self.noLotteryView.isHidden = false
                 }
                 
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "메인 공연 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "메인 공연 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
+    }
+    
+    
+    
+    func checkLottery() {
+        
+        guard let idx = self.ticketIdx else { return }
+        
+        LotteryService.shared.lotteryList() {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                print("타임 조회 성공")
+                let response = res as! ResponseArray<LotteryList>
+                
+                self.timeList = response.data as! [LotteryList]
+                print(self.timeList.count)
+                // self.lotteryList = res as! [LotteryList]
+                self.lotteryCollectionView.reloadData()
                 
             case .requestErr(let message):
                 self.simpleAlert(title: "메인 공연 조회 실패", message: "\(message)")

@@ -10,4 +10,5 @@ import UIKit
 
 class LotteryCheckCell : UICollectionViewCell {
     @IBOutlet weak var lotteryShowTitle: UILabel!
+    var lotteryShowIdx: Int?
 }
