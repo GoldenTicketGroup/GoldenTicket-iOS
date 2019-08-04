@@ -33,7 +33,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="contentsImage"/>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ2-nu-P72">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ2-nu-P72">
                                                 <rect key="frame" x="30.5" y="416" width="314" height="76"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -47,7 +47,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="showText"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOy-SJ-dRQ">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOy-SJ-dRQ">
                                                 <rect key="frame" x="30.5" y="498" width="314" height="136"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -64,7 +64,7 @@
                                                 </attributedString>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="볼거리 많은 대극장 뮤지컬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DE-DQ-57T">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="볼거리 많은 대극장 뮤지컬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DE-DQ-57T">
                                                 <rect key="frame" x="37.5" y="671" width="300" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="dZz-NU-lur"/>
@@ -99,8 +99,8 @@
                                                     <constraint firstAttribute="width" secondItem="Lgn-Ur-mT4" secondAttribute="height" multiplier="7:5" id="f5P-Gs-EtL"/>
                                                 </constraints>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1D-Ow-ch6">
-                                                <rect key="frame" x="30.5" y="977" width="314" height="285"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1D-Ow-ch6">
+                                                <rect key="frame" x="31" y="977" width="314" height="293"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="DQe-tH-Mdq"/>
@@ -171,7 +171,7 @@ Cg
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glF-Ho-e7h">
-                                                <rect key="frame" x="48.5" y="1278" width="278" height="40"/>
+                                                <rect key="frame" x="48.5" y="1283.5" width="278" height="40"/>
                                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="DVg-Bo-cth"/>
@@ -191,7 +191,7 @@ Cg
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="깊이 있는 주제의" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7F-OM-bjC">
-                                                <rect key="frame" x="37.5" y="1383" width="300" height="21"/>
+                                                <rect key="frame" x="37.5" y="1388.5" width="300" height="15.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="Gx1-Xx-PO5"/>
                                                 </constraints>
@@ -324,7 +324,7 @@ Cg
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="2200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAp-MT-lFd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1991"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgContentsSecTop" translatesAutoresizingMaskIntoConstraints="NO" id="xOA-xE-Z1y">
                                                 <rect key="frame" x="0.0" y="-20" width="375" height="395"/>
@@ -395,24 +395,24 @@ Cg
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgContentsSec01" translatesAutoresizingMaskIntoConstraints="NO" id="K7n-Z8-wWm">
-                                                <rect key="frame" x="176.5" y="708" width="22" height="16"/>
+                                                <rect key="frame" x="30" y="708" width="315" height="225"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="K7n-Z8-wWm" secondAttribute="height" multiplier="7:5" id="QUM-3u-ma0"/>
                                                 </constraints>
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yz-Ec-eoK">
-                                                <rect key="frame" x="30.5" y="740" width="314" height="561"/>
+                                                <rect key="frame" x="30.5" y="949" width="314" height="352"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="FZk-02-vWf"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment>
-                                                        <mutableString key="content">작곡가이자 프로듀서인 세계적 거장 앤드루 로이드 웨버의 &lt;스쿨 오브 락&gt;은 영국 뮤지컬 최초로 브로드웨에서 월드 프리미어 공연을 선보인 작품인데요, 올해 6월부터 한국에서도 만나보실 수 있게 되었습니다.
+                                                        <string key="content">작곡가이자 프로듀서인 세계적 거장 앤드루 로이드 웨버의 &lt;스쿨 오브 락&gt;은 영국 뮤지컬 최초로 브로드웨에서 월드 프리미어 공연을 선보인 작품인데요, 올해 6월부터 한국에서도 만나보실 수 있게 되었습니다.
 
 뮤지컬 &lt;스쿨 오브 락&gt;은 전미 박스 오피스 1위를 기록한 세계적인 음악 영화 &lt;스쿨 오브 락&gt;을 앤드루 로이디 웨버가 뮤지컬로 재탄생 시킨 작품입니다.
 
-어디에서도 들을 수 없던 라이브 연주, 작은 체구에서 나온다고 하기엔 믿기지 않을 정도로 엄청난 에너지를 갖고 있는 배우들이 무대를 장악합니다. 그리고 배우들이 직접 악기를 연주함으로써 모두 함께 하나의 음악이 만들어지는 과정들을 지켜본다는 것은 뮤지컬 &lt;스쿨 오브락&gt;에서만 볼 수 있는 묘미입니다.</mutableString>
+어디에서도 들을 수 없던 라이브 연주, 작은 체구에서 나온다고 하기엔 믿기지 않을 정도로 엄청난 에너지를 갖고 있는 배우들이 무대를 장악합니다. 그리고 배우들이 직접 악기를 연주함으로써 모두 함께 하나의 음악이 만들어지는 과정들을 지켜본다는 것은 뮤지컬 &lt;스쿨 오브락&gt;에서만 볼 수 있는 묘미입니다.</string>
                                                         <attributes>
                                                             <font key="NSFont" size="15" name="AppleSDGothicNeo-Light"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" tighteningFactorForTruncation="0.0"/>
@@ -422,7 +422,7 @@ Cg
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O14-Sk-meK">
-                                                <rect key="frame" x="30.5" y="1480" width="314" height="399"/>
+                                                <rect key="frame" x="30.5" y="1689" width="314" height="399"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="2GF-4W-hzD"/>
@@ -430,11 +430,11 @@ Cg
                                                 </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment>
-                                                        <mutableString key="content">다양한 장르가 혼합된 ‘록키호러쇼’는 기존 뮤지컬 서사 구조에 반하는 도발적인 매력을 자랑합니다. 작품은 막 약혼한 자넷과 브래드가 우연히 프랑큰 퍼터의 성을 방문하며 겪게 되는 하룻밤의 이야기를 그립니다.
+                                                        <string key="content">다양한 장르가 혼합된 ‘록키호러쇼’는 기존 뮤지컬 서사 구조에 반하는 도발적인 매력을 자랑합니다. 작품은 막 약혼한 자넷과 브래드가 우연히 프랑큰 퍼터의 성을 방문하며 겪게 되는 하룻밤의 이야기를 그립니다.
 
 종잡을 수 없는 방향으로 이끄는 독특한 설정의 캐릭터들과 과장된 대사는 극의 매력을 더합니다. 여름과 가장 잘어울리는 장르로 손꼽히는 공포와 스릴러가 관객들의 관심을 자극하죠.   
 
-저마다의 개성을 살린 화려하고 독특한 메이크업, 코르셋과 망사 스타킹 등 파격적인 비주얼의 의상 또한 &lt;록키호러쇼&gt;의 볼거리 중 하나입니다. ‘콜백’(call-back) 이라 불리는 특별한 관람 문화도 인기인데요, &lt;록키 호러쇼&gt;에서는 관객들이 배우들의 대사에 반응하거나 극 중 캐릭터와 같은 행동을 하며 극을 이끄는 주체가 되기도 하니 가만히 앉아서 보는 공연이 지루해지신 분들께 추천합니다.</mutableString>
+저마다의 개성을 살린 화려하고 독특한 메이크업, 코르셋과 망사 스타킹 등 파격적인 비주얼의 의상 또한 &lt;록키호러쇼&gt;의 볼거리 중 하나입니다. ‘콜백’(call-back) 이라 불리는 특별한 관람 문화도 인기인데요, &lt;록키 호러쇼&gt;에서는 관객들이 배우들의 대사에 반응하거나 극 중 캐릭터와 같은 행동을 하며 극을 이끄는 주체가 되기도 하니 가만히 앉아서 보는 공연이 지루해지신 분들께 추천합니다.</string>
                                                         <attributes>
                                                             <color key="NSColor" red="0.0012826677506345082" green="0.0012764712880710565" blue="0.00128886421319796" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="15" name="AppleSDGothicNeo-Light"/>
@@ -459,7 +459,7 @@ Cg
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgContentsSec02" translatesAutoresizingMaskIntoConstraints="NO" id="KG4-PF-Zme">
-                                                <rect key="frame" x="176.5" y="1448" width="22" height="16"/>
+                                                <rect key="frame" x="30" y="1448" width="315" height="225"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="KG4-PF-Zme" secondAttribute="height" multiplier="7:5" id="P7i-gc-bnW"/>
                                                 </constraints>
@@ -484,7 +484,7 @@ Cg
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvl-3o-cL7">
-                                                <rect key="frame" x="48.5" y="1885" width="278" height="40"/>
+                                                <rect key="frame" x="48.5" y="2094" width="278" height="40"/>
                                                 <color key="backgroundColor" red="0.98271244759999998" green="0.96458894009999996" blue="0.63131237029999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Dpb-FT-Omb"/>

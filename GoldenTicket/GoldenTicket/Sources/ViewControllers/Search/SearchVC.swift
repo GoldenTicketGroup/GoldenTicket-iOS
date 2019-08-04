@@ -27,11 +27,12 @@ class SearchVC: UIViewController {
     var checkisLiked : Int?  // 좋아요가 체크 되어있나요? 0: 아니요. 1: 예
     var showIdx : Int?
     
-    var showDetail : ShowDetail!
+    //var showDetail : ShowDetail!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        initGestureRecognizer()
         
         collectionView.isHidden = true
         
@@ -60,6 +61,14 @@ class SearchVC: UIViewController {
             //            self.likeButton.setImage(btnNoImage, for: .normal)
         }
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //registerForKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        unregisterForKeyboardNotifications()
     }
 
     
@@ -180,16 +189,16 @@ extension SearchVC : UICollectionViewDataSource
     }
 }
 
-extension SearchVC : UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
-        let show = searchShowList[indexPath.row]
-        showIdx = show.show_idx  // 1 ~ 17
-        // data setting
-        self.setDetailData()
-    }
-}
+//extension SearchVC : UICollectionViewDelegate {
+//
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//
+//        let show = searchShowList[indexPath.row]
+//        showIdx = show.show_idx  // 1 ~ 17
+//        // data setting
+//        self.setDetailData()
+//    }
+//}
 
 extension SearchVC : UICollectionViewDelegateFlowLayout
 {
@@ -204,98 +213,130 @@ extension SearchVC : UICollectionViewDelegateFlowLayout
 }
 
 
-extension SearchVC {
-
-    func setDetailData() {
-
-        guard let idx = self.showIdx else { return }
-
-        print("idx : \(idx)")
-        ShowService.shared.showDetail(showIdx: idx) {
-            [weak self]
-            data in
-
-            guard let `self` = self else { return }
-            switch data {
-
-            case .success(let res):
-
-                // 1. 공연 하나에 대한 정보만 받아오면 된다.
-                self.showDetail = res as! ShowDetail
-
-//                let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
-
-                let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-                let dvc = storyboard.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
-
-                dvc.showIdx = idx
-
-                // 2. ShowDetail Struct
-                let imageUrlString = self.showDetail.image_url
-                let imageUrl = URL(string: imageUrlString)!
-                let imageData = try! Data(contentsOf: imageUrl)
-                let image = UIImage(data: imageData)
-
-                // 1. posterImg가 있을 때 imageFromUrl을 호출하는데, 초기화 안된 상태이고 nil이니까 초기화를 해줘야 한다.
-                // 2. UIimageView가 아닌 UIImage로 접근해야 한다.
-                /*
-                 var backImg : UIImage?
-                 var posterI : UIImage?
-                 var showN: String?
-                 var beforeP : String?
-                 var afterP : String?
-                 var showT : String?
-                 var showL : String?
-                 var detailP : UIImageView?
-                 var checkisL : Int?
-                 var a : Int?
-                */
-                dvc.posterI = image
-                dvc.showN = self.showDetail.name
-                dvc.showL = self.showDetail.location
-                dvc.showT = self.showDetail.duration
-                dvc.beforeP = self.showDetail.original_price
-                dvc.afterP = self.showDetail.discount_price
-                dvc.checkisL = self.showDetail.is_liked     // 다음 스토리보드로 좋아요 여부 보내기
-
-                // image URL 얻어오기
-                let imageUrlString2 = self.showDetail.background_image
-                let imageUrl2 = URL(string: imageUrlString2)!
-                let imageData2 = try! Data(contentsOf: imageUrl2)
-                let backimage = UIImage(data: imageData2)
-
-                dvc.backImg = backimage
-
-                // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
-                dvc.timeList = self.showDetail.schedule!
-                self.present(dvc, animated: true)
-
-                self.navigationController?.pushViewController(dvc, animated: true)
-
-
-                // 2. Poster Struct
-                let poster = self.showDetail.poster
-                dvc.posterList = poster!
-
-                // 2. Actor Struct
-                let artistDetail = self.showDetail.artist
-                // let artistDetail = res as! [Artist]
-
-                // dvc에 있는 배우들 리스트에 서버 통신해서 꽂아주기
-                dvc.artistList = artistDetail!
-
-            case .requestErr(let message):
-                self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")
-
-            case .pathErr:
-                print(".pathErr")
-
-            case .serverErr:
-                print(".serverErr")
-
-            case .networkFail:
-                self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
-            }
+//extension SearchVC {
+//
+//    func setDetailData() {
+//
+//        guard let idx = self.showIdx else { return }
+//
+//        print("idx : \(idx)")
+//        ShowService.shared.showDetail(showIdx: idx) {
+//            [weak self]
+//            data in
+//
+//            guard let `self` = self else { return }
+//            switch data {
+//
+//            case .success(let res):
+//
+//                // 1. 공연 하나에 대한 정보만 받아오면 된다.
+//                self.showDetail = res as! ShowDetail
+//
+////                let dvc = self.storyboard?.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
+//
+//                let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+//                let dvc = storyboard.instantiateViewController(withIdentifier: "ShowDetailVC") as! ShowDetailVC
+//
+//                dvc.showIdx = idx
+//
+//                // 2. ShowDetail Struct
+//                let imageUrlString = self.showDetail.image_url
+//                let imageUrl = URL(string: imageUrlString)!
+//                let imageData = try! Data(contentsOf: imageUrl)
+//                let image = UIImage(data: imageData)
+//
+//                // 1. posterImg가 있을 때 imageFromUrl을 호출하는데, 초기화 안된 상태이고 nil이니까 초기화를 해줘야 한다.
+//                // 2. UIimageView가 아닌 UIImage로 접근해야 한다.
+//                /*
+//                 var backImg : UIImage?
+//                 var posterI : UIImage?
+//                 var showN: String?
+//                 var beforeP : String?
+//                 var afterP : String?
+//                 var showT : String?
+//                 var showL : String?
+//                 var detailP : UIImageView?
+//                 var checkisL : Int?
+//                 var a : Int?
+//                */
+//                dvc.posterI = image
+//                dvc.showN = self.showDetail.name
+//                dvc.showL = self.showDetail.location
+//                dvc.showT = self.showDetail.duration
+//                dvc.beforeP = self.showDetail.original_price
+//                dvc.afterP = self.showDetail.discount_price
+//                dvc.checkisL = self.showDetail.is_liked     // 다음 스토리보드로 좋아요 여부 보내기
+//
+//                // image URL 얻어오기
+//                let imageUrlString2 = self.showDetail.background_image
+//                let imageUrl2 = URL(string: imageUrlString2)!
+//                let imageData2 = try! Data(contentsOf: imageUrl2)
+//                let backimage = UIImage(data: imageData2)
+//
+//                dvc.backImg = backimage
+//
+//                // 다음 시간표 리스트로 스케줄 서버 통신 받아온 데이터 넘기기
+//                dvc.timeList = self.showDetail.schedule!
+//                self.present(dvc, animated: true)
+//
+//                self.navigationController?.pushViewController(dvc, animated: true)
+//
+//
+//                // 2. Poster Struct
+//                let poster = self.showDetail.poster
+//                dvc.posterList = poster!
+//
+//                // 2. Actor Struct
+//                let artistDetail = self.showDetail.artist
+//                // let artistDetail = res as! [Artist]
+//
+//                // dvc에 있는 배우들 리스트에 서버 통신해서 꽂아주기
+//                dvc.artistList = artistDetail!
+//
+//            case .requestErr(let message):
+//                self.simpleAlert(title: "공연 상세 조회 실패", message: "\(message)")
+//
+//            case .pathErr:
+//                print(".pathErr")
+//
+//            case .serverErr:
+//                print(".serverErr")
+//
+//            case .networkFail:
+//                self.simpleAlert(title: "공연 상세 조회 실패", message: "네트워크 상태를 확인해주세요.")
+//            }
+//        }
+//    }
+//}
+extension SearchVC : UIGestureRecognizerDelegate {
+    
+    func initGestureRecognizer() {
+        let textFieldTap = UITapGestureRecognizer(target: self, action: #selector(handleTapTextField(_:)))
+        textFieldTap.delegate = self
+        view.addGestureRecognizer(textFieldTap)
+    }
+    
+    // 다른 위치 탭했을 때 키보드 없어지는 코드
+    @objc func handleTapTextField(_ sender: UITapGestureRecognizer) {
+        self.searchField.resignFirstResponder()
+    }
+    
+    
+    func gestureRecognizer(_ gestrueRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if (touch.view?.isDescendant(of: searchField))! {
+            return false
         }
+        return true
+    }
+    
+//    func registerForKeyboardNotifications() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+//    }
+    
+    
+    func unregisterForKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
