@@ -37,11 +37,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var showCollectionView: UICollectionView!
     
     //오늘 올라온 공연이 없는 경우
-    
-    @IBOutlet weak var noShowImage: UIImageView!
-    @IBOutlet weak var noShowBubbleImage: UIImageView!
-    @IBOutlet weak var noShowLabel: UILabel!
-    
+    @IBOutlet weak var noShow: UIImageView!
     
     //응모내역 보여주기에 대한 뷰
     @IBOutlet weak var lotteryCollectionView: UICollectionView!
@@ -86,18 +82,6 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //응모가능한 공연이 없을시
-        
-        self.noShowImage.image = UIImage.gif(name: "noTicket")
-        
-        do {
-            let imageData = try Data(contentsOf: Bundle.main.url(forResource: "noTicket", withExtension: "gif")!)
-            self.noShowImage.image = UIImage.gif(data: imageData)
-            
-        } catch {
-            print(error)
-        }
-        
         setupSideMenu()
         
         //
@@ -126,10 +110,13 @@ class MainVC: UIViewController {
         noLotteryHere.isHidden = true
         noLotteryView.isHidden = true
 
-        //
-        self.noShowImage.isHidden = true
-        self.noShowLabel.isHidden = true
-        self.noShowBubbleImage.isHidden = true
+        // 이거 삭제해야함
+        //self.noShowImage.isHidden = true
+        //self.noShowLabel.isHidden = true
+        //self.noShowBubbleImage.isHidden = true
+        
+        // 추가해야하는거 -> 하나의 이미지로 묶어서 수정해준거
+        self.noShow.isHidden = true
         
     } // viewDidLoad
     
@@ -427,9 +414,7 @@ extension MainVC {
                 
                 if self.showList.count == 0 {
                     //우선 오늘 응모가능한 공연이 없는 경우
-                    self.noShowImage.isHidden = false
-                    self.noShowLabel.isHidden = false
-                    self.noShowBubbleImage.isHidden = false
+                    self.noShow.isHidden = false
                 }
                 
             case .requestErr(let message):

@@ -39,7 +39,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="OHj-YR-ffI"/>
                                                 </constraints>
-                                                <string key="text">7월 연휴 뭐 할지 못 정했다면,
+                                                <string key="text">8월 연휴 뭐 할지 못 정했다면,
 공연장 나들이 어때요?</string>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -54,7 +54,20 @@
                                                     <constraint firstAttribute="width" constant="314" id="zot-IL-Qca"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="공휴일 많았던 가정의 달, 5월이 끝나간다고 아쉬워하지 마세요. 6월에도 현충일을 끼고 ‘징검다리 연휴’가 있으니까요. 짧은 연휴지만 알차게 보내고 싶다면 공연장 나들이는 어떨까요? 6월에 보기 좋은 6편의 공연을 소개합니다.">
+                                                    <fragment content="공휴일 많았던 가정의 달, 5월이 끝나간다고 아쉬워하지 마세요. 6월에도 현충일을 끼고 ‘징검다리 연휴’가 있으니까요. 짧은 연휴지만 알차게 보내고 싶다면 공연장 나들이는 어떨까요? ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-Light"/>
+                                                            <font key="NSOriginalFont" size="16" name="AppleSDGothicNeo-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="8">
+                                                        <attributes>
+                                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="월에 보기 좋은 6편의 공연을 소개합니다.">
                                                         <attributes>
                                                             <font key="NSFont" size="16" name="AppleSDGothicNeo-Light"/>
                                                             <font key="NSOriginalFont" size="16" name="AppleSDGothicNeo-Light"/>
@@ -341,7 +354,7 @@ Cg
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="jsO-iM-ryz"/>
                                                 </constraints>
-                                                <string key="text">7월 추천, 무더운 더위를 피할
+                                                <string key="text">8월 추천, 무더운 더위를 피할
 시원한 뮤지컬!</string>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -356,7 +369,7 @@ Cg
                                                     <constraint firstAttribute="width" constant="314" id="48M-W0-4tK"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="무더운 여름에는 시원한 공연장에서 뮤캉스 어때요? 눈과 귀를 즐겁게 해줄 화려한 무대와 음악으로 더위를 날려보세요. 7월에 보기 좋은 2편의 공연을 소개합니다.">
+                                                    <fragment content="무더운 여름에는 시원한 공연장에서 뮤캉스 어때요? 눈과 귀를 즐겁게 해줄 화려한 무대와 음악으로 더위를 날려보세요. 8월에 보기 좋은 2편의 공연을 소개합니다.">
                                                         <attributes>
                                                             <font key="NSFont" size="16" name="AppleSDGothicNeo-Light"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
