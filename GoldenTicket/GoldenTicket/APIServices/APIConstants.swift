@@ -20,6 +20,7 @@ struct APIConstants {
     static let ShowURL = BaseURL + "/show/home"
     static let ShowDetailURL = BaseURL + "/show/detail"
     static let InterestURL = BaseURL + "/show/heart"
+    static let ShowAllURL = BaseURL + "/show/all" //전체추가
     
     /* 검색 (Search) */
     static let SearchURL = BaseURL + "/search/text"

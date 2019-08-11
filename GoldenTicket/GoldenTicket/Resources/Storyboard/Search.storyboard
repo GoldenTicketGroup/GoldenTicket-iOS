@@ -186,7 +186,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="어떤 공연을 찾고 계신가요?" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gFd-Ui-35g">
-                                <rect key="frame" x="58" y="30" width="257" height="45"/>
+                                <rect key="frame" x="62" y="30" width="253" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="b4v-wM-9kW"/>
@@ -265,6 +265,13 @@
                                     <outlet property="delegate" destination="C5K-Px-xHI" id="k8S-dj-Xql"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeC-DA-68A">
+                                <rect key="frame" x="0.0" y="30" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="backButton:" destination="C5K-Px-xHI" eventType="touchUpInside" id="lBu-rw-sHR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -282,6 +289,7 @@
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="i2J-h8-u5y" secondAttribute="trailing" constant="13" id="JIR-wi-qBa"/>
                             <constraint firstItem="i2J-h8-u5y" firstAttribute="top" secondItem="jwI-8Z-8XF" secondAttribute="bottom" constant="15" id="LmF-LE-7lZ"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="ZR8-MV-Jj6" secondAttribute="trailing" constant="26" id="PT7-jJ-BvY"/>
+                            <constraint firstItem="gFd-Ui-35g" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="62" id="Q2L-lq-Ib4"/>
                             <constraint firstItem="gFd-Ui-35g" firstAttribute="top" secondItem="Khk-2u-R0T" secondAttribute="top" constant="10" id="QN3-d6-pES"/>
                             <constraint firstItem="jwI-8Z-8XF" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="62" id="T6V-Es-ogV"/>
                             <constraint firstItem="FGO-WL-ET5" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="149" id="TIv-Z3-6eg"/>
@@ -298,7 +306,6 @@
                             <constraint firstItem="gGC-h5-bEy" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" id="jao-SD-WXo"/>
                             <constraint firstItem="BUn-6a-5g9" firstAttribute="top" secondItem="Khk-2u-R0T" secondAttribute="top" constant="19" id="k1H-Vg-RIe"/>
                             <constraint firstItem="SnG-NV-goL" firstAttribute="bottom" secondItem="Khk-2u-R0T" secondAttribute="bottom" id="lVC-k8-5JQ"/>
-                            <constraint firstItem="gFd-Ui-35g" firstAttribute="leading" secondItem="Khk-2u-R0T" secondAttribute="leading" constant="58" id="mQN-tL-hKo"/>
                             <constraint firstItem="jwI-8Z-8XF" firstAttribute="top" secondItem="FGO-WL-ET5" secondAttribute="bottom" constant="22.5" id="nvQ-Vy-Ub3"/>
                             <constraint firstItem="i2J-h8-u5y" firstAttribute="height" secondItem="jwI-8Z-8XF" secondAttribute="height" id="wPg-dQ-ijb"/>
                             <constraint firstItem="Khk-2u-R0T" firstAttribute="trailing" secondItem="smN-UI-WEv" secondAttribute="trailing" constant="26" id="yec-VP-rKd"/>

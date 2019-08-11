@@ -93,6 +93,7 @@
 		F4955C0422C88D1C00530906 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4955C0322C88D1C00530906 /* Search.storyboard */; };
 		F4955C0722C8936900530906 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4955C0622C8936900530906 /* SearchVC.swift */; };
 		F4955C0922C89C0F00530906 /* CustomSearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4955C0822C89C0F00530906 /* CustomSearchButton.swift */; };
+		F4D67B4B22FFBDE80073A8B6 /* MainShowAllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D67B4A22FFBDE80073A8B6 /* MainShowAllCell.swift */; };
 		F4FE454C22D18CB200E6C6B0 /* ContentsMusicalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE454B22D18CB200E6C6B0 /* ContentsMusicalVC.swift */; };
 		F4FE454E22D1CF9000E6C6B0 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE454D22D1CF9000E6C6B0 /* UIImageView+Extensions.swift */; };
 		F4FE455022D232B800E6C6B0 /* mainLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = F4FE454F22D232B800E6C6B0 /* mainLogo.gif */; };
@@ -201,6 +202,7 @@
 		F4955C0322C88D1C00530906 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		F4955C0622C8936900530906 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		F4955C0822C89C0F00530906 /* CustomSearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchButton.swift; sourceTree = "<group>"; };
+		F4D67B4A22FFBDE80073A8B6 /* MainShowAllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShowAllCell.swift; sourceTree = "<group>"; };
 		F4FE454B22D18CB200E6C6B0 /* ContentsMusicalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsMusicalVC.swift; sourceTree = "<group>"; };
 		F4FE454D22D1CF9000E6C6B0 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		F4FE454F22D232B800E6C6B0 /* mainLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mainLogo.gif; sourceTree = "<group>"; };
@@ -500,6 +502,7 @@
 				F4955BFD22C8587300530906 /* MainShowCell.swift */,
 				F40313EE22CAF61A00BB2737 /* SideMenuVC.swift */,
 				F402F33A22CF0F610047B976 /* LotteryCheckCell.swift */,
+				F4D67B4A22FFBDE80073A8B6 /* MainShowAllCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 				F4FE457022D38DAE00E6C6B0 /* SearchShow.swift in Sources */,
 				080BF82622CC8EC400A06BBF /* WinCell.swift in Sources */,
 				F4955C0722C8936900530906 /* SearchVC.swift in Sources */,
+				F4D67B4B22FFBDE80073A8B6 /* MainShowAllCell.swift in Sources */,
 				F40313EF22CAF61A00BB2737 /* SideMenuVC.swift in Sources */,
 				F440B3A922C640A100B8AFD6 /* CustomButton.swift in Sources */,
 				F40313FE22CB344900BB2737 /* QuestionVC.swift in Sources */,

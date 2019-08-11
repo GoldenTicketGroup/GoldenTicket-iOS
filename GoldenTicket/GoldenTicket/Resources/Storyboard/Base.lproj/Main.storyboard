@@ -345,7 +345,7 @@
                                                         <rect key="frame" x="62" y="55" width="250" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-Zj-08n">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-Zj-08n">
                                                                 <rect key="frame" x="0.0" y="-8" width="250" height="32"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
@@ -426,38 +426,83 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wt4-eB-QRj">
-                                                <rect key="frame" x="25" y="140" width="325" height="33"/>
+                                                <rect key="frame" x="0.0" y="140" width="375" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGw-w7-kbT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="163" height="30"/>
+                                                        <rect key="frame" x="25" y="0.0" width="163" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                                                         <state key="normal" title="Today">
                                                             <color key="titleColor" red="1" green="0.87617599940000002" blue="0.3210505434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="todayButtonClick:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="6uT-aC-bBO"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlV-WW-faK">
-                                                        <rect key="frame" x="163" y="0.0" width="162" height="30"/>
+                                                        <rect key="frame" x="188" y="0.0" width="162" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                                                         <state key="normal" title="All">
                                                             <color key="titleColor" red="0.80395036939999998" green="0.80783128739999999" blue="0.80784374479999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="allButtonClick:" destination="HcJ-Ym-6tT" eventType="touchUpInside" id="cRa-ik-GyN"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thy-L7-D4o">
-                                                        <rect key="frame" x="0.0" y="30" width="163" height="3"/>
+                                                        <rect key="frame" x="25" y="30" width="163" height="3"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" red="1" green="0.87617599940000002" blue="0.3210505434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZFT-Yo-qXU">
-                                                        <rect key="frame" x="163" y="30" width="162" height="3"/>
+                                                        <rect key="frame" x="188" y="30" width="162" height="3"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" red="0.80395036939999998" green="0.80783128739999999" blue="0.80784374479999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0x9-HJ-KBH">
+                                                <rect key="frame" x="0.0" y="190" width="375" height="772"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="7" id="vHZ-Fm-M9b">
+                                                    <size key="itemSize" width="177" height="236"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="7" minY="0.0" maxX="7" maxY="10"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allShowCell" id="JvO-VC-P4q" customClass="MainShowAllCell" customModule="GoldenTicket" customModuleProvider="target">
+                                                        <rect key="frame" x="7" y="0.0" width="177" height="236"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="177" height="236"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="osF-8Z-ouf">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="236"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="osF-8Z-ouf" secondAttribute="height" multiplier="3:4" id="JWu-Wh-uBa"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </view>
+                                                        <constraints>
+                                                            <constraint firstItem="osF-8Z-ouf" firstAttribute="leading" secondItem="JvO-VC-P4q" secondAttribute="leading" id="Fhl-bV-u3Z"/>
+                                                            <constraint firstItem="osF-8Z-ouf" firstAttribute="top" secondItem="JvO-VC-P4q" secondAttribute="top" id="WOA-i3-Rvc"/>
+                                                            <constraint firstAttribute="bottom" secondItem="osF-8Z-ouf" secondAttribute="bottom" id="bLt-4R-aBq"/>
+                                                            <constraint firstAttribute="trailing" secondItem="osF-8Z-ouf" secondAttribute="trailing" id="gXe-9C-E6Y"/>
+                                                        </constraints>
+                                                        <size key="customSize" width="177" height="236"/>
+                                                        <connections>
+                                                            <outlet property="showImg" destination="osF-8Z-ouf" id="Z1W-sZ-Ocw"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -513,9 +558,13 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="allBtn" destination="wlV-WW-faK" id="PwV-OG-1qG"/>
+                        <outlet property="allShowView" destination="0x9-HJ-KBH" id="lEk-Ei-smB"/>
+                        <outlet property="allUnder" destination="ZFT-Yo-qXU" id="Bu5-XU-krC"/>
                         <outlet property="firstLotteryCheckButton" destination="40C-IL-EL3" id="aI9-Mx-r9S"/>
                         <outlet property="firstLotteryView" destination="wTV-A3-zvr" id="j98-SI-XgF"/>
                         <outlet property="firstTimeLabel" destination="YeX-Zj-08n" id="JhI-bZ-8hl"/>
+                        <outlet property="infoLabel" destination="71A-9l-TyJ" id="1W9-BW-lYc"/>
                         <outlet property="lotteryCollectionView" destination="Llk-PQ-Bnc" id="npe-xN-HhY"/>
                         <outlet property="lotteryLeftButton" destination="R2o-9b-mIF" id="XqY-c0-Er1"/>
                         <outlet property="lotteryRightButton" destination="bDr-9C-1c4" id="QDw-Rr-6Yj"/>
@@ -524,18 +573,21 @@
                         <outlet property="noLotteryHere" destination="aXk-CH-Ur5" id="OJc-Oa-fxq"/>
                         <outlet property="noLotteryView" destination="9ew-5a-kOY" id="EaG-Iu-ZuY"/>
                         <outlet property="noShow" destination="XRp-Wx-hfa" id="WeB-WX-wdR"/>
+                        <outlet property="scrollView" destination="nLR-eC-Sh7" id="kRD-xN-iyM"/>
                         <outlet property="searchButton" destination="E2G-TD-Yt9" id="qbT-g5-Ic3"/>
                         <outlet property="secondLotteryCheckButton" destination="SKe-Zw-CtY" id="WY0-Wb-dHh"/>
                         <outlet property="secondLotteryView" destination="YV1-WU-1Nc" id="4l0-7m-N4F"/>
                         <outlet property="secondTimeLabel" destination="eHV-ey-Pwn" id="5Je-Bj-Ya2"/>
                         <outlet property="setLotteryView" destination="gzM-Db-wGe" id="wkz-Is-TAV"/>
                         <outlet property="showCollectionView" destination="jbq-Mf-F18" id="Fi0-yQ-Xm8"/>
+                        <outlet property="todayBtn" destination="sGw-w7-kbT" id="81R-9D-1cV"/>
+                        <outlet property="todayUnder" destination="thy-L7-D4o" id="ekf-Kq-hge"/>
                         <outlet property="userName" destination="KRz-ed-Jqd" id="oGg-SE-Mob"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMz-Je-kpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3743" y="-278"/>
+            <point key="canvasLocation" x="3817" y="-363"/>
         </scene>
         <!--Side MenuVC-->
         <scene sceneID="bBM-g1-drP">
