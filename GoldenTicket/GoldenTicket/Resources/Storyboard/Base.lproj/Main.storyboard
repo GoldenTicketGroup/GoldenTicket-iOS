@@ -1169,6 +1169,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uIv-Ge-VB4"/>
                     </view>
+                    <size key="freeformSize" width="375" height="667"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
