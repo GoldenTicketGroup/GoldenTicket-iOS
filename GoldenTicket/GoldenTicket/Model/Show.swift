@@ -18,3 +18,9 @@ struct Show: Codable {
     let location:String
     let running_time:String
 }
+
+//전체추가
+struct ShowAll : Codable {
+    let show_idx: Int
+    let image_url : String
+}

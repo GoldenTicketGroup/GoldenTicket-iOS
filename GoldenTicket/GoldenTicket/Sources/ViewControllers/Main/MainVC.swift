@@ -25,6 +25,7 @@ class MainVC: UIViewController {
     var timeList : [LotteryList] = []
     var labelList : [LotteryList] = []
     var ticketDetail : [LotteryDetail] = []
+    var showAllList : [ShowAll] = [] //전체추가
     
     // time label 시간 통신
     var lotteryTime1 : String!
@@ -33,15 +34,17 @@ class MainVC: UIViewController {
     // 응모한 공연 없는지 여부
     var noLottery = false
     
+    // 스크롤뷰
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    // 안내 메시지 라벨
+    @IBOutlet weak var infoLabel: UILabel!
+    
     //홈 공연 상세 정보에 필요한 outlet
     @IBOutlet weak var showCollectionView: UICollectionView!
     
     //오늘 올라온 공연이 없는 경우
-    
-    @IBOutlet weak var noShowImage: UIImageView!
-    @IBOutlet weak var noShowBubbleImage: UIImageView!
-    @IBOutlet weak var noShowLabel: UILabel!
-    
+    @IBOutlet weak var noShow: UIImageView!
     
     //응모내역 보여주기에 대한 뷰
     @IBOutlet weak var lotteryCollectionView: UICollectionView!
@@ -61,6 +64,13 @@ class MainVC: UIViewController {
     @IBOutlet var noLotteryHere: UILabel!
     @IBOutlet weak var noLotteryView: UIView!
     @IBOutlet weak var setLotteryView: UIView!
+    
+    // 모든 공연 보여주는 뷰.
+    @IBOutlet weak var allShowView: UICollectionView!
+    @IBOutlet weak var todayBtn: UIButton!
+    @IBOutlet weak var allBtn: UIButton!
+    @IBOutlet weak var todayUnder: UIView!
+    @IBOutlet weak var allUnder: UIView!
     
     let formatter = DateFormatter()
     let userCalender = Calendar.current;
@@ -86,18 +96,6 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //응모가능한 공연이 없을시
-        
-        self.noShowImage.image = UIImage.gif(name: "noTicket")
-        
-        do {
-            let imageData = try Data(contentsOf: Bundle.main.url(forResource: "noTicket", withExtension: "gif")!)
-            self.noShowImage.image = UIImage.gif(data: imageData)
-            
-        } catch {
-            print(error)
-        }
-        
         setupSideMenu()
         
         //
@@ -108,6 +106,9 @@ class MainVC: UIViewController {
         
         showCollectionView.dataSource = self
         showCollectionView.delegate = self
+        
+        //전체추가
+        allShowView.dataSource = self
         
         // 로그인한 사용자 이름으로 메인 label 반영
         let user = UserDefaults.standard
@@ -125,11 +126,15 @@ class MainVC: UIViewController {
         // 응모한 공연이 있는 경우 이 뷰 보이지 않도록
         noLotteryHere.isHidden = true
         noLotteryView.isHidden = true
-
-        //
-        self.noShowImage.isHidden = true
-        self.noShowLabel.isHidden = true
-        self.noShowBubbleImage.isHidden = true
+        
+        // 응모가능한 공연이 없는 경우
+        self.noShow.isHidden = true
+        
+        // 모든 공연 보여주는 컬렉션 뷰 보이지 않도록
+        self.allShowView.isHidden = true
+        
+        //self.allShowView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 250, right: 0)
+        
         
     } // viewDidLoad
     
@@ -142,7 +147,37 @@ class MainVC: UIViewController {
         self.userName.text = user.string(forKey: "name")
         self.setShowData()
         self.setTimeLabel()
+        self.setShowAll()
     }
+    
+    // 클릭한 버튼에 따른 공연 뷰 바꿔주기.
+    @IBAction func todayButtonClick(_ sender: Any) {
+        todayBtn.setTitleColor(UIColor.maize, for: .normal)
+        todayUnder.backgroundColor = UIColor.maize
+        allBtn.setTitleColor(UIColor.veryLightPink, for: .normal)
+        allUnder.backgroundColor = UIColor.veryLightPink
+        allShowView.isHidden = true
+        
+        infoLabel.text = "오늘 저녁 이런 공연 어때요?"
+        
+        scrollView.isScrollEnabled = true
+    }
+    
+    @IBAction func allButtonClick(_ sender: Any) {
+        todayBtn.setTitleColor(UIColor.veryLightPink, for: .normal)
+        todayUnder.backgroundColor = UIColor.veryLightPink
+        allBtn.setTitleColor(UIColor.maize, for: .normal)
+        allUnder.backgroundColor = UIColor.maize
+        allShowView.isHidden = false
+        
+        infoLabel.text = "모든 공연은 이렇게 있어요!"
+        
+        scrollView.isScrollEnabled = false
+        
+        allShowView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 296, right: 0)
+        allShowView.scrollIndicatorInsets = allShowView.contentInset
+    }
+    
     
     // 응모한 공연이 있을 시 남은 시간을 보여주는 뷰에 팔요한 시간 계산기, timer
     func timeCalculator(dateFormat: String, endTime: String, startTime: Date = Date()) -> DateComponents {
@@ -354,6 +389,9 @@ extension MainVC: UICollectionViewDataSource {
         }
         // nil 값이 들어오지 않도록 setTimeLabel 먼저 호출해주고 timeList 반환된 상태에서 접근할 수 있도록 한다.
         // setTimeLabel()
+        else if collectionView == self.allShowView {
+            return showAllList.count
+        }
         return timeList.count
     }
     
@@ -370,6 +408,27 @@ extension MainVC: UICollectionViewDataSource {
             cell.showLocation.text = show.location
             cell.showTime.text = show.running_time
             cell.showTitle.text = show.name
+            
+            return cell
+        }
+        else if collectionView == self.allShowView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "allShowCell", for: indexPath) as! MainShowAllCell
+            
+            let show = showAllList[indexPath.row]
+            
+            // kingfisher로 url 통해서 이미지 불러오기
+            // cell.MainShowCell의 아웃렛 이름 = show(모델).swift.서버 이름
+            cell.showImg.imageFromUrl(show.image_url, defaultImgPath: "https://sopt24server.s3.ap-northeast-2.amazonaws.com/1562055837775.jpg")
+            cell.showIndex = show.show_idx
+
+            // 셀 corner radius, drop shadow 설정해주기.
+            cell.contentView.layer.cornerRadius = 20
+            cell.contentView.layer.masksToBounds = true
+            cell.layer.shadowColor = UIColor.black16.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+            cell.layer.shadowOpacity = 1
+            cell.layer.shadowRadius = 3
+            cell.layer.masksToBounds = false
             
             return cell
         }
@@ -406,6 +465,24 @@ extension MainVC : UICollectionViewDelegate {
     }
 }
 
+//전체추가
+//extension MainVC : UICollectionViewDelegateFlowLayout
+//{
+//    // Collection View Cell 의 width, height 를 지정할 수 있습니다.
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+//    {
+//        let width : CGFloat =
+//        let height : CGFloat
+//        if collectionView == self.allShowView {
+//            let width: CGFloat = (view.frame.width - 21) / 2
+//            let height: CGFloat = 236
+//
+//            return CGSize(width: width, height: height)
+//        }
+//        return CGSize(width: width, height: height)
+//    }
+//}
+
 // 통신 데이터 세팅.
 extension MainVC {
     
@@ -427,9 +504,7 @@ extension MainVC {
                 
                 if self.showList.count == 0 {
                     //우선 오늘 응모가능한 공연이 없는 경우
-                    self.noShowImage.isHidden = false
-                    self.noShowLabel.isHidden = false
-                    self.noShowBubbleImage.isHidden = false
+                    self.noShow.isHidden = false
                 }
                 
             case .requestErr(let message):
@@ -442,6 +517,37 @@ extension MainVC {
                 
             case .networkFail:
                 self.simpleAlert(title: "메인 공연 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+        }
+    }
+    
+    //전체추가
+    func setShowAll() {
+        
+        ShowService.shared.showAll() {
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                
+                self.showAllList = res as! [ShowAll]
+                self.allShowView.reloadData()
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "전체 공연 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "전체 공연 조회 실패", message: "네트워크 상태를 확인해주세요.")
             }
         }
     }
