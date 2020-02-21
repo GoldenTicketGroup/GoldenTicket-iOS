@@ -4,6 +4,10 @@
 > 오늘 응모 가능한 공연을 둘러보고 행운을 경험해보세요.
 <br />
 
+# GoldenTicket Group Github
+- [Server: 황재석, 최민경, 윤희성] [이동](https://github.com/GoldenTicketGroup/GoldenTicketServer)
+- [Android: 김강희, 김민경, 한선민, 전성은] [이동](https://github.com/GoldenTicketGroup/GoldenTicket_Android)
+
 서비스 work flow
 ---------------
 <div>
