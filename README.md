@@ -8,6 +8,8 @@
 - [Server: 황재석, 최민경, 윤희성] [이동](https://github.com/GoldenTicketGroup/GoldenTicketServer)
 - [Android: 김강희, 김민경, 한선민, 전성은] [이동](https://github.com/GoldenTicketGroup/GoldenTicket_Android)
 
+<br />
+
 서비스 work flow
 ---------------
 <div>
