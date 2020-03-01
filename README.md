@@ -123,7 +123,7 @@
 
   [예시 화면]
   
-  <img width="300" src="https://user-images.githubusercontent.com/49272528/61109648-5f3cb180-a4c0-11e9-86e8-bc93f04e4e5f.png">
+  <img width="400" src="https://user-images.githubusercontent.com/49272528/61109648-5f3cb180-a4c0-11e9-86e8-bc93f04e4e5f.png">
   
 ### **해결**. 
 - 서버 이미지 속성의 width, height 값의 최소 공약수를 구하여 UIImage의 규격 셋팅을 한다.
@@ -133,7 +133,7 @@
 <br />
 
 ### **문제4**. 
-- 공연 상세 뷰의 셀 이미지가 두번째 클릭부터 로드 되는 문제점<br />
+- 공연 상세 뷰의 셀 이미지가 두번째 클릭부터 로드 되는 문제점
 
 ### **해결**. 
 - dvc의 image 속성을 UIImageView?가 아닌 UIImage?로 선언하여 해결했다. 따라서 이미지 url 메소드 불러올 때도 kingfisher의 imageFromURL을 사용하지 않고 직접 image URL을 받아 UIImage에 대응해주었다.
