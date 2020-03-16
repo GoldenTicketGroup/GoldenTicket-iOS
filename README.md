@@ -2,11 +2,15 @@
 * 당일 공연 추첨식 예매 서비스
 > '골든티켓'은 공연 티켓 응모 서비스 입니다. 당일 남은 좌석에 대한 응모를 통해 당첨자는 가장 저렴한 가격에 공연을 관람할 수 있습니다. 
 > 오늘 응모 가능한 공연을 둘러보고 행운을 경험해보세요.
+
+* 개발 기간
+> 2019.06.22 ~ 2019.07.13
+
 <br />
 
 # GoldenTicket Group Github
-- [Server: 황재석, 최민경, 윤희성] [이동](https://github.com/GoldenTicketGroup/GoldenTicketServer)
-- [Android: 김강희, 김민경, 한선민, 전성은] [이동](https://github.com/GoldenTicketGroup/GoldenTicket_Android)
+- [Server](https://github.com/GoldenTicketGroup/GoldenTicketServer) : 황재석, 최민경, 윤희성 
+- [Android](https://github.com/GoldenTicketGroup/GoldenTicket_Android) : 김강희, 김민경, 한선민, 전성은 
 
 <br />
 
