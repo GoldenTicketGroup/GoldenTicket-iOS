@@ -60,15 +60,10 @@ class LoginVC: UIViewController {
                 // DataClass 에서 받은 유저 정보 반환
                 let user_data = data as! DataClass
                 
-                // 사용자의 토큰, 이름, 이메일, 전화번호 받아오기
-                let token = user_data.token
-                UserDefaults.standard.set(token, forKey: "token")
+                UserDefaults.standard.set(true, forKey: "isLogin")
                 UserDefaults.standard.set(user_data.name, forKey: "name")
                 UserDefaults.standard.set(user_data.email, forKey: "email")
                 UserDefaults.standard.set(user_data.phone, forKey: "phone")
-
-//                let token = (token as! DataClass).token
-//                UserDefaults.standard.set(token, forKey: "token")
                 
                 let storyboardMain = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC")
                 self.present(storyboardMain, animated: true)

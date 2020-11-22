@@ -34,15 +34,13 @@ class SplashVC: UIViewController {
     
     // 토큰이 있는 경우와 없는 경우에 따라 분기처리.
     @objc func showTutorial() {
-        let token = UserDefaults.standard
-        if token.string(forKey: "token") != nil {
-            // 토큰이 있는 경우 바로 메인으로 이동
+        let isLogin: Bool = UserDefaults.standard.bool(forKey: "isLogin")
+        
+        if isLogin {
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             let tutorial = storyboard.instantiateViewController(withIdentifier: "MainVC")
             present(tutorial, animated: true)
-        }
-        else {
-            // 토큰이 없는 경우 튜토리얼로 이동
+        } else {
             let storyboard = UIStoryboard.init(name: "Tutorial", bundle: nil)
             let tutorial = storyboard.instantiateViewController(withIdentifier: "tutorial")
             present(tutorial, animated: true)
